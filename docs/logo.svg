@@ -18,5 +18,5 @@
   <path d="M477 0V325H62V464H477V607H62V755H403L-3 1466H197L487 950Q536 862 563 796Q586 849 645 959L919 1466H1133L728 755H1069V607H657V464H1069V325H657V0Z" transform="translate(354.82 717.00) scale(0.27967 -0.27967)"
     fill="#ffffff" stroke="#ffffff" stroke-width="78.66" stroke-linejoin="miter" paint-order="stroke"/>
 </svg></mask>
-  <rect width="1024" height="1024" fill="#000000" mask="url(#ink)"/>
+  <rect width="1024" height="1024" fill="#ffffff" mask="url(#ink)"/>
 </svg>

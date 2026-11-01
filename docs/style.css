@@ -1,4 +1,4 @@
-/* The app's blue, with black type in one column: big headings, plain text, and footage that keeps to the column. */
+/* Violet with white type in one column: big headings, plain text, and footage that keeps to the column. */
 
 @font-face {
   font-family: "Archivo";
@@ -16,10 +16,11 @@
 }
 
 :root {
-  --sky: #6aacf0;
-  --ink: #07090c;
+  --ground: #5a2ee6;
+  --type: #ffffff;
   --well: #121519;
-  --pale: #a6c8ef;
+  --deep: #140a3a;
+  --fine: #4a2bb0;
   --margin: clamp(16px, 4vw, 48px);
   --gap: clamp(64px, 9vw, 128px);
   --corner: 8px;
@@ -31,17 +32,17 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--sky);
-  color: var(--ink);
+  background: var(--ground);
+  color: var(--type);
   font: 450 clamp(18px, 1.4vw, 21px)/1.42 "Bricolage", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 p { margin: 0; text-wrap: pretty; }
 a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 2px; }
-a:hover { color: #fff; }
-:focus-visible { outline: 4px solid var(--ink); outline-offset: 4px; }
-::selection { background: var(--ink); color: var(--sky); }
+a:hover { color: #d6c9ff; }
+:focus-visible { outline: 4px solid var(--type); outline-offset: 4px; }
+::selection { background: var(--type); color: var(--ground); }
 
 h1, h2, .giant {
   margin: 0;
@@ -84,15 +85,15 @@ br.p { display: none; }
 .line p { max-width: 36em; }
 .button {
   padding: 0.72em 1.1em;
-  background: var(--ink);
-  color: var(--sky);
+  background: var(--type);
+  color: var(--ground);
   font: 800 clamp(20px, 2vw, 28px)/1.1 "Archivo", system-ui, sans-serif;
   font-stretch: 125%;
   letter-spacing: -0.02em;
   text-decoration: none;
   white-space: nowrap;
 }
-.button:hover { background: #fff; color: var(--ink); }
+.button:hover { background: var(--deep); color: var(--type); }
 
 /* Footage. Each clip says its two shapes, so nothing moves as it loads. A click stops it; the button is for the keyboard. */
 .cut { position: relative; margin-top: clamp(12px, 1.6vw, 20px); }
@@ -113,8 +114,8 @@ br.p { display: none; }
   min-height: 36px;
   padding: 6px 12px;
   border: 0;
-  background: var(--sky);
-  color: var(--ink);
+  background: var(--ground);
+  color: var(--type);
   font: 700 14px/1 "Bricolage", system-ui, sans-serif;
   cursor: pointer;
   opacity: 0;
@@ -157,14 +158,14 @@ h2 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1; text-wrap: balance; }
 }
 .more dd { margin: 4px 0 0; }
 
-/* The page ends in the dark, on the one line that matters. */
-.foot { padding: clamp(40px, 5vw, 72px) 0 32px; background: var(--ink); color: var(--sky); }
-.foot :focus-visible { outline-color: var(--sky); }
-.foot a:hover { color: #fff; }
+/* The page ends in white, on the one line that matters. */
+.foot { padding: clamp(40px, 5vw, 72px) 0 32px; background: var(--type); color: var(--ground); }
+.foot :focus-visible { outline-color: var(--ground); }
+.foot a:hover { color: var(--deep); }
 /* One line, the column's width: 11.1em is that line's measured width. */
 .giant { display: block; font-size: calc(100cqw / 11.1); line-height: 0.9; text-decoration: none; white-space: nowrap; }
 .foot nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: clamp(28px, 4vw, 48px); font-weight: 600; }
-.small { margin-top: 24px; color: var(--pale); font-size: 14px; font-weight: 400; line-height: 1.45; }
+.small { margin-top: 24px; color: var(--fine); font-size: 14px; font-weight: 400; line-height: 1.45; }
 .small p { max-width: 62em; margin-bottom: 0.6em; }
 
 /* What a download leaves on screen. */
@@ -180,12 +181,12 @@ h2 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1; text-wrap: balance; }
   padding: 10px 10px 10px 18px;
   transform: translateX(-50%);
   border-radius: var(--corner);
-  background: var(--ink);
-  color: var(--sky);
+  background: var(--type);
+  color: var(--ground);
 }
 .after[hidden] { display: none; }
-.after :focus-visible { outline-color: var(--sky); }
-.after a:hover { color: #fff; }
+.after :focus-visible { outline-color: var(--ground); }
+.after a:hover { color: var(--deep); }
 .after button {
   width: 36px;
   height: 36px;
@@ -195,7 +196,7 @@ h2 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1; text-wrap: balance; }
   font: 500 24px/1 "Bricolage", system-ui, sans-serif;
   cursor: pointer;
 }
-.after button:hover { color: #fff; }
+.after button:hover { color: var(--deep); }
 
 /* The pages of words. */
 .page { padding: 16px var(--margin) 80px; }
