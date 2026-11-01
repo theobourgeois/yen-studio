@@ -1,27 +1,21 @@
-/* The app's Dark theme, and one loud thing: type that fills the page. Only the footage moves. */
+/* The app's blue, all over, with black type as big as it goes. Only the footage moves. */
 
 @font-face {
-  font-family: "League Gothic";
-  src: url("fonts/league-gothic.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "DM Sans";
-  src: url("fonts/dm-sans.woff2") format("woff2");
-  font-weight: 100 1000;
+  font-family: "Archivo";
+  src: url("fonts/archivo.woff2") format("woff2");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
   font-display: swap;
 }
 
 :root {
-  --page: #1e2227;
-  --well: #121519;
-  --line: #111417;
-  --text: #e2e5e9;
-  --faded: #9ba4af;
   --sky: #6aacf0;
-  --margin: clamp(1.25rem, 3.4vw, 3rem);
-  --display: "League Gothic", "Arial Narrow", Impact, sans-serif;
-  color-scheme: dark;
+  --ink: #07090c;
+  --well: #121519;
+  --pale: #a6c8ef;
+  --margin: clamp(16px, 2.4vw, 36px);
+  --gap: clamp(48px, 6vw, 96px);
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
@@ -29,199 +23,143 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  background: var(--page);
-  color: var(--text);
-  font: 400 1.0625rem/1.55 "DM Sans", system-ui, sans-serif;
+  background: var(--sky);
+  color: var(--ink);
+  font: 500 clamp(19px, 1.6vw, 24px)/1.35 "Archivo", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-p { margin: 0 0 0.75em; text-wrap: pretty; }
-p:last-child { margin-bottom: 0; }
-a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
-a:hover { color: var(--sky); }
-:focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; border-radius: 2px; }
-::selection { background: var(--sky); color: #0d1117; }
-.quiet { color: var(--faded); }
+p { margin: 0; text-wrap: pretty; }
+a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 2px; }
+a:hover { color: #fff; }
+:focus-visible { outline: 4px solid var(--ink); outline-offset: 4px; }
+::selection { background: var(--ink); color: var(--sky); }
 
-h1, h2, h3, .statement {
+h1, h2, .effects, .giant {
   margin: 0;
-  font-family: var(--display);
-  font-weight: 400;
-  letter-spacing: 0.002em;
-  line-height: 0.98;
+  font-weight: 900;
+  font-stretch: 125%;
+  letter-spacing: -0.035em;
 }
-h2 { font-size: clamp(3rem, 6.4vw, 6.25rem); text-wrap: balance; }
-h3 { font-size: 2rem; margin-bottom: 0.3em; }
 
-/* The bar: the app's own button, and nothing else. */
+/* The bar: the name, and the one thing to do here. */
 .bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem var(--margin);
+  padding: 18px var(--margin);
+  font-weight: 800;
+  font-stretch: 125%;
 }
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 600;
-  text-decoration: none;
-}
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand img { border-radius: 6px; }
+.get { text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
+
+/* 8.7vw is what puts the headline's longest line margin to margin. */
+.headline { padding: clamp(8px, 2vw, 28px) var(--margin) 0; font-size: 8.7vw; line-height: 0.97; }
+br.p { display: none; }
+
+.line {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 24px;
+  align-items: end;
+  padding: clamp(24px, 3vw, 44px) var(--margin) clamp(28px, 3.4vw, 48px);
+}
+.line p { max-width: 32em; }
 .button {
-  padding: 0.5rem 0.9rem;
-  border: 1px solid #1c4f86;
-  border-radius: 5px;
-  background: linear-gradient(#7cb7f3, #5a9de6);
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.3), 0 1px 2px rgb(0 0 0 / 0.4);
-  color: #0d1117;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  line-height: 1.2;
+  justify-self: end;
+  padding: 0.72em 1.1em;
+  background: var(--ink);
+  color: var(--sky);
+  font-size: clamp(22px, 2.3vw, 34px);
+  font-weight: 800;
+  font-stretch: 125%;
+  letter-spacing: -0.02em;
   text-decoration: none;
   white-space: nowrap;
 }
-.button:hover { background: linear-gradient(#8cc2f6, #69a9ec); color: #0d1117; }
-.button:active { background: linear-gradient(#5a9de6, #7cb7f3); box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.3); }
+.button:hover { background: #fff; color: var(--ink); }
 
-/* The headline's first line runs margin to margin. 6.1em is that line's measured width. */
-.hero { container-type: inline-size; margin: clamp(1.5rem, 4vw, 3.5rem) var(--margin) 0; }
-h1 { font-size: calc(100cqw / 6.1); line-height: 0.9; padding-bottom: 0.08em; }
-h1 span { display: block; white-space: nowrap; }
-.hero-text {
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: 1.5rem clamp(2rem, 5vw, 5rem);
-  margin: clamp(1.25rem, 2.6vw, 2.25rem) 0 clamp(2rem, 4vw, 3.5rem);
-  font-size: clamp(1.0625rem, 1.5vw, 1.3125rem);
-  line-height: 1.45;
-}
-.hero-text p { max-width: 34em; margin: 0; }
-
-/* Footage: no frame, no corners, the whole width. */
-.clip { display: block; width: 100%; height: auto; background: var(--well); }
-
-/* What a clip is, right under it. */
-.chapter {
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: 1rem clamp(2rem, 5vw, 5rem);
-  align-items: start;
-  padding: clamp(1.25rem, 2.2vw, 2rem) var(--margin) 0;
-}
-.words { max-width: 34em; }
-
-section { padding-bottom: clamp(5rem, 11vw, 11rem); }
-
+/* Footage: the whole width, no frame, no corners. Each clip says its two shapes, so nothing moves as it loads. */
+.cut { position: relative; }
+.clip { display: block; width: 100%; height: auto; aspect-ratio: var(--wide); background: var(--well); }
 .toggle {
-  display: block;
-  margin-top: 0.9rem;
-  padding: 0.25rem 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 64px;
+  min-height: 36px;
+  padding: 6px 12px;
   border: 0;
-  background: none;
-  color: var(--faded);
-  font: inherit;
-  font-size: 0.875rem;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
-  text-decoration-thickness: 1px;
+  background: var(--sky);
+  color: var(--ink);
+  font: 800 14px/1 "Archivo", system-ui, sans-serif;
   cursor: pointer;
 }
-.toggle:hover { color: var(--sky); }
+.toggle:hover { background: #fff; }
+.toggle:focus-visible { outline-color: #fff; outline-offset: -4px; }
 
-/* The rack is a strip, so it sits on the page. */
-.inset .clip { width: calc(100% - 2 * var(--margin)); margin-inline: var(--margin); }
+h2 { padding: var(--gap) var(--margin) 0; font-size: 8.7vw; line-height: 0.97; }
+h2.keys { font-size: 13vw; line-height: 0.9; }
+.text { max-width: calc(36em + 2 * var(--margin)); padding: clamp(20px, 2.4vw, 36px) var(--margin) var(--gap); }
 
-/* These run off one edge, with their words in the column they leave. */
-.beside {
+.effects { padding: 0 var(--margin) var(--gap); font-size: 5.6vw; line-height: 0.98; letter-spacing: -0.03em; }
+.effects span { white-space: nowrap; }
+
+.more {
   display: grid;
-  grid-template-columns: minmax(0, 28fr) minmax(0, 72fr);
-  align-items: end;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(24px, 4vw, 64px);
+  margin: clamp(20px, 2.4vw, 36px) 0 0;
+  padding: 0 var(--margin) var(--gap);
+  list-style: none;
 }
-.beside .clip { grid-column: 2; grid-row: 1; }
-.beside .chapter {
-  display: block;
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 0;
-  padding-right: clamp(1.5rem, 3vw, 3rem);
-  font-size: 1rem;
-}
-.beside.flip { grid-template-columns: minmax(0, 72fr) minmax(0, 28fr); }
-.beside.flip .clip { grid-column: 1; }
-.beside.flip .chapter { grid-column: 2; padding-right: var(--margin); padding-left: clamp(1.5rem, 3vw, 3rem); }
-.beside h2 { font-size: clamp(2.75rem, 4.6vw, 4.75rem); margin-bottom: 0.3em; }
-#recording .beside + .beside { margin-top: clamp(2.5rem, 5vw, 5rem); }
+.more li { padding: 0.7em 0; border-top: 3px solid var(--ink); }
 
-/* The one place without a picture: a plugin's window is its maker's, so this one is words. */
-.well {
-  margin-bottom: clamp(5rem, 11vw, 11rem);
-  padding: clamp(3.5rem, 7vw, 7rem) var(--margin);
-  background: var(--well);
-  box-shadow: inset 0 1px 0 var(--line), inset 0 -1px 0 var(--line);
-}
-.statement { font-size: clamp(3.25rem, 8.6vw, 8.5rem); line-height: 1; max-width: 17em; text-wrap: balance; }
-.well p { max-width: 34em; margin: clamp(1.5rem, 3vw, 2.5rem) 0 0 auto; }
-
-.lead { padding-top: 0; padding-bottom: clamp(2rem, 4vw, 4rem); }
-
-/* The page ends the way it starts: one line, margin to margin, and this one is the link. */
-.download { container-type: inline-size; margin-inline: var(--margin); padding-bottom: clamp(3rem, 6vw, 6rem); }
-.giant {
-  display: block;
-  color: var(--sky);
-  font-family: var(--display);
-  font-size: calc(100cqw / 4.72);
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.giant:hover { color: #8cc2f6; text-decoration: underline; text-decoration-thickness: 0.035em; text-underline-offset: 0.06em; }
+/* The page ends in the dark, on the one line that matters. */
+.foot { container-type: inline-size; padding: clamp(40px, 5vw, 72px) var(--margin) 32px; background: var(--ink); color: var(--sky); }
+.foot :focus-visible { outline-color: var(--sky); }
+.foot a:hover { color: #fff; }
+/* One line, margin to margin: 11.1em is that line's measured width. */
+.giant { display: block; font-size: calc(100cqw / 11.1); line-height: 0.9; text-decoration: none; white-space: nowrap; }
 .facts {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: 2.5rem clamp(2rem, 5vw, 5rem);
-  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px clamp(24px, 4vw, 64px);
+  margin-top: clamp(28px, 4vw, 56px);
 }
-.facts > div > p { max-width: 34em; }
-ol { margin: 0.75em 0 0; padding-left: 1.3em; }
-li { margin-bottom: 0.4em; padding-left: 0.2em; }
-
-.foot {
-  padding: 1.75rem var(--margin) 2.5rem;
-  background: var(--well);
-  box-shadow: inset 0 1px 0 var(--line);
-  color: var(--faded);
-  font-size: 0.875rem;
-}
-.foot nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin-bottom: 1.25rem; color: var(--text); }
-.foot p { max-width: 46em; }
+.facts p { max-width: 34em; margin-bottom: 0.75em; }
+.foot h3 { margin: 0 0 0.4em; font-size: inherit; font-weight: 900; font-stretch: 125%; }
+ol { max-width: 34em; margin: 0; padding-left: 1.3em; }
+li::marker { font-weight: 800; }
+ol li { margin-bottom: 0.4em; padding-left: 0.2em; }
+.foot nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: clamp(28px, 4vw, 56px); font-weight: 700; }
+.small { margin-top: 24px; color: var(--pale); font-size: 14px; font-weight: 400; line-height: 1.45; }
+.small p { max-width: 62em; margin-bottom: 0.6em; }
 
 /* The privacy page. */
-.page { padding: 1rem var(--margin) 5rem; }
+.page { padding: 18px var(--margin) 80px; }
 .prose { max-width: 40em; }
-.prose h1 { font-size: clamp(3.5rem, 9vw, 6rem); margin: clamp(2.5rem, 7vw, 5rem) 0 0.3em; }
-.prose h2 { font-size: 2.25rem; margin: 1.3em 0 0.35em; }
+.prose h1 { margin: clamp(32px, 6vw, 64px) 0 0.4em; font-size: clamp(44px, 7vw, 88px); line-height: 0.97; }
+.prose h2 { padding: 0; margin: 1.3em 0 0.4em; font-size: clamp(28px, 3vw, 40px); }
+.prose p { margin-bottom: 0.75em; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin-bottom: 0.6em; }
 
-/* A phone: the headline wraps and grows, and a clip is cropped to what it's about. */
+/* A phone: the headline stacks, and each clip is its own cut of the frame. */
 @media (max-width: 640px) {
-  h1 { font-size: 32cqw; line-height: 0.96; }
-  h1 span { white-space: normal; }
-  .hero-text, .chapter, .facts { grid-template-columns: minmax(0, 1fr); }
-  .clip { aspect-ratio: 1; object-fit: cover; object-position: var(--focus, 50%) 50%; }
-  [data-clip="assistant"] { --focus: 100%; }
-  [data-clip="song"] { --focus: 25%; }
-  [data-clip="piano"] { --focus: 42%; }
-  [data-clip="mixer"] { --focus: 50%; }
-  [data-clip="stems"] { --focus: 18%; }
-  [data-clip="notes"] { --focus: 34%; }
-  [data-clip="rack"] { aspect-ratio: 2; --focus: 0%; }
-  .inset .clip { width: 100%; margin-inline: 0; }
-  .beside, .beside.flip { display: block; }
-  .beside .chapter, .beside.flip .chapter { padding: clamp(1.25rem, 2.2vw, 2rem) var(--margin) 0; font-size: inherit; }
-  .beside h2 { font-size: clamp(3rem, 6.4vw, 6.25rem); }
-  .well p { margin-left: 0; }
-  .bar .button { padding-inline: 0.75rem; }
+  :root { --margin: 14px; }
+  br.d { display: none; }
+  br.p { display: inline; }
+  .headline { font-size: 13.7vw; line-height: 0.99; }
+  .line { display: block; }
+  .button { display: inline-block; margin-top: 20px; font-size: min(26px, 6.6vw); }
+  .clip { aspect-ratio: var(--phone); }
+  .toggle { min-height: 44px; }
+  h2 { font-size: 13.2vw; }
+  h2.keys { font-size: 22vw; line-height: 0.97; }
+  .effects { font-size: 10vw; }
+  .more, .facts { grid-template-columns: minmax(0, 1fr); }
+  .giant { font-size: 14.2vw; white-space: normal; }
 }

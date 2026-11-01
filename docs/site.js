@@ -1,14 +1,21 @@
 // The clips: each loads when it's nearly on screen, plays while it's on screen, and has a button to stop it.
 // Asked for reduced motion or less data, they stay still pictures until that button is pressed.
+// A phone gets its own cut of each, not a smaller copy: it's the part of the frame that reads at that size.
 
 const still = matchMedia("(prefers-reduced-motion: reduce)").matches || navigator.connection?.saveData === true;
-const small = Math.min(screen.width, innerWidth) * devicePixelRatio <= 1300;
+const phone = matchMedia("(max-width: 640px)");
 
-const NAMES = { assistant: "assistant", song: "playlist", rack: "channel rack", piano: "piano roll", mixer: "mixer", stems: "stems", notes: "notes" };
+const NAMES = { assistant: "assistant", song: "playlist", rack: "channel rack", piano: "piano roll", mixer: "mixer", stems: "stems" };
+
+const file = (video) => `clips/${video.dataset.clip}-${phone.matches ? "phone" : "wide"}`;
+
+function dress(video) {
+  video.poster = `${file(video)}.webp`;
+}
 
 function load(video) {
-  if (video.src) return;
-  video.src = `clips/${video.dataset.clip}${small ? "-small" : ""}.mp4`;
+  if (video.getAttribute("src")) return;
+  video.src = `${file(video)}.mp4`;
 }
 
 function setLabel(video) {
@@ -20,30 +27,34 @@ function setLabel(video) {
 const near = new IntersectionObserver((entries) => {
   for (const entry of entries) {
     if (!entry.isIntersecting) continue;
-    load(entry.target);
+    dress(entry.target);
+    if (!still) load(entry.target);
     near.unobserve(entry.target);
   }
 }, { rootMargin: "600px 0px" });
 
 const seen = new IntersectionObserver((entries) => {
   for (const { target: video, isIntersecting } of entries) {
+    video.onScreen = isIntersecting;
     if (!isIntersecting) video.pause();
     else if (!video.stopped) {
       // The other observer may not have run yet, and setting a source afterwards would cancel the play.
+      dress(video);
       load(video);
       video.play().catch(() => undefined);
     }
   }
 }, { threshold: 0.2 });
 
-for (const video of document.querySelectorAll("video[data-clip]")) {
-  // Under the clip, at the end of its words: never over the picture.
+const videos = [...document.querySelectorAll("video[data-clip]")];
+
+for (const video of videos) {
   const toggle = document.createElement("button");
   toggle.type = "button";
   toggle.className = "toggle";
   video.toggle = toggle;
   video.stopped = still;
-  video.parentElement.querySelector(".words")?.append(toggle);
+  video.parentElement.append(toggle);
   toggle.addEventListener("click", () => {
     video.stopped = !video.paused;
     if (video.stopped) video.pause();
@@ -55,6 +66,16 @@ for (const video of document.querySelectorAll("video[data-clip]")) {
   video.addEventListener("play", () => setLabel(video));
   video.addEventListener("pause", () => setLabel(video));
   setLabel(video);
-  if (!still) near.observe(video);
+  near.observe(video);
   seen.observe(video);
 }
+
+// A window narrowed past the line, or a phone turned: the clips it has already loaded change to that shape's cut.
+phone.addEventListener("change", () => {
+  for (const video of videos) {
+    if (video.getAttribute("poster")) dress(video);
+    if (!video.getAttribute("src")) continue;
+    video.src = `${file(video)}.mp4`;
+    if (video.onScreen && !video.stopped) video.play().catch(() => undefined);
+  }
+});

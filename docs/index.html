@@ -3,135 +3,94 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yen Studio: the AI DAW that works with your plugins</title>
-<meta name="description" content="A music studio for your Mac: patterns, a playlist, a piano roll, a mixer, your VST3 and AU plugins, and an assistant that can read your song and edit it.">
+<title>Yen Studio: a free DAW for Mac</title>
+<meta name="description" content="Prompting won't make your song good. You will. Yen Studio is a free DAW for Mac, for people who came up on FL Studio: channel rack, piano roll, playlist, mixer, and your VST3 and AU plugins.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Yen Studio">
-<meta property="og:description" content="The AI DAW that works with your plugins.">
+<meta property="og:description" content="Prompting won't make your song good. You will. A free DAW for Mac.">
 <meta property="og:url" content="https://theobourgeois.github.io/yen-studio/">
 <meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1e2227">
+<meta name="theme-color" content="#6aacf0">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="preload" href="fonts/league-gothic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 <script src="site.js" defer></script>
 </head>
 <body>
 
 <header class="bar">
-  <a class="brand" href="./"><img src="icon.png" alt="" width="26" height="26">Yen Studio</a>
-  <a class="button" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download for Mac</a>
+  <a class="brand" href="./"><img src="icon.png" alt="" width="28" height="28">Yen Studio</a>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
 </header>
 
 <main>
 
-<div class="hero">
-  <h1><span>The AI DAW that works</span> <span>with your plugins.</span></h1>
-  <div class="hero-text">
-    <p>A music studio for your Mac, with patterns, a playlist, a piano roll and a mixer. An assistant can read your whole song and edit it while you watch.</p>
-    <p class="quiet">Free, with no account. For Apple Silicon Macs on macOS 14 or later.</p>
-  </div>
+<h1 class="headline">Prompting <br class="p">won't <br class="d">make <br class="p">your song <br class="p d">good. <br class="p">You will.</h1>
+<div class="line">
+  <p>A free DAW for Mac, for people who came up on FL Studio and already know where everything is. No account. Apple Silicon, macOS 14 or later. Windows isn't ready yet.</p>
+  <a class="button" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download for Mac</a>
 </div>
+<div class="cut"><video class="clip" data-clip="piano" style="--wide:1900/924;--phone:1152/1150" muted playsinline loop preload="none" aria-label="Notes are drawn in the piano roll, with their velocities in the lane underneath."></video></div>
+
+<section id="keys">
+  <h2 class="keys">F5 F6 F7 F9</h2>
+  <p class="text">Playlist, channel rack, piano roll, mixer, on the keys you'd press anyway. Left-click adds. Right-click deletes. New songs start with a kit, so you can click in a beat right away.</p>
+  <div class="cut"><video class="clip" data-clip="rack" style="--wide:2342/506;--phone:1358/506" muted playsinline loop preload="none" aria-label="Steps are clicked on and off in the channel rack's kick, clap and hat."></video></div>
+  <div class="cut"><video class="clip" data-clip="song" style="--wide:2400/982;--phone:1210/1216" muted playsinline loop preload="none" aria-label="Patterns are painted onto the playlist's tracks while the song plays."></video></div>
+</section>
+
+<section id="mixer">
+  <h2>Ten slots.<br>Every track.</h2>
+  <p class="text">Sends, groups, VCA, a sidechain on any slot, and delay compensation that keeps your plugins in time.</p>
+  <div class="cut"><video class="clip" data-clip="mixer" style="--wide:2400/1194;--phone:1210/1216" muted playsinline loop preload="none" aria-label="A fader is dragged, then Y-EQ goes in a mixer slot and two of its bands are shaped."></video></div>
+</section>
+
+<section id="plugins">
+  <h2>Your plugins. Your presets.</h2>
+  <p class="text">VST3 and Audio Units load as instruments and in mixer slots, in their own windows. Any knob on them automates or follows a modulator. Ten effects come with it:</p>
+  <p class="effects"><span>Y-EQ</span> <span>Y-C</span> <span>Y-L</span> <span>Y-R</span> <span>Y-Delay</span> <span>Y-Multiband</span> <span>Y-Time</span> <span>Y-Tune</span> <span>Y-Pan</span> <span>Y-Pitch</span></p>
+</section>
+
+<section id="stems">
+  <h2>Pull a sample apart.</h2>
+  <p class="text">Extract vocals, drums, bass, guitar and piano, or turn a clip into notes. It runs on your Mac and nothing gets uploaded. The models download once, the first time you say yes.</p>
+  <div class="cut"><video class="clip" data-clip="stems" style="--wide:2400/1200;--phone:1268/1216" muted playsinline loop preload="none" aria-label="A clip is split, and its drums, bass and the rest appear on the tracks below it."></video></div>
+</section>
 
 <section id="assistant">
-  <video class="clip" data-clip="assistant" muted playsinline loop preload="none" width="2400" height="1350" poster="clips/assistant.webp" aria-label="The assistant is asked for a counter-melody on bars 9 to 16. It adds a channel, writes the notes and places them on the playlist, then the changes wait in a review bar."></video>
-  <div class="chapter">
-    <h2>Say what the song needs.</h2>
-    <div class="words">
-      <p>The assistant reads your channels, patterns, mixer and plugins, then changes them where you can watch. Every change waits in the review bar until you choose Undo all or Keep all.</p>
-      <p class="quiet">It runs on your own <a href="https://claude.com/product/claude-code">Claude Code</a> or <a href="https://openai.com/codex/">Codex</a>, installed and signed in. Everything else works without either.</p>
-    </div>
-  </div>
+  <h2>Make it route your channels.</h2>
+  <p class="text">Don't ask the assistant to write your song. Ask it to put every channel on an insert, fill your slots, duck the chords to the kick. It's your own <a href="https://claude.com/product/claude-code">Claude Code</a> or <a href="https://openai.com/codex/">Codex</a>, and every change waits for Undo all or Keep all. Everything else works without it.</p>
+  <div class="cut"><video class="clip" data-clip="assistant" style="--wide:2400/1148;--phone:806/1360" muted playsinline loop preload="none" aria-label="The assistant is asked to put every channel on its own insert, add effects to the 808 and duck the chords to the kick. The mixer fills up, then the changes wait in a review bar."></video></div>
 </section>
 
-<section id="playlist">
-  <video class="clip" data-clip="song" muted playsinline loop preload="none" width="2400" height="1350" poster="clips/song.webp" aria-label="Patterns are painted onto the playlist's tracks while the song plays."></video>
-  <div class="chapter">
-    <h2>Arrange it on the playlist.</h2>
-    <div class="words">
-      <p>Patterns and audio clips go on tracks. A .yen file holds the song and its samples, on your disk.</p>
-      <p class="quiet">Export a WAV, MP3, FLAC or MIDI file, or the song as stems.</p>
-    </div>
-  </div>
+<section id="more">
+  <h2>Also in there.</h2>
+  <ul class="more">
+    <li>Patterns, steps, a graph editor and swing</li>
+    <li>Slice, stretch, ghost notes, scale snap and Stamp chords in the piano roll</li>
+    <li>Automation, and modulators that make any control follow a track or a channel's notes</li>
+    <li>Recording, audio and MIDI</li>
+    <li>Export to WAV, MP3, FLAC or MIDI, or the song as stems</li>
+    <li>A .yen file that holds your song and its samples, on your disk</li>
+  </ul>
 </section>
 
-<section id="rack" class="inset">
-  <video class="clip" data-clip="rack" muted playsinline loop preload="none" width="2342" height="506" poster="clips/rack.webp" aria-label="Steps are clicked on and off in the channel rack's kick, clap and hat."></video>
-  <div class="chapter">
-    <h2>Program drums on the rack.</h2>
-    <div class="words">
-      <p>A new song starts with a kit, so you can click in a beat before you've chosen a sound.</p>
-    </div>
-  </div>
-</section>
+</main>
 
-<section id="piano">
-  <video class="clip" data-clip="piano" muted playsinline loop preload="none" width="2400" height="1350" poster="clips/piano.webp" aria-label="Notes are drawn in the piano roll, with their velocities in the lane underneath."></video>
-  <div class="chapter">
-    <h2>Write it in the piano roll.</h2>
-    <div class="words">
-      <p>Draw notes, drag them, and set how hard each one hits in the lane underneath.</p>
-    </div>
-  </div>
-</section>
-
-<section id="mixer" class="beside">
-  <video class="clip" data-clip="mixer" muted playsinline loop preload="none" width="2400" height="1350" poster="clips/mixer.webp" aria-label="A fader is dragged, then Y-EQ goes in a mixer slot and two of its bands are shaped."></video>
-  <div class="chapter">
-    <h2>Mix it with ten effects on every track.</h2>
-    <div class="words">
-      <p>Sends and sidechains are there, and delay compensation keeps your plugins in time.</p>
-      <p class="quiet">It comes with an EQ, a compressor, a limiter, a reverb and six more effects.</p>
-    </div>
-  </div>
-</section>
-
-<section id="plugins" class="well">
-  <h2 class="statement">Your VST3 and Audio Units load as instruments and in mixer slots, in their own windows, with their own presets.</h2>
-  <p>Any knob can be automated. The assistant sees the same list you do, so “put my pad synth on the chorus” means your pad synth.</p>
-</section>
-
-<section id="recording">
-  <div class="chapter lead">
-    <h2>Take a recording apart.</h2>
-    <div class="words">
-      <p>Both of these run on your Mac. Their models download once, the first time you say yes, and your audio isn't uploaded.</p>
-    </div>
-  </div>
-  <div class="beside flip">
-    <video class="clip" data-clip="stems" muted playsinline loop preload="none" width="2400" height="1350" poster="clips/stems.webp" aria-label="A clip is split, and its drums, bass and the rest appear on the tracks below it."></video>
-    <div class="chapter">
-      <div class="words">
-        <h3>Extract stems</h3>
-        <p>Pull out vocals, drums, bass, guitar, piano and the rest, onto the tracks under the clip.</p>
-      </div>
-    </div>
-  </div>
-  <div class="beside">
-    <video class="clip" data-clip="notes" muted playsinline loop preload="none" width="2400" height="1350" poster="clips/notes.webp" aria-label="A clip becomes notes in a new pattern, shown in the piano roll."></video>
-    <div class="chapter">
-      <div class="words">
-        <h3>Convert to notes</h3>
-        <p>Get what it plays as a new pattern, on a sampler you can swap for any instrument.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="download" class="download">
+<footer class="foot">
   <a class="giant" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download for Mac</a>
   <div class="facts">
     <div>
-      <p>Version 0.1.0, about 100 MB. Free, with no account.</p>
+      <p>Free, with no account. Version 0.1.0, about 100 MB.</p>
       <p>You need a Mac with Apple Silicon (M1 or later), on macOS 14 or later. Windows and Intel Macs aren't ready yet.</p>
-      <p class="quiet">This is a first release and there will be rough edges. <a href="https://github.com/theobourgeois/yen-studio/issues/new/choose">Report a problem</a> when you hit one.</p>
+      <p>This is a first release and there will be rough edges. <a href="https://github.com/theobourgeois/yen-studio/issues/new/choose">Report a problem</a> when you hit one.</p>
     </div>
     <div>
       <h3>The first launch</h3>
-      <p class="quiet">Yen Studio isn't signed with an Apple certificate yet, so macOS asks once.</p>
+      <p>Yen Studio isn't signed with an Apple certificate yet, so macOS asks once.</p>
       <ol>
         <li>Open the download and drag Yen Studio to Applications.</li>
         <li>Open it. macOS says it can't verify the app: choose Done.</li>
@@ -139,19 +98,16 @@
       </ol>
     </div>
   </div>
-</section>
-
-</main>
-
-<footer class="foot">
   <nav aria-label="More">
     <a href="https://github.com/theobourgeois/yen-studio/releases">Releases</a>
     <a href="https://github.com/theobourgeois/yen-studio/issues">Report a problem</a>
     <a href="privacy.html">Privacy</a>
     <a href="notices.txt">Licences</a>
   </nav>
-  <p>The clips are filmed from the app itself, on a demo song and a test recording, without sound. The assistant's runs five times as fast during its turn, and the waits for stems and notes are cut. The meters in them come from a stand-in for the audio engine.</p>
-  <p>VST is a trademark of Steinberg Media Technologies GmbH. Audio Units is a trademark of Apple Inc. Other names belong to their owners.</p>
+  <div class="small">
+    <p>The clips are filmed from the app itself, on a demo song and a test recording, without sound. The assistant's runs five times as fast during its turn, and the wait for stems is cut. The meters in them come from a stand-in for the audio engine.</p>
+    <p>FL Studio is a trademark of Image-Line. VST is a trademark of Steinberg Media Technologies GmbH. Audio Units is a trademark of Apple Inc. Other names belong to their owners.</p>
+  </div>
 </footer>
 
 </body>

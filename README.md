@@ -1,10 +1,12 @@
 # Yen Studio
 
-The AI DAW that works with your plugins: patterns, a playlist, a piano roll and a mixer, every VST3 and AU you own, and an assistant that can read your whole song and edit it while you watch.
+Prompting won't make your song good. You will.
+
+A free DAW for Mac, for people who came up on FL Studio: patterns, a playlist, a piano roll and a mixer, every VST3 and AU you own, and an assistant for the setup work if you want one.
 
 **[Website](https://theobourgeois.github.io/yen-studio/) · [Download for Mac](https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg) · [Report a problem](https://github.com/theobourgeois/yen-studio/issues/new/choose)**
 
-![Yen Studio's playlist with the assistant open](docs/clips/assistant.webp)
+![Yen Studio's mixer, with Y-EQ open](docs/clips/mixer-wide.webp)
 
 ## What you need
 
