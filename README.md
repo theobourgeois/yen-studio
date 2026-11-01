@@ -4,7 +4,7 @@ The AI DAW that works with your plugins: patterns, a playlist, a piano roll and 
 
 **[Website](https://theobourgeois.github.io/yen-studio/) · [Download for Mac](https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg) · [Report a problem](https://github.com/theobourgeois/yen-studio/issues/new/choose)**
 
-![Yen Studio's playlist and channel rack](docs/shots/hero.webp)
+![Yen Studio's playlist with the assistant open](docs/clips/assistant.webp)
 
 ## What you need
 
