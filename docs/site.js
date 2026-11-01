@@ -1,5 +1,5 @@
-// The clips: each loads when it's nearly on screen, plays while it's on screen, and has a button to stop it.
-// Asked for reduced motion or less data, they stay still pictures until that button is pressed.
+// The clips: each loads when it's nearly on screen and plays while it's on screen. A click stops or starts it, and a
+// button only the keyboard reaches does the same. Asked for reduced motion or less data, they stay still until then.
 // A phone gets its own cut of each, not a smaller copy: it's the part of the frame that reads at that size.
 
 const still = matchMedia("(prefers-reduced-motion: reduce)").matches || navigator.connection?.saveData === true;
@@ -55,14 +55,16 @@ for (const video of videos) {
   video.toggle = toggle;
   video.stopped = still;
   video.parentElement.append(toggle);
-  toggle.addEventListener("click", () => {
+  const flip = () => {
     video.stopped = !video.paused;
     if (video.stopped) video.pause();
     else {
       load(video);
       video.play().catch(() => undefined);
     }
-  });
+  };
+  toggle.addEventListener("click", flip);
+  video.addEventListener("click", flip);
   video.addEventListener("play", () => setLabel(video));
   video.addEventListener("pause", () => setLabel(video));
   setLabel(video);
@@ -78,4 +80,15 @@ phone.addEventListener("change", () => {
     video.src = `${file(video)}.mp4`;
     if (video.onScreen && !video.stopped) video.play().catch(() => undefined);
   }
+});
+
+// A download started: how to get past macOS's question, in reach when it's needed.
+const after = document.querySelector(".after");
+for (const link of document.querySelectorAll('a[href$=".dmg"]')) {
+  link.addEventListener("click", () => {
+    after.hidden = false;
+  });
+}
+after.querySelector("button").addEventListener("click", () => {
+  after.hidden = true;
 });

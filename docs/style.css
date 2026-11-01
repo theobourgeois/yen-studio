@@ -1,4 +1,4 @@
-/* The app's blue, all over, with black type as big as it goes. Only the footage moves. */
+/* The app's blue, with black type in one column: big headings, plain text, and footage that keeps to the column. */
 
 @font-face {
   font-family: "Archivo";
@@ -8,13 +8,21 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Bricolage";
+  src: url("fonts/bricolage.woff2") format("woff2");
+  font-weight: 200 800;
+  font-display: swap;
+}
+
 :root {
   --sky: #6aacf0;
   --ink: #07090c;
   --well: #121519;
   --pale: #a6c8ef;
-  --margin: clamp(16px, 2.4vw, 36px);
-  --gap: clamp(48px, 6vw, 96px);
+  --margin: clamp(16px, 4vw, 48px);
+  --gap: clamp(64px, 9vw, 128px);
+  --corner: 8px;
   color-scheme: light;
 }
 
@@ -25,7 +33,7 @@ body {
   margin: 0;
   background: var(--sky);
   color: var(--ink);
-  font: 500 clamp(19px, 1.6vw, 24px)/1.35 "Archivo", system-ui, sans-serif;
+  font: 450 clamp(18px, 1.4vw, 21px)/1.42 "Bricolage", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -35,11 +43,19 @@ a:hover { color: #fff; }
 :focus-visible { outline: 4px solid var(--ink); outline-offset: 4px; }
 ::selection { background: var(--ink); color: var(--sky); }
 
-h1, h2, .effects, .giant {
+h1, h2, .giant {
   margin: 0;
+  font-family: "Archivo", system-ui, sans-serif;
   font-weight: 900;
   font-stretch: 125%;
   letter-spacing: -0.035em;
+}
+
+/* Everything keeps to this: the page's size in `cqw` is the column's. */
+.col {
+  container-type: inline-size;
+  width: min(1200px, 100% - 2 * var(--margin));
+  margin-inline: auto;
 }
 
 /* The bar: the name, and the one thing to do here. */
@@ -47,33 +63,30 @@ h1, h2, .effects, .giant {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px var(--margin);
-  font-weight: 800;
+  padding: 16px 0;
+  font: 800 19px/1 "Archivo", system-ui, sans-serif;
   font-stretch: 125%;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand img { border-radius: 6px; }
 .get { text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
 
-/* 8.7vw is what puts the headline's longest line margin to margin. */
-.headline { padding: clamp(8px, 2vw, 28px) var(--margin) 0; font-size: 8.7vw; line-height: 0.97; }
+/* The headline's longest line is 10.94em. */
+.headline { padding-top: clamp(8px, 2vw, 24px); font-size: calc(100cqw / 11); line-height: 0.97; }
 br.p { display: none; }
 
 .line {
   display: grid;
-  grid-template-columns: 7fr 5fr;
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
   align-items: end;
-  padding: clamp(24px, 3vw, 44px) var(--margin) clamp(28px, 3.4vw, 48px);
+  padding: clamp(24px, 3vw, 40px) 0 clamp(28px, 3vw, 44px);
 }
-.line p { max-width: 32em; }
+.line p { max-width: 36em; }
 .button {
-  justify-self: end;
   padding: 0.72em 1.1em;
   background: var(--ink);
   color: var(--sky);
-  font-size: clamp(22px, 2.3vw, 34px);
-  font-weight: 800;
+  font: 800 clamp(20px, 2vw, 28px)/1.1 "Archivo", system-ui, sans-serif;
   font-stretch: 125%;
   letter-spacing: -0.02em;
   text-decoration: none;
@@ -81,85 +94,140 @@ br.p { display: none; }
 }
 .button:hover { background: #fff; color: var(--ink); }
 
-/* Footage: the whole width, no frame, no corners. Each clip says its two shapes, so nothing moves as it loads. */
-.cut { position: relative; }
-.clip { display: block; width: 100%; height: auto; aspect-ratio: var(--wide); background: var(--well); }
+/* Footage. Each clip says its two shapes, so nothing moves as it loads. A click stops it; the button is for the keyboard. */
+.cut { position: relative; margin-top: clamp(12px, 1.6vw, 20px); }
+.clip {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--wide);
+  border-radius: var(--corner);
+  background: var(--well);
+  cursor: pointer;
+}
 .toggle {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 8px;
+  bottom: 8px;
   min-width: 64px;
   min-height: 36px;
   padding: 6px 12px;
   border: 0;
   background: var(--sky);
   color: var(--ink);
-  font: 800 14px/1 "Archivo", system-ui, sans-serif;
+  font: 700 14px/1 "Bricolage", system-ui, sans-serif;
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
 }
-.toggle:hover { background: #fff; }
-.toggle:focus-visible { outline-color: #fff; outline-offset: -4px; }
+.toggle:focus-visible { opacity: 1; pointer-events: auto; outline-color: #fff; }
 
-h2 { padding: var(--gap) var(--margin) 0; font-size: 8.7vw; line-height: 0.97; }
-h2.keys { font-size: 13vw; line-height: 0.9; }
-.text { max-width: calc(36em + 2 * var(--margin)); padding: clamp(20px, 2.4vw, 36px) var(--margin) var(--gap); }
+section { padding-top: var(--gap); }
+h2 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1; text-wrap: balance; }
 
-.effects { padding: 0 var(--margin) var(--gap); font-size: 5.6vw; line-height: 0.98; letter-spacing: -0.03em; }
-.effects span { white-space: nowrap; }
+/* A heading beside what it says, then what it shows. */
+.head {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: end;
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+.head p { max-width: 36em; }
+
+/* The effects' windows: each row is as wide as the column, its windows one height, by their shapes. */
+.fx-row { display: flex; gap: clamp(16px, 2vw, 24px); }
+.fx-row + .fx-row { margin-top: clamp(28px, 3.2vw, 44px); }
+.fx figure { flex: var(--r) 1 0; min-width: 0; margin: 0; }
+.fx img { display: block; width: 100%; height: auto; border-radius: var(--corner); background: var(--well); }
+.fx figcaption { max-width: 34em; margin-top: 12px; line-height: 1.32; text-wrap: pretty; }
+.fx b, .more dt {
+  font-family: "Archivo", system-ui, sans-serif;
+  font-weight: 800;
+  font-stretch: 125%;
+  letter-spacing: -0.01em;
+}
+.fx b { display: block; margin-bottom: 2px; }
 
 .more {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 clamp(24px, 4vw, 64px);
-  margin: clamp(20px, 2.4vw, 36px) 0 0;
-  padding: 0 var(--margin) var(--gap);
-  list-style: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 40px) clamp(24px, 4vw, 56px);
+  margin: clamp(24px, 3vw, 40px) 0 var(--gap);
 }
-.more li { padding: 0.7em 0; border-top: 3px solid var(--ink); }
+.more dd { margin: 4px 0 0; }
 
 /* The page ends in the dark, on the one line that matters. */
-.foot { container-type: inline-size; padding: clamp(40px, 5vw, 72px) var(--margin) 32px; background: var(--ink); color: var(--sky); }
+.foot { padding: clamp(40px, 5vw, 72px) 0 32px; background: var(--ink); color: var(--sky); }
 .foot :focus-visible { outline-color: var(--sky); }
 .foot a:hover { color: #fff; }
-/* One line, margin to margin: 11.1em is that line's measured width. */
+/* One line, the column's width: 11.1em is that line's measured width. */
 .giant { display: block; font-size: calc(100cqw / 11.1); line-height: 0.9; text-decoration: none; white-space: nowrap; }
-.facts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px clamp(24px, 4vw, 64px);
-  margin-top: clamp(28px, 4vw, 56px);
-}
-.facts p { max-width: 34em; margin-bottom: 0.75em; }
-.foot h3 { margin: 0 0 0.4em; font-size: inherit; font-weight: 900; font-stretch: 125%; }
-ol { max-width: 34em; margin: 0; padding-left: 1.3em; }
-li::marker { font-weight: 800; }
-ol li { margin-bottom: 0.4em; padding-left: 0.2em; }
-.foot nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: clamp(28px, 4vw, 56px); font-weight: 700; }
+.foot nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: clamp(28px, 4vw, 48px); font-weight: 600; }
 .small { margin-top: 24px; color: var(--pale); font-size: 14px; font-weight: 400; line-height: 1.45; }
 .small p { max-width: 62em; margin-bottom: 0.6em; }
 
-/* The privacy page. */
-.page { padding: 18px var(--margin) 80px; }
-.prose { max-width: 40em; }
-.prose h1 { margin: clamp(32px, 6vw, 64px) 0 0.4em; font-size: clamp(44px, 7vw, 88px); line-height: 0.97; }
-.prose h2 { padding: 0; margin: 1.3em 0 0.4em; font-size: clamp(28px, 3vw, 40px); }
-.prose p { margin-bottom: 0.75em; }
-.prose ul { padding-left: 1.2em; }
-.prose li { margin-bottom: 0.6em; }
+/* What a download leaves on screen. */
+.after {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: calc(100vw - 24px);
+  padding: 10px 10px 10px 18px;
+  transform: translateX(-50%);
+  border-radius: var(--corner);
+  background: var(--ink);
+  color: var(--sky);
+}
+.after[hidden] { display: none; }
+.after :focus-visible { outline-color: var(--sky); }
+.after a:hover { color: #fff; }
+.after button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: 500 24px/1 "Bricolage", system-ui, sans-serif;
+  cursor: pointer;
+}
+.after button:hover { color: #fff; }
 
-/* A phone: the headline stacks, and each clip is its own cut of the frame. */
+/* The pages of words. */
+.page { padding: 16px var(--margin) 80px; }
+.prose { width: min(1200px, 100%); margin-inline: auto; }
+.prose .brand { font: 800 19px/1 "Archivo", system-ui, sans-serif; font-stretch: 125%; }
+.prose h1 { margin: clamp(32px, 6vw, 64px) 0 0.4em; font-size: clamp(40px, 6vw, 72px); line-height: 0.97; }
+.prose h2 { margin: 1.3em 0 0.4em; font-size: clamp(26px, 2.6vw, 34px); }
+.prose p, .prose ul, .prose ol { max-width: 40em; }
+.prose p { margin-bottom: 0.75em; }
+.prose ul, .prose ol { padding-left: 1.3em; margin: 0 0 1em; }
+.prose li { margin-bottom: 0.6em; padding-left: 0.2em; }
+.prose ol li::marker { font-weight: 700; }
+
+/* Heading and words stack before they get cramped. */
+@media (max-width: 860px) {
+  .head { display: block; }
+  .head p { margin-top: 16px; }
+  .more { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* A phone: the headline stacks, each clip is its own cut of the frame, and a window has the width to itself. */
 @media (max-width: 640px) {
-  :root { --margin: 14px; }
   br.d { display: none; }
   br.p { display: inline; }
-  .headline { font-size: 13.7vw; line-height: 0.99; }
+  .headline { font-size: calc(100cqw / 6.75); line-height: 0.99; }
   .line { display: block; }
-  .button { display: inline-block; margin-top: 20px; font-size: min(26px, 6.6vw); }
+  .button { display: inline-block; margin-top: 20px; font-size: min(24px, 6.2vw); }
   .clip { aspect-ratio: var(--phone); }
   .toggle { min-height: 44px; }
-  h2 { font-size: 13.2vw; }
-  h2.keys { font-size: 22vw; line-height: 0.97; }
-  .effects { font-size: 10vw; }
-  .more, .facts { grid-template-columns: minmax(0, 1fr); }
-  .giant { font-size: 14.2vw; white-space: normal; }
+  h2 { font-size: 10.4vw; }
+  .fx-row { display: block; }
+  .fx-row + .fx-row, .fx figure + figure { margin-top: 28px; }
+  .more { grid-template-columns: minmax(0, 1fr); }
+  .giant { font-size: calc(100cqw / 6.2); white-space: normal; }
 }
