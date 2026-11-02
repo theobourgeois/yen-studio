@@ -15,13 +15,9 @@ A free DAW for Mac, for people who came up on FL Studio: patterns, a playlist, a
 - A Mac with Apple Silicon (M1 or later), on macOS 14 or later. Windows and Intel Macs aren't ready yet.
 - For the assistant, your own [Claude Code](https://claude.com/product/claude-code) or [Codex](https://openai.com/codex/), installed and signed in. Everything else works without either.
 
-## The first launch
+## Install
 
-Yen Studio isn't signed with an Apple certificate yet, so macOS asks once:
-
-1. Open the download and drag Yen Studio to Applications.
-2. Open it. macOS says it can't verify the app: choose **Done**.
-3. In **System Settings › Privacy & Security**, scroll down and choose **Open Anyway**.
+Open the download and drag Yen Studio to Applications.
 
 ## What's here
 
