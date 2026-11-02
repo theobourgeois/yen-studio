@@ -4,6 +4,8 @@ Prompting won't make your song good. You will.
 
 A free DAW for Mac, for people who came up on FL Studio: patterns, a playlist, a piano roll and a mixer, every VST3 and AU you own, and an assistant for the setup work if you want one.
 
+**It's pre-alpha.** Expect bugs and missing features, and keep copies of songs you care about.
+
 **[Website](https://theobourgeois.github.io/yen-studio/) · [Download for Mac](https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg) · [Report a problem](https://github.com/theobourgeois/yen-studio/issues/new/choose)**
 
 ![Yen Studio's mixer, with Y-EQ open](docs/clips/mixer-wide.webp)

@@ -69,6 +69,17 @@ h1, h2, .giant {
   font-stretch: 125%;
 }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.stage {
+  margin-left: 2px;
+  padding: 4px 7px 3px;
+  border: 2px solid currentColor;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  font-stretch: 100%;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
 .get { text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
 
 /* The headline's longest line is 10.94em. */
@@ -83,6 +94,8 @@ br.p { display: none; }
   padding: clamp(24px, 3vw, 40px) 0 clamp(28px, 3vw, 44px);
 }
 .line p { max-width: 36em; }
+.line p + p { margin-top: 12px; }
+.line b { font-weight: 700; }
 .button {
   padding: 0.72em 1.1em;
   background: var(--type);
@@ -221,6 +234,8 @@ h2 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1; text-wrap: balance; }
 @media (max-width: 640px) {
   br.d { display: none; }
   br.p { display: inline; }
+  .bar .get { display: none; }
+  .brand { white-space: nowrap; }
   .headline { font-size: calc(100cqw / 6.75); line-height: 0.99; }
   .line { display: block; }
   .button { display: inline-block; margin-top: 20px; font-size: min(24px, 6.2vw); }
