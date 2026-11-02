@@ -81,14 +81,3 @@ phone.addEventListener("change", () => {
     if (video.onScreen && !video.stopped) video.play().catch(() => undefined);
   }
 });
-
-// A download started: how to get past macOS's question, in reach when it's needed.
-const after = document.querySelector(".after");
-for (const link of document.querySelectorAll('a[href$=".dmg"]')) {
-  link.addEventListener("click", () => {
-    after.hidden = false;
-  });
-}
-after.querySelector("button").addEventListener("click", () => {
-  after.hidden = true;
-});

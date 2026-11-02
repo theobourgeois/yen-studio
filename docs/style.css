@@ -181,36 +181,6 @@ h2 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1; text-wrap: balance; }
 .small { margin-top: 24px; color: var(--fine); font-size: 14px; font-weight: 400; line-height: 1.45; }
 .small p { max-width: 62em; margin-bottom: 0.6em; }
 
-/* What a download leaves on screen. */
-.after {
-  position: fixed;
-  left: 50%;
-  bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: max-content;
-  max-width: calc(100vw - 24px);
-  padding: 10px 10px 10px 18px;
-  transform: translateX(-50%);
-  border-radius: var(--corner);
-  background: var(--type);
-  color: var(--ground);
-}
-.after[hidden] { display: none; }
-.after :focus-visible { outline-color: var(--ground); }
-.after a:hover { color: var(--deep); }
-.after button {
-  width: 36px;
-  height: 36px;
-  border: 0;
-  background: none;
-  color: inherit;
-  font: 500 24px/1 "Bricolage", system-ui, sans-serif;
-  cursor: pointer;
-}
-.after button:hover { color: var(--deep); }
-
 /* The pages of words. */
 .page { padding: 16px var(--margin) 80px; }
 .prose { width: min(1200px, 100%); margin-inline: auto; }
