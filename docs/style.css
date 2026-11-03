@@ -82,8 +82,8 @@ h1, h2, .giant {
 }
 .get { text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
 .go { display: flex; gap: 28px; }
-.docs { text-decoration: none; }
-.docs:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
+.to-docs { text-decoration: none; }
+.to-docs:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 0.2em; }
 
 /* The headline's longest line is 10.94em. */
 .headline { padding-top: clamp(8px, 2vw, 24px); font-size: calc(100cqw / 11); line-height: 0.97; }
