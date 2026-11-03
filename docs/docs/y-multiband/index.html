@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-Multiband: Yen Studio docs</title>
+<meta name="description" content="Y-Multiband, the built-in upward and downward compressor on three bands: its knobs, its band display, its gestures and its presets.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-multiband/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-Multiband">
+<meta property="og:description" content="Y-Multiband, the built-in upward and downward compressor on three bands: its knobs, its band display, its gestures and its presets.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-multiband/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/" aria-current="page">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-Multiband</h1>
+<p>Y-Multiband compresses three bands of a sound at once, both ways: quiet detail is brought up and loud parts are
+pushed down. At full depth it is a loud, dense, over-the-top sound. Turned down, it is glue and air. Its settings are
+saved with the song, every change can be undone, and its knobs and band thresholds can be automated.</p>
+<h2 id="add-y-multiband-to-a-track"><a class="anchor" href="#add-y-multiband-to-a-track">Add Y-Multiband to a track</a></h2>
+<ol>
+<li>Open <a href="../mixer/">the Mixer</a> and pick a track.</li>
+<li>Click an empty effect slot. The picker opens.</li>
+<li>Under <strong>Built in</strong>, choose <strong>Compressor</strong> (&quot;Multiband upward and downward compressor&quot;).</li>
+</ol>
+<p>The window opens when you click the slot&#39;s name. Its title bar says the effect and its track, for example
+&quot;Y-Multiband (Insert 1)&quot;. Close the window and the effect keeps playing. Delete the effect from its slot and its
+window closes.</p>
+<p>Every effect slot in the Mixer has a small mix knob and a bypass button beside its name. The mix knob sets how much
+of Y-Multiband you hear against the dry sound. See <a href="../effects/">Built-in effects</a> for what every built-in effect shares.</p>
+<h2 id="the-window"><a class="anchor" href="#the-window">The window</a></h2>
+<p>From top to bottom:</p>
+<ul>
+<li><strong>The preset bar</strong>: the preset arrows, the preset menu, the name, and the ⋮ menu.</li>
+<li><strong>Depth</strong>, <strong>Time</strong>, <strong>In Gain</strong> and <strong>Out Gain</strong>.</li>
+<li><strong>The band display</strong>: a row for each band, high at the top, low at the bottom, each with its own gain knob.
+<strong>Upward</strong> is written under its left side and <strong>Downward</strong> under its right.</li>
+<li><strong>Upwd%</strong> and <strong>Dnwd%</strong>.</li>
+</ul>
+<div class="cut"><video class="clip" data-clip="fx-multiband" style="--wide:840/720;--phone:840/720" muted playsinline loop preload="none" aria-label="Y-Multiband on a beat: each band's meter moves, and the depth is turned down and back."></video></div>
+<h2 id="the-knobs"><a class="anchor" href="#the-knobs">The knobs</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Range</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Depth</strong></td>
+<td>0 to 100%</td>
+<td>How much of the whole effect you get: the lift, the squash and the makeup gain together. 100% is the full, over-the-top sound. Around 50% is the usual place to start.</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>0 to 1000%</td>
+<td>How fast the bands recover (their release). 100% is the normal speed. Lower is faster and more aggressive; higher is slower and smoother.</td>
+</tr>
+<tr>
+<td><strong>In Gain</strong></td>
+<td>−24 to +19.1 dB</td>
+<td>The level going in. More level drives the bands harder.</td>
+</tr>
+<tr>
+<td><strong>Out Gain</strong></td>
+<td>−24 to +19.1 dB</td>
+<td>The level coming out.</td>
+</tr>
+<tr>
+<td><strong>Upwd%</strong></td>
+<td>0 to 200%</td>
+<td>How strongly the quiet parts are brought up, on every band. 0% turns upward compression off.</td>
+</tr>
+<tr>
+<td><strong>Dnwd%</strong></td>
+<td>0 to 200%</td>
+<td>How strongly the loud parts are pushed down, on every band. 0% turns downward compression off.</td>
+</tr>
+<tr>
+<td><strong>H gain</strong>, <strong>M gain</strong>, <strong>L gain</strong></td>
+<td>−24 to +6 dB</td>
+<td>Each band&#39;s level after it&#39;s compressed, on the knob at its row&#39;s side.</td>
+</tr>
+</tbody></table>
+</div>
+<p>A new Y-Multiband has everything at 100% and every gain at 0 dB.</p>
+<p>The knobs work like every knob in Yen Studio:</p>
+<ul>
+<li>Drag up or down to turn one. Hold <kbd>⌘</kbd> while dragging for fine changes.</li>
+<li>Scroll over it to turn it.</li>
+<li>⌥-click it, or click it with the middle button, to put it back to its default.</li>
+<li>Hover over it to see its value.</li>
+<li>Right-click it for <strong>Reset</strong>, <strong>Copy value</strong>, <strong>Paste value</strong>, <strong>Type in value…</strong>, <strong>Create automation clip</strong> and the
+<a href="../modulators/">modulation</a> items.</li>
+</ul>
+<h2 id="the-band-display"><a class="anchor" href="#the-band-display">The band display</a></h2>
+<p>Each row is one band: <strong>H</strong> (the highs), <strong>M</strong> (the mids) and <strong>L</strong> (the lows). The low band is only the sub, so the
+bass&#39;s body and the kick&#39;s click are in the mid band.</p>
+<p>Read a row from left to right, quiet to loud:</p>
+<ul>
+<li><strong>The brown part on the left</strong> is the upward range. Sound quieter than this is brought up.</li>
+<li><strong>The green part on the right</strong> is the downward range. Sound louder than this is pushed down.</li>
+<li><strong>The gap between them</strong>, in the row&#39;s colour, is where the band is left alone.</li>
+<li><strong>The white marker</strong> is the band&#39;s level coming in.</li>
+<li><strong>The yellow bar</strong> is the band&#39;s level coming out.</li>
+</ul>
+<p>A grid line marks every 12 dB. A compressor that&#39;s switched off is greyed.</p>
+<h3 id="move-a-bands-threshold"><a class="anchor" href="#move-a-bands-threshold">Move a band&#39;s threshold</a></h3>
+<p>Drag a row left or right. The gap moves with it, and so do both of its edges: this is the band&#39;s threshold. Drag it
+left and more of the band is pushed down. Drag it right and more of it is brought up.</p>
+<ul>
+<li>⌥-click or double-click a row to put its threshold back.</li>
+<li>Hover over a row to see its threshold as a percentage (100% is where a new one starts).</li>
+</ul>
+<h3 id="switch-a-bands-upward-or-downward-compression"><a class="anchor" href="#switch-a-bands-upward-or-downward-compression">Switch a band&#39;s upward or downward compression</a></h3>
+<p><kbd>⌘</kbd>-click the brown part of a row to switch that band&#39;s upward compression off or on. <kbd>⌘</kbd>-click the
+green part to switch its downward compression. You can, for example, stop the low band being squashed while the
+others are.</p>
+<p>Right-click a row for the same things as a menu:</p>
+<ul>
+<li><strong>Reset threshold</strong></li>
+<li><strong>Upward compression</strong> (ticked when it&#39;s on)</li>
+<li><strong>Downward compression</strong> (ticked when it&#39;s on)</li>
+<li><strong>Create automation clip</strong> for the band&#39;s threshold, and the <a href="../modulators/">modulation</a> items.</li>
+</ul>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>Click the preset name for the list. Hover over a preset to read what it&#39;s for. The arrows on either side of the name
+step to the previous and next preset.</p>
+<p>The presets include:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>What it&#39;s for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Default</strong></td>
+<td>Everything at 100%, over the top</td>
+</tr>
+<tr>
+<td><strong>Gentle</strong></td>
+<td>A third of it: glue and air without the squash</td>
+</tr>
+<tr>
+<td><strong>Half</strong></td>
+<td>Depth at 50%, the usual place to start</td>
+</tr>
+<tr>
+<td><strong>Upward only</strong></td>
+<td>Tails, reverbs and detail brought up, nothing pushed down</td>
+</tr>
+<tr>
+<td><strong>Downward only</strong></td>
+<td>A three-band leveller: the loud parts held, nothing lifted</td>
+</tr>
+<tr>
+<td><strong>Bright</strong></td>
+<td>The top band up</td>
+</tr>
+<tr>
+<td><strong>Sub tamer</strong></td>
+<td>The low band left out, the rest squashed</td>
+</tr>
+<tr>
+<td><strong>Vocal glue</strong></td>
+<td>Slow and light, the mids held</td>
+</tr>
+<tr>
+<td><strong>Drum smash</strong></td>
+<td>Fast and hard, the transients flattened</td>
+</tr>
+<tr>
+<td><strong>Pad bloom</strong></td>
+<td>Long release, quiet detail lifted</td>
+</tr>
+</tbody></table>
+</div>
+<p>A preset stays named until you change the sound. Then the name says <strong>Custom</strong>.</p>
+<h3 id="the-menu"><a class="anchor" href="#the-menu">The ⋮ menu</a></h3>
+<ul>
+<li><strong>Reset to default</strong>: back to the Default preset.</li>
+<li><strong>Copy state</strong>: copies every setting.</li>
+<li><strong>Paste state</strong>: puts copied settings on this Y-Multiband. Use it to give another track&#39;s Y-Multiband the same
+sound.</li>
+</ul>
+<h2 id="automate-y-multiband"><a class="anchor" href="#automate-y-multiband">Automate Y-Multiband</a></h2>
+<p>Every knob and every band&#39;s threshold can be automated.</p>
+<ul>
+<li>Right-click a knob or a band row and choose <strong>Create automation clip</strong>. A clip of it appears in
+<a href="../playlist/">the Playlist</a>.</li>
+<li>Or touch a control (turn it or drag it), then click <strong>Automate “…”</strong> in the window&#39;s title bar. It names the last
+control you touched and makes a clip of it.</li>
+</ul>
+<p>An automated control is marked, and its hover tip says &quot;(automated)&quot;. See <a href="../automation/">Automation</a>.</p>
+<h2 id="tips"><a class="anchor" href="#tips">Tips</a></h2>
+<aside class="callout tip"><p><strong>Tip:</strong> Start with <strong>Half</strong>, then bring <strong>Depth</strong> down until you stop noticing the effect, and back up a little.</p>
+</aside>
+<aside class="callout tip"><p><strong>Tip:</strong> On a whole mix or a bus, try <strong>Gentle</strong>, or set <strong>Dnwd%</strong> low and <strong>Upwd%</strong> near 100%, so detail comes up
+without the peaks being flattened.</p>
+</aside>
+<aside class="callout note"><p><strong>Note:</strong> Y-Multiband makes quiet sounds louder, so it brings up noise and room sound as well. If a track gets
+noisy, lower <strong>Upwd%</strong> or move the band&#39;s threshold left.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-delay/"><span>Previous</span>Y-Delay</a><a class="next" rel="next" href="../y-time/"><span>Next</span>Y-Time</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-Multiband">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#add-y-multiband-to-a-track">Add Y-Multiband to a track</a></li><li><a href="#the-window">The window</a></li><li><a href="#the-knobs">The knobs</a></li><li><a href="#the-band-display">The band display</a></li><li><a href="#presets">Presets</a></li><li><a href="#automate-y-multiband">Automate Y-Multiband</a></li><li><a href="#tips">Tips</a></li></ul></nav>
+</div>
+</body>
+</html>

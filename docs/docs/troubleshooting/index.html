@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Problems and logs: Yen Studio docs</title>
+<meta name="description" content="What to do when Yen Studio has no sound, a plugin crashes or a song won't open, and how to find the logs and report a problem.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/troubleshooting/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Problems and logs">
+<meta property="og:description" content="What to do when Yen Studio has no sound, a plugin crashes or a song won't open, and how to find the logs and report a problem.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/troubleshooting/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/" aria-current="page">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:More">
+<p class="crumb" data-pagefind-ignore>More</p>
+<h1 data-pagefind-meta="title">Problems and logs</h1>
+<p>Yen Studio is pre-alpha, so things will go wrong. This page covers the problems it already knows how to tell you
+about, where it keeps its logs, and how to report the rest.</p>
+<h2 id="no-sound"><a class="anchor" href="#no-sound">No sound</a></h2>
+<p>Work down this list. Most of the time the answer is in the first few.</p>
+<ol>
+<li><strong>Check the output device.</strong> Open <a href="../settings/">Settings</a> with <kbd>⌘,</kbd> and look at <strong>Output device</strong> on the
+<strong>Music</strong> tab. Is it the speakers or headphones you&#39;re listening on?</li>
+<li><strong>Play the test tone.</strong> At the bottom of the Music tab, under <strong>Engine and plugins</strong>, turn on <strong>Test tone</strong>. If you
+hear it, the engine and your device work: the problem is in the song. If you don&#39;t, it&#39;s the device or the volume.</li>
+<li><strong>Check your Mac&#39;s volume</strong>, and the volume on your audio interface if you use one.</li>
+<li><strong>Check the song&#39;s mode.</strong> Press <kbd>L</kbd> to switch between pattern mode and song mode. Song mode plays the
+Playlist; if there&#39;s nothing on it yet, there&#39;s nothing to hear. Pattern mode plays the pattern shown in the
+Channel rack.</li>
+<li><strong>Check for mutes.</strong> The number keys <kbd>1</kbd> … <kbd>0</kbd> mute and unmute the first ten channels, so one
+stray key can silence a channel. Look at the channel&#39;s mute light in <a href="../channel-rack/">the Channel rack</a>, and at its
+track in <a href="../mixer/">the Mixer</a>: muted, soloed elsewhere, or with its fader all the way down.</li>
+<li><strong>Check the routing.</strong> A channel plays through the mixer track it&#39;s routed to. If that track goes nowhere, or a
+bus on the way is muted, you won&#39;t hear it. The Mixer&#39;s meters show where the sound stops.</li>
+<li><strong>Check the plugin.</strong> If a channel&#39;s plugin couldn&#39;t load, its settings window says why in red, with <strong>Try again</strong>. See
+<a href="#a-plugin-crashes">A plugin crashes</a>.</li>
+<li><strong>Check the engine.</strong> If a message said <strong>The audio engine stopped</strong>, wait a moment: it starts again by itself,
+with your song. Then press <kbd>Space</kbd> to play again.</li>
+</ol>
+<p>If the sound clicks or drops out rather than stopping, raise <strong>Buffer length</strong> in Settings, Music tab.</p>
+<h2 id="where-the-sound-goes"><a class="anchor" href="#where-the-sound-goes">Where the sound goes</a></h2>
+<p>Until you choose an output device in Settings, Yen Studio plays through your Mac&#39;s own output, the one in the menu
+bar&#39;s sound menu. When that changes, Yen Studio follows it: plug in headphones and the sound moves to them, as it does
+for any app. A message says <strong>Now playing through</strong> and the device&#39;s name.</p>
+<p>It doesn&#39;t switch in the middle of an export or a take. It waits for it to end.</p>
+<p>Once you choose an output device yourself, Yen Studio keeps to it, whatever else you plug in. Changing the buffer
+length or the input device in Settings counts as choosing too.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> If you plugged headphones in and the sound stayed on the speakers, check whether you chose the speakers in
+Settings at some point. Choose the headphones there instead.</p>
+</aside>
+<h2 id="a-plugin-crashes"><a class="anchor" href="#a-plugin-crashes">A plugin crashes</a></h2>
+<p>Your plugins run inside Yen Studio&#39;s audio engine. When one crashes, the engine stops with it. A message says <strong>The
+audio engine stopped: A plugin may have crashed. It&#39;s starting again, with your song.</strong> Wait a moment, then play
+again.</p>
+<p>If the plugin crashed while the song was opening, the song opens without it, so one bad plugin can&#39;t keep you out of
+your song. The channel or effect is still there, and says why the plugin isn&#39;t:</p>
+<ul>
+<li>crashed while loading, so this song opened without it; or</li>
+<li>crashed reading its saved settings, so this song opened without it.</li>
+</ul>
+<p>To try it again:</p>
+<ul>
+<li><strong>A channel&#39;s plugin</strong>: right-click the channel in the Channel rack and choose <strong>Try again</strong>, or click <strong>Try again</strong>
+at the top of the channel&#39;s settings window.</li>
+<li><strong>An effect</strong>: click the <strong>Try again</strong> arrow beside its name in the Mixer.</li>
+</ul>
+<p>If it crashes again, the engine restarts and the song goes on without it. Look for an update to the plugin, or
+remove it from the song.</p>
+<h3 id="when-a-scan-skips-a-plugin"><a class="anchor" href="#when-a-scan-skips-a-plugin">When a scan skips a plugin</a></h3>
+<p>When Yen Studio looks for your plugins, one that crashes during the scan is skipped and listed as skipped, with why.
+The list is in the Plugin manager (<strong>More plugins…</strong> at the foot of <a href="../plugins/">the plugin picker</a>) and in Settings,
+Music tab, under <strong>Engine and plugins</strong>. Click <strong>Try again</strong> there to scan the skipped plugins again, for example
+after updating one.</p>
+<h2 id="a-song-wont-open"><a class="anchor" href="#a-song-wont-open">A song won&#39;t open</a></h2>
+<p>When Yen Studio isn&#39;t sure it can read a song, it leaves the file alone rather than risk your work. The song still
+shows on the Home screen, greyed out, saying <strong>Damaged: can&#39;t be opened</strong>. Hold the pointer over it to see why. It
+can&#39;t be opened, and nothing is ever saved over it.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>What it says</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>It was made by a newer Yen Studio</td>
+<td>Update Yen Studio, then open it</td>
+</tr>
+<tr>
+<td>Its document (<code>project.json</code>) isn&#39;t there, though it&#39;s been saved before</td>
+<td>It may still be syncing (iCloud or another sync app). It opens once the file arrives</td>
+</tr>
+<tr>
+<td>Its document is damaged</td>
+<td>A copy of the damaged document is kept in the package. Replace <code>project.json</code> in the package with a good copy, from a backup</td>
+</tr>
+<tr>
+<td>Something in it is a link to somewhere else</td>
+<td>Replace the link with the real files</td>
+</tr>
+</tbody></table>
+</div>
+<p>To see inside a song, find it in Finder, right-click it and choose <strong>Show Package Contents</strong>. A song is a <code>.yen</code>
+package: <code>project.json</code> is the song itself, and its sounds are in <code>media</code>.</p>
+<h3 id="not-where-it-was"><a class="anchor" href="#not-where-it-was">Not where it was</a></h3>
+<p>A song that was moved or deleted outside Yen Studio shows as <strong>Not where it was</strong>. If you moved it, open it again
+from its new place with <kbd>⌘O</kbd>.</p>
+<h2 id="two-copies-of-a-song"><a class="anchor" href="#two-copies-of-a-song">Two copies of a song</a></h2>
+<p>If a song was saved somewhere else while you had it open (on another Mac, or by a sync app), the next save keeps both.
+A message says the song <strong>was also saved somewhere else</strong>, and names the copy.</p>
+<p>Your window&#39;s version is saved as the song. The other version is kept inside the package, beside <code>project.json</code>, as
+<code>project.conflict-</code> followed by the date and time. To use it instead, close the song, open the package with <strong>Show
+Package Contents</strong>, and swap the two files.</p>
+<h2 id="takes-recovered-after-a-crash"><a class="anchor" href="#takes-recovered-after-a-crash">Takes recovered after a crash</a></h2>
+<p>If Yen Studio stops while you&#39;re recording, what you&#39;d recorded isn&#39;t lost. The next time you open the song, it&#39;s
+recovered, and a message says <strong>Recovered a take from when the app stopped</strong> (or how many takes).</p>
+<ul>
+<li>Takes whose place is known go back on <a href="../playlist/">the Playlist</a> where they were recorded. Their timing may be off by
+your device&#39;s latency: listen, and nudge them if they&#39;re late or early.</li>
+<li>Takes whose place isn&#39;t known go into the song&#39;s sounds in <a href="../browser/">the Browser</a>. Drag them where they belong.</li>
+</ul>
+<p>If a message says <strong>Couldn&#39;t keep a take from when the app stopped</strong>, the take&#39;s file is still in the song&#39;s
+<code>recordings</code> folder, inside the package. Opening the song again tries again.</p>
+<h2 id="logs"><a class="anchor" href="#logs">Logs</a></h2>
+<p>Yen Studio keeps a log of what it did and what went wrong, on your computer only. Older lines are let go of, so it only
+holds the latest few megabytes.</p>
+<p>To find it, choose <strong>Help › Show Logs</strong>: Finder opens with the log file selected. You can also click <strong>Show in
+Finder</strong> next to <strong>Log files</strong> in Settings, General tab.</p>
+<p><strong>Help › Show Data Folder</strong> opens the folder where Yen Studio keeps everything that isn&#39;t a song: the logs, the
+assistant&#39;s chats, your recent songs and the like. It&#39;s
+<code>~/Library/Application Support/Yen Studio/data</code>.</p>
+<aside class="callout note"><p><strong>Note:</strong> The log can contain the names of your files and folders. Read it before you send it to anyone.</p>
+</aside>
+<h2 id="report-a-problem"><a class="anchor" href="#report-a-problem">Report a problem</a></h2>
+<ol>
+<li>Choose <strong>Help › Report a Problem…</strong>. Your browser opens a new issue on Yen Studio&#39;s GitHub, with your version and
+your macOS version already filled in.</li>
+<li>Say what happened and what you expected, and how to make it happen again.</li>
+<li>If it helps, attach the log (<strong>Help › Show Logs</strong>). Check it first: it can contain the names of your files.</li>
+</ol>
+<p>You need a GitHub account to post the issue. Nothing is sent until you post it, and the log is only sent if you attach
+it yourself.</p>
+<p>If you&#39;ve turned on <strong>Send usage and crash reports</strong> in <a href="../settings/#send-usage-and-crash-reports">Settings</a>, crashes
+are reported without your names or your songs. A written report is still the best way to say what went wrong.</p>
+<h2 id="yen-studio-wont-start"><a class="anchor" href="#yen-studio-wont-start">Yen Studio won&#39;t start</a></h2>
+<p>If Yen Studio takes a long time to open, it says so, with <strong>Show Logs</strong> and <strong>Quit</strong>. It opens by itself once it&#39;s
+ready, or you can quit and try again. If it says its server keeps stopping, or couldn&#39;t start, quit, open it again,
+and if it still won&#39;t start, report it with the log.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../shortcuts/"><span>Previous</span>Keyboard shortcuts</a><span></span></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Problems%20and%20logs">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#no-sound">No sound</a></li><li><a href="#where-the-sound-goes">Where the sound goes</a></li><li><a href="#a-plugin-crashes">A plugin crashes</a></li><li><a href="#a-song-wont-open">A song won't open</a></li><li><a href="#two-copies-of-a-song">Two copies of a song</a></li><li><a href="#takes-recovered-after-a-crash">Takes recovered after a crash</a></li><li><a href="#logs">Logs</a></li><li><a href="#report-a-problem">Report a problem</a></li><li><a href="#yen-studio-wont-start">Yen Studio won't start</a></li></ul></nav>
+</div>
+</body>
+</html>

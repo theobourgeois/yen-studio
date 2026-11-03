@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sidechain: Yen Studio docs</title>
+<meta name="description" content="Key any effect slot from another mixer track, choose where the key is taken, duck a bass under a kick in two clicks, and use your plugins' sidechain inputs.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/sidechain/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sidechain">
+<meta property="og:description" content="Key any effect slot from another mixer track, choose where the key is taken, duck a bass under a kick in two clicks, and use your plugins' sidechain inputs.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/sidechain/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/" aria-current="page">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Sidechain</h1>
+<p>A sidechain lets an effect listen to one track while it works on another. The classic case is a compressor on a bass
+that ducks every time the kick hits. In Yen Studio the key belongs to the effect slot: pick the track it listens to
+from the slot&#39;s menu. You don&#39;t need a 0% send to set it up, as you would in FL Studio, though those still work.</p>
+<h2 id="duck-a-track-under-another"><a class="anchor" href="#duck-a-track-under-another">Duck a track under another</a></h2>
+<p>The quickest way to make a bass duck under a kick:</p>
+<ol>
+<li>Open the <a href="../mixer/">Mixer</a> (<kbd>F9</kbd>).</li>
+<li>Right-click the kick&#39;s track and open <strong>Sidechain to ▸</strong>.</li>
+<li>Pick the bass&#39;s track, then <strong>Duck with a new Y-C</strong>.</li>
+</ol>
+<p>A <a href="../y-c/">Y-C</a> goes into the bass track&#39;s first free slot, set to the <strong>Sidechain – Duck to Kick</strong> preset and keyed from
+the kick, and its window opens. It&#39;s one undo step. The item is greyed when the bass track has no free slot, or when
+the key would make a loop.</p>
+<p>Turn the Y-C&#39;s threshold and ratio to taste: the <a href="../y-c/">Y-C page</a> says what each control does.</p>
+<h2 id="key-an-effect-from-a-track"><a class="anchor" href="#key-an-effect-from-a-track">Key an effect from a track</a></h2>
+<p>To key an effect that&#39;s already in a slot:</p>
+<ol>
+<li>In the Mixer, select the track with the effect.</li>
+<li>Click the slot&#39;s arrow in the inspector, or right-click the slot.</li>
+<li>Open <strong>Sidechain input ▸</strong> and pick the track under <strong>Key from</strong>.</li>
+</ol>
+<p>Under <strong>Taken</strong>, choose where the key comes from on that track (see <a href="#where-the-key-is-taken">Where the key is taken</a>).
+<strong>No key</strong> takes it away.</p>
+<p>A slot with a key shows a key badge and the source track&#39;s number. The submenu reads <strong>Sidechain input (N)</strong>, with the
+source&#39;s number.</p>
+<h3 id="from-the-source-track"><a class="anchor" href="#from-the-source-track">From the source track</a></h3>
+<p>You can also start from the track that makes the key. Right-click it and open <strong>Sidechain to ▸</strong>. Under <em>This track&#39;s
+sound is the key of…</em>, each other track has a submenu:</p>
+<ul>
+<li><strong>Its effects that hear a key</strong>: the effects on that track that can listen to one. A tick marks those already keyed
+from this track; pick one to key it, or pick a ticked one to take its key away.</li>
+<li><strong>Duck with a new Y-C</strong>: see <a href="#duck-a-track-under-another">Duck a track under another</a>.</li>
+</ul>
+<h2 id="where-the-key-is-taken"><a class="anchor" href="#where-the-key-is-taken">Where the key is taken</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Taken</th>
+<th>What the effect hears</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Before its effects</strong></td>
+<td>The source track&#39;s sound as it comes in, before its own effects.</td>
+</tr>
+<tr>
+<td><strong>After its effects</strong></td>
+<td>After the source&#39;s effects, before its fader. This is the default.</td>
+</tr>
+<tr>
+<td><strong>After its fader</strong></td>
+<td>After the source&#39;s fader and mute, as FL Studio&#39;s sends are.</td>
+</tr>
+</tbody></table>
+</div>
+<p>With the default, the source&#39;s fader and mute don&#39;t change how much the effect ducks: you can turn a kick down
+without the bass ducking less. Pick <strong>After its fader</strong> if you want them to.</p>
+<h2 id="effects-that-listen-to-a-key"><a class="anchor" href="#effects-that-listen-to-a-key">Effects that listen to a key</a></h2>
+<ul>
+<li><strong><a href="../y-c/">Y-C</a></strong>: its side chain section. Set the trigger to <strong>External</strong> and choose the track under <strong>Key from</strong>;
+choosing a key there turns External on. With External and no key, Y-C says <em>No key yet: it hears silence</em>. The
+section also has the key&#39;s <strong>Level</strong>, <strong>Audition</strong> (hold it to hear what the detector hears) and <strong>Stereo Link</strong>.</li>
+<li><strong><a href="../y-eq/">Y-EQ</a></strong>: a dynamic band with a threshold of its own has an <strong>SC</strong> button. Turn it on and the band reacts to
+the slot&#39;s key instead of its own range.</li>
+<li><strong><a href="../y-r/">Y-R</a></strong>: open <strong>▸ Advanced</strong>, and under <strong>Ducking</strong> set <strong>Key</strong> to another track instead of <strong>This track</strong>.
+The reverb then ducks under that track. Y-R&#39;s key is taken after the source&#39;s fader unless you change it.</li>
+<li><strong>Your plugins</strong> that have a sidechain input. The engine asks each plugin whether it has one.</li>
+</ul>
+<p>Y-Delay, Y-Multiband, Y-Time, Y-Tune, Y-Pan and Y-Pitch don&#39;t listen to a key, so their slot menus don&#39;t offer one.</p>
+<p>A plugin without a sidechain input shows <strong>Sidechain input (none)</strong>, greyed. If such a plugin has a key anyway, the key
+is kept but its badge is greyed, to say the plugin can&#39;t hear it.</p>
+<p><figure class="shot" style="--w:898"><img src="../shots/effect-compressor.webp" width="898" height="610" alt="Y-C's window" loading="lazy" decoding="async"><figcaption>Y-C, whose side chain section takes the key</figcaption></figure></p>
+<h2 id="what-youll-see-in-the-mixer"><a class="anchor" href="#what-youll-see-in-the-mixer">What you&#39;ll see in the Mixer</a></h2>
+<p>Keys are drawn as cables in the Mixer, dotted and in the accent colour, from the source track to the keyed one (select
+either track to see them). See <a href="../mixer/#cables">Cables</a>.</p>
+<p>The <strong>Sidechain input ▸</strong> list greys out any track whose sound already reaches the effect&#39;s track: keying from it
+would make a loop.</p>
+<h2 id="how-keys-behave"><a class="anchor" href="#how-keys-behave">How keys behave</a></h2>
+<ul>
+<li><strong>Order.</strong> A key makes the source track play before the keyed one, the way a send does, and it never makes a loop.</li>
+<li><strong>Solo.</strong> A source track silenced by another track&#39;s solo still feeds its keys, so the ducking doesn&#39;t stop when
+you solo the bass.</li>
+<li><strong>Mute.</strong> Muting the source silences its key only when the key is taken <strong>After its fader</strong>.</li>
+<li><strong>Delay compensation.</strong> Keys are <a href="../mixer/#delay-compensation">compensated</a> like every other path: a key from a track
+with a delaying plugin still lines up.</li>
+</ul>
+<h2 id="fl-studios-sidechain-sends"><a class="anchor" href="#fl-studios-sidechain-sends">FL Studio&#39;s sidechain sends</a></h2>
+<p><strong>Sidechain to this track</strong> in a send switch&#39;s menu, and <strong>Sidechain selected to this track</strong> under <strong>Track routing
+▸</strong>, still make FL Studio&#39;s 0% sends, and they still make the source track play first. You don&#39;t need them to key an
+effect: choose the key in the slot&#39;s menu instead.</p>
+<h2 id="pumping-without-a-compressor"><a class="anchor" href="#pumping-without-a-compressor">Pumping without a compressor</a></h2>
+<p>To make any control dip on each kick (a filter&#39;s cutoff, a reverb&#39;s mix, a track&#39;s fader), use a
+<a href="../modulators/">modulator</a> instead of a key: right-click the control, then <strong>Modulate ▸ Follow track ▸</strong> and the kick.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../mixer/"><span>Previous</span>Mixer</a><a class="next" rel="next" href="../modulators/"><span>Next</span>Modulators</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Sidechain">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#duck-a-track-under-another">Duck a track under another</a></li><li><a href="#key-an-effect-from-a-track">Key an effect from a track</a></li><li><a href="#where-the-key-is-taken">Where the key is taken</a></li><li><a href="#effects-that-listen-to-a-key">Effects that listen to a key</a></li><li><a href="#what-youll-see-in-the-mixer">What you'll see in the Mixer</a></li><li><a href="#how-keys-behave">How keys behave</a></li><li><a href="#fl-studios-sidechain-sends">FL Studio's sidechain sends</a></li><li><a href="#pumping-without-a-compressor">Pumping without a compressor</a></li></ul></nav>
+</div>
+</body>
+</html>

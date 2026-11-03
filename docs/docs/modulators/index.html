@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modulators: Yen Studio docs</title>
+<meta name="description" content="Make any control follow a track's level or a channel's notes: a filter that pumps with the kick, a fader that ducks, a reverb that opens up.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/modulators/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Modulators">
+<meta property="og:description" content="Make any control follow a track's level or a channel's notes: a filter that pumps with the kick, a fader that ducks, a reverb that opens up.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/modulators/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/" aria-current="page">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Modulators</h1>
+<p>A modulator follows something in your song, either a mixer track&#39;s level or the notes of a channel, and moves
+controls with it. Link a bass&#39;s filter cutoff to the kick&#39;s track and it dips on every hit. Link a reverb&#39;s mix to a
+snare&#39;s notes and it opens up on every snare. It&#39;s what FL Studio&#39;s Peak Controller does, without an effect in a
+slot: modulators belong to the song.</p>
+<h2 id="make-a-control-follow-a-track"><a class="anchor" href="#make-a-control-follow-a-track">Make a control follow a track</a></h2>
+<ol>
+<li>Right-click any control that can be <a href="../automation/">automated</a>: a mixer fader, a pan knob, an effect slot&#39;s mix, a
+knob in a built-in effect&#39;s window.</li>
+<li>Open <strong>Modulate ▸ Follow track ▸</strong> and pick the track (the master is there too).</li>
+</ol>
+<p>The control now moves with that track&#39;s level, taken after its effects. The Modulators window opens on that
+modulator, so you can shape it.</p>
+<p>If a modulator already follows that track, the control is linked to it rather than to a new one.</p>
+<h2 id="make-a-control-follow-a-channels-notes"><a class="anchor" href="#make-a-control-follow-a-channels-notes">Make a control follow a channel&#39;s notes</a></h2>
+<ol>
+<li>Right-click the control.</li>
+<li>Open <strong>Modulate ▸ Follow notes of ▸</strong> and pick a channel from the Channel rack.</li>
+</ol>
+<p>The modulator opens while any of the channel&#39;s notes play, as far as the note&#39;s velocity, and closes when they stop.
+It follows the song&#39;s notes as the sequencer plays them. That means a muted channel still drives it: put a kick&#39;s
+pattern on a muted channel to pump a pad without hearing the kick twice.</p>
+<aside class="callout note"><p><strong>Note:</strong> a notes modulator follows the notes in your patterns, not what you play on a MIDI keyboard.</p>
+</aside>
+<h2 id="the-modulate-menu"><a class="anchor" href="#the-modulate-menu">The Modulate menu</a></h2>
+<p>Right-click a control and open <strong>Modulate ▸</strong>. Once the control is linked, the item reads <strong>Modulated by</strong> and the
+modulator&#39;s name, and the menu begins with:</p>
+<ul>
+<li><strong>Edit</strong> the modulator (with the link&#39;s amount): opens it in the Modulators window.</li>
+<li><strong>Remove modulation</strong>: takes this control off it. The control goes back to its own value.</li>
+</ul>
+<p>Then, always:</p>
+<ul>
+<li><strong>Follow track ▸</strong>: link it to a track&#39;s level.</li>
+<li><strong>Follow notes of ▸</strong>: link it to a channel&#39;s notes.</li>
+<li><strong>Link to ▸</strong>: link it to a modulator the song already has.</li>
+<li><strong>Modulators…</strong>: open the Modulators window.</li>
+</ul>
+<p>A control is moved by one modulator at most: linking it to another takes it off the first. The tempo can&#39;t be
+modulated.</p>
+<h2 id="the-modulators-window"><a class="anchor" href="#the-modulators-window">The Modulators window</a></h2>
+<p>Open it from <strong>Modulate ▸ Modulators…</strong> on any control, or from the <a href="../mixer/">Mixer</a>&#39;s menu.</p>
+<p>On the left are the song&#39;s modulators. Each row shows its name, how many controls it moves, and a bar with its level
+as the song plays. <strong>+ New</strong> makes one that follows a track (<strong>Follow track</strong>) or a channel&#39;s notes (<strong>Follow notes
+of</strong>), with nothing linked yet. Click a modulator to see it on the right.</p>
+<h3 id="name-and-source"><a class="anchor" href="#name-and-source">Name and source</a></h3>
+<ul>
+<li><strong>Name</strong>: a modulator is called after what it follows (&quot;Kick level&quot;, &quot;Kick notes&quot;) until you type a name.</li>
+<li><strong>Follows</strong>: the track or channel it follows. Tracks are under <em>A track&#39;s level</em>, channels under <em>A channel&#39;s
+notes</em>.</li>
+<li>For a track, the second list says where its level is taken: <strong>Before its effects</strong>, <strong>After its effects</strong> (the
+default) or <strong>After its fader</strong>. These are the same places a <a href="../sidechain/#where-the-key-is-taken">sidechain key</a> can
+be taken from.</li>
+</ul>
+<p>The bin deletes the modulator. Every control it moved goes back to its own value.</p>
+<h3 id="the-follower"><a class="anchor" href="#the-follower">The follower</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ATT</strong> (attack)</td>
+<td>How fast the level rises when the sound comes in. 2 ms to start.</td>
+</tr>
+<tr>
+<td><strong>REL</strong> (release)</td>
+<td>How fast it falls back once the sound goes. 150 ms to start, so it recovers between kicks.</td>
+</tr>
+<tr>
+<td><strong>GAIN</strong></td>
+<td>Turns the source up or down before it&#39;s followed, in dB. Turn it up for a quiet source, so it reaches full level.</td>
+</tr>
+<tr>
+<td><strong>TENS</strong> (tension)</td>
+<td>Bends the curve. <strong>Straight</strong> in the middle; one way the level is slower to rise, the other quicker.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The <strong>Level</strong> bar beside them shows the modulator&#39;s level as the song plays.</p>
+<h3 id="moves-the-links-and-their-amounts"><a class="anchor" href="#moves-the-links-and-their-amounts">Moves: the links and their amounts</a></h3>
+<p>Under <strong>Moves</strong> is every control the modulator moves, with the track or effect it belongs to. Each one has:</p>
+<ul>
+<li><strong>An amount knob</strong>, from −100% to +100%. At full level the control moves by that share of its whole range. A new
+link starts at −60%: it dips. Make it positive to push the control up instead.</li>
+<li><strong>Its range</strong>, in the control&#39;s own words (for example, a fader&#39;s level from where it is to where it dips to).</li>
+<li><strong>×</strong> to unlink it.</li>
+</ul>
+<p>A link whose control has gone (its effect was deleted) is shown in red.</p>
+<h3 id="link-a-plugins-parameter"><a class="anchor" href="#link-a-plugins-parameter">Link a plugin&#39;s parameter</a></h3>
+<p>A plugin&#39;s window is the plugin&#39;s own, so you can&#39;t right-click its knobs. Instead:</p>
+<ol>
+<li>Move the parameter in the plugin&#39;s window.</li>
+<li>In the Modulators window, choose the modulator and click <strong>Link</strong> and the parameter&#39;s name, under <strong>Moves</strong>.</li>
+</ol>
+<p>The same button offers the last of Yen Studio&#39;s own controls you touched.</p>
+<h2 id="how-it-adds-to-automation"><a class="anchor" href="#how-it-adds-to-automation">How it adds to automation</a></h2>
+<p>A modulator moves a control <em>from where it is</em>. If the control is automated, the modulator moves it from wherever its
+<a href="../automation/">automation</a> has it at that moment. So you can automate a filter opening over eight bars and have it pump
+with the kick the whole way.</p>
+<ul>
+<li>A linked knob or fader moves as the modulator does, and shows a ring for how far the modulator can take it.</li>
+<li>Modulators play in pattern mode and song mode alike. Automation plays in song mode only.</li>
+<li>An <a href="../export/">export</a> is modulated just as playback is.</li>
+</ul>
+<h2 id="timing"><a class="anchor" href="#timing">Timing</a></h2>
+<p>A modulator follows its source a little over a millisecond late. Unlike a <a href="../sidechain/">sidechain key</a>, it isn&#39;t
+<a href="../mixer/#delay-compensation">delay-compensated</a>: if the source track has a plugin that delays it, the modulator follows
+it as late as it is. For a tight duck on audio, key a <a href="../y-c/">Y-C</a> from the track instead.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../sidechain/"><span>Previous</span>Sidechain</a><a class="next" rel="next" href="../effects/"><span>Next</span>Built-in effects</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Modulators">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#make-a-control-follow-a-track">Make a control follow a track</a></li><li><a href="#make-a-control-follow-a-channels-notes">Make a control follow a channel's notes</a></li><li><a href="#the-modulate-menu">The Modulate menu</a></li><li><a href="#the-modulators-window">The Modulators window</a></li><li><a href="#how-it-adds-to-automation">How it adds to automation</a></li><li><a href="#timing">Timing</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playlist: Yen Studio docs</title>
+<meta name="description" content="Arrange your song. Tracks, pattern, audio and automation clips, the tools and their keys, the Picker, slicing, stretching and consolidating.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/playlist/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Playlist">
+<meta property="og:description" content="Arrange your song. Tracks, pattern, audio and automation clips, the tools and their keys, the Picker, slicing, stretching and consolidating.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/playlist/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/" aria-current="page">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Make">
+<p class="crumb" data-pagefind-ignore>Make</p>
+<h1 data-pagefind-meta="title">Playlist</h1>
+<p>The Playlist is where a song is put together. It&#39;s a stack of numbered tracks, and on them go clips: pattern clips
+(the notes and steps of a pattern), audio clips (a sound file) and automation clips (a control&#39;s curve, see
+<a href="../automation/">Automation</a>). Any clip goes on any track. Press <kbd>F5</kbd> to show or hide it.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/playlist.webp" width="1200" height="615" alt="The Playlist, with pattern clips and audio clips on its tracks" loading="lazy" decoding="async"></figure></p>
+<h2 id="song-mode-and-pattern-mode"><a class="anchor" href="#song-mode-and-pattern-mode">Song mode and pattern mode</a></h2>
+<p>The PAT / SONG switch in the toolbar says what <kbd>Space</kbd> plays. PAT plays the pattern shown in the
+<a href="../channel-rack/">Channel rack</a>, looped. SONG plays the Playlist. Press <kbd>L</kbd> to switch between them. A song that
+already has clips opens in song mode.</p>
+<p>In song mode, play loops the whole song, up to the end of its last clip&#39;s bar. Make a <a href="#select-a-stretch-of-time">time selection</a>
+and it loops that instead.</p>
+<p>Automation clips play in song mode only.</p>
+<h2 id="put-clips-on-the-playlist"><a class="anchor" href="#put-clips-on-the-playlist">Put clips on the Playlist</a></h2>
+<p>The window&#39;s heading reads <strong>Playlist › name</strong>. That name is the <em>clip source</em>: what Draw and Paint add. Click the
+heading to pick another pattern, audio clip or automation clip from its menu.</p>
+<ol>
+<li>Pick what to add: from the heading&#39;s menu, or by clicking it in the <a href="#the-picker">Picker</a>.</li>
+<li>Pick the Draw tool (<kbd>P</kbd>) and click an empty spot on a track. The clip goes at the start of the grid cell
+you clicked. Keep the button down and drag to move it before you let go.</li>
+<li>To lay several in a row, use the Paint tool (<kbd>B</kbd>) and drag along the track. Holding <kbd>⇧</kbd> with Draw
+paints too.</li>
+</ol>
+<p>Left-click adds. Right-click deletes: right-click a clip, or hold the right button and sweep across several.
+Right-clicking where there&#39;s nothing deselects.</p>
+<div class="cut"><video class="clip" data-clip="song" style="--wide:2400/982;--phone:1210/1216" muted playsinline loop preload="none" aria-label="Patterns are painted onto the playlist's tracks while the song plays."></video></div>
+<p>You can also drag straight onto a track:</p>
+<ul>
+<li>Drag a pattern, audio clip or automation clip from the Picker. You see it where it will land. Drag several at once and
+they land on tracks one under another. What you drop is selected, and the first one becomes the clip source.</li>
+<li>Drop sound files from the <a href="../browser/">Browser</a> or Finder. Each becomes an audio clip, one per track going down. Hold
+<kbd>⇧</kbd> as you drop to lay them one after another on a single track instead.</li>
+</ul>
+<p>Hold <kbd>⌥</kbd> while you drag to place it off the grid.</p>
+<p>Clicking a clip with Draw or Paint makes it the clip source, so the next one you add is the same.</p>
+<h2 id="move-copy-and-resize-clips"><a class="anchor" href="#move-copy-and-resize-clips">Move, copy and resize clips</a></h2>
+<p>With Draw or Paint:</p>
+<ul>
+<li><strong>Move:</strong> drag a clip. If it&#39;s part of the selection, the whole selection moves with it.</li>
+<li><strong>Copy:</strong> <kbd>⇧</kbd>-drag a clip.</li>
+<li><strong>Resize:</strong> drag a clip&#39;s left or right edge.</li>
+<li><strong>Change track only:</strong> hold <kbd>⌘</kbd> while you move, and the clips keep their place in time.</li>
+<li><strong>Off the grid:</strong> hold <kbd>⌥</kbd>.</li>
+</ul>
+<p>Double-click a clip to open what it plays. A pattern clip opens the <a href="../piano-roll/">Piano roll</a> on the channel with the
+most notes in it, or the Channel rack if the pattern only has steps. An audio clip opens its channel&#39;s settings. An
+automation clip opens its window.</p>
+<h2 id="the-tools"><a class="anchor" href="#the-tools">The tools</a></h2>
+<p>The tool buttons are in the Playlist&#39;s toolbar. Each has a key, which works while the Playlist is the window in front.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Draw</td>
+<td><kbd>P</kbd></td>
+<td>Click to add a clip of the clip source. Drag clips to move them, their edges to resize.</td>
+</tr>
+<tr>
+<td>Paint</td>
+<td><kbd>B</kbd></td>
+<td>As Draw, but dragging along a track lays clip after clip.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><kbd>D</kbd></td>
+<td>Click or sweep to delete clips.</td>
+</tr>
+<tr>
+<td>Mute</td>
+<td><kbd>T</kbd></td>
+<td>Click or sweep to mute or unmute clips. Everything you sweep over ends up the same.</td>
+</tr>
+<tr>
+<td>Slip</td>
+<td><kbd>S</kbd></td>
+<td>Drag to slide what&#39;s inside a clip while the clip stays put.</td>
+</tr>
+<tr>
+<td>Slice</td>
+<td><kbd>C</kbd></td>
+<td>Drag down across clips to cut them. See <a href="#slice-clips">Slice clips</a>.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td><kbd>E</kbd></td>
+<td>Click a clip to select it, or drag a rectangle. <kbd>⇧</kbd> adds to the selection.</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td><kbd>Z</kbd></td>
+<td>Drag a rectangle to zoom into it. Click to zoom out. Right-click to go back and forth.</td>
+</tr>
+<tr>
+<td>Playback</td>
+<td><kbd>Y</kbd></td>
+<td>Press and hold to play the song from there. It stops when you let go.</td>
+</tr>
+</tbody></table>
+</div>
+<p>A few work with any tool:</p>
+<ul>
+<li><kbd>⌘</kbd>-click or <kbd>⌘</kbd>-drag selects, as the Select tool does.</li>
+<li><kbd>⌥</kbd>-right-click plays the song from there.</li>
+<li>Double right-click switches to the Mute tool.</li>
+<li><kbd>⌘</kbd>-right-drag zooms into a rectangle. <kbd>⌘</kbd>-right-click goes back.</li>
+</ul>
+<h2 id="get-around"><a class="anchor" href="#get-around">Get around</a></h2>
+<ul>
+<li><strong>Scroll up and down</strong> the tracks with the wheel. Hold <kbd>⇧</kbd>, or scroll sideways, to move along the song.</li>
+<li><strong>Zoom</strong> with <kbd>⌘</kbd> and the wheel, or a pinch, around the pointer. <kbd>Page Up</kbd> and
+<kbd>Page Down</kbd> zoom around the middle.</li>
+<li><strong>Make tracks taller or shorter</strong> with <kbd>⌘⌥</kbd> and the wheel, or <kbd>⌘</kbd> and a middle-button drag.</li>
+<li><strong>Pan</strong> by dragging with the middle button, or by <kbd>⇧</kbd>-right-dragging.</li>
+<li><strong>The overview</strong> along the top shows the whole song. Drag it to scroll; drag its ends to zoom.</li>
+<li><strong>The scrollbar</strong> on the right scrolls the tracks. Drag its ends to change the tracks&#39; height.</li>
+</ul>
+<p>Keys for jumping to a view:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>View</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⇧1</kbd></td>
+<td>4 bars across</td>
+</tr>
+<tr>
+<td><kbd>⇧2</kbd></td>
+<td>16 bars across</td>
+</tr>
+<tr>
+<td><kbd>⇧3</kbd></td>
+<td>64 bars across</td>
+</tr>
+<tr>
+<td><kbd>⇧4</kbd></td>
+<td>The whole song</td>
+</tr>
+<tr>
+<td><kbd>⇧5</kbd></td>
+<td>The time selection</td>
+</tr>
+<tr>
+<td><kbd>⇧0</kbd></td>
+<td>Centre on the playhead</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd></td>
+<td>Back to the song&#39;s start</td>
+</tr>
+</tbody></table>
+</div>
+<p>While the song plays, the view follows the playhead a page at a time. The playhead turns red while you record.</p>
+<h2 id="snap"><a class="anchor" href="#snap">Snap</a></h2>
+<p>The magnet in the toolbar sets what clips snap to. <strong>Line</strong> and <strong>Cell</strong> follow the grid you see, which gets finer as
+you zoom in. The others are fixed: from a sixth of a step up to a whole bar, or <strong>(none)</strong>. Hold <kbd>⌥</kbd> while
+you drag to ignore the snap for that drag.</p>
+<h2 id="select-and-edit"><a class="anchor" href="#select-and-edit">Select and edit</a></h2>
+<p>Most commands act on the selected clips. With nothing selected, they act on every clip.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select all</td>
+</tr>
+<tr>
+<td><kbd>⌘D</kbd></td>
+<td>Deselect (the clips and the time selection)</td>
+</tr>
+<tr>
+<td><kbd>⇧I</kbd></td>
+<td>Invert the selection</td>
+</tr>
+<tr>
+<td><kbd>⇧C</kbd></td>
+<td>Select every clip like the selected ones</td>
+</tr>
+<tr>
+<td><kbd>⌘C</kbd> / <kbd>⌘X</kbd> / <kbd>⌘V</kbd></td>
+<td>Copy, cut, paste</td>
+</tr>
+<tr>
+<td><kbd>⌘B</kbd></td>
+<td>Duplicate, to the right</td>
+</tr>
+<tr>
+<td><kbd>⌫</kbd></td>
+<td>Delete</td>
+</tr>
+<tr>
+<td><kbd>⌥M</kbd> / <kbd>⌥⇧M</kbd></td>
+<td>Mute / unmute</td>
+</tr>
+<tr>
+<td><kbd>⌃Q</kbd></td>
+<td>Quick quantize: start times onto the snap</td>
+</tr>
+<tr>
+<td><kbd>⇧←</kbd> / <kbd>⇧→</kbd></td>
+<td>Nudge by the snap</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> / <kbd>⇧↓</kbd></td>
+<td>Move a track up or down</td>
+</tr>
+<tr>
+<td><kbd>⌘⌥C</kbd></td>
+<td><a href="#consolidate-clips-into-audio">Consolidate</a></td>
+</tr>
+</tbody></table>
+</div>
+<p>Paste puts the clips at the first bar in view, on the tracks they came from, and selects them. Duplicate puts the copy
+straight after, selects it, and moves the time selection along with it, so pressing <kbd>⌘B</kbd> again carries on.</p>
+<p>The <strong>Edit</strong> menu (the arrow at the start of the toolbar) has the same commands, for when you&#39;d rather click.</p>
+<h2 id="select-a-stretch-of-time"><a class="anchor" href="#select-a-stretch-of-time">Select a stretch of time</a></h2>
+<p>The ruler along the top is where play starts from. Click or drag in it to set that. If the song is playing, it jumps
+there straight away.</p>
+<p>To select a stretch of time, <kbd>⌘</kbd>-drag in the ruler, or double-click and drag. A time selection:</p>
+<ul>
+<li>loops in song mode,</li>
+<li>selects the clips in it,</li>
+<li>sets where a new automation clip goes.</li>
+</ul>
+<p>Double-click the ruler without dragging, or right-click it, to clear it.</p>
+<p>With a time selection:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘←</kbd> / <kbd>⌘→</kbd></td>
+<td>Move it by its own length</td>
+</tr>
+<tr>
+<td><kbd>⌘Enter</kbd></td>
+<td>Make one around the selected clips</td>
+</tr>
+<tr>
+<td><kbd>⌘Insert</kbd></td>
+<td>Insert space: push everything from its start along by its length</td>
+</tr>
+<tr>
+<td><kbd>⌘⌥Insert</kbd></td>
+<td>Insert space, cutting clips that cross its start</td>
+</tr>
+<tr>
+<td><kbd>⌘⌫</kbd></td>
+<td>Delete space: take that time out and close the gap</td>
+</tr>
+</tbody></table>
+</div>
+<p>Inserting and deleting space moves the time markers too.</p>
+<h2 id="time-markers"><a class="anchor" href="#time-markers">Time markers</a></h2>
+<p>Press <kbd>⌥T</kbd> to add a marker. It goes where the song is: where you hear it while it plays in song mode, or
+where play starts from when it doesn&#39;t. It&#39;s named &quot;Marker 1&quot;, &quot;Marker 2&quot; and so on, and you can type a new name
+straight away on the ruler.</p>
+<p>Markers sit along the bottom of the ruler.</p>
+<ul>
+<li>Click one to play from it.</li>
+<li>Drag it to move it.</li>
+<li>Double-click it to rename it. <kbd>Enter</kbd> keeps the name, <kbd>Esc</kbd> doesn&#39;t.</li>
+<li>Right-click it to rename, delete, or turn it into a <strong>Start recording</strong> or <strong>Stop recording</strong> marker. With those,
+a recording keeps only what&#39;s between them. See <a href="../recording/">Recording</a>.</li>
+</ul>
+<h2 id="slice-clips"><a class="anchor" href="#slice-clips">Slice clips</a></h2>
+<ul>
+<li><strong>With the Slice tool</strong> (<kbd>C</kbd>): drag down across the clips. The cut goes straight down at the nearest grid
+line, across the tracks you drag over. Hold <kbd>⇧</kbd> to cut every track, top to bottom; you see the line before
+you click. Hold <kbd>⌥</kbd> to cut off the grid.</li>
+<li><strong>With a key:</strong> point at a clip and press <kbd>Insert</kbd>. It&#39;s cut at the nearest grid line.</li>
+<li><strong>Into even pieces:</strong> a clip&#39;s menu has <strong>Chop</strong>: every bar, every beat, every step, or at the snap. The pieces are
+selected.</li>
+</ul>
+<p>Every piece is still a clip of the same pattern or sound. Use the Slip tool to change which part each one plays.</p>
+<h2 id="track-headers"><a class="anchor" href="#track-headers">Track headers</a></h2>
+<p>Each track has a header on the left with its name and a mute light.</p>
+<ul>
+<li><strong>Mute:</strong> click the light, or the header around the name. <strong>Solo:</strong> right-click the light, or <kbd>⌘</kbd>-click it.
+<kbd>⌘</kbd>- or <kbd>⌥</kbd>-click on the header solos too.</li>
+<li><strong>Rename:</strong> double-click the name.</li>
+<li><strong>Height:</strong> drag the line under the track. <kbd>⌥</kbd>-click the line to reset it.</li>
+</ul>
+<p>Right-click the name for the track&#39;s menu: rename and colour, size (50% to 300%), select its clips, mute or unmute all
+its clips, solo, insert a track, move it up or down, or delete it (with its clips). <strong>Consolidate this track</strong> renders
+its clips into audio on the same track.</p>
+<p><strong>Audio track</strong> makes the track record from a mixer track&#39;s input. It then shows an arm button and, when it&#39;s tall
+enough, which mixer track and input it uses: click that to open the <a href="../mixer/">Mixer</a> on it. See <a href="../recording/">Recording</a>.</p>
+<h2 id="the-picker"><a class="anchor" href="#the-picker">The Picker</a></h2>
+<p>Press <kbd>⌥P</kbd> to show or hide the Picker panel, on the Playlist&#39;s left. Its tabs list the song&#39;s <strong>Patterns</strong>,
+<strong>Audio clips</strong> and <strong>Automation clips</strong>, each with a little picture of what it plays.</p>
+<ul>
+<li>Click one to make it the clip source. Clicking a pattern also shows it in the Channel rack.</li>
+<li>Drag one onto a track to place it.</li>
+<li><kbd>⌘</kbd>-click to select several, <kbd>⇧</kbd>-click for a range.</li>
+<li>Double-click a pattern to show it in the Channel rack, an audio clip to select its channel, an automation clip to
+open its window.</li>
+<li><kbd>⌥↑</kbd> and <kbd>⌥↓</kbd> move the selected patterns up and down the list.</li>
+</ul>
+<p>Right-click a pattern for: transpose, rename, clone, split by channel, move up or down, and delete. Right-click an
+audio clip or an automation clip to open its settings or delete it.</p>
+<p>Deleting something in the Picker deletes its clips from the Playlist too. Delete every pattern and you&#39;re left with an
+empty Pattern 1.</p>
+<h2 id="the-clip-menu"><a class="anchor" href="#the-clip-menu">The clip menu</a></h2>
+<p>Every clip has a small arrow at the start of its title. Click it, with any tool, for the clip&#39;s menu.</p>
+<ul>
+<li><strong>Preview:</strong> hold it to hear the clip on its own.</li>
+<li><strong>Edit pattern</strong>, <strong>Channel settings</strong> or <strong>Automation settings:</strong> open what the clip plays.</li>
+<li><strong>Rename and color…</strong> and <strong>Change color:</strong> for what it plays, so every clip of it changes. A clip takes the colour
+of what it plays, or else its track&#39;s.</li>
+<li><strong>Make unique:</strong> see <a href="#make-unique">below</a>.</li>
+<li><strong>Split by channel</strong> (a pattern clip): see <a href="#split-by-channel">below</a>.</li>
+<li><strong>Chop:</strong> cut it into even pieces.</li>
+<li><strong>Consolidate</strong>, <strong>Render as audio clip</strong>, and on a rendered clip <strong>Re-render</strong> and <strong>Unconsolidate:</strong> see
+<a href="#consolidate-clips-into-audio">Consolidate</a>.</li>
+<li><strong>Select all similar clips</strong>, <strong>Mute</strong> or <strong>Unmute</strong>, <strong>Delete.</strong></li>
+</ul>
+<p>An audio clip&#39;s menu also has <strong>Stretch</strong>, <strong>Detect tempo</strong>, <strong>Automate</strong> (volume or panning, see
+<a href="../automation/#automate-an-audio-clips-volume-or-pan">Automation</a>), <strong>Reset fades and gain</strong>, and
+<a href="../stems-and-notes/">Extract stems… and Convert to notes…</a>.</p>
+<p>An automation clip&#39;s menu has <strong>Tools</strong>, the same as in <a href="../automation/#the-automation-clips-window">its window</a>.</p>
+<h2 id="make-unique"><a class="anchor" href="#make-unique">Make unique</a></h2>
+<p>Every clip of a pattern plays that same pattern: change the notes and every copy changes. When you want one to be
+different, use <strong>Make unique</strong> from its clip menu. That clip gets its own copy of the pattern, named &quot;Pattern 1 #2&quot; and
+so on, and the others are left alone.</p>
+<p>It works the same for an automation clip: it gets its own copy of the curve.</p>
+<p>For an audio clip it&#39;s <strong>Make unique as sample</strong>: the clip gets a channel of its own, playing the same file. Then its
+channel&#39;s settings (pitch, volume, stretch) are its own.</p>
+<h2 id="split-by-channel"><a class="anchor" href="#split-by-channel">Split by channel</a></h2>
+<p>A pattern can play several channels at once: a whole drum kit, say. <strong>Split by channel</strong> turns it into one pattern per
+channel, and its clips on the Playlist are split the same way, each on a track. It&#39;s one step of undo.</p>
+<p>It&#39;s in a pattern clip&#39;s menu, in the Playlist heading&#39;s menu when the clip source is a pattern, and in the Picker.</p>
+<h2 id="audio-clips"><a class="anchor" href="#audio-clips">Audio clips</a></h2>
+<h3 id="fades-and-gain"><a class="anchor" href="#fades-and-gain">Fades and gain</a></h3>
+<p>An audio clip has small handles on its body:</p>
+<ul>
+<li><strong>Fades:</strong> drag the corner at the top left along the clip for a fade-in, the top right for a fade-out.</li>
+<li><strong>Fade curves:</strong> once a fade is long enough, drag the middle of its curve up or down to bend it.</li>
+<li><strong>Gain:</strong> drag the half-circle in the middle of the clip&#39;s bottom edge up or down. It goes up to +36 dB; drag it
+far enough down and the clip is silent.</li>
+</ul>
+<p>If several clips are selected, they all change alike. <strong>Reset fades and gain</strong> in the clip menu takes them back.</p>
+<h3 id="stretch"><a class="anchor" href="#stretch">Stretch</a></h3>
+<p>By default, a clip&#39;s edge resizes it. Turn on <strong>Stretch</strong> in the toolbar (<kbd>⇧M</kbd>) and dragging an audio
+clip&#39;s edge stretches its sound to fit instead.</p>
+<p>The clip menu&#39;s <strong>Stretch</strong> has more:</p>
+<ul>
+<li><strong>Mode:</strong> <strong>Stretch</strong> keeps the pitch. <strong>Resample</strong> plays it faster and higher, or slower and lower, as a record
+would.</li>
+<li><strong>Reset pitch, keep speed:</strong> back to the pitch it was recorded at, at the speed it plays now.</li>
+<li><strong>Time:</strong> <strong>None</strong> (the file at its own speed), <strong>Autodetect</strong>, <strong>Project tempo</strong> (it sounds as it does now, then
+follows the song&#39;s tempo), a length in beats or bars, <strong>Twice as long</strong> or <strong>Half as long</strong>.</li>
+<li><strong>Follow its channel&#39;s:</strong> once a clip has a stretch of its own, this gives it back the channel&#39;s.</li>
+</ul>
+<p>If selected clips include the one you clicked, the selection changes with it.</p>
+<p>A stretched clip follows the song&#39;s tempo: change the tempo and it keeps time. A channel&#39;s pitch makes its audio clips
+higher or lower, never faster.</p>
+<h3 id="detect-tempo"><a class="anchor" href="#detect-tempo">Detect tempo</a></h3>
+<p><strong>Detect tempo</strong> in an audio clip&#39;s menu listens to its file, works out its tempo, and stretches it to the song&#39;s.
+You see the tempo it heard. A file that&#39;s too short to tell is left as it was.</p>
+<h2 id="consolidate-clips-into-audio"><a class="anchor" href="#consolidate-clips-into-audio">Consolidate clips into audio</a></h2>
+<p>Consolidating renders clips into audio clips that sound the same.</p>
+<ol>
+<li>Select the clips. With nothing selected, <kbd>⌘⌥C</kbd> asks you to select some first.</li>
+<li>Press <kbd>⌘⌥C</kbd>, or pick <strong>Consolidate</strong> from a clip&#39;s menu.</li>
+</ol>
+<p>You get one audio clip per mixer track the clips play into, in their place. The clips you rendered go inside it, so
+nothing is lost. The sound is as it reaches its mixer track, before that track&#39;s effects: the instrument and the
+channel&#39;s volume and pan are in it; the track&#39;s effects, fader, pan and sends aren&#39;t, and still apply when it plays
+back into the same track.</p>
+<p>On a consolidated clip:</p>
+<ul>
+<li><strong>Re-render</strong> renders the clips inside it again, as their patterns and instruments are now. Its copies and slices
+all play the new sound.</li>
+<li><strong>Unconsolidate</strong> puts back the clips it was made from, wherever the clip has moved to. If you trimmed it, you get
+only the part inside.</li>
+</ul>
+<p><strong>Render as audio clip</strong> is the same render, but it leaves your clips as they are and puts the audio on the first
+free tracks below. The new clip starts where the first clip does.</p>
+<p><strong>Consolidate this track</strong>, in a track&#39;s menu, does it for every clip on that track.</p>
+<h2 id="keys-at-a-glance"><a class="anchor" href="#keys-at-a-glance">Keys at a glance</a></h2>
+<p>These work while the Playlist is the window in front. <kbd>⌘</kbd> is Ctrl on Windows. See <a href="../shortcuts/">Shortcuts</a>
+for the rest of the app.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>P</kbd> <kbd>B</kbd> <kbd>D</kbd> <kbd>T</kbd> <kbd>S</kbd> <kbd>C</kbd> <kbd>E</kbd> <kbd>Z</kbd> <kbd>Y</kbd></td>
+<td>Draw, Paint, Delete, Mute, Slip, Slice, Select, Zoom, Playback</td>
+</tr>
+<tr>
+<td><kbd>⌥P</kbd></td>
+<td>Picker panel</td>
+</tr>
+<tr>
+<td><kbd>⇧M</kbd></td>
+<td>Stretch on or off</td>
+</tr>
+<tr>
+<td><kbd>⌥T</kbd></td>
+<td>Add a time marker</td>
+</tr>
+<tr>
+<td><kbd>Insert</kbd></td>
+<td>Slice the clip under the pointer</td>
+</tr>
+<tr>
+<td><kbd>⌃Q</kbd> or <kbd>⇧Q</kbd></td>
+<td>Quick quantize</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>Close the Playlist</td>
+</tr>
+</tbody></table>
+</div>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../piano-roll/"><span>Previous</span>Piano roll</a><a class="next" rel="next" href="../browser/"><span>Next</span>Browser</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Playlist">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#song-mode-and-pattern-mode">Song mode and pattern mode</a></li><li><a href="#put-clips-on-the-playlist">Put clips on the Playlist</a></li><li><a href="#move-copy-and-resize-clips">Move, copy and resize clips</a></li><li><a href="#the-tools">The tools</a></li><li><a href="#get-around">Get around</a></li><li><a href="#snap">Snap</a></li><li><a href="#select-and-edit">Select and edit</a></li><li><a href="#select-a-stretch-of-time">Select a stretch of time</a></li><li><a href="#time-markers">Time markers</a></li><li><a href="#slice-clips">Slice clips</a></li><li><a href="#track-headers">Track headers</a></li><li><a href="#the-picker">The Picker</a></li><li><a href="#the-clip-menu">The clip menu</a></li><li><a href="#make-unique">Make unique</a></li><li><a href="#split-by-channel">Split by channel</a></li><li><a href="#audio-clips">Audio clips</a></li><li><a href="#consolidate-clips-into-audio">Consolidate clips into audio</a></li><li><a href="#keys-at-a-glance">Keys at a glance</a></li></ul></nav>
+</div>
+</body>
+</html>

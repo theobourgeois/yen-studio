@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-Pitch: Yen Studio docs</title>
+<meta name="description" content="Y-Pitch, the built-in pitch and formant shifter: its two wheels and their physics, the keyboard, Single and Multi, and its presets.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-pitch/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-Pitch">
+<meta property="og:description" content="Y-Pitch, the built-in pitch and formant shifter: its two wheels and their physics, the keyboard, Single and Multi, and its presets.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-pitch/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/" aria-current="page">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-Pitch</h1>
+<p>Y-Pitch moves the pitch of a sound by hand. You turn a wheel, and the sound follows the pointer the way a weight on
+an elastic would: straight there, or swinging past and back. A second wheel moves the formants, the voice&#39;s
+character, on their own. Notes played on its keyboard, or from a channel of the song, move it too, so one vocal can
+sing a melody or harmonies. Its settings are saved with the song, every change can be undone, and both wheels can be
+automated.</p>
+<h2 id="add-y-pitch-to-a-track"><a class="anchor" href="#add-y-pitch-to-a-track">Add Y-Pitch to a track</a></h2>
+<ol>
+<li>Open <a href="../mixer/">the Mixer</a> and pick a track.</li>
+<li>Click an empty effect slot. The picker opens.</li>
+<li>Under <strong>Built in</strong>, choose <strong>Pitch and formants</strong> (&quot;Pitch and formants by hand, swings, harmonies from notes&quot;).</li>
+</ol>
+<p>The window opens when you click the slot&#39;s name. Its title bar names the effect and its track, for example
+&quot;Y-Pitch (Insert 1)&quot;. Close it and the effect keeps playing. Delete the effect and the window closes.</p>
+<p>The <strong>Mix</strong> knob at the window&#39;s bottom right sets how much of the shifted sound you hear against the dry sound. It&#39;s
+the same knob as the slot&#39;s mix in the Mixer. See <a href="../effects/">Built-in effects</a> for what every built-in effect shares.</p>
+<h2 id="the-window"><a class="anchor" href="#the-window">The window</a></h2>
+<ul>
+<li><strong>The top bar</strong>: the preset, <strong>Resolution</strong> and the <strong>⋯</strong> menu.</li>
+<li><strong>The wheels</strong>: <strong>Pitch</strong> on the left and <strong>Timbre</strong> on the right, with the <strong>Timbre</strong> tab between them.</li>
+<li><strong>The bottom bar</strong>: the lights, <strong>Midi</strong>, the channel its notes come from, <strong>Origin</strong> and <strong>Mix</strong>.</li>
+<li><strong>The keyboard</strong> along the bottom.</li>
+</ul>
+<div class="cut"><video class="clip" data-clip="fx-pitch" style="--wide:1256/912;--phone:900/654" muted playsinline loop preload="none" aria-label="Y-Pitch: the pitch wheel above its keyboard is dragged round a quarter turn and back."></video></div>
+<h2 id="turn-a-wheel"><a class="anchor" href="#turn-a-wheel">Turn a wheel</a></h2>
+<p>Each wheel is a dial. Its value is in semitones:</p>
+<ul>
+<li><strong>Drag round it</strong>, from anywhere inside it. Hold <kbd>⇧</kbd> for fine.</li>
+<li><strong>Scroll</strong> over it. A notch is a semitone when it snaps to semitones, an octave when it snaps to octaves, and a tenth
+of a semitone when it doesn&#39;t snap. Hold <kbd>⌘</kbd> for a hundredth of a semitone.</li>
+<li><strong>⌥-click</strong> it, or click it with the middle button, to put it back to 0.</li>
+<li><strong>Double-click</strong> it, or press <kbd>Enter</kbd> on it, to type a value. What&#39;s heard goes straight there, with no
+swing.</li>
+<li>The arrow keys step it while it has the focus, <kbd>⌘</kbd> for fine.</li>
+</ul>
+<p>Right-click a wheel for its menu:</p>
+<ul>
+<li><strong>Type in value…</strong></li>
+<li><strong>Reset to 0</strong></li>
+<li><strong>Jump there (no swing)</strong>: what&#39;s heard goes straight to where the pointer is, with no swing on the way.</li>
+<li><strong>Create automation clip</strong> and the other automation items.</li>
+</ul>
+<p>The dial shows the pointer, where you&#39;ve set it, and what&#39;s heard as a glowing ring with a trail behind it. When the
+two don&#39;t agree, the sound is still on its way, or swinging.</p>
+<h3 id="range-and-snap"><a class="anchor" href="#range-and-snap">Range and Snap</a></h3>
+<p>The two boxes in a wheel&#39;s top corners set how it turns. Click one for its list.</p>
+<ul>
+<li><strong>Range</strong> (top left): how many semitones the whole dial spans, from 2 to 48. <strong>24 semitones (±12)</strong> is an octave
+either way. The Pitch wheel starts at 24, the Timbre wheel at 12.</li>
+<li><strong>Snap</strong> (top right): where the pointer lands. <strong>ON</strong> is semitones (<strong>Semitones</strong> in the list), <strong>OCT</strong> is octaves
+(<strong>Octaves</strong>) and <strong>OFF</strong> is anywhere (<strong>Off: anywhere</strong>). Both wheels start on semitones.</li>
+</ul>
+<h3 id="gravity-inertia-and-smooth"><a class="anchor" href="#gravity-inertia-and-smooth">Gravity, inertia and smooth</a></h3>
+<p>Under each wheel, three knobs set how what&#39;s heard follows the pointer:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>gravity</strong></td>
+<td>How hard what&#39;s heard is held to the pointer. Low, it swings past and back, as on a weak elastic. High, it&#39;s clamped to the pointer.</td>
+</tr>
+<tr>
+<td><strong>inertia</strong></td>
+<td>How slowly what&#39;s heard heads for the pointer. You hear it most at low gravity.</td>
+</tr>
+<tr>
+<td><strong>smooth</strong></td>
+<td>How slowly the pointer itself is followed. High, it glides from pitch to pitch, and gravity and inertia matter less.</td>
+</tr>
+</tbody></table>
+</div>
+<p>They start at 75, 45 and 10. Each knob works like every knob in Yen Studio: drag up or down (<kbd>⌘</kbd> for fine),
+scroll, ⌥-click to reset, and right-click for <strong>Type in value…</strong>, automation and <a href="../modulators/">modulation</a>.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> Set <strong>gravity</strong> near 0 and <strong>smooth</strong> to 0, then flick the Pitch wheel and let go: the pitch flies past and
+swings back. That&#39;s the <strong>Wild Swing</strong> preset.</p>
+</aside>
+<h2 id="the-timbre-wheel"><a class="anchor" href="#the-timbre-wheel">The Timbre wheel</a></h2>
+<p>The <strong>Timbre</strong> tab between the wheels opens and closes it:</p>
+<ul>
+<li><strong>On</strong> (as it starts): the formants are the Timbre wheel&#39;s. At 0 they stay where they were, so a voice moved up or
+down by the Pitch wheel keeps its character. Turn the Timbre wheel to make the voice smaller and brighter (up) or
+bigger and darker (down) without changing its notes.</li>
+<li><strong>Off</strong>: the formants move with the pitch, as a tape sped up or slowed down. The Timbre wheel is dimmed.</li>
+</ul>
+<h2 id="play-it-with-notes"><a class="anchor" href="#play-it-with-notes">Play it with notes</a></h2>
+<p>Notes move the pitch as well as the wheel. A note above the <strong>Origin</strong> shifts the sound up by the distance between
+them: with the origin at C5, playing D5 moves the sound up two semitones. What&#39;s heard is the Pitch wheel plus that
+shift, followed with the same gravity, inertia and smooth.</p>
+<h3 id="the-keyboard"><a class="anchor" href="#the-keyboard">The keyboard</a></h3>
+<ul>
+<li><strong>Press a key</strong> to play it. Drag along the keys to glide from one to the next.</li>
+<li><strong>⇧-click a key</strong> to hold it on, until you click it again. Hold several to play a chord in Multi.</li>
+<li><strong>Right-click a key</strong> to make it the origin.</li>
+</ul>
+<p>The keyboard shows the origin as a dot and the notes playing as lit keys. In Single it rings the note the sound is at.
+What you play on it isn&#39;t saved in the song.</p>
+<h3 id="notes-from"><a class="anchor" href="#notes-from">Notes from</a></h3>
+<p>The <strong>Notes from</strong> list picks a channel of the song whose notes play Y-Pitch as the song plays. <strong>Keyboard only</strong>, as
+it starts, takes notes from the keyboard alone. A muted channel says <strong>(muted)</strong> in the list.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> Draw the melody on a channel, pick it in <strong>Notes from</strong>, then mute that channel. You hear only the shifted
+sound, not the instrument the notes are drawn on.</p>
+</aside>
+<h3 id="origin"><a class="anchor" href="#origin">Origin</a></h3>
+<p><strong>Origin</strong> is the note that shifts nothing. It starts at C5. Drag it up or down or scroll over it, right-click it to
+type a note (such as &quot;C5&quot;, &quot;F#4&quot; or a MIDI note number), or right-click a key on the keyboard.</p>
+<h3 id="single-and-multi"><a class="anchor" href="#single-and-multi">Single and Multi</a></h3>
+<ul>
+<li><strong>Single</strong> (as it starts): the sound is always heard. The latest note moves it, and it stays there after the note
+ends, until the next one.</li>
+<li><strong>Multi</strong>: each note plays the sound at its own pitch, so a chord makes harmonies. Without notes, it&#39;s silent.</li>
+</ul>
+<p>The lights at the bottom left show <strong>In</strong> when sound is coming in and <strong>Midi</strong> when notes are playing it.</p>
+<h2 id="resolution"><a class="anchor" href="#resolution">Resolution</a></h2>
+<p><strong>Resolution</strong> in the top bar trades how late it is against how clean it sounds:</p>
+<ul>
+<li><strong>Tight</strong>: less late, for playing it live. Notes closer than about 90 Hz blur together.</li>
+<li><strong>Wide</strong> (as it starts): the cleanest. Chords and low notes stay apart, and drums stay sharp. It&#39;s later, and Yen
+Studio makes up for the delay so the track stays in time.</li>
+</ul>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>Pick one from <strong>Preset</strong> in the top bar. Each says what it does under its name. The name reads <strong>Custom</strong> once the
+sound is your own. A preset sets the wheels and the Timbre tab, never <strong>Notes from</strong>, the origin, Single or Multi, or
+Resolution.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Natural</strong></td>
+<td>Nothing shifted, the knobs as they come: a fresh start</td>
+</tr>
+<tr>
+<td><strong>Octave Up</strong></td>
+<td>An octave higher, the voice&#39;s character kept</td>
+</tr>
+<tr>
+<td><strong>Octave Down</strong></td>
+<td>An octave lower, the voice&#39;s character kept</td>
+</tr>
+<tr>
+<td><strong>Fifth Up</strong></td>
+<td>Up a fifth, formants kept: a harmony to blend in</td>
+</tr>
+<tr>
+<td><strong>Fourth Down</strong></td>
+<td>Down a fourth, formants kept: a low harmony</td>
+</tr>
+<tr>
+<td><strong>Chipmunk</strong></td>
+<td>Up a fifth with the formants: the tape sped up</td>
+</tr>
+<tr>
+<td><strong>Helium</strong></td>
+<td>The same notes, the formants up: a small, bright voice</td>
+</tr>
+<tr>
+<td><strong>Giant</strong></td>
+<td>Down a fourth, the formants lower still: a big, dark voice</td>
+</tr>
+<tr>
+<td><strong>Monster</strong></td>
+<td>Down an octave with the formants: the tape slowed down</td>
+</tr>
+<tr>
+<td><strong>Slow Tape</strong></td>
+<td>A quarter-tone flat, as a tape running slow</td>
+</tr>
+<tr>
+<td><strong>Turntable</strong></td>
+<td>Nothing snapped, a little weight: play it like a record</td>
+</tr>
+<tr>
+<td><strong>Springy</strong></td>
+<td>Every move overshoots and settles: springy vibrato</td>
+</tr>
+<tr>
+<td><strong>Wild Swing</strong></td>
+<td>No gravity: swing it and the pitch flies past and back for octaves</td>
+</tr>
+<tr>
+<td><strong>Slow Glide</strong></td>
+<td>Notes and moves glide in, as a portamento</td>
+</tr>
+</tbody></table>
+</div>
+<p>The <strong>⋯</strong> menu (<strong>Options</strong>) has <strong>Centre both wheels</strong>, and <strong>Copy state</strong> and <strong>Paste state</strong> to put every setting
+on another Y-Pitch.</p>
+<h2 id="automate-y-pitch"><a class="anchor" href="#automate-y-pitch">Automate Y-Pitch</a></h2>
+<p>These can be automated: the <strong>Pitch</strong> and <strong>Timbre</strong> wheels, and each wheel&#39;s <strong>gravity</strong>, <strong>inertia</strong> and
+<strong>smooth</strong>.</p>
+<ul>
+<li>Right-click a wheel or a knob and choose <strong>Create automation clip</strong>.</li>
+<li>Or touch a control, then click <strong>Automate “…”</strong> in the window&#39;s title bar. It names the last control you touched
+and makes a clip of it.</li>
+</ul>
+<p>See <a href="../automation/">Automation</a>.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-pan/"><span>Previous</span>Y-Pan</a><a class="next" rel="next" href="../export/"><span>Next</span>Export</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-Pitch">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#add-y-pitch-to-a-track">Add Y-Pitch to a track</a></li><li><a href="#the-window">The window</a></li><li><a href="#turn-a-wheel">Turn a wheel</a></li><li><a href="#the-timbre-wheel">The Timbre wheel</a></li><li><a href="#play-it-with-notes">Play it with notes</a></li><li><a href="#resolution">Resolution</a></li><li><a href="#presets">Presets</a></li><li><a href="#automate-y-pitch">Automate Y-Pitch</a></li></ul></nav>
+</div>
+</body>
+</html>

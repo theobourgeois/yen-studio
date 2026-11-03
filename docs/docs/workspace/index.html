@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows and the toolbar: Yen Studio docs</title>
+<meta name="description" content="How Yen Studio's windows move, snap and fill the screen, and what each part of the toolbar, the menu bar and the tab strip does.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/workspace/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Windows and the toolbar">
+<meta property="og:description" content="How Yen Studio's windows move, snap and fill the screen, and what each part of the toolbar, the menu bar and the tab strip does.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/workspace/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/" aria-current="page">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Start">
+<p class="crumb" data-pagefind-ignore>Start</p>
+<h1 data-pagefind-meta="title">Windows and the toolbar</h1>
+<p>Every part of Yen Studio is a window that floats over the desktop: the Channel rack, the Piano roll, the Playlist, the Mixer, the Browser, the Sampler and your plugins. The toolbar runs across the top, with the menus at its left and the song&#39;s name and the hint bar below them. This page covers the windows first, then the toolbar, then the menus and tabs around them.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/hero.webp" width="1200" height="615" alt="Yen Studio with the toolbar along the top and its windows open under it" loading="lazy" decoding="async"><figcaption>The toolbar along the top, the windows under it.</figcaption></figure></p>
+<h2 id="open-a-window"><a class="anchor" href="#open-a-window">Open a window</a></h2>
+<p>Each window has a button on the toolbar&#39;s second row, and a key:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Window</th>
+<th>Key</th>
+<th>Also</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="../playlist/">Playlist</a></td>
+<td><kbd>⌥1</kbd></td>
+<td><kbd>F5</kbd></td>
+</tr>
+<tr>
+<td><a href="../channel-rack/">Channel rack</a></td>
+<td><kbd>⌥2</kbd></td>
+<td><kbd>F6</kbd></td>
+</tr>
+<tr>
+<td><a href="../piano-roll/">Piano roll</a></td>
+<td><kbd>⌥3</kbd></td>
+<td><kbd>F7</kbd></td>
+</tr>
+<tr>
+<td><a href="../mixer/">Mixer</a></td>
+<td><kbd>⌥4</kbd></td>
+<td><kbd>F9</kbd></td>
+</tr>
+<tr>
+<td><a href="../browser/">Browser</a></td>
+<td><kbd>⌥5</kbd></td>
+<td><kbd>⌥F8</kbd></td>
+</tr>
+</tbody></table>
+</div>
+<p>The keys open a window, or close it if it&#39;s open. A toolbar button only opens its window, or brings it to the front if it&#39;s open already. The same windows are in the <strong>Window</strong> menu.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> On most Mac keyboards the F keys need <kbd>Fn</kbd>. The <kbd>⌥</kbd> keys don&#39;t.</p>
+</aside>
+<p>The Piano roll shows the selected channel&#39;s notes. Click a channel&#39;s button in the rack to open its own window: the Sampler&#39;s settings, or your plugin.</p>
+<h2 id="move-and-arrange-windows"><a class="anchor" href="#move-and-arrange-windows">Move and arrange windows</a></h2>
+<ul>
+<li><strong>Move a window</strong> by dragging its title bar. Its edges stick to the edges of the desktop and of other windows, so they line up. Hold <kbd>⌥</kbd> while you drag to stop them sticking.</li>
+<li><strong>Bring a window to the front</strong> by clicking anywhere in it.</li>
+<li><strong>Close a window</strong> with the <strong>×</strong> at the right of its title bar.</li>
+</ul>
+<h3 id="resize-maximise-and-half-the-screen"><a class="anchor" href="#resize-maximise-and-half-the-screen">Resize, maximise and half the screen</a></h3>
+<p>Most windows can be resized. The Channel rack is the exception: it doesn&#39;t maximise or fill half the desktop.</p>
+<ul>
+<li><strong>Resize</strong> a window by dragging any of its edges or corners.</li>
+<li><strong>Fill the desktop</strong> by double-clicking the title bar, clicking the maximise button beside the <strong>×</strong>, or dragging the window to the top of the desktop. Double-click the title bar again, or click the restore button, to put it back.</li>
+<li><strong>Fill half the desktop</strong> by dragging the window to its left or right edge.</li>
+</ul>
+<p>While you drag to an edge, an outline shows where the window will go. Drag a window away from the top or a side and it goes back to its own size.</p>
+<p>The Piano roll, the Playlist and the Mixer open filling the desktop. Double-click the title bar to make one a smaller window.</p>
+<h3 id="the-channel-racks-corner"><a class="anchor" href="#the-channel-racks-corner">The Channel rack&#39;s corner</a></h3>
+<p>Double-click the Channel rack&#39;s title bar to send it to the corner of the desktop, out of the way. Double-click it again to bring it back.</p>
+<h2 id="the-toolbar"><a class="anchor" href="#the-toolbar">The toolbar</a></h2>
+<p>From left to right, the toolbar&#39;s first row has the menus, the transport, the tempo and position, the recording switches, the main volume and two graphs. Undo, redo, Settings, Export and the assistant are at its end.</p>
+<p>The second row starts with the song&#39;s name and the hint bar. Then come the window buttons, the pattern selector and the song position slider.</p>
+<p>In a narrow window, some of the toolbar is hidden to make room. Widen the window to see it all again.</p>
+<h3 id="play-pause-and-stop"><a class="anchor" href="#play-pause-and-stop">Play, pause and stop</a></h3>
+<ul>
+<li><strong>PAT / SONG</strong> chooses what plays. The lit one is what you hear: <strong>PAT</strong> loops the pattern shown in the Channel rack, <strong>SONG</strong> plays the <a href="../playlist/">Playlist</a>. Click either one, or press <kbd>L</kbd> to switch.</li>
+<li><strong>Play</strong> starts playing. While it plays, the button becomes <strong>Pause</strong>: click it to stop where you are, and the next play carries on from there.</li>
+<li><strong>Stop</strong> stops and goes back to where play starts. Click <strong>Stop</strong> again while stopped to silence delays and reverbs that are still ringing.</li>
+<li><kbd>Space</kbd> plays and stops, from anywhere.</li>
+</ul>
+<p>A song that has clips in its Playlist opens in song mode.</p>
+<h3 id="record"><a class="anchor" href="#record">Record</a></h3>
+<p>The round <strong>Record</strong> button (<kbd>R</kbd>) turns recording on. While it&#39;s on, <strong>Play</strong> records the mixer tracks you&#39;ve armed and the notes you play on the selected channel. Right-click it for the count-in, loop recording and how recorded notes are quantized. See <a href="../recording/">Recording</a>.</p>
+<h3 id="tempo"><a class="anchor" href="#tempo">Tempo</a></h3>
+<p>The tempo display shows the song&#39;s tempo in BPM.</p>
+<ul>
+<li>Drag it up or down to change it. The pointer keeps going past the edge of the screen.</li>
+<li>Scroll over it to move it a beat per minute at a time.</li>
+<li>Click it to type a tempo. <kbd>Return</kbd> sets it; <kbd>Esc</kbd> keeps the old one. <kbd>↑</kbd> and <kbd>↓</kbd> nudge it.</li>
+</ul>
+<p>Right-click it for more:</p>
+<ul>
+<li><strong>Tap tempo…</strong>: tap along to the beat, by clicking the pad or pressing any key at least three times, then click <strong>Set tempo</strong>.</li>
+<li>An automation clip for the tempo, so it can change during the song. See <a href="../automation/">Automation</a>.</li>
+<li><strong>Make … BPM the default</strong>: new songs start at this tempo. <strong>Reset the default</strong> goes back to 140 BPM.</li>
+</ul>
+<h3 id="position"><a class="anchor" href="#position">Position</a></h3>
+<p>The position display shows where play is, or where it will start. Click it to switch between bars, steps and ticks (<strong>B:S:T</strong>) and minutes, seconds and hundredths (<strong>M:S:CS</strong>). Yen Studio remembers which you chose.</p>
+<h3 id="typing-keyboard-count-in-and-metronome"><a class="anchor" href="#typing-keyboard-count-in-and-metronome">Typing keyboard, count-in and metronome</a></h3>
+<p>After the position come three switches:</p>
+<ul>
+<li><strong>Typing keyboard</strong> (<kbd>⌘T</kbd>) plays the selected channel from your computer&#39;s keyboard. <kbd>[</kbd> and <kbd>]</kbd> move it an octave. Its light blinks when a note comes in, from the keyboard or a MIDI controller. See <a href="../midi/">MIDI</a>.</li>
+<li><strong>Count-in</strong> (<strong>3·2·1</strong>): while it&#39;s on, recording starts after the metronome counts you in. Right-click it to choose how many bars.</li>
+<li><strong>Metronome</strong> clicks along while the song plays. Right-click it to choose its sound.</li>
+</ul>
+<h3 id="main-volume-and-the-graphs"><a class="anchor" href="#main-volume-and-the-graphs">Main volume and the graphs</a></h3>
+<p>The <strong>Main volume</strong> knob sets the level of everything the song puts out. Drag it; ⌥-click it to put it back.</p>
+<p>The two graphs show the engine&#39;s output level and how hard it&#39;s working.</p>
+<h3 id="undo-redo-settings-export-and-the-assistant"><a class="anchor" href="#undo-redo-settings-export-and-the-assistant">Undo, redo, Settings, Export and the assistant</a></h3>
+<p>At the end of the first row:</p>
+<ul>
+<li><strong>Undo</strong> and <strong>Redo</strong> (<kbd>⌘Z</kbd> and <kbd>⇧⌘Z</kbd>).</li>
+<li><strong>Settings</strong> (<kbd>⌘,</kbd>).</li>
+<li><strong>Export</strong> asks where to save, then opens the <a href="../export/">export window</a>.</li>
+<li>The <a href="../assistant/">assistant</a>.</li>
+</ul>
+<h3 id="the-hint-bar"><a class="anchor" href="#the-hint-bar">The hint bar</a></h3>
+<p>The hint bar, beside the song&#39;s name, says what&#39;s under the pointer: the name of a control and, often, what it does and its key. Move the pointer over anything you don&#39;t recognise and read the hint bar.</p>
+<h3 id="the-pattern-selector"><a class="anchor" href="#the-pattern-selector">The pattern selector</a></h3>
+<p>The pattern selector shows the pattern the Channel rack shows and <strong>PAT</strong> plays.</p>
+<ul>
+<li>Scroll over the name, or drag it up and down, to go through the patterns. Go past the last one for a new, empty pattern.</li>
+<li>Click the arrow for the list of patterns. Pick one, rename it, clone it or delete it.</li>
+<li>Click <strong>+</strong> for a new pattern. Give it a name.</li>
+</ul>
+<p><kbd>+</kbd> and <kbd>−</kbd> on the numeric keypad go to the next and previous pattern. On a keyboard without one, use <strong>Patterns › Next Pattern</strong> and <strong>Previous Pattern</strong>.</p>
+<h3 id="the-song-position-slider"><a class="anchor" href="#the-song-position-slider">The song position slider</a></h3>
+<p>The slider shows where play is in the pattern, or in the song in song mode. Click or drag it to move play there.</p>
+<h2 id="the-menu-bar"><a class="anchor" href="#the-menu-bar">The menu bar</a></h2>
+<p>The menus are at the left of the toolbar:</p>
+<ul>
+<li><strong>File</strong>: New Song, Open…, Find Song… (<kbd>⌘P</kbd>), Save, Save a Copy…, Rename…, Export, Show in Finder, Home and Close Tab.</li>
+<li><strong>Edit</strong>: Undo, Redo, Cut, Copy, Paste, Delete and Select All, which act on the window in front, and Settings….</li>
+<li><strong>View</strong>: pattern or song mode, the metronome, the typing keyboard and the Channel rack&#39;s track selectors.</li>
+<li><strong>Patterns</strong>: New Pattern, Clone Pattern, and the next and previous pattern.</li>
+<li><strong>Tools</strong>: Record and Assign Free Mixer Tracks.</li>
+<li><strong>Window</strong>: the Playlist, the Channel rack, the Piano roll, the Mixer, the Browser and the Graph editor.</li>
+</ul>
+<p>Click a menu to open it. While one is open, move the pointer to another to open that, or press <kbd>←</kbd> and <kbd>→</kbd>.</p>
+<p>The Mac&#39;s own menu bar, at the top of the screen, has most of the same File and Edit commands, plus the View menu&#39;s zoom (<kbd>⌘=</kbd>, <kbd>⌘−</kbd> and <kbd>⌘0</kbd>), full screen (<kbd>⌃⌘F</kbd>) and Help. <strong>Help</strong> shows the data folder and the logs, reports a problem and opens the website.</p>
+<h2 id="the-tab-strip"><a class="anchor" href="#the-tab-strip">The tab strip</a></h2>
+<p>Each song you open is a tab in the strip along the top of the window. The Home button starts the strip.</p>
+<ul>
+<li>Click a tab to switch to its song. Only the song in front is open: the others are saved and reopen when you switch.</li>
+<li>Click a tab&#39;s <strong>×</strong>, or press <kbd>⌘W</kbd>, to close it.</li>
+<li>Press <kbd>⇧⌘]</kbd> and <kbd>⇧⌘[</kbd>, or <kbd>⌃Tab</kbd> and <kbd>⌃⇧Tab</kbd>, to go through the tabs.</li>
+<li>Press <kbd>⌘P</kbd> to find a song by name and open it.</li>
+</ul>
+<p>If you&#39;d rather not have the strip, turn off <strong>Show tabs</strong> in <strong>Settings › General</strong>. The menus then start the window, after the Home button, and <kbd>⌘P</kbd> still switches songs.</p>
+<h2 id="themes-and-fonts"><a class="anchor" href="#themes-and-fonts">Themes and fonts</a></h2>
+<p>Yen Studio has light and dark themes, and some with a look of their own. <strong>System</strong> follows your Mac&#39;s light or dark setting. Choose one, and the fonts for text and numbers, in <strong>Settings › General</strong>. See <a href="../settings/">Settings</a>.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../getting-started/"><span>Previous</span>Getting started</a><a class="next" rel="next" href="../coming-from-fl-studio/"><span>Next</span>Coming from FL Studio</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Windows%20and%20the%20toolbar">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#open-a-window">Open a window</a></li><li><a href="#move-and-arrange-windows">Move and arrange windows</a></li><li><a href="#the-toolbar">The toolbar</a></li><li><a href="#the-menu-bar">The menu bar</a></li><li><a href="#the-tab-strip">The tab strip</a></li><li><a href="#themes-and-fonts">Themes and fonts</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Export: Yen Studio docs</title>
+<meta name="description" content="Render your song or a pattern to WAV, MP3, FLAC, OGG, M4A or MIDI, with stems, while you keep working.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/export/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Export">
+<meta property="og:description" content="Render your song or a pattern to WAV, MP3, FLAC, OGG, M4A or MIDI, with stems, while you keep working.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/export/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/" aria-current="page">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Finish">
+<p class="crumb" data-pagefind-ignore>Finish</p>
+<h1 data-pagefind-meta="title">Export</h1>
+<p>Exporting renders your song to files you can play anywhere, as FL Studio does: a save dialog first, then a window of settings, then <strong>Start</strong>. Yen Studio renders as fast as your computer can, not in real time, and you can keep editing while it works.</p>
+<h2 id="export-a-song"><a class="anchor" href="#export-a-song">Export a song</a></h2>
+<ol>
+<li>Press <kbd>⌘R</kbd> to export a WAV, or <kbd>⇧⌘R</kbd> to export an MP3.</li>
+<li>In the save dialog, choose a folder and a name. It suggests the song&#39;s name and the folder you used last time.</li>
+<li>The export window opens. Check the settings below.</li>
+<li>Click <strong>Start</strong>.</li>
+</ol>
+<p>You can also choose <strong>Export…</strong>, <strong>Export WAV…</strong> or <strong>Export MP3…</strong> in the File menu, or click <strong>Export</strong> at the top right. <strong>Export…</strong> keeps the formats you ticked last time. <kbd>⌘R</kbd> and <kbd>⇧⌘R</kbd> tick WAV or MP3 on top of them.</p>
+<p>If you cancel the save dialog, nothing happens. The files go in the folder you chose, named after the name you gave. To put them somewhere else, click <strong>Change…</strong> at the top of the export window.</p>
+<p><figure class="shot" style="--w:462"><img src="../shots/export.webp" width="462" height="666" alt="The export window" loading="lazy" decoding="async"></figure></p>
+<p>The window remembers its settings, in every song.</p>
+<h2 id="song-or-pattern"><a class="anchor" href="#song-or-pattern">Song or pattern</a></h2>
+<p>Under <strong>Project type</strong>, <strong>Mode</strong> says what&#39;s rendered:</p>
+<ul>
+<li><strong>Song</strong> renders the <a href="../playlist/">Playlist</a>.</li>
+<li><strong>Pattern</strong> renders the pattern that&#39;s showing, as the <a href="../channel-rack/">Channel rack</a> and <a href="../piano-roll/">Piano roll</a> play it.</li>
+</ul>
+<p>If the Playlist is still empty, the window starts on <strong>Pattern</strong>, for this export only.</p>
+<p>How much is rendered:</p>
+<ul>
+<li>In <strong>Song</strong> mode: the Playlist&#39;s time selection, if there is one. If not, the song up to the last time marker past its end, if there&#39;s one. If not, the whole song.</li>
+<li>In <strong>Pattern</strong> mode: the Piano roll&#39;s time selection, if there is one. If not, the whole pattern.</li>
+</ul>
+<p>Under the choices, the window shows the <strong>Length</strong> in bars, the <strong>Time</strong> it lasts and roughly how much <strong>Disk</strong> space the files take. It also says when it&#39;s rendering a <strong>Time selection</strong>, or <strong>To the last marker</strong>.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> To export a section of a song, drag a time selection over it in the Playlist before you press <kbd>⌘R</kbd>.</p>
+</aside>
+<h2 id="the-tail"><a class="anchor" href="#the-tail">The tail</a></h2>
+<p><strong>Tail</strong> is what happens to sound still ringing at the end: a reverb, a delay, a long release.</p>
+<ul>
+<li><strong>Cut at the end</strong>: the file stops exactly at the end. The last few milliseconds fade out, so it doesn&#39;t click.</li>
+<li><strong>Let it ring out</strong>: the render carries on past the end until the sound dies away, for up to 30 seconds. This is the default.</li>
+<li><strong>Wrap</strong>: for loops. What rings past the end is mixed back onto the start, and the file is exactly as long as the loop, so it plays round seamlessly.</li>
+</ul>
+<h2 id="formats"><a class="anchor" href="#formats">Formats</a></h2>
+<p>Under <strong>Output format</strong>, click a format to tick it. Tick several, and one render writes them all.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Format</th>
+<th>What it is</th>
+<th>Its setting</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>WAV</strong></td>
+<td>Uncompressed sound.</td>
+<td><strong>WAV bit depth</strong>: 16-bit, 24-bit or 32-bit float.</td>
+</tr>
+<tr>
+<td><strong>MP3</strong></td>
+<td>Compressed, plays everywhere.</td>
+<td><strong>MP3 bitrate</strong>, up to 320 kb/s.</td>
+</tr>
+<tr>
+<td><strong>FLAC</strong></td>
+<td>Compressed without losing anything.</td>
+<td>Bit depth (16-bit or 24-bit) and compression level.</td>
+</tr>
+<tr>
+<td><strong>OGG</strong></td>
+<td>Compressed.</td>
+<td><strong>OGG quality</strong>: higher sounds better and takes more space.</td>
+</tr>
+<tr>
+<td><strong>M4A</strong></td>
+<td>Compressed (AAC).</td>
+<td><strong>M4A bitrate</strong>.</td>
+</tr>
+<tr>
+<td><strong>MIDI</strong></td>
+<td>The notes, not the sound.</td>
+<td>None.</td>
+</tr>
+</tbody></table>
+</div>
+<p>A FLAC file sounds the same at every compression level. A higher level only makes the file a little smaller and takes longer to write.</p>
+<p>An OGG file&#39;s size depends on the music more than on the quality you choose, so the disk space shown for it is a guess.</p>
+<p>The <strong>MIDI</strong> file has a track for each channel that plays, named after it, with the song&#39;s tempo changes and time signature. Notes of muted channels are left out.</p>
+<h2 id="stems"><a class="anchor" href="#stems">Stems</a></h2>
+<p>Turn on <strong>Split mixer tracks</strong> under <strong>Miscellaneous</strong> to get a file for each <a href="../mixer/">Mixer</a> track that has sound.</p>
+<ul>
+<li>They come from the same render as the mix, so they&#39;re in time with it and add up to it.</li>
+<li>Each is named after the song and its track: &quot;My song - Drums.wav&quot;. Two tracks with the same name get &quot;Drums&quot; and &quot;Drums 2&quot;.</li>
+<li><strong>Include the mix</strong> adds the whole mix as well. Turn it off for the stems alone.</li>
+</ul>
+<p>Stems need at least one audio format: they don&#39;t apply to MIDI.</p>
+<h2 id="quality"><a class="anchor" href="#quality">Quality</a></h2>
+<ul>
+<li><strong>Resampling</strong> is how samplers and audio clips are read when they&#39;re pitched. The better the method, the slower the render. Choosing it here also changes it in <a href="../settings/">Settings</a>, where live playback has a setting of its own.</li>
+<li><strong>Dither</strong> adds shaped noise when going down to 16 bits. You&#39;d only hear the difference in very quiet passages. It&#39;s only available when a 16-bit WAV or FLAC is ticked.</li>
+<li><strong>Keep it from clipping</strong> is on by default. Yen Studio mixes with headroom to spare, so your mix can go over full scale and still sound clean while you play it. A file can&#39;t hold that. With this on, a mix that goes over is turned down as a whole, every file by the same amount, so it sounds as it played. MP3, OGG and M4A files are kept a little further under, because they come out louder than they went in.</li>
+</ul>
+<p>If your mix went over, the window says by how much once it&#39;s done, and how far the files were turned down. To export it louder, bring the master down and put a limiter on it, such as <a href="../y-l/">Y-L</a>.</p>
+<p>When Y-L is the last effect on the master, the export keeps its ceiling and its dither. Only a mix over full scale is turned down, and it isn&#39;t dithered a second time.</p>
+<h2 id="where-the-files-go"><a class="anchor" href="#where-the-files-go">Where the files go</a></h2>
+<ul>
+<li>The file you named in the save dialog is replaced if it&#39;s already there: the dialog asked you.</li>
+<li>If any other file of the export would replace one already in the folder, the whole set is numbered instead: &quot;My song 2.wav&quot;, &quot;My song 2 - Drums.wav&quot;. Nothing else is overwritten.</li>
+<li><strong>Show in Finder when done</strong> opens the folder when the export ends.</li>
+</ul>
+<h2 id="while-it-renders"><a class="anchor" href="#while-it-renders">While it renders</a></h2>
+<p>The song is exported as it was when you clicked <strong>Start</strong>. Keep editing: your changes aren&#39;t in the files.</p>
+<ul>
+<li>Playback stops while it renders, and comes back when it&#39;s done.</li>
+<li>The window says what it&#39;s doing: <strong>Rendering…</strong>, <strong>Rendering the tail…</strong>, then <strong>Encoding</strong> each file, with how far along it is.</li>
+<li>Click <strong>Stop</strong> to stop it. The files it had started are deleted. Closing the export window stops it too, so <kbd>Escape</kbd> doesn&#39;t close it while it&#39;s working.</li>
+</ul>
+<p>When it&#39;s done, the window lists the files and their sizes, and how long it took. Click <strong>Show in Finder</strong> to see them, <strong>Export again</strong> to go back to the settings, or <strong>Done</strong> to close it.</p>
+<h2 id="what-happens-to-plugins"><a class="anchor" href="#what-happens-to-plugins">What happens to plugins</a></h2>
+<p>The export uses your plugins as they&#39;re loaded in the song, with their current settings.</p>
+<ul>
+<li>Plugins are told they&#39;re rendering, not playing live, so those with a better-quality offline mode use it.</li>
+<li>Plugin windows are hidden while it renders and come back when it&#39;s done.</li>
+<li>The delay your plugins add is taken off, so the song starts on time, and the stems stay in time with the mix. See <a href="../plugins/#delay-compensation">delay compensation</a>.</li>
+<li>A channel or effect whose plugin or sample couldn&#39;t be loaded isn&#39;t heard. When the export ends, the window names them: &quot;Not heard (their plugin or sample couldn&#39;t be loaded): …&quot;. See <a href="../plugins/#when-a-plugin-fails">when a plugin fails</a>.</li>
+</ul>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-pitch/"><span>Previous</span>Y-Pitch</a><a class="next" rel="next" href="../stems-and-notes/"><span>Next</span>Stems and notes</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Export">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#export-a-song">Export a song</a></li><li><a href="#song-or-pattern">Song or pattern</a></li><li><a href="#the-tail">The tail</a></li><li><a href="#formats">Formats</a></li><li><a href="#stems">Stems</a></li><li><a href="#quality">Quality</a></li><li><a href="#where-the-files-go">Where the files go</a></li><li><a href="#while-it-renders">While it renders</a></li><li><a href="#what-happens-to-plugins">What happens to plugins</a></li></ul></nav>
+</div>
+</body>
+</html>

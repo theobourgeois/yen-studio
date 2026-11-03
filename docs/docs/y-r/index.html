@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-R: Yen Studio docs</title>
+<meta name="description" content="Yen Studio's reverb. Plates, rooms, chambers and halls, an era for each, a decay you shape across the bands, and a tail that ducks under the vocal.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-r/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-R">
+<meta property="og:description" content="Yen Studio's reverb. Plates, rooms, chambers and halls, an era for each, a decay you shape across the bands, and a tail that ducks under the vocal.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-r/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/" aria-current="page">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-R</h1>
+<p>Y-R is a reverb made with vocals in mind, though it works on anything. Pick a mode (a plate, a room, a hall), an era for its colour, then shape how long each part of the sound rings. It can duck its tail while the vocal sings, take the &quot;s&quot; out of what it sends, and freeze the tail for ever.</p>
+<p><figure class="shot" style="--w:898"><img src="../shots/effect-reverb.webp" width="898" height="510" alt="Y-R's window: the preset bar and mode, the Decay display, the knobs under it" loading="lazy" decoding="async"><figcaption>The DECAY display: how long each part of the sound rings.</figcaption></figure></p>
+<h2 id="get-started"><a class="anchor" href="#get-started">Get started</a></h2>
+<ol>
+<li>Put Y-R in a mixer slot (see <a href="../effects/">Built-in effects</a>). On a track that sounds of its own it starts at a low <strong>Mix</strong>, so you hear the dry sound with some space round it.</li>
+<li>Pick a preset from the menu in the top bar, or a <strong>MODE</strong>.</li>
+<li>Set <strong>Decay</strong> for how long the tail lasts, and <strong>Pre-delay</strong> for the gap before it starts.</li>
+<li>Turn <strong>Mix</strong> up or down until it sits.</li>
+</ol>
+<aside class="callout tip"><p><strong>Tip:</strong> On a send&#39;s return track, where no channel plays in and the reverb is all you want, Y-R starts fully wet with <strong>Mix Lock</strong> on, so presets and A/B leave <strong>Mix</strong> at 100%. See <a href="../mixer/">the Mixer</a> for sends.</p>
+</aside>
+<h2 id="the-top-bar"><a class="anchor" href="#the-top-bar">The top bar</a></h2>
+<ul>
+<li><p><strong>Presets</strong>: the arrows and the preset menu. The menu also has <strong>Init</strong> (Smooth Plate, 1.8 s, nothing else), <strong>Copy settings</strong>, <strong>Paste settings</strong> and <strong>Revert</strong>.</p>
+</li>
+<li><p><strong>Revert</strong>: back to the preset as you loaded it. It&#39;s lit once you&#39;ve changed something.</p>
+</li>
+<li><p><strong>A│B</strong> and <strong>Copy</strong>: two settings at once (see <a href="../effects/#a-b">Built-in effects</a>).</p>
+</li>
+<li><p><strong>MODE</strong>: the kind of space. Use the arrows, or click the name for the menu.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Smooth Plate</strong></td>
+<td>The plate without the metal: silky and even. The vocal default.</td>
+</tr>
+<tr>
+<td><strong>Plate</strong></td>
+<td>Instant and dense, with a little sheen.</td>
+</tr>
+<tr>
+<td><strong>Room</strong></td>
+<td>A real close room: walls you can hear, a short tail.</td>
+</tr>
+<tr>
+<td><strong>Chamber</strong></td>
+<td>A dense echo chamber: quick and warm, no distinct echoes.</td>
+</tr>
+<tr>
+<td><strong>Hall</strong></td>
+<td>A big hall: a slow bloom, lush chorus in the tail.</td>
+</tr>
+<tr>
+<td><strong>Ambience</strong></td>
+<td>Early energy and air, almost no tail. Felt, not heard.</td>
+</tr>
+</tbody></table>
+</div>
+</li>
+<li><p><strong>ERA</strong>: the colour of the machine it&#39;s on. <strong>Now</strong> is full bandwidth and clean. <strong>1980s</strong> rolls off the top a little and adds a hardware sheen. <strong>1970s</strong> is darker and grainier.</p>
+</li>
+<li><p><strong>Kill</strong>: hold it to mute what goes in while you hear the tail. Useful to hear what the reverb is doing on its own.</p>
+</li>
+<li><p><strong>FREEZE</strong>: holds the tail for ever. <kbd>⌥</kbd>-click it to freeze only while you hold it.</p>
+</li>
+<li><p><strong>Mix</strong>: how much reverb against the dry sound. <strong>Mix Lock</strong> beside it keeps presets and A/B from changing it.</p>
+</li>
+<li><p><strong>Bypass</strong>.</p>
+</li>
+</ul>
+<h3 id="keys"><a class="anchor" href="#keys">Keys</a></h3>
+<p>While Y-R&#39;s window is in front:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>F</kbd></td>
+<td>Tap to turn Freeze on or off; hold to freeze only while held.</td>
+</tr>
+<tr>
+<td><kbd>←</kbd> / <kbd>→</kbd></td>
+<td>Previous or next preset.</td>
+</tr>
+<tr>
+<td><kbd>Tab</kbd></td>
+<td>Switches between DECAY and SHAPE.</td>
+</tr>
+<tr>
+<td><kbd>A</kbd></td>
+<td>Switches between A and B.</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="the-display"><a class="anchor" href="#the-display">The display</a></h2>
+<p>The display has two tabs: <strong>DECAY</strong> and <strong>SHAPE</strong>. As you move the pointer over it, a readout says what&#39;s under it.</p>
+<h3 id="decay"><a class="anchor" href="#decay">DECAY</a></h3>
+<p>DECAY shows how long each frequency rings. Low on the left, high on the right; the higher the curve, the longer that part rings. You shape it with bands, as you would an EQ.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Double-click the empty display</td>
+<td>Makes a band there (a notch near the bottom).</td>
+</tr>
+<tr>
+<td>Drag a band&#39;s dot</td>
+<td>Moves its frequency (sideways) and how much longer or shorter it rings (up and down). <kbd>⇧</kbd> for fine, <kbd>⌥</kbd> for one axis. Several selected bands move together.</td>
+</tr>
+<tr>
+<td>Scroll over a dot</td>
+<td>Changes its Q.</td>
+</tr>
+<tr>
+<td><kbd>⌥</kbd>-click a dot</td>
+<td>Bypasses the band.</td>
+</tr>
+<tr>
+<td>Drag the curve</td>
+<td>Moves <strong>Decay</strong> for the whole sound.</td>
+</tr>
+<tr>
+<td>Drag a Post EQ handle</td>
+<td>Sets the output&#39;s low and high shelves.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The button by the tabs bypasses every band at once, so you can hear what they do.</p>
+<h3 id="shape"><a class="anchor" href="#shape">SHAPE</a></h3>
+<p>SHAPE shows the reverb over time: the gap, the early reflections and the tail.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Drag the gap&#39;s edge sideways</td>
+<td>Sets <strong>Pre-delay</strong>.</td>
+</tr>
+<tr>
+<td>Drag the slope</td>
+<td>Sets <strong>Decay</strong>.</td>
+</tr>
+<tr>
+<td>Drag the early cluster sideways</td>
+<td>Sets <strong>Distance</strong>.</td>
+</tr>
+<tr>
+<td>Double-click</td>
+<td>Plays a click through the reverb, so you hear its shape.</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="the-displays-menu"><a class="anchor" href="#the-displays-menu">The display&#39;s menu</a></h3>
+<p>Right-click the display for:</p>
+<ul>
+<li>A band&#39;s shape (<strong>Low shelf</strong>, <strong>Bell</strong>, <strong>High shelf</strong>, <strong>Notch</strong>), <strong>Bypass band</strong> or <strong>Enable band</strong>, <strong>Delete band</strong>.</li>
+<li><strong>Reset decay bands</strong> and <strong>Reset Post EQ</strong>.</li>
+<li><strong>Show natural curve</strong>: how the mode rings before your bands. <strong>Show analyzer</strong>.</li>
+<li><strong>Log time</strong>, in SHAPE.</li>
+<li><strong>Copy curve</strong> and <strong>Paste curve</strong>, to take a decay curve to another Y-R.</li>
+</ul>
+<h3 id="meters"><a class="anchor" href="#meters">Meters</a></h3>
+<p><strong>IN</strong>, <strong>OUT</strong> and <strong>DUCK</strong> at the side show the level in, the level out and how far the tail is ducked. A lamp lights if the reverb&#39;s loop clipped.</p>
+<h2 id="the-main-controls"><a class="anchor" href="#the-main-controls">The main controls</a></h2>
+<ul>
+<li><strong>Pre-delay</strong>: the gap between the dry sound and the reverb. Click <strong>Sync</strong> for a note value (straight, dotted or triplet) to keep it in time with the song, or <strong>Time (ms)</strong>.</li>
+<li><strong>Decay</strong> (the big knob): how long the tail lasts. Turn it all the way for a tail that never ends.</li>
+<li><strong>Size</strong>: how big the space is.</li>
+<li><strong>Distance</strong>: how far away the sound seems, by moving the early reflections.</li>
+<li><strong>Diffusion</strong>: how smeared the echoes are, from distinct to a smooth wash.</li>
+<li><strong>Mod Rate</strong> and <strong>Depth</strong>: a slow movement in the tail that keeps it from ringing metallic.</li>
+<li><strong>Width</strong>: how wide the reverb is.</li>
+<li><strong>Low Cut</strong> and <strong>High Cut</strong>: take the mud and the fizz off the reverb, not the dry sound.</li>
+</ul>
+<h3 id="the-vocal-row"><a class="anchor" href="#the-vocal-row">The vocal row</a></h3>
+<ul>
+<li><strong>De-ess</strong>: takes the &quot;s&quot; sounds out of what goes into the reverb, so they don&#39;t splash. The lamp lights while it works.</li>
+<li><strong>Duck</strong>: turns the tail down while the sound plays and back up in the gaps, so the vocal stays clear.</li>
+</ul>
+<h2 id="advanced"><a class="anchor" href="#advanced">Advanced</a></h2>
+<p>Click <strong>▸ Advanced</strong> for the rest. The panel is in four groups.</p>
+<p><strong>Input</strong>: what goes into the reverb.</p>
+<ul>
+<li><strong>Input</strong>: <strong>Auto</strong>, <strong>Mono</strong> or <strong>Stereo</strong>.</li>
+<li><strong>Cross</strong>: how much of each side feeds the other.</li>
+<li><strong>Low Cut</strong> and <strong>High Cut</strong>: filters before the reverb.</li>
+<li><strong>De-ess Freq</strong>: where the de-esser listens.</li>
+<li><strong>Offset</strong>: nudges a synced pre-delay. It shows only when <strong>Pre-delay</strong> is synced.</li>
+<li><strong>VLF Cut</strong>: takes out the very lowest frequencies.</li>
+</ul>
+<p><strong>Early &amp; late</strong>: the reflections and the tail.</p>
+<ul>
+<li><strong>Early Send</strong>: how loud the early reflections are.</li>
+<li><strong>Early Cross</strong>: how much they cross between the sides.</li>
+<li><strong>Late Diff.</strong>: how smeared the tail is.</li>
+<li><strong>Mod Shape</strong>: <strong>Chorus</strong> or <strong>Random</strong>.</li>
+<li><strong>Variation</strong>: a different version of the same space; step through them with the arrows.</li>
+<li><strong>Tone Lock</strong>: the Decay bands change how long each band rings, not how loud.</li>
+</ul>
+<p><strong>Ducking</strong>: how <strong>Duck</strong> listens.</p>
+<ul>
+<li><strong>Key</strong>: what it listens to: this track, or another track (the same as the slot&#39;s <strong>Sidechain input</strong>, see <a href="../sidechain/">Sidechain</a>).</li>
+<li><strong>Thresh</strong>: where ducking starts. <strong>AUTO</strong> sets it for you.</li>
+<li><strong>Attack</strong>, <strong>Release</strong> (with <strong>Sync</strong>) and <strong>Hold</strong>: how fast it ducks and lets go.</li>
+<li><strong>Duck What</strong>: <strong>Tail</strong> (only the tail) or <strong>All</strong>.</li>
+<li><strong>Auto-Decay</strong>: shortens the tail while the sound plays.</li>
+<li><strong>Recovery</strong>: how fast the tail comes back.</li>
+</ul>
+<p><strong>Output</strong>: what comes out.</p>
+<ul>
+<li><strong>Low Shelf</strong> and <strong>High Shelf</strong>, each with its <strong>Gain</strong>.</li>
+<li><strong>Studio</strong>: steep send filters at 600 Hz and 10 kHz, an old studio&#39;s trick for a vocal reverb.</li>
+<li><strong>Mono Below</strong>: makes the reverb mono under a frequency, so the low end stays centred.</li>
+<li><strong>Output</strong>: the reverb&#39;s level.</li>
+<li><strong>Cut Slope</strong>: how steep the cuts are, 12 or 24 dB per octave.</li>
+</ul>
+<h3 id="knobs"><a class="anchor" href="#knobs">Knobs</a></h3>
+<p>Drag a knob up or down (<kbd>⇧</kbd> for fine), or scroll over it. Double-click to type a value. <kbd>⌘</kbd>-click or <kbd>⌥</kbd>-click resets it. Right-click for <strong>Reset</strong>, <strong>Type in value…</strong> and its automation.</p>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>The presets are in folders:</p>
+<ul>
+<li><strong>Lead Vocal</strong>: plates, rooms, chambers and halls for a lead, from a short room under a rap vocal to a long ballad hall.</li>
+<li><strong>Pairs</strong>: two presets meant to go together on two sends: a short space where the voice sits, and a longer one behind it. Each says which it pairs with.</li>
+<li><strong>Backing Vocals</strong>: washes and plates for stacks, harmonies and choirs.</li>
+<li><strong>Throws &amp; FX</strong>: big throws, an endless tail, a lo-fi verb.</li>
+<li><strong>Other</strong>: snare, drums, keys, synths and acoustic instruments.</li>
+</ul>
+<p>Each preset has a line on what it&#39;s for.</p>
+<h2 id="automation"><a class="anchor" href="#automation">Automation</a></h2>
+<p>Every knob can be automated, and so can <strong>Freeze</strong>. Right-click the control, or touch it and click <strong>Automate &quot;…&quot;</strong> in the title bar. See <a href="../automation/">Automation</a>.</p>
+<div class="cut"><video class="clip" data-clip="fx-reverb" style="--wide:1400/796;--phone:900/512" muted playsinline loop preload="none" aria-label="Y-R on a beat: the decay drawn across frequency stretches as the decay knob is turned up and back."></video></div>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-l/"><span>Previous</span>Y-L</a><a class="next" rel="next" href="../y-delay/"><span>Next</span>Y-Delay</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-R">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#get-started">Get started</a></li><li><a href="#the-top-bar">The top bar</a></li><li><a href="#the-display">The display</a></li><li><a href="#the-main-controls">The main controls</a></li><li><a href="#advanced">Advanced</a></li><li><a href="#presets">Presets</a></li><li><a href="#automation">Automation</a></li></ul></nav>
+</div>
+</body>
+</html>

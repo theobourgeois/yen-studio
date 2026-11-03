@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings: Yen Studio docs</title>
+<meta name="description" content="Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI and quality.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/settings/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Settings">
+<meta property="og:description" content="Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI and quality.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/settings/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/" aria-current="page">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:More">
+<p class="crumb" data-pagefind-ignore>More</p>
+<h1 data-pagefind-meta="title">Settings</h1>
+<p>Settings is where you choose how Yen Studio looks, where your songs are saved, and where its sound goes. It opens as a
+window over the app, and you can keep working with it open.</p>
+<p>Press <kbd>⌘,</kbd> to open it, or choose <strong>Settings…</strong> from the <strong>Edit</strong> menu. Press <kbd>⌘,</kbd> again or
+<kbd>Esc</kbd> to close it. With a song open it starts on the <strong>Music</strong> tab; from the Home screen it starts on
+<strong>General</strong>. Click a tab to switch, or use the arrow keys, <kbd>Home</kbd> and <kbd>End</kbd> on the tabs.</p>
+<h2 id="general"><a class="anchor" href="#general">General</a></h2>
+<p>How the whole app looks, and where new songs go.</p>
+<h3 id="save-new-projects-in"><a class="anchor" href="#save-new-projects-in">Save new projects in</a></h3>
+<p>Each song is a file of its own, a <code>.yen</code> package. You can move, copy or back it up in Finder like any other file.</p>
+<p><strong>Save new projects in</strong> shows the folder new songs are saved to. It starts as <code>Documents/Yen Studio</code> in your home
+folder. Click <strong>Change…</strong> to pick another folder. Once you&#39;ve changed it, <strong>Reset</strong> puts it back.</p>
+<p>Songs you already have stay where they are: this only changes where new ones go.</p>
+<h3 id="theme"><a class="anchor" href="#theme">Theme</a></h3>
+<p>Click a card to change the app&#39;s colours. Every theme changes the whole app at once.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>What it looks like</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>System</td>
+<td>Light or Dark, as your computer is set</td>
+</tr>
+<tr>
+<td>Light</td>
+<td>Blue-grey, blue accent</td>
+</tr>
+<tr>
+<td>Dark</td>
+<td>Blue-grey, blue accent (the default)</td>
+</tr>
+<tr>
+<td>Slate</td>
+<td>Slate grey, orange and lime</td>
+</tr>
+<tr>
+<td>Paper</td>
+<td>Flat light grey, orange</td>
+</tr>
+<tr>
+<td>Console</td>
+<td>Charcoal, blue, green counter</td>
+</tr>
+<tr>
+<td>Graphite</td>
+<td>Dark grey, blue</td>
+</tr>
+<tr>
+<td>Silver</td>
+<td>Light grey, blue</td>
+</tr>
+<tr>
+<td>Teenage</td>
+<td>Aluminium, black screens, four knob colours</td>
+</tr>
+<tr>
+<td>Synthwave</td>
+<td>Night blue, neon pink and cyan</td>
+</tr>
+<tr>
+<td>Luna</td>
+<td>Cream, glossy blue</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="app-icon"><a class="anchor" href="#app-icon">App icon</a></h3>
+<p>Choose how the app&#39;s icon looks in the Dock and in Finder. Click one of the icons shown.</p>
+<h3 id="show-tabs"><a class="anchor" href="#show-tabs">Show tabs</a></h3>
+<p>Under <strong>Window</strong>, <strong>Show tabs</strong> turns the strip of open songs along the top of the window on or off. Without it, the
+menus start the window. <kbd>⌘P</kbd> still finds and switches between your songs.</p>
+<h3 id="fonts"><a class="anchor" href="#fonts">Fonts</a></h3>
+<p>Under <strong>Text</strong>:</p>
+<ul>
+<li><strong>Interface font</strong>: menus, panels, labels and the assistant&#39;s chat. DM Sans by default; Inter, Geist, IBM Plex Sans,
+Figtree, Manrope, Tahoma, or your system&#39;s font.</li>
+<li><strong>Numbers and code</strong>: times, values, the position and tempo displays. Geist Mono by default; JetBrains Mono, IBM
+Plex Mono, Fira Code, or your system&#39;s monospaced font.</li>
+</ul>
+<p>A sample line under them shows both.</p>
+<h3 id="send-usage-and-crash-reports"><a class="anchor" href="#send-usage-and-crash-reports">Send usage and crash reports</a></h3>
+<p>Under <strong>Reports</strong>, <strong>Send usage and crash reports</strong> is off until you say yes. The first time Yen Studio opens, a card
+in the corner asks <strong>Help make Yen Studio better?</strong> Click <strong>Send reports</strong> or <strong>No thanks</strong>. Either way, you can
+change it here at any time.</p>
+<p>When it&#39;s on, reports say:</p>
+<ul>
+<li>your version of Yen Studio and your system;</li>
+<li>when the app opens, plays and exports;</li>
+<li>which plugins you load;</li>
+<li>what went wrong when something breaks, including a crash read from macOS&#39;s crash reports the next time the app
+opens.</li>
+</ul>
+<p>They never include your songs, sounds or file names, and nothing tied to your name. Nothing is sent before you say
+yes, and nothing is sent once it&#39;s off.</p>
+<h3 id="logs"><a class="anchor" href="#logs">Logs</a></h3>
+<p><strong>Logs</strong> keeps a record of what the app did and what went wrong, on your computer only. Click <strong>Show in Finder</strong> next
+to <strong>Log files</strong> to find them. Only the latest few megabytes are kept. See <a href="../troubleshooting/">Problems and logs</a> for
+when to use them.</p>
+<h2 id="music"><a class="anchor" href="#music">Music</a></h2>
+<p>Where your sound goes, how sound is read, and your plugins.</p>
+<h3 id="audio-device"><a class="anchor" href="#audio-device">Audio device</a></h3>
+<p>The engine plays every song through these devices, whichever song is open.</p>
+<ul>
+<li><strong>Output device</strong>: where you hear the song. If the device has its own control panel, a <strong>Device panel</strong> button
+opens it.</li>
+<li><strong>Input device</strong>: what you record from. Choose <strong>No input</strong> if you don&#39;t record audio. To record you need an audio
+interface, or the computer&#39;s microphone. Use headphones with a microphone, so the song isn&#39;t recorded too. Once an
+input is chosen, the line under it says how many inputs it has and how late it is.</li>
+</ul>
+<p>Choosing an input asks macOS for access to the microphone first. If you said no, allow Yen Studio in <strong>System
+Settings › Privacy &amp; Security › Microphone</strong>, then choose the input again.</p>
+<aside class="callout note"><p><strong>Note:</strong> Until you choose an output device here, the sound follows your Mac&#39;s own output, so it moves to
+headphones when you plug them in. Once you choose one, Yen Studio keeps to it. See
+<a href="../troubleshooting/#where-the-sound-goes">Where the sound goes</a>.</p>
+</aside>
+<h3 id="buffer-length"><a class="anchor" href="#buffer-length">Buffer length</a></h3>
+<p><strong>Buffer length</strong> is the size of the engine&#39;s audio buffer, in samples. The line under it says how many milliseconds
+of buffer that is, and how long until a sound is heard on this device.</p>
+<p>A smaller buffer answers faster, which matters when you play a MIDI keyboard or record. A larger one works the
+computer less hard. If you hear clicks or dropouts, raise it.</p>
+<h3 id="sample-rate"><a class="anchor" href="#sample-rate">Sample rate</a></h3>
+<p><strong>Sample rate</strong> is the rate the engine runs at. 44.1 or 48 kHz suits most work. Higher rates work the computer harder.</p>
+<h3 id="recording-offset"><a class="anchor" href="#recording-offset">Recording offset</a></h3>
+<p><strong>Recording offset</strong> shows when your device reports it. Takes already land where the driver&#39;s latency says they
+should. If your takes still sit late, set this to move them earlier by that many milliseconds. A negative number
+moves them later. See <a href="../recording/">Recording audio</a>.</p>
+<h3 id="midi-inputs"><a class="anchor" href="#midi-inputs">MIDI inputs</a></h3>
+<p>Each MIDI keyboard or pad plugged in is listed, with a <strong>Use</strong> switch. Keyboards play the channel selected in
+<a href="../channel-rack/">the Channel rack</a>, and recording keeps what you play. A keyboard you plug in is used at once: you don&#39;t
+need to come back here.</p>
+<p>Under each keyboard a line says what it&#39;s doing:</p>
+<ul>
+<li><strong>Playing the selected channel.</strong></li>
+<li><strong>Couldn&#39;t be opened: another app may have it.</strong> Quit the other app, or turn the keyboard off there.</li>
+<li><strong>Turned off.</strong></li>
+</ul>
+<p>With no keyboard, <kbd>⌘T</kbd> plays the selected channel from your computer&#39;s keyboard instead. See
+<a href="../midi/">MIDI keyboards</a>.</p>
+<h3 id="quality"><a class="anchor" href="#quality">Quality</a></h3>
+<p>How samplers and audio clips are read when they&#39;re pitched, or recorded at another rate than the song. Better methods
+sound cleaner (no faint whistles on bright sounds) and cost more. Your plugins aren&#39;t affected.</p>
+<ul>
+<li><strong>Resampling while playing</strong>: <strong>Linear</strong>, <strong>Hermite (4-point)</strong> or <strong>Sinc (32-point)</strong>.</li>
+<li><strong>Resampling in exports</strong>: the same choices, used when you <a href="../export/">export</a>.</li>
+<li><strong>Stretch mode</strong>: how an audio clip stretches when you drag its edge with the Playlist&#39;s Stretch on
+(<kbd>⇧M</kbd>). <strong>Stretch</strong> keeps its pitch. <strong>Resample</strong> makes it higher when it&#39;s faster, as a record would.</li>
+</ul>
+<h3 id="reset-plugins-on-stop"><a class="anchor" href="#reset-plugins-on-stop">Reset plugins on stop</a></h3>
+<p>Under <strong>Playback</strong>. On, stopping silences delays, reverbs and every other tail at once. Off, they ring out after a
+stop, and pressing Stop again silences them.</p>
+<h3 id="open-favourite-folders-in-place"><a class="anchor" href="#open-favourite-folders-in-place">Open favourite folders in place</a></h3>
+<p>Under <strong>Browser</strong>. On, a folder you&#39;ve starred opens under <strong>Favourites</strong> in <a href="../browser/">the Browser</a>. Off, it&#39;s a
+shortcut: clicking it shows the folder where it is among your folders.</p>
+<h3 id="engine-and-plugins"><a class="anchor" href="#engine-and-plugins">Engine and plugins</a></h3>
+<p>The state of the audio engine, and a test bench for your plugins.</p>
+<p>The status card shows the device, its sample rate and buffer, how late its output is, how hard the engine is working,
+any dropouts, and the output&#39;s level on a meter. Turn on <strong>Test tone</strong> to check you can hear the engine at all.</p>
+<p>The <strong>Plugins</strong> card says how many plugins were found (VST3 and Audio Units). Click <strong>Scan</strong> to look for plugins you&#39;ve
+installed since. A plugin that crashed during the scan is listed under it as skipped, with the reason and a way to try
+it again. See <a href="../plugins/">Plugins</a>.</p>
+<p>The <strong>Instrument</strong> and <strong>Effect</strong> cards try a plugin on its own, outside any song:</p>
+<ol>
+<li>Pick an instrument under <strong>Instrument</strong>. Play it with the keys under the cards.</li>
+<li>Pick an effect under <strong>Effect</strong>. The song, the instrument and the test tone all go through it.</li>
+<li>Use <strong>Open window</strong> to see its own window, <strong>Save state</strong> and <strong>Restore</strong> to keep and bring back its settings, and
+<strong>Remove</strong> to take it off the bench.</li>
+</ol>
+<h3 id="starting-point"><a class="anchor" href="#starting-point">Starting point</a></h3>
+<p>Under <strong>New songs</strong>. New songs start blank. To start each one from a song of yours, choose <strong>Use as starting point</strong>
+in its menu on the Home screen. Once one is set, <strong>Start blank</strong> here goes back to blank songs.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../assistant/"><span>Previous</span>Assistant</a><a class="next" rel="next" href="../shortcuts/"><span>Next</span>Keyboard shortcuts</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Settings">Tell us</a>.</p>
+</main>
+
+</div>
+</body>
+</html>

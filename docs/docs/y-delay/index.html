@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-Delay: Yen Studio docs</title>
+<meta name="description" content="Yen Studio's delay. Tape, analogue and digital echoes, single, dual, ping-pong or a rhythm you draw, in time with the song.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-delay/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-Delay">
+<meta property="og:description" content="Yen Studio's delay. Tape, analogue and digital echoes, single, dual, ping-pong or a rhythm you draw, in time with the song.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-delay/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/" aria-current="page">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-Delay</h1>
+<p>Y-Delay is an echo. It can be one clean repeat, two that answer each other, a ping-pong across the stereo field, or a rhythm of taps you draw on a grid. Its <strong>Echo Style</strong> gives the repeats the sound of a machine, from studio tape and oil cans to radios and choruses. It keeps to the song&#39;s tempo unless you tap one of its own.</p>
+<p><figure class="shot" style="--w:840"><img src="../shots/effect-delay.webp" width="840" height="291" alt="Y-Delay's window: the echo section, the mode dial in the middle, saturation and levels at the right" loading="lazy" decoding="async"><figcaption>The mode dial in the middle; the echo section at the left changes with it.</figcaption></figure></p>
+<h2 id="get-started"><a class="anchor" href="#get-started">Get started</a></h2>
+<ol>
+<li>Put Y-Delay in a mixer slot (see <a href="../effects/">Built-in effects</a>).</li>
+<li>Pick a preset from the menu in the top bar, or click a <strong>Mode</strong> name on the dial.</li>
+<li>Set the echo time: click <strong>Note</strong> and turn the knob for a note value, such as an eighth or a dotted eighth.</li>
+<li>Set <strong>Feedback</strong> for how many times it repeats, and <strong>Mix</strong> for how loud the echoes are against the dry sound.</li>
+</ol>
+<h2 id="modes"><a class="anchor" href="#modes">Modes</a></h2>
+<p>The <strong>Mode</strong> dial in the middle picks how the echoes are laid out. Click a name to choose it, or the dial for the next.</p>
+<ul>
+<li><strong>Single Echo</strong>: one echo time.</li>
+<li><strong>Dual Echo</strong>: two echoes with their own times, <strong>Echo 1</strong> and <strong>Echo 2</strong>.</li>
+<li><strong>Ping-Pong</strong>: two echoes that bounce between left and right, <strong>Ping</strong> and <strong>Pong</strong>.</li>
+<li><strong>Rhythm Echo</strong>: taps you place on a grid.</li>
+</ul>
+<p>The section at the left changes with the mode.</p>
+<h2 id="echo-times"><a class="anchor" href="#echo-times">Echo times</a></h2>
+<p>Each echo time has a knob, four keys and a display:</p>
+<ul>
+<li><strong>Time</strong>: in milliseconds. Turning it while the song plays bends the pitch, as tape does.</li>
+<li><strong>Note</strong>: a note value, in time with the song.</li>
+<li><strong>Dot</strong> and <strong>Trip</strong>: dotted or triplet note values.</li>
+</ul>
+<p>Drag the display up or down, nudge it with the arrow keys, or click it and type a value: <code>126.2</code> for milliseconds, or <code>1/8 dot</code> for a note.</p>
+<h2 id="the-echo-section"><a class="anchor" href="#the-echo-section">The echo section</a></h2>
+<p>In <strong>Single Echo</strong>, <strong>Dual Echo</strong> and <strong>Ping-Pong</strong>:</p>
+<ul>
+<li><strong>Mix</strong>: from <strong>Dry</strong> to <strong>Wet</strong>. At the middle it&#39;s half and half.</li>
+<li><strong>Echo Time</strong>, or <strong>Echo 1</strong> and <strong>Echo 2</strong>, or <strong>Ping</strong> and <strong>Pong</strong>.</li>
+<li><strong>Feedback</strong>: how much of each echo goes round again. Turn it up for more repeats; with some styles, all the way for an echo that runs away.</li>
+<li><strong>Low Cut</strong> and <strong>High Cut</strong>: filter the echoes, not the dry sound.</li>
+<li><strong>Prime Numbers</strong>: nudges the times to prime numbers of milliseconds, so the echoes never ring together.</li>
+<li><strong>Tweak</strong>: opens the mode&#39;s finer controls (see <a href="#tweak">Tweak</a>).</li>
+</ul>
+<h2 id="rhythm-echo"><a class="anchor" href="#rhythm-echo">Rhythm Echo</a></h2>
+<p>In <strong>Rhythm Echo</strong>, the echoes are taps on a grid you draw.</p>
+<ul>
+<li><strong>Mix</strong> and <strong>Feedback</strong>, as in the other modes.</li>
+<li><strong>Rhythm</strong>: the time between the taps, with the same <strong>Time</strong>, <strong>Note</strong>, <strong>Dot</strong> and <strong>Trip</strong> keys. Turning it lays the taps out evenly again.</li>
+<li><strong>Patt</strong>: the patterns menu, in groups (<strong>Bars</strong>, <strong>Notes</strong>, <strong>Dotted</strong>, <strong>Triplet</strong> and <strong>Presets</strong>). The pattern&#39;s name shows beside it.</li>
+<li><strong>Shape</strong>: how the taps fade along the pattern. The menu picks <strong>Decay</strong>, <strong>Reverse</strong>, <strong>Swell</strong>, <strong>Fade</strong> or <strong>NonLin</strong>; the knob sets how much.</li>
+<li><strong>Repeats</strong>: how many taps follow the One, evenly spaced.</li>
+</ul>
+<h3 id="the-rhythm-grid"><a class="anchor" href="#the-rhythm-grid">The rhythm grid</a></h3>
+<p>The grid sits between <strong>Low Cut</strong> and <strong>High Cut</strong>.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Click</td>
+<td>Adds a tap on the nearest grid line.</td>
+</tr>
+<tr>
+<td>Drag a tap sideways</td>
+<td>Moves it along the grid. Hold <kbd>⌘</kbd> or <kbd>⇧</kbd> to move it off the grid.</td>
+</tr>
+<tr>
+<td>Drag a tap up or down</td>
+<td>Sets its level.</td>
+</tr>
+<tr>
+<td><kbd>⌥</kbd>-click or right-click a tap</td>
+<td>Deletes it.</td>
+</tr>
+<tr>
+<td>Click the left edge</td>
+<td>Puts the first tap (the One) back.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The One is yellow. Taps past what the delay can hold turn grey and stay silent.</p>
+<h2 id="tempo-groove-and-feel"><a class="anchor" href="#tempo-groove-and-feel">Tempo, groove and feel</a></h2>
+<ul>
+<li><strong>MIDI</strong>: keeps Y-Delay to the song&#39;s tempo. It&#39;s on to start with.</li>
+<li><strong>Tap Tempo</strong>: tap it in time to give Y-Delay a tempo of its own. <strong>MIDI</strong> goes off.</li>
+<li>The tempo display: drag it or type a tempo in bpm.</li>
+<li><strong>Groove</strong>: from <strong>Shuffle</strong> to <strong>Swing</strong>, for echoes that lean.</li>
+<li><strong>Feel</strong>: from <strong>Rushin&#39;</strong> to <strong>Draggin&#39;</strong>: pushes the echoes up to 30 ms early or late.</li>
+</ul>
+<h2 id="saturation-and-levels"><a class="anchor" href="#saturation-and-levels">Saturation and levels</a></h2>
+<ul>
+<li><strong>Saturation</strong>: how hard the echoes are driven, from <strong>Min</strong> to <strong>Max</strong>. What it does depends on the style.</li>
+<li><strong>Input</strong> and <strong>Output</strong>: the levels in and out. Each has an LED meter: green for the level, yellow 6 dB below clipping, red when it clips.</li>
+<li><strong>Echo Style</strong>: the sound of the machine the echoes come from (see <a href="#styles">Styles</a>).</li>
+<li><strong>Style Edit</strong>: the style&#39;s own settings (see <a href="#style-edit">Style Edit</a>).</li>
+</ul>
+<h2 id="tweak"><a class="anchor" href="#tweak">Tweak</a></h2>
+<p>Click <strong>Tweak</strong> for the mode&#39;s finer controls.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Controls</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Single Echo</td>
+<td><strong>Width</strong>, <strong>L/R Offset</strong> (up to 25 ms between the sides, for width), <strong>Accent</strong> (makes the even or the odd repeats softer).</td>
+</tr>
+<tr>
+<td>Dual Echo, Ping-Pong</td>
+<td><strong>Balance</strong> (between the two echoes), <strong>FB Mix</strong> (from each echo feeding itself to each feeding the other), <strong>FB Bal</strong>, <strong>Accent 1</strong> and <strong>Accent 2</strong>.</td>
+</tr>
+<tr>
+<td>Rhythm Echo</td>
+<td><strong>L/R Offset</strong>, <strong>Width</strong>, <strong>Pan Shape</strong> (<strong>Double</strong>, <strong>Center</strong>, <strong>Alt 1</strong>, <strong>Alt 2</strong>, <strong>Alt 3</strong>, <strong>Sweep L</strong>, <strong>Sweep R</strong> or <strong>Pan</strong>), <strong>Accent</strong> (softer even or odd taps), <strong>Rhythm Grid</strong> (the grid&#39;s step) and <strong>Length (beats)</strong>.</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="styles"><a class="anchor" href="#styles">Styles</a></h2>
+<p>Click <strong>Echo Style</strong> for the menu. Each style has a line on how it sounds. They range over:</p>
+<ul>
+<li><strong>Tape</strong>: Master Tape, Studio Tape, Tape Loop, Roller Echo, Tube Tape, Cheap Tape.</li>
+<li><strong>Pedals and old machines</strong>: Bucket Brigade, Small BBD, Oil Can, Drum Echo.</li>
+<li><strong>Radio and phone</strong>: Telephone, AM Radio, FM Radio, Shortwave, Transmitter.</li>
+<li><strong>Clean and chorus</strong>: Digital Delay, Analog Delay, DigitalChorus, Analog Chorus, Vintage Chorus, Vibrato.</li>
+<li><strong>Driven</strong>: Saturated, Fat, Distressed, Limited, Distorted, Queeked.</li>
+<li><strong>Spaces</strong>: Ambient, Diffused, Splattered, Verbed.</li>
+</ul>
+<h3 id="style-edit"><a class="anchor" href="#style-edit">Style Edit</a></h3>
+<p>Click <strong>Style Edit</strong> to change the style itself. Its panel has:</p>
+<ul>
+<li><strong>Low EQ</strong>, <strong>Mid EQ</strong> and <strong>High EQ</strong>: each with <strong>Freq</strong> and <strong>Gain</strong> (the Mid with <strong>Res</strong> too), and <strong>Decay</strong>: how much the EQ builds up with each repeat.</li>
+<li><strong>Diffusion</strong>: <strong>Amount</strong> and <strong>Size</strong>, and whether it&#39;s in the feedback <strong>Loop</strong> (each repeat more diffused) or <strong>Post</strong> (every repeat diffused alike).</li>
+<li><strong>Wobble</strong>: <strong>Depth</strong>, <strong>Rate</strong> (or <strong>Sync</strong> to the song), <strong>FB</strong> (wobble the repeats) and <strong>Out</strong> (wobble the echo&#39;s output), with a shape: <strong>Triangle</strong>, <strong>Sine</strong>, <strong>Square</strong>, <strong>Random Walk</strong> or <strong>Random S/H</strong>.</li>
+<li><strong>Saturation</strong>: <strong>Decay Sat</strong> (on the repeats) and <strong>Out Sat</strong> (on the output), with a type: <strong>Clean</strong>, <strong>Tape</strong>, <strong>Warm</strong>, <strong>Pump</strong>, <strong>Dirt</strong>, <strong>Hard Limit</strong>, <strong>Soft Limit</strong>, <strong>Warm Limit</strong> or <strong>Bright Limit</strong>.</li>
+</ul>
+<p>Once you change it, the style reads <em>Custom, from</em> the style you started from.</p>
+<h2 id="knobs"><a class="anchor" href="#knobs">Knobs</a></h2>
+<p>Drag a knob up or down, or scroll over it. Hold <kbd>⌘</kbd> for fine moves. <kbd>⌥</kbd>-click or middle-click resets it. Right-click for <strong>Reset</strong>, <strong>Copy value</strong>, <strong>Paste value</strong>, <strong>Type in value…</strong> and its automation.</p>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>The presets are in folders: <strong>Basic</strong>, <strong>Bass</strong>, <strong>Chorus</strong>, <strong>Classic</strong>, <strong>Drums</strong>, <strong>Effected</strong>, <strong>Guitar</strong>, <strong>MultiTap</strong>, <strong>Rhythmic</strong>, <strong>Spacy</strong>, <strong>Verbs</strong>, <strong>Vocal</strong> and <strong>WayOut</strong>. They go from <strong>Quarter Note Tape</strong> and <strong>Slapback</strong> to dub throws and choruses. Once you change a setting, the preset&#39;s name reads <em>Custom</em>.</p>
+<p>Y-Delay has no A/B or <strong>Undo</strong> button; <kbd>⌘Z</kbd> undoes its changes like any other edit. The <strong>⋮</strong> menu holds <strong>Copy state</strong> and <strong>Paste state</strong>, to copy one Y-Delay&#39;s settings into another.</p>
+<h2 id="automation"><a class="anchor" href="#automation">Automation</a></h2>
+<p>Mix, Feedback, the echo times, Rhythm, Shape, Low Cut, High Cut, Saturation, Input, Output, Groove, Feel, the Tweak knobs and the Style Edit knobs can be automated. Right-click a knob, or touch it and click <strong>Automate &quot;…&quot;</strong> in the title bar. See <a href="../automation/">Automation</a>.</p>
+<div class="cut"><video class="clip" data-clip="fx-delay" style="--wide:1400/558;--phone:900/358" muted playsinline loop preload="none" aria-label="Y-Delay on a beat, set to a rhythm echo: its taps move as the rhythm knob is turned and back."></video></div>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-r/"><span>Previous</span>Y-R</a><a class="next" rel="next" href="../y-multiband/"><span>Next</span>Y-Multiband</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-Delay">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#get-started">Get started</a></li><li><a href="#modes">Modes</a></li><li><a href="#echo-times">Echo times</a></li><li><a href="#the-echo-section">The echo section</a></li><li><a href="#rhythm-echo">Rhythm Echo</a></li><li><a href="#tempo-groove-and-feel">Tempo, groove and feel</a></li><li><a href="#saturation-and-levels">Saturation and levels</a></li><li><a href="#tweak">Tweak</a></li><li><a href="#styles">Styles</a></li><li><a href="#knobs">Knobs</a></li><li><a href="#presets">Presets</a></li><li><a href="#automation">Automation</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keyboard shortcuts: Yen Studio docs</title>
+<meta name="description" content="Every keyboard shortcut in Yen Studio, by window: the whole app, Channel rack, Piano roll, Playlist, Mixer, Browser, Y-R and the typing keyboard.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/shortcuts/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keyboard shortcuts">
+<meta property="og:description" content="Every keyboard shortcut in Yen Studio, by window: the whole app, Channel rack, Piano roll, Playlist, Mixer, Browser, Y-R and the typing keyboard.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/shortcuts/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/" aria-current="page">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:More">
+<p class="crumb" data-pagefind-ignore>More</p>
+<h1 data-pagefind-meta="title">Keyboard shortcuts</h1>
+<p>Yen Studio&#39;s keys follow FL Studio&#39;s wherever it has them. The keys of the window in front come first: the Piano roll&#39;s
+<kbd>D</kbd> is its Delete tool, and the Playlist&#39;s is too. Keys that work everywhere are listed first.</p>
+<p>⌘ and Ctrl both work for command keys, so <kbd>⌘Z</kbd> is also Ctrl+Z. Where a key must be Ctrl, it says so. Keys
+on the number pad say &quot;Numpad&quot;.</p>
+<p>Menus show their keys beside their items, and buttons show theirs when you hold the pointer over them.</p>
+<h2 id="everywhere"><a class="anchor" href="#everywhere">Everywhere</a></h2>
+<p>These work whichever window is in front, and from your plugins&#39; own windows too, when the plugin doesn&#39;t use the key
+itself.</p>
+<h3 id="play-and-record"><a class="anchor" href="#play-and-record">Play and record</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>Space</kbd></td>
+<td>Play or stop. While the Browser previews a sound, stops the preview</td>
+</tr>
+<tr>
+<td><kbd>L</kbd></td>
+<td>Switch between pattern mode and song mode</td>
+</tr>
+<tr>
+<td><kbd>R</kbd></td>
+<td>Turn recording on or off</td>
+</tr>
+<tr>
+<td><kbd>Numpad +</kbd></td>
+<td>Next pattern (past the last, a new one)</td>
+</tr>
+<tr>
+<td><kbd>Numpad −</kbd></td>
+<td>Previous pattern</td>
+</tr>
+<tr>
+<td><kbd>⌘T</kbd></td>
+<td>Play notes from the computer&#39;s keyboard: see <a href="#the-typing-keyboard">The typing keyboard</a></td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="windows"><a class="anchor" href="#windows">Windows</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>F5</kbd> or <kbd>⌥1</kbd></td>
+<td>Show or hide the <a href="../playlist/">Playlist</a></td>
+</tr>
+<tr>
+<td><kbd>F6</kbd> or <kbd>⌥2</kbd></td>
+<td>Show or hide the <a href="../channel-rack/">Channel rack</a></td>
+</tr>
+<tr>
+<td><kbd>F7</kbd> or <kbd>⌥3</kbd></td>
+<td>Show or hide the <a href="../piano-roll/">Piano roll</a></td>
+</tr>
+<tr>
+<td><kbd>F9</kbd> or <kbd>⌥4</kbd></td>
+<td>Show or hide the <a href="../mixer/">Mixer</a></td>
+</tr>
+<tr>
+<td><kbd>⌥F8</kbd> or <kbd>⌥5</kbd></td>
+<td>Show or hide the <a href="../browser/">Browser</a></td>
+</tr>
+<tr>
+<td><kbd>F8</kbd></td>
+<td>Pick a plugin for a new channel</td>
+</tr>
+<tr>
+<td><kbd>⌘I</kbd></td>
+<td>Show or hide the <a href="../assistant/">assistant</a></td>
+</tr>
+<tr>
+<td><kbd>⌘,</kbd></td>
+<td>Open or close <a href="../settings/">Settings</a></td>
+</tr>
+</tbody></table>
+</div>
+<p>On a Mac, the F keys may need <kbd>fn</kbd>, unless you&#39;ve set them to work as standard function keys in System
+Settings.</p>
+<h3 id="songs-and-files"><a class="anchor" href="#songs-and-files">Songs and files</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘S</kbd></td>
+<td>Save</td>
+</tr>
+<tr>
+<td><kbd>⌘Z</kbd></td>
+<td>Undo</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘Z</kbd> or <kbd>⌘Y</kbd></td>
+<td>Redo</td>
+</tr>
+<tr>
+<td><kbd>⌘R</kbd></td>
+<td>Export a WAV</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘R</kbd></td>
+<td>Export an MP3</td>
+</tr>
+<tr>
+<td><kbd>⌘O</kbd></td>
+<td>Open a song</td>
+</tr>
+<tr>
+<td><kbd>⌘P</kbd></td>
+<td>Find a song and switch to it</td>
+</tr>
+<tr>
+<td><kbd>⌘W</kbd></td>
+<td>Close the song&#39;s tab</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘W</kbd></td>
+<td>Close the window</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘H</kbd></td>
+<td>Go to the Home screen, and back</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘]</kbd> / <kbd>⇧⌘[</kbd></td>
+<td>Next / previous tab</td>
+</tr>
+<tr>
+<td>Ctrl+Tab / Ctrl+⇧Tab</td>
+<td>Next / previous tab</td>
+</tr>
+<tr>
+<td><kbd>⌘Q</kbd></td>
+<td>Quit (your songs are saved first)</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="the-app"><a class="anchor" href="#the-app">The app</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘H</kbd></td>
+<td>Hide Yen Studio</td>
+</tr>
+<tr>
+<td><kbd>⌥⌘H</kbd></td>
+<td>Hide other apps</td>
+</tr>
+<tr>
+<td><kbd>⌘M</kbd></td>
+<td>Minimise the window</td>
+</tr>
+<tr>
+<td><kbd>⌃⌘F</kbd></td>
+<td>Full screen</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="channel-rack"><a class="anchor" href="#channel-rack">Channel rack</a></h2>
+<p>When the Channel rack is in front, or no other window is. See <a href="../channel-rack/">Channel rack</a>.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>1</kbd> … <kbd>9</kbd>, <kbd>0</kbd></td>
+<td>Mute or unmute the first ten channels</td>
+</tr>
+<tr>
+<td><kbd>⌘1</kbd> … <kbd>⌘9</kbd>, <kbd>⌘0</kbd></td>
+<td>Solo the first ten channels</td>
+</tr>
+<tr>
+<td><kbd>↑</kbd> / <kbd>↓</kbd></td>
+<td>Select the channel above / below</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> / <kbd>⇧↓</kbd></td>
+<td>Add the channel above / below to the selection</td>
+</tr>
+<tr>
+<td><kbd>⌥↑</kbd> / <kbd>⌥↓</kbd></td>
+<td>Move the selected channels up / down</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘←</kbd> / <kbd>⇧⌘→</kbd></td>
+<td>Rotate the selected channel&#39;s steps left / right</td>
+</tr>
+<tr>
+<td><kbd>⌘C</kbd> / <kbd>⌘X</kbd> / <kbd>⌘V</kbd></td>
+<td>Copy / cut / paste the first selected channel&#39;s steps</td>
+</tr>
+<tr>
+<td><kbd>⌥C</kbd></td>
+<td>Clone the selected channels</td>
+</tr>
+<tr>
+<td><kbd>⌥Delete</kbd></td>
+<td>Delete the selected channels</td>
+</tr>
+<tr>
+<td><kbd>⌥M</kbd></td>
+<td>Show or hide the track selectors</td>
+</tr>
+<tr>
+<td><kbd>⌘L</kbd></td>
+<td>Give each selected channel a free mixer track, named after it</td>
+</tr>
+<tr>
+<td><kbd>⌘K</kbd></td>
+<td>Show or hide the graph editor</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="piano-roll"><a class="anchor" href="#piano-roll">Piano roll</a></h2>
+<p>When the Piano roll is in front. See <a href="../piano-roll/">Piano roll</a>.</p>
+<h3 id="tools"><a class="anchor" href="#tools">Tools</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>P</kbd></td>
+<td>Draw</td>
+</tr>
+<tr>
+<td><kbd>B</kbd></td>
+<td>Paint</td>
+</tr>
+<tr>
+<td><kbd>D</kbd></td>
+<td>Delete</td>
+</tr>
+<tr>
+<td><kbd>T</kbd></td>
+<td>Mute</td>
+</tr>
+<tr>
+<td><kbd>C</kbd></td>
+<td>Slice</td>
+</tr>
+<tr>
+<td><kbd>E</kbd></td>
+<td>Select</td>
+</tr>
+<tr>
+<td><kbd>Z</kbd></td>
+<td>Zoom</td>
+</tr>
+<tr>
+<td><kbd>Y</kbd></td>
+<td>Playback</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="select-copy-and-delete"><a class="anchor" href="#select-copy-and-delete">Select, copy and delete</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select every note</td>
+</tr>
+<tr>
+<td><kbd>⌘D</kbd></td>
+<td>Deselect notes and the time selection</td>
+</tr>
+<tr>
+<td><kbd>⇧I</kbd></td>
+<td>Invert the selection</td>
+</tr>
+<tr>
+<td><kbd>⌘C</kbd> / <kbd>⌘X</kbd> / <kbd>⌘V</kbd></td>
+<td>Copy / cut / paste</td>
+</tr>
+<tr>
+<td><kbd>⌘B</kbd></td>
+<td>Duplicate the selection to its right</td>
+</tr>
+<tr>
+<td><kbd>Delete</kbd> or <kbd>⌫</kbd></td>
+<td>Delete the selected notes</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="edit-notes"><a class="anchor" href="#edit-notes">Edit notes</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘G</kbd></td>
+<td>Glue: same-pitch notes that touch become one</td>
+</tr>
+<tr>
+<td><kbd>⌘U</kbd></td>
+<td>Chop the selected notes into grid-long pieces</td>
+</tr>
+<tr>
+<td><kbd>⌥U</kbd></td>
+<td>Open the Chopper</td>
+</tr>
+<tr>
+<td><kbd>⌥Q</kbd></td>
+<td>Open the Quantizer</td>
+</tr>
+<tr>
+<td><kbd>⌃Q</kbd></td>
+<td>Quick quantize: to the snap, or a step when snap is off</td>
+</tr>
+<tr>
+<td><kbd>⇧Q</kbd></td>
+<td>Quantize the starts only</td>
+</tr>
+<tr>
+<td><kbd>⌘L</kbd></td>
+<td>Legato: each note lasts until the next</td>
+</tr>
+<tr>
+<td><kbd>⇧D</kbd></td>
+<td>Discard lengths</td>
+</tr>
+<tr>
+<td><kbd>⌥M</kbd> / <kbd>⌥⇧M</kbd></td>
+<td>Mute / unmute the selected notes</td>
+</tr>
+<tr>
+<td><kbd>⌥V</kbd></td>
+<td>Show or hide ghost notes</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="move-notes"><a class="anchor" href="#move-notes">Move notes</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⇧←</kbd> / <kbd>⇧→</kbd></td>
+<td>Move a snap unit earlier / later</td>
+</tr>
+<tr>
+<td><kbd>⌥←</kbd> / <kbd>⌥→</kbd></td>
+<td>Move a tick earlier / later</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> / <kbd>⇧↓</kbd> or <kbd>⌥↑</kbd> / <kbd>⌥↓</kbd></td>
+<td>Up / down a semitone</td>
+</tr>
+<tr>
+<td><kbd>⌘↑</kbd> / <kbd>⌘↓</kbd></td>
+<td>Up / down an octave</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘←</kbd> / <kbd>⇧⌘→</kbd></td>
+<td>Rotate the notes by a grid step</td>
+</tr>
+<tr>
+<td><kbd>⌘←</kbd> / <kbd>⌘→</kbd></td>
+<td>Move the time selection by its own length</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="view"><a class="anchor" href="#view">View</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘Enter</kbd></td>
+<td>Time selection: the bars around the selected notes</td>
+</tr>
+<tr>
+<td><kbd>⇧0</kbd></td>
+<td>Centre on the playhead</td>
+</tr>
+<tr>
+<td><kbd>PageUp</kbd> / <kbd>PageDown</kbd></td>
+<td>Zoom in / out</td>
+</tr>
+<tr>
+<td><kbd>⇧1</kbd> / <kbd>⇧2</kbd> / <kbd>⇧3</kbd></td>
+<td>Zoom to show 1 / 4 / 16 bars</td>
+</tr>
+<tr>
+<td><kbd>⇧4</kbd></td>
+<td>Zoom to show everything</td>
+</tr>
+<tr>
+<td><kbd>⇧5</kbd></td>
+<td>Zoom to the time selection</td>
+</tr>
+<tr>
+<td><kbd>⇧Enter</kbd></td>
+<td>Show or hide the event lane</td>
+</tr>
+<tr>
+<td><kbd>F</kbd> or <kbd>⇧F</kbd></td>
+<td>Switch the event lane between velocity and pan</td>
+</tr>
+<tr>
+<td><kbd>G</kbd> / <kbd>K</kbd></td>
+<td>The channel above / below</td>
+</tr>
+<tr>
+<td><kbd>H</kbd> / <kbd>J</kbd></td>
+<td>The next channel with notes in this pattern, up / down</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>Close the Piano roll</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="playlist"><a class="anchor" href="#playlist">Playlist</a></h2>
+<p>When the Playlist is in front. See <a href="../playlist/">Playlist</a>.</p>
+<h3 id="tools-2"><a class="anchor" href="#tools-2">Tools</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Tool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>P</kbd></td>
+<td>Draw</td>
+</tr>
+<tr>
+<td><kbd>B</kbd></td>
+<td>Paint</td>
+</tr>
+<tr>
+<td><kbd>D</kbd></td>
+<td>Delete</td>
+</tr>
+<tr>
+<td><kbd>T</kbd></td>
+<td>Mute</td>
+</tr>
+<tr>
+<td><kbd>S</kbd></td>
+<td>Slip</td>
+</tr>
+<tr>
+<td><kbd>C</kbd></td>
+<td>Slice</td>
+</tr>
+<tr>
+<td><kbd>E</kbd></td>
+<td>Select</td>
+</tr>
+<tr>
+<td><kbd>Z</kbd></td>
+<td>Zoom</td>
+</tr>
+<tr>
+<td><kbd>Y</kbd></td>
+<td>Playback</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="select-copy-and-delete-2"><a class="anchor" href="#select-copy-and-delete-2">Select, copy and delete</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select every clip</td>
+</tr>
+<tr>
+<td><kbd>⌘D</kbd></td>
+<td>Deselect</td>
+</tr>
+<tr>
+<td><kbd>⇧I</kbd></td>
+<td>Invert the selection</td>
+</tr>
+<tr>
+<td><kbd>⇧C</kbd></td>
+<td>Select every clip of the same source as the selected ones</td>
+</tr>
+<tr>
+<td><kbd>⌘C</kbd> / <kbd>⌘X</kbd> / <kbd>⌘V</kbd></td>
+<td>Copy / cut / paste</td>
+</tr>
+<tr>
+<td><kbd>⌘B</kbd></td>
+<td>Duplicate the selection to its right</td>
+</tr>
+<tr>
+<td><kbd>Delete</kbd></td>
+<td>Delete the selected clips</td>
+</tr>
+<tr>
+<td><kbd>⌥M</kbd> / <kbd>⌥⇧M</kbd></td>
+<td>Mute / unmute the selected clips</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="edit-clips"><a class="anchor" href="#edit-clips">Edit clips</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌃Q</kbd> or <kbd>⇧Q</kbd></td>
+<td>Quantize the selected clips</td>
+</tr>
+<tr>
+<td><kbd>⌥⌘C</kbd></td>
+<td>Consolidate the selected clips</td>
+</tr>
+<tr>
+<td><kbd>⇧M</kbd></td>
+<td>Turn Stretch on or off</td>
+</tr>
+<tr>
+<td><kbd>⌘Delete</kbd></td>
+<td>Delete the time selection, and close up the gap</td>
+</tr>
+<tr>
+<td><kbd>Insert</kbd></td>
+<td>Slice the clip under the pointer at the nearest grid line</td>
+</tr>
+<tr>
+<td><kbd>⌘Insert</kbd></td>
+<td>Insert space the length of the time selection</td>
+</tr>
+<tr>
+<td><kbd>⌥⌘Insert</kbd></td>
+<td>Insert space, slicing the clips it crosses</td>
+</tr>
+<tr>
+<td><kbd>⇧←</kbd> / <kbd>⇧→</kbd></td>
+<td>Move the selected clips a snap unit earlier / later</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> / <kbd>⇧↓</kbd></td>
+<td>Move the selected clips a track up / down</td>
+</tr>
+<tr>
+<td><kbd>⌘←</kbd> / <kbd>⌘→</kbd></td>
+<td>Move the time selection by its own length</td>
+</tr>
+</tbody></table>
+</div>
+<p>Most Mac keyboards have no <kbd>Insert</kbd> key; the Slice tool and the clips&#39; menus do the same.</p>
+<h3 id="view-and-markers"><a class="anchor" href="#view-and-markers">View and markers</a></h3>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌘Enter</kbd></td>
+<td>Time selection: what the selected clips span</td>
+</tr>
+<tr>
+<td><kbd>⌥T</kbd></td>
+<td>Add a time marker where play is</td>
+</tr>
+<tr>
+<td><kbd>⌥P</kbd></td>
+<td>Show or hide the pattern picker</td>
+</tr>
+<tr>
+<td><kbd>⌥↑</kbd> / <kbd>⌥↓</kbd></td>
+<td>Move the selected patterns up / down the picker&#39;s list</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd></td>
+<td>Play from the start of the song</td>
+</tr>
+<tr>
+<td><kbd>⇧0</kbd></td>
+<td>Centre on the playhead</td>
+</tr>
+<tr>
+<td><kbd>PageUp</kbd> / <kbd>PageDown</kbd></td>
+<td>Zoom in / out</td>
+</tr>
+<tr>
+<td><kbd>⇧1</kbd> / <kbd>⇧2</kbd> / <kbd>⇧3</kbd></td>
+<td>Zoom to show 4 / 16 / 64 bars</td>
+</tr>
+<tr>
+<td><kbd>⇧4</kbd></td>
+<td>Zoom to show the whole song</td>
+</tr>
+<tr>
+<td><kbd>⇧5</kbd></td>
+<td>Zoom to the time selection</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>Close the Playlist</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="mixer"><a class="anchor" href="#mixer">Mixer</a></h2>
+<p>When the Mixer is in front. See <a href="../mixer/">Mixer</a>.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>←</kbd> / <kbd>→</kbd></td>
+<td>Select the track before / after</td>
+</tr>
+<tr>
+<td><kbd>⌥←</kbd> / <kbd>⌥→</kbd></td>
+<td>Move the selected tracks left / right</td>
+</tr>
+<tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select every track</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>Keep only the current track selected</td>
+</tr>
+<tr>
+<td><kbd>S</kbd></td>
+<td>Solo the selected tracks, or unsolo them</td>
+</tr>
+<tr>
+<td><kbd>⌥S</kbd></td>
+<td>Solo the selected tracks alone</td>
+</tr>
+<tr>
+<td><kbd>⌘L</kbd></td>
+<td>Route the rack&#39;s selected channels to the current track</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘L</kbd></td>
+<td>Route them to the current track and the ones after it, one each</td>
+</tr>
+<tr>
+<td><kbd>⌥L</kbd></td>
+<td>Select, in the rack, the channels routed to the current track</td>
+</tr>
+<tr>
+<td><kbd>⌘G</kbd></td>
+<td>Route the selected tracks to a new bus</td>
+</tr>
+<tr>
+<td><kbd>F2</kbd> or <kbd>⇧⌘N</kbd></td>
+<td>Rename the track</td>
+</tr>
+<tr>
+<td><kbd>⌥Delete</kbd></td>
+<td>Delete the selected tracks (never the master)</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="browser"><a class="anchor" href="#browser">Browser</a></h2>
+<p>When the Browser&#39;s list has the focus. See <a href="../browser/">Browser</a>.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>↑</kbd> / <kbd>↓</kbd></td>
+<td>The row above / below. A sound plays as it&#39;s selected</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> / <kbd>⇧↓</kbd></td>
+<td>The sound above / below, also loaded onto the selected channel</td>
+</tr>
+<tr>
+<td><kbd>→</kbd> / <kbd>←</kbd></td>
+<td>Open or go into a folder / close it or go out</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd> / <kbd>End</kbd></td>
+<td>The first / last row</td>
+</tr>
+<tr>
+<td><kbd>PageUp</kbd> / <kbd>PageDown</kbd></td>
+<td>A page up / down</td>
+</tr>
+<tr>
+<td><kbd>Enter</kbd></td>
+<td>Open a folder, or load a sound onto the selected channel</td>
+</tr>
+<tr>
+<td><kbd>⌘↑</kbd></td>
+<td>Close every folder</td>
+</tr>
+<tr>
+<td><kbd>⌘F</kbd> or <kbd>/</kbd></td>
+<td>Search</td>
+</tr>
+<tr>
+<td>Any letter</td>
+<td>Start a search for what you type</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>Stop the preview, or clear the search</td>
+</tr>
+<tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select every row</td>
+</tr>
+<tr>
+<td>Ctrl+R</td>
+<td>Look through your folders again (this one must be Ctrl)</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="y-r"><a class="anchor" href="#y-r">Y-R</a></h2>
+<p>When <a href="../y-r/">Y-R</a>&#39;s window is in front. Other keys go on to the rest of the app, so <kbd>Space</kbd> still plays.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>F</kbd></td>
+<td>Tap to turn Freeze on or off. Hold it to freeze only while it&#39;s down</td>
+</tr>
+<tr>
+<td><kbd>←</kbd> / <kbd>→</kbd></td>
+<td>The previous / next preset</td>
+</tr>
+<tr>
+<td><kbd>Tab</kbd></td>
+<td>Switch the display between Decay and Shape</td>
+</tr>
+<tr>
+<td><kbd>A</kbd></td>
+<td>Switch between A and B</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="the-typing-keyboard"><a class="anchor" href="#the-typing-keyboard">The typing keyboard</a></h2>
+<p>Press <kbd>⌘T</kbd>, or choose <strong>View › Typing Keyboard to Piano</strong>, to play the selected channel from the computer&#39;s
+keyboard. Press it again to stop. See <a href="../midi/">MIDI keyboards</a>.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Keys</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>Z</kbd> <kbd>X</kbd> <kbd>C</kbd> <kbd>V</kbd> <kbd>B</kbd> <kbd>N</kbd> <kbd>M</kbd> <kbd>,</kbd> <kbd>.</kbd> <kbd>/</kbd></td>
+<td>White keys, from C</td>
+</tr>
+<tr>
+<td><kbd>S</kbd> <kbd>D</kbd> <kbd>G</kbd> <kbd>H</kbd> <kbd>J</kbd> <kbd>L</kbd> <kbd>;</kbd></td>
+<td>Black keys of that octave</td>
+</tr>
+<tr>
+<td><kbd>Q</kbd> <kbd>W</kbd> <kbd>E</kbd> <kbd>R</kbd> <kbd>T</kbd> <kbd>Y</kbd> <kbd>U</kbd> <kbd>I</kbd> <kbd>O</kbd> <kbd>P</kbd></td>
+<td>White keys, an octave up</td>
+</tr>
+<tr>
+<td><kbd>2</kbd> <kbd>3</kbd> <kbd>5</kbd> <kbd>6</kbd> <kbd>7</kbd> <kbd>9</kbd> <kbd>0</kbd></td>
+<td>Black keys of the octave up</td>
+</tr>
+<tr>
+<td><kbd>[</kbd> / <kbd>]</kbd></td>
+<td>Octave down / up</td>
+</tr>
+</tbody></table>
+</div>
+<p>While it&#39;s on, the other letters and digits do nothing, so a stray key doesn&#39;t switch tools. Keys with ⌘, Ctrl or ⌥
+still work, and so does <kbd>Space</kbd>.</p>
+<h2 id="text-fields-and-the-assistant"><a class="anchor" href="#text-fields-and-the-assistant">Text fields and the assistant</a></h2>
+<p>In the <a href="../assistant/">assistant</a>&#39;s message box, <kbd>Enter</kbd> sends, <kbd>⇧Enter</kbd> starts a new line, and
+<kbd>Esc</kbd> leaves the box. In the model menu, <kbd>⌘1</kbd> … <kbd>⌘9</kbd> pick a model, and the arrows and
+<kbd>Enter</kbd> move and choose.</p>
+<p>While you type in any text field, the keys above type text instead.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../settings/"><span>Previous</span>Settings</a><a class="next" rel="next" href="../troubleshooting/"><span>Next</span>Problems and logs</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Keyboard%20shortcuts">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#everywhere">Everywhere</a></li><li><a href="#channel-rack">Channel rack</a></li><li><a href="#piano-roll">Piano roll</a></li><li><a href="#playlist">Playlist</a></li><li><a href="#mixer">Mixer</a></li><li><a href="#browser">Browser</a></li><li><a href="#y-r">Y-R</a></li><li><a href="#the-typing-keyboard">The typing keyboard</a></li><li><a href="#text-fields-and-the-assistant">Text fields and the assistant</a></li></ul></nav>
+</div>
+</body>
+</html>

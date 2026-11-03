@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automation: Yen Studio docs</title>
+<meta name="description" content="Make a knob, fader or plugin parameter move over the song with automation clips: their curves, points, curve types, LFO and tools.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/automation/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Automation">
+<meta property="og:description" content="Make a knob, fader or plugin parameter move over the song with automation clips: their curves, points, curve types, LFO and tools.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/automation/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/" aria-current="page">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Make">
+<p class="crumb" data-pagefind-ignore>Make</p>
+<h1 data-pagefind-meta="title">Automation</h1>
+<p>An automation clip moves a control over time: a filter opening over eight bars, a fade-out at the end, a riser that
+speeds up. It&#39;s a curve that lives on the <a href="../playlist/">Playlist</a> like any other clip, and the control follows it as the
+song plays. Almost every control can be automated: channel volume, pan and pitch, mixer faders, pans, sends and effect
+mixes, every knob of the built-in effects, your plugins&#39; parameters, the main volume and the tempo.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/automation.webp" width="1200" height="248" alt="An automation clip's curve on the Playlist" loading="lazy" decoding="async"></figure></p>
+<h2 id="make-an-automation-clip"><a class="anchor" href="#make-an-automation-clip">Make an automation clip</a></h2>
+<p>There are a few ways in. All of them make the same thing.</p>
+<p><strong>From a knob or fader.</strong> Right-click it and pick <strong>Create automation clip</strong>.</p>
+<p><strong>From a built-in effect&#39;s window.</strong> Touch any control in it. Its window&#39;s title bar then shows <strong>Automate &quot;…&quot;</strong>, with
+the name of what you touched. Click it.</p>
+<p><strong>From a plugin&#39;s window.</strong> Move a parameter in the plugin, then press <strong>Automate</strong> in the window&#39;s title bar.</p>
+<p><strong>From the Automate window.</strong> In the Playlist&#39;s <a href="../playlist/#the-picker">Picker</a> (<kbd>⌥P</kbd>), open the
+<strong>Automation clips</strong> tab and click <strong>Automate…</strong>. Type to find a control (&quot;cutoff&quot;, &quot;kick vol&quot;) or browse:</p>
+<ul>
+<li>what you last touched, in a plugin&#39;s window or anywhere else,</li>
+<li>the song: the main volume and the tempo,</li>
+<li>each channel: volume, pan and pitch,</li>
+<li>the mixer: the tracks something plays into and the master, with their volume, pan, stereo, sends, effect mixes and
+the built-in effects&#39; controls,</li>
+<li>each plugin&#39;s parameters.</li>
+</ul>
+<p>Wherever you start, the new clip:</p>
+<ul>
+<li>covers the Playlist&#39;s <a href="../playlist/#select-a-stretch-of-time">time selection</a> if there is one, else the whole song (at
+least four bars),</li>
+<li>goes on a track below the others,</li>
+<li>starts flat, at the value the control has now,</li>
+<li>is selected, and the Playlist opens on it.</li>
+</ul>
+<aside class="callout tip"><p><strong>Tip:</strong> Select the stretch you want first with <kbd>⌘</kbd>-drag in the Playlist&#39;s ruler. The clip fits it
+exactly.</p>
+</aside>
+<h2 id="shape-the-curve"><a class="anchor" href="#shape-the-curve">Shape the curve</a></h2>
+<p>Edit the curve right on its clip in the Playlist, with the Draw (<kbd>P</kbd>) or Paint (<kbd>B</kbd>) tool. Make the
+track taller if the clip is too thin to work on.</p>
+<p>Right-click adds. Left-click moves. ⌥-click deletes.</p>
+<ul>
+<li><strong>Add a point:</strong> right-click on the curve. Keep the button down to drag the new point into place. Hold <kbd>⇧</kbd>
+to add it on the line, keeping the value the curve has there.</li>
+<li><strong>Move a point:</strong> drag it. Hold <kbd>⇧</kbd> to move it only along time, <kbd>⌘</kbd> only up and down,
+<kbd>⌥</kbd> to move it off the grid.</li>
+<li><strong>Type a value:</strong> double-click a point.</li>
+<li><strong>Delete a point:</strong> <kbd>⌥</kbd>-click it.</li>
+<li><strong>Bend a segment:</strong> drag the small ring between two points. Hold <kbd>⌘</kbd> to bend it finely. Right-click the
+ring to straighten it again.</li>
+</ul>
+<p>The first point always sits at the clip&#39;s left edge. It can&#39;t be deleted.</p>
+<p>Right-click a point for its menu: its value, its curve type, <strong>Type in value…</strong> (as a percentage of the clip&#39;s range),
+<strong>Reset tension</strong>, <strong>Delete</strong> and <strong>Automation settings…</strong>.</p>
+<p>Away from the points, the clip is still a clip. Drag its title, or its body with the left button (outside Step mode), to move it.
+Right-click its title to delete it. <kbd>⌘</kbd>-click and <kbd>⌘</kbd>-drag select, as on any clip.</p>
+<h2 id="curve-types"><a class="anchor" href="#curve-types">Curve types</a></h2>
+<p>A point&#39;s curve type shapes the segment that arrives at it, from the point before. Right-click a point to pick one:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Curve</th>
+<th>Shape</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Single curve</td>
+<td>One bend, set by the ring</td>
+</tr>
+<tr>
+<td>Double curve</td>
+<td>An S: the first half bent one way, the second the mirror of it</td>
+</tr>
+<tr>
+<td>Alt single curve</td>
+<td>A single curve, bending the other way</td>
+</tr>
+<tr>
+<td>Alt double curve</td>
+<td>The other S: fast at the ends, slow through the middle, or the reverse</td>
+</tr>
+<tr>
+<td>Hold</td>
+<td>Stays where it was, then jumps at the point</td>
+</tr>
+<tr>
+<td>Stairs, Smooth stairs</td>
+<td>Steps from one value to the next, sharp or rounded</td>
+</tr>
+<tr>
+<td>Pulse</td>
+<td>Flips between the two values</td>
+</tr>
+<tr>
+<td>Wave</td>
+<td>Swings between the two values, arriving at the second</td>
+</tr>
+<tr>
+<td>Half sine</td>
+<td>Quick away, slowing to a stop as it arrives, like a tape stop</td>
+</tr>
+<tr>
+<td>Smooth</td>
+<td>Eases out and in, with no sharp corners</td>
+</tr>
+</tbody></table>
+</div>
+<p>For stairs, pulses and waves, dragging the ring sets how many steps or cycles there are.</p>
+<p>A point you add takes the curve type of the segment it splits, so the shape carries on.</p>
+<p>The first point has no curve type: nothing comes before it.</p>
+<h2 id="step-and-slide"><a class="anchor" href="#step-and-slide">Step and Slide</a></h2>
+<p>Two buttons in the Playlist&#39;s toolbar change how a drag on a curve works.</p>
+<ul>
+<li><strong>Step mode:</strong> dragging across a curve paints steps, one per grid cell, at the height of the pointer. It&#39;s the
+quickest way to draw a gated or stuttered pattern. Hold <kbd>⌥</kbd> to paint steps a step long, whatever the snap.
+Change the <a href="../playlist/#snap">snap</a> to change the cells.</li>
+<li><strong>Slide mode:</strong> moving a point moves every point after it too, so the rest of the curve keeps its shape.</li>
+</ul>
+<h2 id="the-automation-clips-window"><a class="anchor" href="#the-automation-clips-window">The automation clip&#39;s window</a></h2>
+<p>Double-click an automation clip, or pick <strong>Automation settings</strong> from its menu, to open its window. It says what the
+clip drives, and shows its curve.</p>
+<h3 id="min-and-max"><a class="anchor" href="#min-and-max">Min and Max</a></h3>
+<p><strong>MIN</strong> and <strong>MAX</strong> set the range the curve moves the control between. The top of the clip is MAX, the bottom MIN.
+Narrow them to keep a sweep subtle without redrawing it.</p>
+<p>A new tempo clip goes from 60 to 180 BPM, widened if the song&#39;s tempo is outside that.</p>
+<h3 id="lfo"><a class="anchor" href="#lfo">LFO</a></h3>
+<p>Turn on the <strong>LFO</strong> for an oscillator on top of the curve. The points stay as they are.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SPD</td>
+<td>How fast: from a cycle every sixteen bars up to 32 a bar</td>
+</tr>
+<tr>
+<td>TENS</td>
+<td>Its shape: towards a square one way, peakier the other</td>
+</tr>
+<tr>
+<td>SKEW</td>
+<td>Where in each cycle it peaks: in the middle it&#39;s a triangle, at either end a saw</td>
+</tr>
+<tr>
+<td>LVL</td>
+<td>How much, from −100% to +100%</td>
+</tr>
+<tr>
+<td>MULT</td>
+<td>On: the LFO scales the curve, as you&#39;d want for a volume. Off: it&#39;s added to it, as for a pan.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The dotted line is what you hear: the curve with the LFO.</p>
+<h3 id="tools"><a class="anchor" href="#tools">Tools</a></h3>
+<p>The <strong>Tools</strong> menu, in the window and in the clip&#39;s menu on the Playlist:</p>
+<ul>
+<li><strong>Flip vertically:</strong> the top becomes the bottom.</li>
+<li><strong>Normalize levels:</strong> stretched so the lowest point is at the bottom and the highest at the top.</li>
+<li><strong>Scale levels up (×1.25)</strong> and <strong>Scale levels down (×0.8):</strong> bigger or smaller moves, about the middle.</li>
+<li><strong>Decimate points:</strong> every second point between the first and last goes.</li>
+<li><strong>Smooth:</strong> each point between the first and last moves halfway towards its neighbours.</li>
+</ul>
+<p>Each is one step of undo.</p>
+<h2 id="copies-share-one-curve"><a class="anchor" href="#copies-share-one-curve">Copies share one curve</a></h2>
+<p>Copy an automation clip on the Playlist, by <kbd>⇧</kbd>-dragging or <kbd>⌘B</kbd>, and the copies all play the same
+curve. Change the curve on one and they all change. That&#39;s handy for a filter move that repeats every chorus.</p>
+<p>To change just one, pick <strong>Make unique</strong> from its clip menu. It gets its own copy of the curve.</p>
+<p>The Picker&#39;s <strong>Automation clips</strong> tab lists every automation clip in the song. Click one to make it what Draw and Paint
+add, and draw it wherever you need it. Deleting one there deletes all its clips.</p>
+<h2 id="automate-an-audio-clips-volume-or-pan"><a class="anchor" href="#automate-an-audio-clips-volume-or-pan">Automate an audio clip&#39;s volume or pan</a></h2>
+<p>An audio clip&#39;s menu has <strong>Automate ▸ Volume</strong> and <strong>Automate ▸ Panning</strong>. Either makes an automation clip of its
+channel&#39;s volume or pan, covering that audio clip exactly, on the track below it.</p>
+<p>For a quick fade, the audio clip&#39;s own <a href="../playlist/#fades-and-gain">fades and gain</a> are often simpler.</p>
+<h2 id="tempo-automation"><a class="anchor" href="#tempo-automation">Tempo automation</a></h2>
+<p>Right-click the tempo in the toolbar and pick <strong>Create automation clip</strong>, or find <strong>Tempo</strong> under Song in the Automate
+window. Draw the curve as you would any other. The song speeds up and slows down as it plays, and
+<a href="../playlist/#stretch">stretched audio clips</a> keep time with it.</p>
+<p>While a tempo clip plays, the tempo in the toolbar shows the tempo where the song is. What you type there is the
+song&#39;s own tempo.</p>
+<h2 id="when-automation-plays"><a class="anchor" href="#when-automation-plays">When automation plays</a></h2>
+<p>Automation plays in <strong>song mode only</strong>. Press <kbd>L</kbd> or use the PAT / SONG switch. In pattern mode, every
+control is just its own value.</p>
+<p>In song mode, a control is:</p>
+<ul>
+<li><strong>before its first clip:</strong> its own value, as you set it,</li>
+<li><strong>inside a clip:</strong> the curve. If two of its clips overlap, the one that starts later wins,</li>
+<li><strong>after a clip:</strong> the clip&#39;s last value, until the next clip of it.</li>
+</ul>
+<p>An automated control follows the curve wherever the song is, playing or not, so you see what you&#39;ll hear. It gets a
+small mark in the accent colour at its top right.</p>
+<p>While you hold an automated control with the mouse, the automation leaves it alone. Let go and it follows the curve
+again.</p>
+<p>A plugin&#39;s parameter is put back to its own value when the song stops.</p>
+<p>Right-click an automated control to open one of the clips driving it (<strong>Edit</strong> and the clip&#39;s name), or to make another.</p>
+<h2 id="things-to-know"><a class="anchor" href="#things-to-know">Things to know</a></h2>
+<ul>
+<li>Automation clips are heard in <a href="../export/">exports</a> exactly as in the Playlist.</li>
+<li>An automation clip whose control is gone (you deleted its channel or plugin) plays nothing. Its window says so.</li>
+<li><a href="../modulators/">Modulators</a> are the other way to move a control: they follow a sound or a channel&#39;s notes rather
+than a curve you draw. They&#39;re under <strong>Modulate</strong> in the same right-click menu.</li>
+</ul>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../plugins/"><span>Previous</span>Plugins</a><a class="next" rel="next" href="../recording/"><span>Next</span>Recording audio</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Automation">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#make-an-automation-clip">Make an automation clip</a></li><li><a href="#shape-the-curve">Shape the curve</a></li><li><a href="#curve-types">Curve types</a></li><li><a href="#step-and-slide">Step and Slide</a></li><li><a href="#the-automation-clips-window">The automation clip's window</a></li><li><a href="#copies-share-one-curve">Copies share one curve</a></li><li><a href="#automate-an-audio-clips-volume-or-pan">Automate an audio clip's volume or pan</a></li><li><a href="#tempo-automation">Tempo automation</a></li><li><a href="#when-automation-plays">When automation plays</a></li><li><a href="#things-to-know">Things to know</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stems and notes: Yen Studio docs</title>
+<meta name="description" content="Split an audio clip into vocals, drums, bass and more, or turn the notes played in it into a pattern, on your own Mac.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/stems-and-notes/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stems and notes">
+<meta property="og:description" content="Split an audio clip into vocals, drums, bass and more, or turn the notes played in it into a pattern, on your own Mac.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/stems-and-notes/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/" aria-current="page">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Finish">
+<p class="crumb" data-pagefind-ignore>Finish</p>
+<h1 data-pagefind-meta="title">Stems and notes</h1>
+<p>Yen Studio can do two things to an audio clip. <strong>Extract stems</strong> splits its file into its parts: vocals, drums, bass, guitar, piano and the rest. <strong>Convert to notes</strong> writes the notes played in it as a pattern you can play with any instrument.</p>
+<p>Both run on your Mac. Nothing is uploaded.</p>
+<h2 id="where-to-find-them"><a class="anchor" href="#where-to-find-them">Where to find them</a></h2>
+<ul>
+<li><strong>In the Playlist</strong>: click the arrow at the start of an audio clip&#39;s title to open its menu, then choose <strong>Extract stems…</strong> or <strong>Convert to notes…</strong>. They work on that clip: the part of the file it plays.</li>
+<li><strong>In the Channel rack</strong>: right-click an audio channel&#39;s button and choose <strong>Extract stems…</strong> or <strong>Convert to notes…</strong>. They work on the channel&#39;s whole file. They&#39;re greyed out until the channel has a sample, and plugin channels don&#39;t have them.</li>
+</ul>
+<p>Each opens a small window.</p>
+<h2 id="the-models-download-once"><a class="anchor" href="#the-models-download-once">The models download once</a></h2>
+<p>Each feature needs a model: a separation model for stems, a transcription model for notes. They aren&#39;t part of the download. The first time you use one, its window says it downloads a model once, and how big it is. Nothing is downloaded until you say yes.</p>
+<ul>
+<li>In <strong>Extract stems</strong>, the button says <strong>Download and extract</strong>. The model downloads, then the split starts.</li>
+<li>In <strong>Convert to notes</strong>, click <strong>Download</strong> in the window. Once it&#39;s there, the window listens to the file.</li>
+</ul>
+<p>After that, the model stays on your Mac, for every song. To stop a download, click <strong>Cancel</strong> (in Extract stems, it&#39;s in the notification) or close Convert to notes&#39; window. If a download is stopped or the connection drops, it carries on from where it was next time.</p>
+<h2 id="extract-stems"><a class="anchor" href="#extract-stems">Extract stems</a></h2>
+<p><figure class="shot" style="--w:1200"><img src="../shots/stems.webp" width="1200" height="615" alt="The Extract stems window" loading="lazy" decoding="async"></figure></p>
+<ol>
+<li>Open <strong>Extract stems…</strong> on an audio clip.</li>
+<li>Choose the stems you want: <strong>Vocals</strong>, <strong>Drums</strong>, <strong>Bass</strong>, <strong>Guitar</strong>, <strong>Piano</strong> and <strong>Other</strong>. The first time, Vocals, Drums, Bass and Other are chosen.</li>
+<li>Leave <strong>Mute the original clip</strong> on to silence the clip they came from, or turn it off.</li>
+<li>Click <strong>Extract</strong>.</li>
+</ol>
+<p>The window closes, and a notification says how far along the split is. Click <strong>Cancel</strong> in it to stop. A split can take a while, depending on how long the file is and on your Mac.</p>
+<h3 id="what-other-holds"><a class="anchor" href="#what-other-holds">What Other holds</a></h3>
+<p><strong>Other</strong> is everything you didn&#39;t choose. Choose Vocals and Other, and Other is the song without its vocals: an instrumental. Leave Guitar and Piano unchosen, and they&#39;re in Other. The window says what Other holds as you choose.</p>
+<p>If you don&#39;t choose Other, what you didn&#39;t choose is left out. With Other chosen, the stems add up to the original.</p>
+<h3 id="what-it-makes"><a class="anchor" href="#what-it-makes">What it makes</a></h3>
+<div class="cut"><video class="clip" data-clip="stems" style="--wide:2400/1200;--phone:1268/1216" muted playsinline loop preload="none" aria-label="A clip is split, and its drums, bass and the rest appear on the tracks below it."></video></div>
+<ul>
+<li>Each stem becomes a file in your song, and a new audio channel in the Channel rack, named after the source channel and the stem.</li>
+<li>A clip of each stem goes on the tracks below the clip, lined up with it, as long as it and as far into the file. New tracks are named after their stem.</li>
+<li>The stem clips copy the original clip&#39;s gain, fades and stretch, and their channels play as the source channel did: its pitch, stretch and sample settings.</li>
+<li>The stems play into the master. Route them to <a href="../mixer/">Mixer</a> tracks yourself if you want to.</li>
+<li>The new channels are selected, so you can find them in the rack.</li>
+</ul>
+<p><figure class="shot" style="--w:1200"><img src="../shots/stems-placed.webp" width="1200" height="615" alt="Stems placed on the tracks under the clip they came from" loading="lazy" decoding="async"></figure></p>
+<p>Started from a channel in the Channel rack, the split works on the channel&#39;s whole file. Each stem gets a clip under every one of that channel&#39;s clips, and <strong>Mute its clips</strong> silences them all.</p>
+<p>Splitting the same file the same way again reuses the stems it already made, so it&#39;s instant.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> Want just the drums of a song as notes? Extract stems first, then use <strong>Convert to notes…</strong> on the drum stem. The window starts on <strong>Drums</strong> for a drum stem.</p>
+</aside>
+<h2 id="convert-to-notes"><a class="anchor" href="#convert-to-notes">Convert to notes</a></h2>
+<p><figure class="shot" style="--w:1200"><img src="../shots/to-notes.webp" width="1200" height="615" alt="The Convert to notes window" loading="lazy" decoding="async"></figure></p>
+<ol>
+<li>Open <strong>Convert to notes…</strong> on an audio clip.</li>
+<li>Wait while it says <strong>Listening…</strong>. A long file takes longer, and the window says so.</li>
+<li>Choose <strong>Melodic</strong> or <strong>Drums</strong>, and set the controls below. The drawing of the notes changes as you move them.</li>
+<li>Click <strong>Preview</strong> to hear the clip with its notes, looping. Click <strong>Stop</strong> to stop.</li>
+<li>Click <strong>Convert</strong>.</li>
+</ol>
+<p>Closing the window, or clicking <strong>Cancel</strong>, stops it listening.</p>
+<h3 id="the-settings"><a class="anchor" href="#the-settings">The settings</a></h3>
+<ul>
+<li><strong>Melodic</strong> hears notes of any pitch: a melody, a bass line, chords. <strong>Drums</strong> hears kicks, snares and hats.</li>
+<li><strong>SENS</strong> (sensitivity) is how readily a sound counts as a note. Turn it up if notes are missing, down if there are notes that shouldn&#39;t be there.</li>
+<li><strong>SHORTEST</strong> (Melodic only) leaves out notes shorter than this.</li>
+<li><strong>QUANTIZE</strong> moves the notes&#39; starts and ends onto a grid: 1/32, 1/16, 1/8 or 1/4. <strong>Off</strong> leaves them where they were heard.</li>
+<li><strong>Snap to the song&#39;s scale</strong> (Melodic only) moves each note to the nearest note of the song&#39;s scale. It needs the song to have a scale: set one in the <a href="../piano-roll/">Piano roll</a>.</li>
+</ul>
+<p>Under the drawing, a line says what it heard: how many notes and their range, or how many kicks, snares and hats.</p>
+<p>It works best on one instrument with clear notes. On a full mix, extract a stem first.</p>
+<h3 id="what-it-makes-2"><a class="anchor" href="#what-it-makes-2">What it makes</a></h3>
+<ul>
+<li>A new pattern with the notes, placed on the first free track under the clip, as long as the clip.</li>
+<li>For <strong>Melodic</strong>, the notes are on a new channel playing a plain tone from the starter kit. For <strong>Drums</strong>, the kick, snare and hat each get a channel playing the starter kit&#39;s.</li>
+<li>The pattern opens in the <a href="../piano-roll/">Piano roll</a>.</li>
+</ul>
+<p>The sampler is a placeholder. To hear the notes on a synth, right-click the channel button, choose <strong>Replace…</strong> and pick an instrument. The notes stay. See <a href="../plugins/">Plugins</a>.</p>
+<p>Started from a channel in the Channel rack, Convert to notes makes the pattern but doesn&#39;t place it on the Playlist.</p>
+<p>Notes don&#39;t carry pitch bends. Drums only knows kicks, snares and hats: toms and cymbals are heard as whichever is nearest.</p>
+<h2 id="undo"><a class="anchor" href="#undo">Undo</a></h2>
+<p>Extracting stems and converting to notes are one undo step each. Press <kbd>⌘Z</kbd> to take away everything it added and unmute the original.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../export/"><span>Previous</span>Export</a><a class="next" rel="next" href="../assistant/"><span>Next</span>Assistant</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Stems%20and%20notes">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#where-to-find-them">Where to find them</a></li><li><a href="#the-models-download-once">The models download once</a></li><li><a href="#extract-stems">Extract stems</a></li><li><a href="#convert-to-notes">Convert to notes</a></li><li><a href="#undo">Undo</a></li></ul></nav>
+</div>
+</body>
+</html>

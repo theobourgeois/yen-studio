@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mixer: Yen Studio docs</title>
+<meta name="description" content="Mixer tracks, routing, faders, mute and solo, sends, effect slots, delay compensation, groups, VCA faders and the Mixer's keys.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/mixer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mixer">
+<meta property="og:description" content="Mixer tracks, routing, faders, mute and solo, sends, effect slots, delay compensation, groups, VCA faders and the Mixer's keys.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/mixer/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/" aria-current="page">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Mixer</h1>
+<p>The Mixer is where every channel&#39;s sound ends up. Each channel in the <a href="../channel-rack/">Channel rack</a> plays into a mixer
+track; each track has a fader, pan, effect slots and an output, and every track ends in the master. It works the way
+FL Studio&#39;s mixer does: route channels with <kbd>⌘L</kbd>, send tracks to each other with the switch under each
+strip, and put effects in the slots on the right.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/mixer.webp" width="1200" height="615" alt="The Mixer, with effects in the selected track's slots" loading="lazy" decoding="async"><figcaption>The Mixer: strips on the left, the selected track's effect slots on the right</figcaption></figure></p>
+<h2 id="open-the-mixer"><a class="anchor" href="#open-the-mixer">Open the Mixer</a></h2>
+<p>Press <kbd>F9</kbd> (or <kbd>⌥4</kbd>), or use the Mixer button on the toolbar. It opens filling the window.
+Double-click its title bar to make it a window you can move and resize, and double-click again to fill the window.</p>
+<p>The Mixer has three parts:</p>
+<ul>
+<li><strong>The strips</strong>: the master first (marked <strong>M</strong>), then the tracks. Scroll along them with the mouse wheel.</li>
+<li><strong>The inspector</strong> on the right: the current track&#39;s name, its input, its effect slots and its delay compensation.</li>
+<li><strong>The title bar</strong>: the Mixer menu (the arrow), the <strong>SOLO</strong> light, <strong>MONO</strong>, <strong>DIM</strong>, the view, and <strong>+</strong> to add a
+track.</li>
+</ul>
+<h2 id="tracks"><a class="anchor" href="#tracks">Tracks</a></h2>
+<h3 id="add-and-delete-tracks"><a class="anchor" href="#add-and-delete-tracks">Add and delete tracks</a></h3>
+<ul>
+<li>Click <strong>+</strong> in the title bar to add a track after the selected one, or the <strong>+</strong> after the last strip to add one at
+the end.</li>
+<li>Right-click a track&#39;s number or name and choose <strong>Insert a track after</strong>.</li>
+<li>To delete, select the tracks and press <kbd>⌥⌫</kbd>, or choose <strong>Delete</strong> from the track&#39;s menu or <strong>Delete
+selected tracks</strong> from the Mixer menu.</li>
+</ul>
+<p>The master can&#39;t be deleted or moved.</p>
+<h3 id="select-tracks"><a class="anchor" href="#select-tracks">Select tracks</a></h3>
+<ul>
+<li>Click a strip to select it. It becomes the <em>current</em> track, the one the inspector shows.</li>
+<li><kbd>⌘</kbd>-click adds a track to the selection. <kbd>⇧</kbd>-click selects every track from the current one to
+the one you click.</li>
+<li>Drag across the names and meters to move the selection along. Hold <kbd>⌘</kbd> while you drag to add every track
+you pass over.</li>
+<li><kbd>←</kbd> and <kbd>→</kbd> select the previous and next track. <kbd>⌘A</kbd> selects them all.</li>
+<li><kbd>Esc</kbd>, or a click on empty space, keeps only the current track selected.</li>
+</ul>
+<p>A control you move on a selected strip moves on every selected track: faders move together by the same number of
+decibels, pan and stereo separation by the same amount, and mute, solo, invert and swap all take the state of the
+strip you clicked.</p>
+<h3 id="rename-colour-and-reorder"><a class="anchor" href="#rename-colour-and-reorder">Rename, colour and reorder</a></h3>
+<ul>
+<li>Double-click a track&#39;s name, press <kbd>F2</kbd> or <kbd>⇧⌘N</kbd>, or choose <strong>Rename and color…</strong> from its menu.
+Clear the name to go back to the track&#39;s number.</li>
+<li><strong>Colour ▸</strong> in the track&#39;s menu picks a colour from a set of swatches, or <strong>No colour</strong>. A coloured track&#39;s strip
+is tinted.</li>
+<li>Drag a track&#39;s number to move it (the selected tracks go with it). A line shows where they&#39;ll land. You can also
+press <kbd>⌥←</kbd> and <kbd>⌥→</kbd>, or choose <strong>Move left</strong> and <strong>Move right</strong>.</li>
+</ul>
+<h2 id="route-channels-to-the-mixer"><a class="anchor" href="#route-channels-to-the-mixer">Route channels to the Mixer</a></h2>
+<p>A channel plays into the mixer track its settings name. To route several at once:</p>
+<ol>
+<li>Select the channels in the <a href="../channel-rack/">Channel rack</a>.</li>
+<li>Select a mixer track.</li>
+<li>Press <kbd>⌘L</kbd> (<strong>Route selected channels to this track</strong>) to send them all there, or <kbd>⇧⌘L</kbd>
+(<strong>…starting from this track</strong>) to give each channel a track of its own, one after the other.</li>
+</ol>
+<p>Both are in the Mixer menu and under <strong>Channel routing ▸</strong> in a track&#39;s menu. <kbd>⌥L</kbd> (<strong>Select channels routed
+here</strong>) selects, in the Channel rack, every channel that plays into the current track.</p>
+<h2 id="a-strip-top-to-bottom"><a class="anchor" href="#a-strip-top-to-bottom">A strip, top to bottom</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Part</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Group band</td>
+<td>Shows when the Mixer has <a href="#groups-and-vca-faders">groups</a>.</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>Drag it to reorder tracks. It turns purple with a microphone when the track takes an input. A clock means the track&#39;s delay is compensated.</td>
+</tr>
+<tr>
+<td>Fold chip</td>
+<td>On a track others send into: how many feed it. Click to fold them away.</td>
+</tr>
+<tr>
+<td>Name and meter</td>
+<td>Double-click the name to rename. The selected strip&#39;s meter is outlined.</td>
+</tr>
+<tr>
+<td>Mute light</td>
+<td>Click to mute.</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>Solo.</td>
+</tr>
+<tr>
+<td>Pan</td>
+<td>Left to right.</td>
+</tr>
+<tr>
+<td>Fader</td>
+<td>The level, with its value in dB under it.</td>
+</tr>
+<tr>
+<td>Arm light</td>
+<td>Arms the track to <a href="../recording/">record</a> its input. Not on the master.</td>
+</tr>
+<tr>
+<td>Invert phase, swap left/right</td>
+<td>Two switches.</td>
+</tr>
+<tr>
+<td>Stereo separation</td>
+<td>Narrower or wider.</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>Where the track goes: <strong>→ M</strong> for the master, a list of numbers, or <strong>→ —</strong> for nowhere.</td>
+</tr>
+<tr>
+<td>Send switch</td>
+<td>Sends the selected tracks to this one. See <a href="#sends">Sends</a>.</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="faders-pan-and-stereo"><a class="anchor" href="#faders-pan-and-stereo">Faders, pan and stereo</a></h2>
+<p><strong>Fader.</strong> Drag the handle, or press anywhere in the groove to bring the handle there and keep dragging. It catches at
+0 dB on the way past; hold <kbd>⇧</kbd> to move through it. Hold <kbd>⌘</kbd> for fine changes. The mouse wheel moves
+it too. <kbd>⌥</kbd>-click (or a middle click) puts it back at 0 dB. Right-click for <strong>Reset</strong>, <strong>Type in value…</strong>
+(in dB) and the <a href="../automation/">automation</a> items.</p>
+<p><strong>Pan and stereo separation</strong> are knobs: drag up or down, <kbd>⌥</kbd>-click to reset, right-click for <strong>Reset</strong>,
+<strong>Copy value</strong>, <strong>Paste value</strong> and <strong>Type in value…</strong>. Stereo separation reads <strong>As it is</strong> in the middle; turned
+right it makes the sound narrower, turned left wider.</p>
+<p><strong>Invert phase</strong> flips the track&#39;s polarity. <strong>Swap left/right</strong> swaps its two sides.</p>
+<p>Every control on a strip can be <a href="../automation/">automated</a> and <a href="../modulators/">modulated</a>: right-click it.</p>
+<h2 id="mute-and-solo"><a class="anchor" href="#mute-and-solo">Mute and solo</a></h2>
+<ul>
+<li>Click the mute light to mute a track. Keep the button down and drag across other strips to mute them too.</li>
+<li>Click <strong>S</strong> to solo a track (drag across strips to solo several). <kbd>⌥</kbd>-click <strong>S</strong>, press <kbd>⌥S</kbd>,
+or <kbd>⌘</kbd>-click or right-click the mute light to solo a track alone.</li>
+<li><kbd>⇧</kbd>-click <strong>S</strong> to make a track <em>solo safe</em> (a lock shows): it&#39;s never silenced by another track&#39;s solo.
+Useful for a reverb bus. <strong>Solo safe</strong> is also in the track&#39;s menu.</li>
+<li>The <strong>SOLO</strong> light in the title bar blinks while anything is soloed, with a count when more than one is. Click it
+to clear every solo (or choose <strong>Clear all solos</strong>).</li>
+</ul>
+<p>Soloing a track keeps what it plays through: the buses it sends into stay on, and their <strong>S</strong> is outlined.</p>
+<p>A muted or soloed-out strip is greyed. A track that&#39;s silent because of something further along (it sends into a
+muted bus, or sends nowhere) is faded a little less; hover over it to see why.</p>
+<h2 id="routing"><a class="anchor" href="#routing">Routing</a></h2>
+<p>Every track goes to the master until you send it somewhere else. Click a strip&#39;s output label for its <strong>Route to</strong>
+menu: every track it can go to, with a tick by those it goes to now, and <strong>New bus</strong>.</p>
+<h3 id="sends"><a class="anchor" href="#sends">Sends</a></h3>
+<p>The send switch under each strip works on the selected tracks:</p>
+<ul>
+<li>On a track that isn&#39;t selected, the switch is an up arrow. Click it to send the selected tracks there; click again
+to stop. It&#39;s half lit when only some of them send there.</li>
+<li>Once a track sends to it, the switch shows a knob: the send&#39;s level (100% to start). It moves the send of every
+selected track at once.</li>
+<li>On a selected track the switch is a down arrow. Drag it onto another strip to route the track there and nowhere
+else; hold <kbd>⌘</kbd> or <kbd>⌥</kbd> as you drop to add a send and keep the routes it has. A cable follows the
+pointer while you drag.</li>
+<li>A switch is greyed when sending there would make a loop: that track&#39;s sound already reaches the selected ones.</li>
+</ul>
+<p>Right-click a send switch for <strong>Route to this track</strong> (or <strong>Remove the sends</strong>), <strong>Route to this track only</strong>,
+<strong>Sidechain to this track</strong> (a send at 0%, as in FL Studio) and, once it sends, <strong>Pre-fader</strong>.</p>
+<p>The same choices are under <strong>Track routing ▸</strong> in a track&#39;s menu, with <strong>Route to the master only</strong>.</p>
+<h3 id="pre-fader-sends"><a class="anchor" href="#pre-fader-sends">Pre-fader sends</a></h3>
+<p>A send is taken after the track&#39;s fader, so turning the track down turns the send down too. Tick <strong>Pre-fader</strong> in the
+send switch&#39;s menu to take it before the fader instead: the send keeps its level whatever the fader does. A <strong>PRE</strong>
+badge marks it.</p>
+<h3 id="buses"><a class="anchor" href="#buses">Buses</a></h3>
+<p>Select some tracks and press <kbd>⌘G</kbd> (<strong>Route selected to a new bus</strong>). A new track is added after them, they
+all go into it, and you name it at once.</p>
+<p>A track that others send into shows a fold chip with how many feed it. Click it to fold those tracks away and show
+only the bus; click again to bring them back.</p>
+<h3 id="cables"><a class="anchor" href="#cables">Cables</a></h3>
+<p>The Mixer draws its routing the way FL Studio does. From each selected track, a cable runs from its send to every
+track it goes to. Into a selected track, dashed cables come from the tracks that feed it. A 0% send is faint, and a
+<a href="../sidechain/">sidechain key</a> is dotted, in the accent colour.</p>
+<h2 id="effect-slots"><a class="anchor" href="#effect-slots">Effect slots</a></h2>
+<p>The inspector shows the current track&#39;s effect slots. An empty one reads <strong>Slot</strong> and its number.</p>
+<h3 id="add-an-effect"><a class="anchor" href="#add-an-effect">Add an effect</a></h3>
+<ol>
+<li>Click an empty slot.</li>
+<li>Pick an effect: the <a href="../effects/">built-in effects</a> come first (Y-EQ, Y-C, Y-L, Y-R, Y-Multiband, Y-Time,
+Y-Delay, Y-Tune, Y-Pan, Y-Pitch), then the <a href="../plugins/">plugins</a> you&#39;ve starred. <strong>More plugins…</strong> opens the Plugin
+manager.</li>
+</ol>
+<p>A built-in effect&#39;s window opens at once; a plugin&#39;s opens when it has loaded. A spinner shows while it loads. If it
+fails, the slot shows a warning and a button to try again.</p>
+<h3 id="use-a-slot"><a class="anchor" href="#use-a-slot">Use a slot</a></h3>
+<ul>
+<li>Click its name to open or close its window.</li>
+<li>The light on the right turns it on or off (bypass). A bypassed effect&#39;s name is struck through.</li>
+<li>The small knob is its <strong>mix</strong>, from dry to 100% wet. It can be automated like any knob.</li>
+<li>A key badge shows when it <a href="../sidechain/">listens to a sidechain key</a>, with the number of the track it hears.</li>
+</ul>
+<p>Click the slot&#39;s arrow, or right-click it, for its menu: <strong>Open its window</strong>, <strong>Replace…</strong>, <strong>Bypass</strong> or <strong>Enable</strong>,
+<strong>Sidechain input ▸</strong>, <strong>Move up</strong>, <strong>Move down</strong> and <strong>Delete</strong>.</p>
+<h3 id="reorder-move-and-copy-effects"><a class="anchor" href="#reorder-move-and-copy-effects">Reorder, move and copy effects</a></h3>
+<ul>
+<li>Turn the mouse wheel over a slot to move its effect up or down.</li>
+<li>Drag a slot onto another slot to swap them. Hold <kbd>⌘</kbd> to copy it there instead.</li>
+<li>Drag a slot onto another track&#39;s strip to move the effect to that track, with its settings and its automation.
+Hold <kbd>⌘</kbd> to copy it. A track with every slot full says <strong>No free slot</strong>.</li>
+</ul>
+<h2 id="delay-compensation"><a class="anchor" href="#delay-compensation">Delay compensation</a></h2>
+<p>Some effects and plugins delay their sound to do their work. Yen Studio delays every
+other path to match, so the tracks stay in time. Sends and <a href="../sidechain/">sidechain keys</a> are compensated too.</p>
+<p>At the bottom of the inspector:</p>
+<ul>
+<li><strong>Plugin delay</strong> says how much the track&#39;s effects delay it, in milliseconds and samples, or <strong>none</strong>. Only effects
+that are switched on count.</li>
+<li><strong>Offset</strong> adds to that, in milliseconds. Use it when a track sounds late (or early) and its plugins don&#39;t say so:
+a positive offset means its sound is later than they report, and the other tracks wait for it. A negative one means
+it&#39;s early. <strong>Reset</strong> sets it back to 0.</li>
+</ul>
+<p>A track whose delay is compensated shows a clock by its number. Hover over it for the plugins&#39; delay and the offset.</p>
+<h2 id="groups-and-vca-faders"><a class="anchor" href="#groups-and-vca-faders">Groups and VCA faders</a></h2>
+<ol>
+<li>Select the tracks.</li>
+<li>Right-click one and choose <strong>Create group…</strong>, then type its name.</li>
+</ol>
+<p>A band with the group&#39;s name runs above its tracks. Click the band to select the group&#39;s tracks (<kbd>⌘</kbd>-click
+adds them to the selection); double-click it to rename the group. <strong>Ungroup</strong> in a track&#39;s menu takes it out.</p>
+<ul>
+<li><strong>Link the group&#39;s controls</strong>: a control moved on one of the group&#39;s tracks moves on all of them, whether or not
+they&#39;re selected. A link icon shows on the band.</li>
+<li><strong>VCA fader for the group</strong>: adds a strip after the master, labelled <strong>VCA</strong> and the group&#39;s name. Its fader scales
+the level of every track in the group without mixing their sound together; each track keeps its own fader and
+automation. The VCA fader itself can&#39;t be automated yet. Its menu has <strong>Remove the VCA fader</strong>.</li>
+</ul>
+<h2 id="layout"><a class="anchor" href="#layout">Layout</a></h2>
+<ul>
+<li><strong>Views.</strong> The view name in the title bar (<strong>Compact</strong>, <strong>Wide</strong>, <strong>Extra large</strong>) switches to the next one; the
+Mixer menu lists them too. Extra large adds a list of each strip&#39;s effects: click one to open it. A bypassed one is
+struck through. The view is kept on this computer.</li>
+<li><strong>Docking.</strong> <strong>Dock to ▸ Left / Middle / Right</strong> in a track&#39;s menu pins it. Left-docked tracks stay beside the
+master and right-docked ones at the far right while the middle scrolls.</li>
+<li><strong>Separators.</strong> Tick <strong>Separator before</strong> in a track&#39;s menu to put a gap before its strip.</li>
+</ul>
+<h2 id="copy-track-state"><a class="anchor" href="#copy-track-state">Copy track state</a></h2>
+<p>Right-click a track and click <strong>Copy track state</strong>, then choose <strong>Paste track state</strong> on another. It copies the
+track&#39;s effects with their settings, and its controls. You can also drag <strong>Copy track state</strong> from the menu onto
+another strip to copy it there in one go.</p>
+<aside class="callout note"><p><strong>Note:</strong> a plugin&#39;s own settings carry over only within the same song.</p>
+</aside>
+<h2 id="meters"><a class="anchor" href="#meters">Meters</a></h2>
+<p>Each strip&#39;s meter shows both sides. It&#39;s green up to −18 dB, amber towards 0 dB and red over it, and stays red for
+a moment after the sound goes over.</p>
+<p>The <strong>SEL</strong> meter at the far left adds up the selected tracks&#39; output, with a dB scale: select a few tracks to see how
+loud they are together.</p>
+<p>On the master:</p>
+<ul>
+<li><strong>MONO</strong> sums the master to mono so you can check the mix there.</li>
+<li><strong>DIM</strong> turns the master down by 20 dB so you can talk over it.</li>
+</ul>
+<p>Neither changes an <a href="../export/">export</a>.</p>
+<h2 id="recording"><a class="anchor" href="#recording">Recording</a></h2>
+<p>A track that takes an input can be armed and recorded. Its input, monitoring and input offset are at the top of the
+inspector. <strong>Assign to new audio track</strong> in a track&#39;s menu gives it a Playlist track where its takes land. See
+<a href="../recording/">Recording audio</a>.</p>
+<h2 id="menus"><a class="anchor" href="#menus">Menus</a></h2>
+<p><strong>The Mixer menu</strong> (the arrow in the title bar): <strong>Add a track</strong>, <strong>Route selected to a new bus</strong>, <strong>Delete selected
+tracks</strong>, <strong>Modulators…</strong> (see <a href="../modulators/">Modulators</a>), <strong>Route selected channels to this track</strong>, <strong>Route selected
+channels starting from this track</strong>, and the views.</p>
+<p><strong>A track&#39;s menu</strong> (right-click its number or name):</p>
+<ul>
+<li><strong>Rename and color…</strong>, <strong>Colour ▸</strong></li>
+<li><strong>Channel routing ▸</strong>, <strong>Track routing ▸</strong>, <strong>Sidechain to ▸</strong> (see <a href="../sidechain/">Sidechain</a>)</li>
+<li><strong>Copy track state</strong>, <strong>Paste track state</strong></li>
+<li><strong>Select channels routed here</strong></li>
+<li><strong>Assign to new audio track</strong></li>
+<li><strong>Solo</strong>, <strong>Solo alone</strong>, <strong>Solo safe</strong>, <strong>Clear all solos</strong></li>
+<li><strong>Move left</strong>, <strong>Move right</strong></li>
+<li><strong>Separator before</strong></li>
+<li><strong>Create group…</strong>, <strong>Ungroup</strong>, <strong>Link the group&#39;s controls</strong>, <strong>VCA fader for the group</strong></li>
+<li><strong>Dock to ▸</strong></li>
+<li><strong>Insert a track after</strong>, <strong>Delete</strong></li>
+</ul>
+<h2 id="keys"><a class="anchor" href="#keys">Keys</a></h2>
+<p>These work while the Mixer is in front.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>F9</kbd></td>
+<td>Open or close the Mixer</td>
+</tr>
+<tr>
+<td><kbd>←</kbd> / <kbd>→</kbd></td>
+<td>Select the previous or next track</td>
+</tr>
+<tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select every track</td>
+</tr>
+<tr>
+<td><kbd>Esc</kbd></td>
+<td>Keep only the current track selected</td>
+</tr>
+<tr>
+<td><kbd>S</kbd></td>
+<td>Solo the selected tracks</td>
+</tr>
+<tr>
+<td><kbd>⌥S</kbd></td>
+<td>Solo them alone</td>
+</tr>
+<tr>
+<td><kbd>⌥←</kbd> / <kbd>⌥→</kbd></td>
+<td>Move the selected tracks left or right</td>
+</tr>
+<tr>
+<td><kbd>F2</kbd> or <kbd>⇧⌘N</kbd></td>
+<td>Rename the track</td>
+</tr>
+<tr>
+<td><kbd>⌘G</kbd></td>
+<td>Route the selected tracks to a new bus</td>
+</tr>
+<tr>
+<td><kbd>⌘L</kbd></td>
+<td>Route the selected channels to this track</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘L</kbd></td>
+<td>Route the selected channels starting from this track</td>
+</tr>
+<tr>
+<td><kbd>⌥L</kbd></td>
+<td>Select the channels routed to this track</td>
+</tr>
+<tr>
+<td><kbd>⌥⌫</kbd></td>
+<td>Delete the selected tracks</td>
+</tr>
+</tbody></table>
+</div>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../midi/"><span>Previous</span>MIDI keyboards</a><a class="next" rel="next" href="../sidechain/"><span>Next</span>Sidechain</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Mixer">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#open-the-mixer">Open the Mixer</a></li><li><a href="#tracks">Tracks</a></li><li><a href="#route-channels-to-the-mixer">Route channels to the Mixer</a></li><li><a href="#a-strip-top-to-bottom">A strip, top to bottom</a></li><li><a href="#faders-pan-and-stereo">Faders, pan and stereo</a></li><li><a href="#mute-and-solo">Mute and solo</a></li><li><a href="#routing">Routing</a></li><li><a href="#effect-slots">Effect slots</a></li><li><a href="#delay-compensation">Delay compensation</a></li><li><a href="#groups-and-vca-faders">Groups and VCA faders</a></li><li><a href="#layout">Layout</a></li><li><a href="#copy-track-state">Copy track state</a></li><li><a href="#meters">Meters</a></li><li><a href="#recording">Recording</a></li><li><a href="#menus">Menus</a></li><li><a href="#keys">Keys</a></li></ul></nav>
+</div>
+</body>
+</html>

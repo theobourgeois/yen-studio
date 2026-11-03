@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Built-in effects: Yen Studio docs</title>
+<meta name="description" content="Put a built-in effect in a mixer slot, and what every built-in window shares: presets, A/B, automation and the mix knob.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/effects/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Built-in effects">
+<meta property="og:description" content="Put a built-in effect in a mixer slot, and what every built-in window shares: presets, A/B, automation and the mix knob.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/effects/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/" aria-current="page">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Built-in effects</h1>
+<p>Yen Studio comes with its own effects: an EQ, compressors, a limiter, a reverb, a delay and a few that move pitch, time and the stereo field. They live in the <a href="../mixer/">Mixer</a>&#39;s effect slots, the same as your plugins, and their settings are saved in the song, so <kbd>⌘Z</kbd> undoes a knob turn like any other edit.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/mixer.webp" width="1200" height="615" alt="The Mixer with its Inspector open on a track's effect slots" loading="lazy" decoding="async"><figcaption>The Inspector, on the Mixer's right, holds the selected track's slots.</figcaption></figure></p>
+<h2 id="put-an-effect-in-a-slot"><a class="anchor" href="#put-an-effect-in-a-slot">Put an effect in a slot</a></h2>
+<ol>
+<li>Open the <a href="../mixer/">Mixer</a> and click the track you want the effect on.</li>
+<li>In the Inspector on the Mixer&#39;s right, click an empty slot (it reads <em>Slot 1</em>, <em>Slot 2</em> and so on), or the arrow beside it.</li>
+<li>Pick an effect. The built-in ones come first, under <strong>Built in</strong>; your plugins follow, by kind.</li>
+</ol>
+<p>A built-in effect opens its window as soon as you pick it. The window&#39;s title says the effect and the track it&#39;s on, for example <em>Y-C (Vocals)</em>.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> <strong>More plugins</strong> at the foot of the picker opens the plugin manager, for <a href="../plugins/">your plugins</a>.</p>
+</aside>
+<h2 id="work-with-a-loaded-slot"><a class="anchor" href="#work-with-a-loaded-slot">Work with a loaded slot</a></h2>
+<p>A slot with an effect in it shows the effect&#39;s name, a small mix knob and a light.</p>
+<ul>
+<li><strong>Click the name</strong> to open or close the effect&#39;s window.</li>
+<li><strong>Click the light</strong> to bypass the effect, and again to turn it back on.</li>
+<li><strong>Turn the mix knob</strong> to blend the effect with the dry sound: 100% is all effect, 0% none. It&#39;s the slot&#39;s own blend, on top of any mix control inside the effect.</li>
+<li><strong>Scroll over a slot</strong> to move it up or down the chain.</li>
+<li><strong>Drag an effect</strong> onto another slot to swap them, or onto another track&#39;s strip to move it there. Hold <kbd>⌘</kbd> (or <kbd>⌥</kbd>) as you drop it to copy it instead.</li>
+</ul>
+<p>Right-click a slot, or click its arrow, for its menu:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Open its window</strong></td>
+<td>Opens the effect&#39;s window.</td>
+</tr>
+<tr>
+<td><strong>Replace…</strong></td>
+<td>Opens the picker to put another effect in this slot.</td>
+</tr>
+<tr>
+<td><strong>Bypass</strong> / <strong>Enable</strong></td>
+<td>Turns the effect off or on.</td>
+</tr>
+<tr>
+<td><strong>Sidechain input</strong></td>
+<td>Picks the track this effect listens to as its key. Only effects that use a key show it. See <a href="../sidechain/">Sidechain</a>.</td>
+</tr>
+<tr>
+<td><strong>Move up</strong> / <strong>Move down</strong></td>
+<td>Moves the effect along the chain.</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>Takes the effect out of the slot.</td>
+</tr>
+</tbody></table>
+</div>
+<p>Y-EQ, Y-C, Y-L and Y-R can listen to a key; the others don&#39;t, so their menu has no <strong>Sidechain input</strong>.</p>
+<h2 id="what-every-built-in-window-shares"><a class="anchor" href="#what-every-built-in-window-shares">What every built-in window shares</a></h2>
+<h3 id="presets"><a class="anchor" href="#presets">Presets</a></h3>
+<p>Every built-in effect has presets. Most windows have a preset menu in their top bar with <strong>Previous preset</strong> and <strong>Next preset</strong> arrows either side, so you can step through them while the song plays. Once you change a setting, the preset&#39;s name dims or reads <em>Custom</em>, so you can tell you&#39;ve moved away from it.</p>
+<h3 id="a-b"><a class="anchor" href="#a-b">A/B</a></h3>
+<p>Y-EQ, Y-C, Y-L and Y-R hold two settings at once. Click <strong>A/B</strong> to switch between them, and <strong>Copy</strong> to copy the one you hear into the other. Set up A, copy it to B, change B, then flick between them to hear which is better.</p>
+<h3 id="undo"><a class="anchor" href="#undo">Undo</a></h3>
+<p>The song&#39;s undo covers every effect: <kbd>⌘Z</kbd> takes back a knob turn, a preset or a band. Y-EQ, Y-C and Y-L also have <strong>Undo</strong> and <strong>Redo</strong> buttons in their top bar. A drag is one undo step, however far it went.</p>
+<h3 id="knobs"><a class="anchor" href="#knobs">Knobs</a></h3>
+<p>The knobs in each window work the way that window&#39;s guide says, but they share a right-click menu. It starts with <strong>Reset</strong> and <strong>Type in value…</strong>, then the automation items:</p>
+<ul>
+<li><strong>Create automation clip</strong> makes an automation clip of the knob in the Playlist. See <a href="../automation/">Automation</a>.</li>
+<li><strong>Edit</strong> <em>clip name</em>… opens a clip that already moves this knob.</li>
+<li><strong>Follow track</strong>, <strong>Follow notes of</strong> and <strong>Link to</strong> let a track&#39;s level, a channel&#39;s notes or a modulator move the knob. See <a href="../modulators/">Modulators</a>.</li>
+</ul>
+<p>In song mode, an automated knob follows its curve. While you hold it, your hand wins; it goes back to the curve when you let go.</p>
+<h3 id="automate"><a class="anchor" href="#automate">Automate &quot;…&quot;</a></h3>
+<p>Once you&#39;ve touched a control in a built-in window, a button appears in the window&#39;s title bar: <strong>Automate &quot;Threshold&quot;</strong>, or whichever control you touched last. Click it to make an automation clip of that control. It&#39;s the quickest way to automate: turn the knob you want, then click.</p>
+<h3 id="latency"><a class="anchor" href="#latency">Latency</a></h3>
+<p>Some settings make an effect look ahead, which delays its sound a little (a linear-phase EQ, a limiter&#39;s lookahead, oversampling). The window says how late it plays, in milliseconds, and the Mixer delays everything else to match, so the song stays in time. The <strong>Plugin delay</strong> and <strong>Offset</strong> at the foot of the Inspector show and adjust this per track.</p>
+<h2 id="the-effects"><a class="anchor" href="#the-effects">The effects</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="../y-eq/">Y-EQ</a></td>
+<td>An EQ. Drag bands right on the curve, over a live analyser. Any band can go dynamic.</td>
+</tr>
+<tr>
+<td><a href="../y-c/">Y-C</a></td>
+<td>A compressor that shows its curve and the gain moving. Key it from any track.</td>
+</tr>
+<tr>
+<td><a href="../y-l/">Y-L</a></td>
+<td>A limiter with true peak, a clip stage and loudness meters.</td>
+</tr>
+<tr>
+<td><a href="../y-r/">Y-R</a></td>
+<td>A reverb: plates, rooms, chambers and halls, each in an era, with a decay you shape across the bands.</td>
+</tr>
+<tr>
+<td><a href="../y-delay/">Y-Delay</a></td>
+<td>Analog and tape echo: single, dual, ping-pong or rhythm.</td>
+</tr>
+<tr>
+<td><a href="../y-multiband/">Y-Multiband</a></td>
+<td>Upward and downward compression on three bands.</td>
+</tr>
+<tr>
+<td><a href="../y-time/">Y-Time</a></td>
+<td>Repeats, gates and tape stops as envelopes you draw, in time with the song.</td>
+</tr>
+<tr>
+<td><a href="../y-tune/">Y-Tune</a></td>
+<td>Pitch correction with a live pitch graph. It can detect the key.</td>
+</tr>
+<tr>
+<td><a href="../y-pan/">Y-Pan</a></td>
+<td>Moves a sound across the stereo field, on patterns or an LFO.</td>
+</tr>
+<tr>
+<td><a href="../y-pitch/">Y-Pitch</a></td>
+<td>Two wheels, pitch and timbre, that swing back with gravity and inertia. Play them from the keys or MIDI.</td>
+</tr>
+</tbody></table>
+</div>
+<aside class="callout note"><p><strong>Note:</strong> The <a href="../assistant/">assistant</a> can add and set these effects too, and what it changes is undoable like your own edits.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../modulators/"><span>Previous</span>Modulators</a><a class="next" rel="next" href="../y-eq/"><span>Next</span>Y-EQ</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Built-in%20effects">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#put-an-effect-in-a-slot">Put an effect in a slot</a></li><li><a href="#work-with-a-loaded-slot">Work with a loaded slot</a></li><li><a href="#what-every-built-in-window-shares">What every built-in window shares</a></li><li><a href="#the-effects">The effects</a></li></ul></nav>
+</div>
+</body>
+</html>
