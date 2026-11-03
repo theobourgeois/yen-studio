@@ -108,7 +108,8 @@ br.p { display: none; }
 }
 .button:hover { background: var(--deep); color: var(--type); }
 
-/* Footage. Each clip says its two shapes, so nothing moves as it loads. A click stops it; the button is for the keyboard. */
+/* Footage. Each clip says its two shapes, so nothing moves as it loads, and sits on the page on a soft shadow. A click
+   stops it; the button is for the keyboard. */
 .cut { position: relative; margin-top: clamp(12px, 1.6vw, 20px); }
 .clip {
   display: block;
@@ -117,6 +118,7 @@ br.p { display: none; }
   aspect-ratio: var(--wide);
   border-radius: var(--corner);
   background: var(--well);
+  box-shadow: 0 18px 36px -6px rgba(8, 3, 32, 0.72);
   cursor: pointer;
 }
 .toggle {
