@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-EQ: Yen Studio docs</title>
+<meta name="description" content="Yen Studio's EQ. Drag bands on the curve over a live analyser, make any band dynamic, match one sound to another.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-eq/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-EQ">
+<meta property="og:description" content="Yen Studio's EQ. Drag bands on the curve over a live analyser, make any band dynamic, match one sound to another.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-eq/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/" aria-current="page">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-EQ</h1>
+<p>Y-EQ is an equaliser you work on directly: drag a dot on the curve and the band moves, over a live analyser of the sound going through. Any band can turn dynamic, cutting or boosting only when the sound asks for it. It can also show another track&#39;s spectrum behind yours, so you can see where two sounds crowd each other.</p>
+<p><figure class="shot" style="--w:978"><img src="../shots/effect-eq.webp" width="978" height="570" alt="Y-EQ's window: bands on the curve over the analyser, the band controls under them" loading="lazy" decoding="async"><figcaption>Each band in its own colour; the yellow line is the sum of them.</figcaption></figure></p>
+<h2 id="add-a-band"><a class="anchor" href="#add-a-band">Add a band</a></h2>
+<ul>
+<li><strong>Double-click the display</strong> to make a band where you clicked. Near the bottom you get a <strong>Notch</strong>; at the far left a <strong>Low Cut</strong>; at the far right a <strong>High Cut</strong>; anywhere else a <strong>Bell</strong> at that gain. <kbd>⌘</kbd>-click works too.</li>
+<li><strong>Drag the yellow curve</strong> to pull a new band out of it: a <strong>Bell</strong>, or a shelf at the very low or very high end.</li>
+<li>Hold <kbd>⌥</kbd> as you make a band to make it dynamic from the start.</li>
+</ul>
+<p>Each band keeps its number and its colour, so you can tell them apart on the curve and in the controls.</p>
+<h2 id="move-bands-on-the-display"><a class="anchor" href="#move-bands-on-the-display">Move bands on the display</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Gesture</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Drag a dot</td>
+<td>Moves its frequency (sideways) and gain (up and down). On a band with no gain, such as a cut or a notch, up and down sets its Q.</td>
+</tr>
+<tr>
+<td><kbd>⇧</kbd>-drag</td>
+<td>Fine moves.</td>
+</tr>
+<tr>
+<td><kbd>⌥</kbd>-drag</td>
+<td>Moves on one axis only.</td>
+</tr>
+<tr>
+<td><kbd>⌘</kbd>-drag</td>
+<td>Changes the band&#39;s Q.</td>
+</tr>
+<tr>
+<td>Scroll over a dot</td>
+<td>Changes its Q (scroll up narrows it). Add <kbd>⌘</kbd> for gain, <kbd>⌥</kbd> for the dynamic range, <kbd>⇧</kbd> for fine steps.</td>
+</tr>
+<tr>
+<td>Click a dot</td>
+<td>Selects it. <kbd>⌘</kbd>-click adds it to the selection or takes it out; <kbd>⇧</kbd>-click selects a run of bands.</td>
+</tr>
+<tr>
+<td>Drag the background</td>
+<td>Draws a box round the bands to select. <kbd>⇧</kbd> adds to the selection. A click on the background selects none.</td>
+</tr>
+<tr>
+<td><kbd>⌥</kbd>-click a dot</td>
+<td>Bypasses the band.</td>
+</tr>
+<tr>
+<td><kbd>⌘⌥</kbd>-click a dot</td>
+<td>Steps to the next shape.</td>
+</tr>
+<tr>
+<td><kbd>⌥⇧</kbd>-click a dot</td>
+<td>Steps to the next slope.</td>
+</tr>
+<tr>
+<td>Double-click a dot</td>
+<td>Lets you type its values.</td>
+</tr>
+<tr>
+<td>Drag the ▲▼ handle</td>
+<td>Sets a dynamic band&#39;s range.</td>
+</tr>
+</tbody></table>
+</div>
+<p>When several bands are selected, dragging one moves them all together.</p>
+<p>With the window in front, <kbd>Delete</kbd> removes the selected bands, <kbd>⌘A</kbd> selects every band and <kbd>Esc</kbd> selects none. Each drag is one step of undo.</p>
+<h3 id="type-a-value"><a class="anchor" href="#type-a-value">Type a value</a></h3>
+<p>Rest the pointer by a band to see its values beside it: bypass, frequency, gain, Q and shape, with buttons to solo or delete the band. Double-click a value to type it, <kbd>Tab</kbd> to go to the next, <kbd>Enter</kbd> to finish. Frequencies take <code>440</code>, <code>1k</code>, <code>2.5k</code> or a note (<code>A4</code>, <code>C#3+13</code>); gains take dB or a ratio (<code>2x</code>).</p>
+<h3 id="solo-a-band"><a class="anchor" href="#solo-a-band">Solo a band</a></h3>
+<p>Hold the headphones button by a band to hear only what that band works on. While you hold it, drag sideways to move its frequency and up and down to change the level.</p>
+<h2 id="band-controls"><a class="anchor" href="#band-controls">Band controls</a></h2>
+<p>Select a band and its controls appear under the display.</p>
+<ul>
+<li><strong>Band power</strong>: bypasses the band.</li>
+<li><strong>Shape</strong>: <strong>Bell</strong>, <strong>Low Shelf</strong>, <strong>Low Cut</strong>, <strong>High Shelf</strong>, <strong>High Cut</strong>, <strong>Notch</strong>, <strong>Band Pass</strong>, <strong>Tilt Shelf</strong> or <strong>Flat Tilt</strong>. With several bands of different shapes selected it reads <em>(Multiple)</em>.</li>
+<li><strong>Slope</strong>: how steep the band is, in dB per octave, up to <strong>Brickwall</strong> for cuts. The choices depend on the shape.</li>
+<li><strong>FREQ</strong>: the band&#39;s frequency.</li>
+<li><strong>GAIN</strong>: the band&#39;s boost or cut. On a dynamic band, a ring round the knob sets the range, and a yellow mark shows the gain it&#39;s using right now.</li>
+<li><strong>Q</strong>: how wide the band is. Higher is narrower.</li>
+<li><strong>Stereo placement</strong>: <strong>Stereo</strong>, <strong>Left</strong>, <strong>Right</strong>, <strong>Mid</strong> or <strong>Side</strong>: which part of the sound the band works on.</li>
+<li><strong>Split</strong> (scissors): makes a copy of the band for each side, left and right or mid and side.</li>
+<li>The band&#39;s number, with arrows to step to the previous or next band, and <strong>×</strong> to delete it.</li>
+</ul>
+<p>With several bands selected, the knobs move them all: frequencies together, gains in proportion.</p>
+<p>The gear by Q holds <strong>Gain-Q interaction</strong>: a Bell narrows as you boost or cut it further. It applies to every band.</p>
+<p>Knobs turn by dragging up and down (<kbd>⇧</kbd> for fine) or scrolling. Double-click one to type a value; <kbd>⌘</kbd>-click, <kbd>⌥</kbd>-click or a middle click resets it. Right-click a knob for <strong>Reset</strong>, <strong>Type in value…</strong> and its automation (see <a href="../effects/#knobs">Built-in effects</a>).</p>
+<h3 id="right-click-a-band"><a class="anchor" href="#right-click-a-band">Right-click a band</a></h3>
+<p>Right-click a dot for the band&#39;s menu: <strong>Shape</strong>, <strong>Slope</strong>, <strong>Stereo placement</strong>, <strong>Bypass</strong> or <strong>Enable</strong>, <strong>Make Dynamic</strong> or <strong>Clear Dynamics</strong>, <strong>Invert Gain</strong>, <strong>Split into Left and Right</strong> or <strong>Split into Mid and Side</strong>, <strong>Reset Placement</strong>, <strong>Gain-Q Interaction</strong> and <strong>Delete</strong>.</p>
+<h2 id="dynamic-bands"><a class="anchor" href="#dynamic-bands">Dynamic bands</a></h2>
+<p>A dynamic band moves its gain with the sound: it cuts a harsh note only when it rings, or lifts a quiet part only while it&#39;s quiet. Make one with <strong>Make Dynamic</strong>, <kbd>⌥</kbd>-scroll over a dot, or <kbd>⌥</kbd> as you make the band.</p>
+<ul>
+<li>Drag the ring round <strong>GAIN</strong>, or the ▲▼ handle on the display, to set how far the band can move.</li>
+<li><strong>Threshold</strong>: where the band starts to act, with a level meter beside it. <strong>Auto</strong> sets the threshold for you; click it to set your own.</li>
+<li><strong>SC</strong>: once you&#39;ve set a threshold, the band listens to the slot&#39;s <strong>Sidechain input</strong> instead of its own sound. See <a href="../sidechain/">Sidechain</a>.</li>
+<li>Power button: bypasses the dynamics, leaving a static band.</li>
+<li><strong>×</strong>: clears the dynamics.</li>
+</ul>
+<h2 id="the-display"><a class="anchor" href="#the-display">The display</a></h2>
+<p>The analyser runs behind the bands: the sound coming in as a darker fill, the sound going out as a lighter fill with a line. Each band draws its own curve in its colour, and the thick yellow line is all of them together.</p>
+<ul>
+<li><strong>Display range</strong> (top right): <strong>±3</strong>, <strong>±6</strong>, <strong>±12</strong> or <strong>±30 dB</strong>. It grows by itself to fit a band that goes further.</li>
+<li><strong>Piano display</strong> (the keyboard button, bottom left): shows a keyboard in place of the frequency scale. Click a dot to tune its band to the nearest note; dragging then moves it a note at a time.</li>
+<li><strong>The frequency scale</strong>: drag up or down on it to zoom, sideways to scroll. Double-click it to see the whole range again.</li>
+<li><strong>The output meter</strong> stands at the right.</li>
+</ul>
+<h3 id="analyzer-settings"><a class="anchor" href="#analyzer-settings">Analyzer settings</a></h3>
+<p>Click <strong>Analyzer</strong> in the bottom bar for its panel:</p>
+<ul>
+<li><strong>Pre</strong> and <strong>Post</strong>: show the sound coming in, going out, or both.</li>
+<li><strong>External spectrum</strong>: shows another Y-EQ&#39;s output, from another track, in red behind yours.</li>
+<li><strong>Show Collisions</strong>: marks where this sound and the external spectrum crowd each other.</li>
+<li><strong>Freeze</strong>: the spectrum stops falling and keeps its highest.</li>
+<li><strong>Spectrum Grab</strong>: rest the pointer on the spectrum and its peaks are labelled; drag one to make a band there. A long press on the background keeps Spectrum Grab on until you click the background again.</li>
+<li><strong>Range</strong>, <strong>Resolution</strong>, <strong>Speed</strong> and <strong>Tilt</strong>: how much the analyser shows, how finely, how fast it moves, and how much it tilts the picture (in dB per octave round 1 kHz; 4.5 shows it as the ear hears it).</li>
+</ul>
+<h2 id="eq-match"><a class="anchor" href="#eq-match">EQ Match</a></h2>
+<p>EQ Match makes this sound&#39;s balance closer to another&#39;s.</p>
+<ol>
+<li>In the Analyzer panel, set <strong>External spectrum</strong> to the track you want to match, then click <strong>EQ Match to</strong> <em>that track</em>.</li>
+<li>Play the song. Y-EQ listens to both until it has heard a few seconds of each.</li>
+<li>Click <strong>Match</strong>. A white line shows the difference.</li>
+<li>Set how many <strong>Bands</strong> to use, then click <strong>Finish</strong>. The bands are added and selected, ready to adjust.</li>
+</ol>
+<h2 id="output-and-processing"><a class="anchor" href="#output-and-processing">Output and processing</a></h2>
+<ul>
+<li><strong>Processing mode</strong>: <strong>Zero Latency</strong>, <strong>Natural Phase</strong> or <strong>Linear Phase</strong>, with a <strong>Linear Phase resolution</strong> from <strong>Low</strong> to <strong>Maximum</strong>. Linear Phase keeps the phase untouched at the cost of latency; the bottom bar says how late it plays. Dynamic bands play in Linear Phase only up to <strong>High</strong>: a warning shows if you go above it.</li>
+<li><strong>Output</strong> (the button showing the mix and level): opens <strong>Phase</strong> (inverts the output), <strong>Auto Gain</strong> (keeps the level even as you boost or cut), <strong>Pan: L/R</strong> or <strong>M/S</strong>, the <strong>OUTPUT</strong> and <strong>PAN</strong> knobs, and <strong>Gain Scale</strong>, which scales every band&#39;s gain at once.</li>
+<li><strong>Bypass</strong>: turns Y-EQ off, keeping its latency so nothing jumps out of time.</li>
+</ul>
+<p>The top bar has <strong>Undo</strong>, <strong>Redo</strong>, <strong>A/B</strong> with <strong>Copy</strong>, and the preset menu with its arrows.</p>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>The presets are in folders: <strong>Mixing</strong>, <strong>Drums</strong>, <strong>Bass</strong>, <strong>Vocals</strong>, <strong>Effects</strong> and <strong>Mastering</strong>, plus <strong>Default Setting</strong>, <strong>Flat 7 Bands</strong> and <strong>Equalize</strong> at the top. A preset changes the bands and leaves your analyser settings alone. Once you change a band, the preset&#39;s name dims.</p>
+<h2 id="automation"><a class="anchor" href="#automation">Automation</a></h2>
+<p>A single band&#39;s frequency, gain, Q and dynamic range can be automated, and so can the output level, pan and <strong>Gain Scale</strong>. Right-click a knob, or use <strong>Automate &quot;…&quot;</strong> in the title bar. See <a href="../automation/">Automation</a>.</p>
+<div class="cut"><video class="clip" data-clip="fx-eq" style="--wide:1400/816;--phone:900/524" muted playsinline loop preload="none" aria-label="Y-EQ on a beat: the analyser moves under three bands, and the middle one is dragged down the curve and back."></video></div>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../effects/"><span>Previous</span>Built-in effects</a><a class="next" rel="next" href="../y-c/"><span>Next</span>Y-C</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-EQ">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#add-a-band">Add a band</a></li><li><a href="#move-bands-on-the-display">Move bands on the display</a></li><li><a href="#band-controls">Band controls</a></li><li><a href="#dynamic-bands">Dynamic bands</a></li><li><a href="#the-display">The display</a></li><li><a href="#eq-match">EQ Match</a></li><li><a href="#output-and-processing">Output and processing</a></li><li><a href="#presets">Presets</a></li><li><a href="#automation">Automation</a></li></ul></nav>
+</div>
+</body>
+</html>

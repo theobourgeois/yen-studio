@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-Time: Yen Studio docs</title>
+<meta name="description" content="Y-Time, the built-in effect for repeats, gates, tape stops and scratches: its slots, its mapping panel, its envelopes and its sync.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-time/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-Time">
+<meta property="og:description" content="Y-Time, the built-in effect for repeats, gates, tape stops and scratches: its slots, its mapping panel, its envelopes and its sync.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-time/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/" aria-current="page">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-Time</h1>
+<p>Y-Time plays with time and volume in step with the song. It keeps the last few beats of what goes through it, and an
+envelope you draw says which moment to play now: the present, a moment ago, faster, slower or backwards. A second
+envelope shapes the volume. Repeats, stutters, half speed, tape stops, scratches and gates are all just shapes. Each
+envelope lasts one bar and loops. A library of ready-made shapes sits in slots, and you switch between them by
+clicking, or by automating which slot plays.</p>
+<p>Its settings are saved with the song and every change can be undone.</p>
+<h2 id="add-y-time-to-a-track"><a class="anchor" href="#add-y-time-to-a-track">Add Y-Time to a track</a></h2>
+<ol>
+<li>Open <a href="../mixer/">the Mixer</a> and pick a track.</li>
+<li>Click an empty effect slot. The picker opens.</li>
+<li>Under <strong>Built in</strong>, choose <strong>Chops and gates</strong> (&quot;Chops, repeats, half speed, gates&quot;).</li>
+</ol>
+<p>The window opens when you click the slot&#39;s name. Its title bar names the effect and its track, for example
+&quot;Y-Time (Insert 1)&quot;. The window can be resized. Close it and the effect keeps playing. Delete the effect and the window
+closes.</p>
+<p>The slot&#39;s own mix knob in the Mixer sets how much of Y-Time you hear against the dry sound. See
+<a href="../effects/">Built-in effects</a> for what every built-in effect shares.</p>
+<h2 id="the-window"><a class="anchor" href="#the-window">The window</a></h2>
+<ul>
+<li><strong>The left panel</strong>: the Time knob, Options, HOLD, the scratching clock, the time slots, the volume slots, and the
+volume knobs.</li>
+<li><strong>The mapping panel</strong>: the slot being shown, its envelope drawn over one bar, with a strip of tools down its left
+side.</li>
+<li><strong>The bottom bar</strong>: the slot&#39;s name and how slots are picked and synced.</li>
+</ul>
+<div class="cut"><video class="clip" data-clip="fx-time" style="--wide:1400/836;--phone:900/536" muted playsinline loop preload="none" aria-label="Y-Time on a beat: its envelope plays in time with the song as the preset changes to a bar scratch and back."></video></div>
+<h2 id="pick-a-slot"><a class="anchor" href="#pick-a-slot">Pick a slot</a></h2>
+<p>The left panel has two grids of slots: <strong>time slots</strong> above, <strong>volume slots</strong> below. Each slot holds one envelope.</p>
+<ul>
+<li>Click a slot to pick it. While the song plays, it starts at its next sync point (see <a href="#sync">Sync</a>).</li>
+<li>The playing slot is filled with its colour. A slot waiting for its sync point is outlined in its colour.</li>
+<li>The slot the mapping panel shows has a white outline.</li>
+<li>A slot you&#39;ve changed from its preset is in italics. Its hover tip says &quot;(changed)&quot;.</li>
+</ul>
+<p>One time slot and one volume slot play at once. The first slot of each, <strong>Empty</strong>, does nothing: time flows normally
+and the volume is full.</p>
+<p>Right-click a slot for its menu:</p>
+<ul>
+<li><strong>Pick slot N</strong></li>
+<li><strong>Copy</strong> and <strong>Paste</strong>: copy a slot&#39;s envelope onto another.</li>
+<li><strong>Clear</strong>: an empty envelope.</li>
+<li><strong>Reset to its preset</strong>: back to the shape it came with.</li>
+<li><strong>Create automation clip</strong> and the other automation items. The picked slot can be automated, so the song can switch
+shapes bar by bar (see <a href="#automate-y-time">Automate Y-Time</a>).</li>
+</ul>
+<h3 id="the-time-slots"><a class="anchor" href="#the-time-slots">The time slots</a></h3>
+<p>The time slots come with shapes such as <strong>2 Beat Rpt</strong>, <strong>1/2 Repeat</strong> to <strong>1/16 Repeat</strong>, <strong>1 Beat Juggle</strong>,
+<strong>Slow Dn Rpt</strong>, <strong>Spd Up Rpt</strong>, <strong>1/4 Pitch Up</strong>, <strong>1/4 Pitch Dn</strong>, <strong>Pitch Bend</strong>, <strong>Jumps</strong>, <strong>Reverse</strong>,
+<strong>Backspin</strong>, <strong>Vinyl Off</strong>, <strong>Vinyl On</strong>, <strong>Vinyl Stop</strong>, <strong>Bar Scratch</strong>, <strong>Scratch</strong>, <strong>Trip Scratch</strong>,
+<strong>1/2 Speed</strong>, <strong>X2 Speed</strong>, <strong>1/2 Grains</strong>, <strong>Slow Triplet</strong>, <strong>Underwater</strong> and <strong>Digital</strong>.</p>
+<h3 id="the-volume-slots"><a class="anchor" href="#the-volume-slots">The volume slots</a></h3>
+<p>The volume slots come with gates and fades such as <strong>2 Beat Gate</strong> to <strong>1/8 Bt Gate</strong>, <strong>Trance Gt 1</strong> to
+<strong>Trance Gt 4</strong>, <strong>Saw Gate 1</strong>, <strong>Off Beat</strong>, <strong>Dotted Gate</strong>, <strong>Swing Gate</strong>, <strong>1/4 Gate Out</strong>, <strong>1/4 Gate In</strong>,
+<strong>Gate Fade</strong>, <strong>Tremolo Slow</strong>, <strong>Tremolo Fast</strong>, <strong>Sidechain</strong>, <strong>Copter</strong>, <strong>AM</strong>, <strong>Fade In</strong>, <strong>Fade Out</strong>,
+<strong>Fade In Out</strong> and <strong>Mute</strong>.</p>
+<h3 id="rename-a-slot"><a class="anchor" href="#rename-a-slot">Rename a slot</a></h3>
+<p>Click the slot&#39;s name in the bottom bar (&quot;Time: …&quot; or &quot;Volume: …&quot;), type a new one, and press <kbd>Enter</kbd>.
+<kbd>Escape</kbd> keeps the old name.</p>
+<h2 id="read-the-mapping-panel"><a class="anchor" href="#read-the-mapping-panel">Read the mapping panel</a></h2>
+<p>The mapping panel shows one bar of the shown slot&#39;s envelope. Switch between the time envelope and the volume envelope
+with the two buttons at the bottom of the strip on its left. While the song plays, a line moves across it.</p>
+<p>Hover over the panel to read the beat and value under the pointer at its top right. On the time envelope it also says
+the speed.</p>
+<h3 id="the-time-envelope"><a class="anchor" href="#the-time-envelope">The time envelope</a></h3>
+<p>The top of the panel is now. Further down is further back in time, up to eight beats back. A point&#39;s height says which
+moment plays at that point of the bar.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>What you draw</th>
+<th>What you hear</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A flat line</td>
+<td>Normal speed, a fixed distance behind now. At the top, the sound as it is.</td>
+</tr>
+<tr>
+<td>A line sloping down, less steep than the safety line</td>
+<td>Slower, and lower in pitch, as a tape slowing down.</td>
+</tr>
+<tr>
+<td>A line sloping up</td>
+<td>Faster and higher in pitch. It can&#39;t go past now.</td>
+</tr>
+<tr>
+<td>A line steeper than the safety line</td>
+<td>Backwards.</td>
+</tr>
+<tr>
+<td>A step</td>
+<td>A jump to another moment: a repeat or a stutter.</td>
+</tr>
+<tr>
+<td>A curve</td>
+<td>A scratch.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The <strong>safety line</strong> is a slope of one beat back per beat: following it is a pause. Lines twice as steep are drawn as
+guides: following one is the sound played backwards at normal speed.</p>
+<aside class="callout note"><p><strong>Note:</strong> Y-Time can only play back what it has heard. When the song starts, what it keeps is empty, so in the first
+bar it can&#39;t reach back before the start.</p>
+</aside>
+<h3 id="the-volume-envelope"><a class="anchor" href="#the-volume-envelope">The volume envelope</a></h3>
+<p>The top is full volume and the bottom is silence. The shape is a gate or a fade over the bar.</p>
+<h2 id="edit-an-envelope"><a class="anchor" href="#edit-an-envelope">Edit an envelope</a></h2>
+<p>Pick a slot, then draw on the mapping panel. Changes are saved in that slot.</p>
+<ul>
+<li><strong>Add a point</strong>: right-click an empty place. Keep the button held to drag it into place. Hold <kbd>⇧</kbd> to put it
+on the line.</li>
+<li><strong>Move a point</strong>: drag it. Hold <kbd>⇧</kbd> to move it only sideways, <kbd>⌘</kbd> to move it only up and down, or
+<kbd>⌥</kbd> to move it off the grid.</li>
+<li><strong>Delete a point</strong>: ⌥-click it.</li>
+<li><strong>Bend a line</strong>: drag a segment&#39;s tension handle up or down. Hold <kbd>⌘</kbd> for fine changes. Right-click the
+handle to make the line straight again.</li>
+</ul>
+<p>Right-click a point for its menu. It says which point it is, then:</p>
+<ul>
+<li><strong>Delete</strong></li>
+<li>The curve from this point to the next: <strong>Single</strong>, <strong>Double</strong>, <strong>Alt single</strong>, <strong>Alt double</strong>, <strong>Hold</strong>,
+<strong>Stairs</strong>, <strong>Smooth stairs</strong>, <strong>Pulse</strong>, <strong>Wave</strong> or <strong>Half sine</strong>.</li>
+<li>On the time envelope, <strong>Pitch</strong>: <strong>1 semitone up</strong> or <strong>1 semitone down</strong>.</li>
+</ul>
+<p>The first point can&#39;t be deleted, and its curve can&#39;t be changed.</p>
+<h3 id="the-strips-tools"><a class="anchor" href="#the-strips-tools">The strip&#39;s tools</a></h3>
+<p>Down the left of the mapping panel:</p>
+<ul>
+<li><strong>Mapping envelope options</strong> (the ▾ menu), for the shown slot: <strong>Flip vertically</strong>, <strong>Scale levels up</strong>, <strong>Scale
+levels down</strong>, <strong>Normalize levels</strong>, <strong>Decimate points</strong>, <strong>Smooth up abrupt changes</strong>, <strong>Turn all points smooth</strong>,
+then <strong>Copy slot</strong>, <strong>Paste slot</strong>, <strong>Clear slot</strong> and <strong>Reset to its preset</strong>.</li>
+<li><strong>Snap</strong>: where points land. <strong>X</strong> is no snap; the others are 1/16, 1/12, 1/8, 1/6, 1/4 and 1/3 of a beat. A new
+window snaps to 1/8.</li>
+<li><strong>Step editing</strong> (the pencil): drag across the panel to draw a step in each grid cell. Hold <kbd>⇧</kbd> for pulses.</li>
+<li><strong>Slide remaining points</strong>: when you move a point, the points after it go along.</li>
+<li><strong>Freeze</strong> (the snowflake): nothing can be edited, so you can click around without changing a shape.</li>
+<li><strong>The time envelope</strong> and <strong>the volume envelope</strong>: which one the panel shows.</li>
+</ul>
+<h2 id="the-knobs"><a class="anchor" href="#the-knobs">The knobs</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Range</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Time</strong></td>
+<td>0 to 100%</td>
+<td>How much of the time envelope you hear against the sound as it is.</td>
+</tr>
+<tr>
+<td><strong>Volume</strong></td>
+<td>0 to 100%</td>
+<td>How much of the volume envelope applies. At 0%, the volume isn&#39;t touched.</td>
+</tr>
+<tr>
+<td><strong>ATT</strong></td>
+<td>0 to 500 ms</td>
+<td>Smooths the volume envelope where it rises.</td>
+</tr>
+<tr>
+<td><strong>REL</strong></td>
+<td>0 to 1000 ms</td>
+<td>Smooths the volume envelope where it falls.</td>
+</tr>
+<tr>
+<td><strong>TNS</strong></td>
+<td>−100 to 100%</td>
+<td>Bends that smoothing&#39;s curve.</td>
+</tr>
+</tbody></table>
+</div>
+<p>Time and Volume start at 100%, the others at 0. The knobs work like every knob in Yen Studio: drag up or down
+(<kbd>⌘</kbd> for fine), scroll, ⌥-click to reset, and right-click for <strong>Type in value…</strong>, automation and
+<a href="../modulators/">modulation</a>.</p>
+<h2 id="hold-and-the-scratching-clock"><a class="anchor" href="#hold-and-the-scratching-clock">HOLD and the scratching clock</a></h2>
+<p><strong>HOLD</strong> repeats a bar while you hold it down. What it repeats is set by <strong>HOLD</strong> in the bottom bar:</p>
+<ul>
+<li><strong>Last</strong>: the bar just played.</li>
+<li><strong>Next</strong>: the next bar.</li>
+<li><strong>Off</strong>: the button does nothing.</li>
+</ul>
+<p>The <strong>scratching clock</strong> is the platter in the left panel. Show or hide it from <strong>Options</strong>. It turns with
+the bar while the song plays. Drag down on it to reach back in time, up to eight beats, and up to come forward again.
+Let go and the sound springs back to now.</p>
+<aside class="callout note"><p><strong>Note:</strong> HOLD and the scratching clock are played live. What you do with them isn&#39;t saved in the song and can&#39;t be
+automated.</p>
+</aside>
+<h2 id="sync"><a class="anchor" href="#sync">Sync</a></h2>
+<p>The bottom bar says how slots change:</p>
+<ul>
+<li><strong>Link slots</strong>: picking a time slot picks the volume slot with the same number, and the other way round.</li>
+<li><strong>One-shot</strong> (the <strong>1</strong>): a slot plays once, for a bar, then slot 1 (Empty) takes over.</li>
+<li><strong>TRIG SYNC</strong>: when a slot you pick starts. <strong>Off</strong> starts it at once; the others wait for the next 1/4 beat,
+1/2 beat, 1, 2 or 4 beats. A new Y-Time waits for the next 1/4 beat.</li>
+<li><strong>POS SYNC</strong>: where in its envelope a slot starts. <strong>Off</strong> starts it from its beginning; the others start it where the
+song is inside that length. A new Y-Time uses 4 beats, so its envelopes stay in line with the bars.</li>
+</ul>
+<p>In a narrow window the last two read <strong>TRIG</strong> and <strong>POS</strong>.</p>
+<h2 id="options"><a class="anchor" href="#options">Options</a></h2>
+<p>Click <strong>▸ Options</strong> at the top of the left panel:</p>
+<ul>
+<li><strong>Click reduction</strong>: a jump fades across, so it doesn&#39;t click. On in a new Y-Time.</li>
+<li><strong>Smoothing attack compensation</strong>: what&#39;s played after a jump starts the attack time earlier, so its start isn&#39;t
+lost under the <strong>ATT</strong> smoothing.</li>
+<li><strong>Remove DC offset</strong>: filters out anything below about 10 Hz, which a slowed or stopped sound can leave behind.</li>
+<li><strong>HQ resampling</strong>: a finer way of reading between samples when the speed changes.</li>
+<li><strong>View scratching clock</strong></li>
+<li><strong>Copy state</strong> and <strong>Paste state</strong>: every setting and every slot, to put on another Y-Time.</li>
+</ul>
+<aside class="callout note"><p><strong>Note:</strong> <strong>Trigger slots from MIDI notes</strong> is in the menu but greyed: Y-Time can&#39;t hear MIDI notes yet. Pick slots
+by clicking them, or automate them. The <strong>Key-held</strong> button in the bottom bar is greyed for the same reason.</p>
+</aside>
+<h2 id="automate-y-time"><a class="anchor" href="#automate-y-time">Automate Y-Time</a></h2>
+<p>These can be automated: the time slot, the volume slot, <strong>Time</strong>, <strong>Volume</strong>, <strong>ATT</strong>, <strong>REL</strong> and <strong>TNS</strong>.</p>
+<ul>
+<li>Right-click a knob, or a slot grid, and choose <strong>Create automation clip</strong>.</li>
+<li>Or touch a control, then click <strong>Automate “…”</strong> in the window&#39;s title bar. It names the last control you touched
+and makes a clip of it.</li>
+</ul>
+<p>Automating the time slot is how you write a performance: a repeat on the last beat of every fourth bar, a tape stop
+before the drop. See <a href="../automation/">Automation</a>.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> Draw your own shape in a slot you don&#39;t use, then automate the slot number to call it in where you want it.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-multiband/"><span>Previous</span>Y-Multiband</a><a class="next" rel="next" href="../y-tune/"><span>Next</span>Y-Tune</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-Time">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#add-y-time-to-a-track">Add Y-Time to a track</a></li><li><a href="#the-window">The window</a></li><li><a href="#pick-a-slot">Pick a slot</a></li><li><a href="#read-the-mapping-panel">Read the mapping panel</a></li><li><a href="#edit-an-envelope">Edit an envelope</a></li><li><a href="#the-knobs">The knobs</a></li><li><a href="#hold-and-the-scratching-clock">HOLD and the scratching clock</a></li><li><a href="#sync">Sync</a></li><li><a href="#options">Options</a></li><li><a href="#automate-y-time">Automate Y-Time</a></li></ul></nav>
+</div>
+</body>
+</html>

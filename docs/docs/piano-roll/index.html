@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piano roll: Yen Studio docs</title>
+<meta name="description" content="Draw, select, move, quantize, chop and edit notes in Yen Studio's Piano roll, with every tool, menu and key.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/piano-roll/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Piano roll">
+<meta property="og:description" content="Draw, select, move, quantize, chop and edit notes in Yen Studio's Piano roll, with every tool, menu and key.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/piano-roll/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/" aria-current="page">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Make">
+<p class="crumb" data-pagefind-ignore>Make</p>
+<h1 data-pagefind-meta="title">Piano roll</h1>
+<p>The Piano roll is where you write a channel&#39;s notes. Pitch runs up the keyboard on the left, time runs along the ruler
+on top, and each note is a bar on the grid. The notes belong to one channel in the pattern shown, the same notes the
+<a href="../channel-rack/">Channel rack</a>&#39;s steps show. It works the way FL Studio&#39;s does: left-click adds, right-click deletes.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/piano.webp" width="1200" height="615" alt="The Piano roll with a melody, its velocity lane underneath" loading="lazy" decoding="async"></figure></p>
+<h2 id="open-it"><a class="anchor" href="#open-it">Open it</a></h2>
+<ul>
+<li>Press <kbd>F7</kbd> or <kbd>⌥3</kbd>, click its button on the toolbar, or choose <strong>Window › Piano Roll</strong>. It opens
+on the channel selected in the rack.</li>
+<li>In the Channel rack, click a row&#39;s note preview, double-click a channel&#39;s select button, or right-click a channel
+and choose <strong>Piano roll</strong>.</li>
+<li>In <a href="../playlist/">the Playlist</a>, double-click a pattern clip. The Piano roll opens on the channel with the most notes in
+it.</li>
+</ul>
+<p>The Piano roll fills the window when it opens. Double-click its title bar to make it a window of its own size. Its keys
+only work while it&#39;s the window in front. <kbd>Escape</kbd> closes it.</p>
+<p>If the rack has no channels, the Piano roll asks you to add one first.</p>
+<h3 id="whats-on-screen"><a class="anchor" href="#whats-on-screen">What&#39;s on screen</a></h3>
+<ul>
+<li><strong>The title bar</strong>: the target channel, the Tools menu, the Scale menu, the Stamp menu, the tools, the Snap menu and
+the ghost notes switch.</li>
+<li><strong>The keyboard</strong> on the left. Click or drag on it to play keys.</li>
+<li><strong>The ruler</strong> on top. It sets where play starts and holds <a href="#the-time-selection">the time selection</a>.</li>
+<li><strong>The grid</strong>, where the notes are.</li>
+<li><strong>The event editor</strong> underneath, with each note&#39;s velocity or pan.</li>
+</ul>
+<p>While the song plays, a line moves across the grid with the playhead.</p>
+<h2 id="draw-notes"><a class="anchor" href="#draw-notes">Draw notes</a></h2>
+<ol>
+<li>Pick <strong>Draw</strong> (<kbd>P</kbd>).</li>
+<li>Click an empty spot on the grid. A note starts at the beginning of the grid cell you clicked.</li>
+<li>Keep the button down and drag to move it before you let go. ⇧-drag pulls out its length instead.</li>
+</ol>
+<p>A new note is as long as the last note you clicked or resized, so click a note of the length you want before drawing
+more. Until you do, new notes are a beat long.</p>
+<p>When notes are selected, clicking an empty spot only deselects them. Click again to draw.</p>
+<p><strong>Paint</strong> (<kbd>B</kbd>) draws a run of notes as you drag, each the current length, at the pitch you pressed. Hold ⇧
+to have each note follow the pointer&#39;s pitch instead.</p>
+<p>While the song plays, a note you draw is heard as soon as you press. When it&#39;s stopped, the note you move is heard as
+you drag it.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> Hold ⌥ while drawing or moving to turn the snap off and ignore <a href="#the-songs-scale">the song&#39;s scale</a>.</p>
+</aside>
+<h2 id="move-copy-and-resize-notes"><a class="anchor" href="#move-copy-and-resize-notes">Move, copy and resize notes</a></h2>
+<p>With Draw or Paint:</p>
+<ul>
+<li><strong>Drag a note</strong> to move it. If it&#39;s selected, the whole selection moves with it.</li>
+<li><strong>⇧-drag a note</strong> to move a copy of it (or of the selection). The copies end up selected.</li>
+<li>Once you&#39;re moving, hold ⇧ to keep the pitch, or ⌘ to keep the time.</li>
+<li><strong>Drag a note&#39;s right edge</strong> to change its length. The end snaps to the nearest grid line.</li>
+<li><strong>Double-click a note</strong> to open <a href="#note-properties">Note properties</a>.</li>
+</ul>
+<p>Notes move by whole grid cells, so a note that sits off the grid keeps its offset. Notes move together: if one of them
+would go past the top or bottom of the keyboard, none of them moves.</p>
+<p>When more than one note is selected, a stretch handle appears at the selection&#39;s end. Drag it to stretch or squeeze the
+notes in time from their start. It snaps; hold ⌥ for none.</p>
+<h2 id="delete-and-mute-notes"><a class="anchor" href="#delete-and-mute-notes">Delete and mute notes</a></h2>
+<ul>
+<li><strong>Right-click</strong> a note to delete it. Right-drag across the grid to delete every note you sweep over.</li>
+<li>The <strong>Delete</strong> tool (<kbd>D</kbd>) deletes notes with the left button too, by clicking or sweeping.</li>
+<li><kbd>Delete</kbd> or <kbd>Backspace</kbd> deletes the selected notes.</li>
+<li>The <strong>Mute</strong> tool (<kbd>T</kbd>) mutes notes as you click or sweep. The first note you press decides: if it was
+playing, the notes you sweep are muted; if it was muted, they&#39;re unmuted. Muted notes stay in place and don&#39;t play.</li>
+<li><kbd>⌥M</kbd> mutes the selected notes, and <kbd>⇧⌥M</kbd> unmutes them.</li>
+</ul>
+<h2 id="the-tools"><a class="anchor" href="#the-tools">The tools</a></h2>
+<p>The tool buttons are on the title bar.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Draw</td>
+<td><kbd>P</kbd></td>
+<td>Click to add a note, drag to move or resize one.</td>
+</tr>
+<tr>
+<td>Paint</td>
+<td><kbd>B</kbd></td>
+<td>Drag to lay down a run of notes.</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td><kbd>D</kbd></td>
+<td>Click or sweep to delete notes.</td>
+</tr>
+<tr>
+<td>Mute</td>
+<td><kbd>T</kbd></td>
+<td>Click or sweep to mute or unmute notes.</td>
+</tr>
+<tr>
+<td>Slice</td>
+<td><kbd>C</kbd></td>
+<td>Cut notes in two along a line in time.</td>
+</tr>
+<tr>
+<td>Select</td>
+<td><kbd>E</kbd></td>
+<td>Drag a rectangle to select notes.</td>
+</tr>
+<tr>
+<td>Zoom</td>
+<td><kbd>Z</kbd></td>
+<td>Drag a rectangle to zoom to it.</td>
+</tr>
+<tr>
+<td>Playback</td>
+<td><kbd>Y</kbd></td>
+<td>Drag across notes to hear them.</td>
+</tr>
+</tbody></table>
+</div>
+<p>Right-click deletes with every tool except Zoom.</p>
+<h3 id="slice"><a class="anchor" href="#slice">Slice</a></h3>
+<ol>
+<li>Pick <strong>Slice</strong> (<kbd>C</kbd>).</li>
+<li>Press where you want the cut, then drag up or down across the rows to cut.</li>
+<li>Let go. Every note the line crosses is cut in two, and the pieces after the cut are selected.</li>
+</ol>
+<p>The cut goes on the grid line nearest the pointer. Hold ⌥ to cut anywhere. Hold ⇧ to cut every row at once: the line
+shows before you press.</p>
+<p>The Slice tool cuts every note it crosses, selected or not.</p>
+<h3 id="zoom-and-playback"><a class="anchor" href="#zoom-and-playback">Zoom and Playback</a></h3>
+<p>With <strong>Zoom</strong>, drag a rectangle to fill the view with it. Click to zoom out. Right-click to go back to the view you had
+before the last zoom, and right-click again to come back.</p>
+<p>With <strong>Playback</strong>, drag along the grid. Each note under the pointer sounds as you pass it. You can do the same with
+any tool by holding ⌥ and dragging with the right button.</p>
+<h2 id="select-notes"><a class="anchor" href="#select-notes">Select notes</a></h2>
+<ul>
+<li><strong>Drag a rectangle</strong> with the Select tool, or with ⌘ held in any tool. Hold ⇧ as well to add to the selection.</li>
+<li><strong>⌘-click</strong> a note to select it alone. <strong>⇧⌘-click</strong> adds it to the selection or takes it out. With the Select tool,
+⇧-click does the same.</li>
+<li><strong>⌘-drag on the keyboard</strong> selects every note on the keys you drag over.</li>
+<li><kbd>⌘A</kbd> selects every note, <kbd>⌘D</kbd> deselects, and <kbd>⇧I</kbd> inverts the selection.</li>
+<li>Right-click an empty spot, or ⌘-click one, to deselect.</li>
+<li>Selecting a range of time on the ruler selects the notes that start in it (see
+<a href="#the-time-selection">The time selection</a>).</li>
+</ul>
+<p>Selected notes are drawn highlighted. The selection clears when you switch pattern or channel.</p>
+<h3 id="commands-act-on-the-selection-or-on-every-note"><a class="anchor" href="#commands-act-on-the-selection-or-on-every-note">Commands act on the selection, or on every note</a></h3>
+<p>Most commands, such as quantize, chop, glue, legato and the moves with the arrow keys, change the selected notes. When
+nothing is selected, they change every note of the channel in the pattern. Delete, copy and cut need a selection.</p>
+<h2 id="copy-paste-and-duplicate"><a class="anchor" href="#copy-paste-and-duplicate">Copy, paste and duplicate</a></h2>
+<ul>
+<li><kbd>⌘C</kbd> copies the selected notes and <kbd>⌘X</kbd> cuts them.</li>
+<li><kbd>⌘V</kbd> pastes them at the first bar in view. The pasted notes are selected, ready to drag into place.</li>
+<li><kbd>⌘B</kbd> duplicates the selection to the right. The copy goes straight after the selection, rounded up to the
+snap. If there&#39;s a time selection, the copy goes one time selection later, and the time selection moves along with
+it. Press <kbd>⌘B</kbd> again to keep repeating.</li>
+</ul>
+<p>The <strong>Edit</strong> menu&#39;s Cut, Copy, Paste, Delete and Select All work on the Piano roll&#39;s notes while it&#39;s in front.</p>
+<h2 id="move-notes-with-the-keys"><a class="anchor" href="#move-notes-with-the-keys">Move notes with the keys</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Keys</th>
+<th>Moves the notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⇧←</kbd> <kbd>⇧→</kbd></td>
+<td>Back or forward by a snap unit</td>
+</tr>
+<tr>
+<td><kbd>⌥←</kbd> <kbd>⌥→</kbd></td>
+<td>Back or forward by a tick</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> <kbd>⇧↓</kbd> or <kbd>⌥↑</kbd> <kbd>⌥↓</kbd></td>
+<td>Up or down a semitone</td>
+</tr>
+<tr>
+<td><kbd>⌘↑</kbd> <kbd>⌘↓</kbd></td>
+<td>Up or down an octave</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘←</kbd> <kbd>⇧⌘→</kbd></td>
+<td>Rotate by a snap unit: notes pushed past the pattern&#39;s end come round to its start</td>
+</tr>
+</tbody></table>
+</div>
+<p>A tick is the smallest step in time: a beat has 96, and a step (a sixteenth) has 24.</p>
+<h2 id="snap"><a class="anchor" href="#snap">Snap</a></h2>
+<p>The <strong>Snap</strong> menu (the magnet) sets the grid notes snap to when you draw, move, resize and slice them, and what
+quantize and chop use.</p>
+<ul>
+<li><strong>Line</strong> and <strong>Cell</strong> snap to the grid drawn at the current zoom. Zoom in and the grid gets finer, down to a step.
+Line is the default.</li>
+<li><strong>(none)</strong> turns snapping off.</li>
+<li>The rest are fixed lengths: 1/6, 1/4, 1/3 and 1/2 of a step, a step, 1/6, 1/4, 1/3 and 1/2 of a beat, a beat and a
+bar.</li>
+</ul>
+<p>Hold ⌥ while you drag to ignore the snap for that drag. The snap also decides whether
+<a href="../midi/#how-recorded-notes-are-quantized">recorded notes</a> are quantized.</p>
+<h2 id="the-time-selection"><a class="anchor" href="#the-time-selection">The time selection</a></h2>
+<p>The time selection is a red range on the ruler. While you&#39;re in pattern mode, playback loops it.</p>
+<ul>
+<li><strong>Select a range</strong>: double-click the ruler and drag, or ⌘-drag on it. The notes that start in the range are selected
+too.</li>
+<li><strong>Clear it</strong>: double-click the ruler without dragging, or right-click it. That also deselects the notes it selected.</li>
+<li><kbd>⌘Enter</kbd> makes the time selection the span of the selected notes (or of every note).</li>
+<li><kbd>⌘←</kbd> and <kbd>⌘→</kbd> move the time selection back or forward by its own length and select the notes
+in its new place. Use them to step through a pattern a section at a time.</li>
+<li><kbd>⌘D</kbd> clears it along with the selection.</li>
+</ul>
+<p>The range snaps to the grid; hold ⌥ for none. Closing the Piano roll stops looping it.</p>
+<p>In song mode, the loop is <a href="../playlist/">the Playlist</a>&#39;s time selection instead.</p>
+<h2 id="the-ruler"><a class="anchor" href="#the-ruler">The ruler</a></h2>
+<ul>
+<li><strong>Click or drag</strong> on the ruler to set where play starts. If the song is playing, it jumps there.</li>
+<li><strong>Double-click and drag</strong>, or <strong>⌘-drag</strong>, to make a <a href="#the-time-selection">time selection</a>.</li>
+<li><strong>Double-click</strong> or <strong>right-click</strong> to clear the time selection.</li>
+</ul>
+<h2 id="zoom-and-scroll"><a class="anchor" href="#zoom-and-scroll">Zoom and scroll</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Do this</th>
+<th>To</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Scroll</td>
+<td>Move up and down the keyboard</td>
+</tr>
+<tr>
+<td>⇧-scroll, or scroll sideways</td>
+<td>Move along time</td>
+</tr>
+<tr>
+<td>⌘-scroll, or pinch</td>
+<td>Zoom in time around the pointer</td>
+</tr>
+<tr>
+<td>⌘- or ⌥-scroll over the keyboard</td>
+<td>Make the rows taller or shorter</td>
+</tr>
+<tr>
+<td>Middle-drag</td>
+<td>Pan</td>
+</tr>
+<tr>
+<td>⌘-middle-drag, or middle-drag on the keyboard</td>
+<td>Make the rows taller or shorter</td>
+</tr>
+<tr>
+<td>⌘-right-click</td>
+<td>Zoom to the selection (or every note); again to go back</td>
+</tr>
+<tr>
+<td><kbd>PageUp</kbd> / <kbd>PageDown</kbd></td>
+<td>Zoom in or out</td>
+</tr>
+<tr>
+<td><kbd>⇧1</kbd> <kbd>⇧2</kbd> <kbd>⇧3</kbd></td>
+<td>Show 1, 4 or 16 bars</td>
+</tr>
+<tr>
+<td><kbd>⇧4</kbd></td>
+<td>Show every note</td>
+</tr>
+<tr>
+<td><kbd>⇧5</kbd></td>
+<td>Show the time selection</td>
+</tr>
+<tr>
+<td><kbd>⇧0</kbd></td>
+<td>Centre on the playhead (or where play starts)</td>
+</tr>
+</tbody></table>
+</div>
+<p>Double-click the vertical scrollbar to bring the rows back to their usual height.</p>
+<h2 id="quantize"><a class="anchor" href="#quantize">Quantize</a></h2>
+<p>Quantizing pulls notes onto the grid. The grid is the snap, or a step when the snap is off.</p>
+<ul>
+<li><kbd>⌃Q</kbd> <strong>Quick quantize</strong>: each note&#39;s start and end go to the nearest grid line. A note so short it would
+vanish keeps one grid cell.</li>
+<li><kbd>⇧Q</kbd> <strong>Quantize start times</strong>: the starts go to the grid, and each note keeps its length.</li>
+<li><kbd>⌥Q</kbd> <strong>Quantize…</strong>: opens the Quantizer.</li>
+</ul>
+<h3 id="the-quantizer"><a class="anchor" href="#the-quantizer">The Quantizer</a></h3>
+<p>The Quantizer quantizes part of the way, and shows and plays the result while it&#39;s open.</p>
+<ol>
+<li>Select the notes, or select none to quantize them all.</li>
+<li>Press <kbd>⌥Q</kbd>, or choose <strong>Tools › Quantize…</strong>.</li>
+<li>Set the grid and the knobs. The Piano roll shows the result as you turn them, and plays it if the song is playing.</li>
+<li>Click <strong>Accept</strong>. To leave the notes as they were, close the window or press <kbd>Escape</kbd>.</li>
+</ol>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Grid</td>
+<td>The grid to quantize to: the Piano roll&#39;s snap, or a length of its own.</td>
+</tr>
+<tr>
+<td>START</td>
+<td>How far each note&#39;s start moves towards the grid.</td>
+</tr>
+<tr>
+<td>SENS</td>
+<td>Only notes this close to a grid line move. All the way up, every note moves.</td>
+</tr>
+<tr>
+<td>DUR</td>
+<td>How far ends or lengths move towards the grid, when they&#39;re quantized.</td>
+</tr>
+<tr>
+<td>SWING</td>
+<td>Pushes every second grid line later.</td>
+</tr>
+<tr>
+<td>Note ends</td>
+<td><strong>Leave duration</strong>, <strong>Leave end time</strong>, <strong>Quantize end time</strong> or <strong>Quantize duration</strong>.</td>
+</tr>
+</tbody></table>
+</div>
+<p>A line under the controls says how many notes will move. <strong>Reset</strong> puts the controls back as they start. Accept is one undo step. The Quantizer keeps its settings for the next time you open it.</p>
+<h2 id="chop"><a class="anchor" href="#chop">Chop</a></h2>
+<p>Chopping cuts notes into shorter ones.</p>
+<ul>
+<li><kbd>⌘U</kbd> <strong>Quick chop</strong>: cuts each note into pieces the length of the snap.</li>
+<li><kbd>⌥U</kbd> <strong>Chop…</strong>: opens the Chopper.</li>
+</ul>
+<h3 id="the-chopper"><a class="anchor" href="#the-chopper">The Chopper</a></h3>
+<p>The Chopper cuts notes in a rhythm, with accents and panning, and plays the result while it&#39;s open.</p>
+<ol>
+<li>Select the notes, or select none to chop them all.</li>
+<li>Press <kbd>⌥U</kbd>, or choose <strong>Tools › Chop…</strong>.</li>
+<li>Pick a pattern and set the knobs. The Piano roll shows and plays the result as you go.</li>
+<li>Click <strong>Accept</strong>. The pieces are selected. Close the window or press <kbd>Escape</kbd> to leave the notes as they
+were.</li>
+</ol>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pattern</td>
+<td>The rhythm: <strong>Default</strong> cuts pieces the snap long, as Quick chop does. The others include Triplets, Dotted, Gallop, 3-3-2, Trap roll, Stutter, Ramp, Gate and Ping-pong. Each shows a hint in the menu.</td>
+</tr>
+<tr>
+<td>Time mul</td>
+<td>Makes the pattern slower or faster, from ×1/4 to ×4.</td>
+</tr>
+<tr>
+<td>PAN</td>
+<td>How much of the pattern&#39;s panning the pieces get.</td>
+</tr>
+<tr>
+<td>VEL</td>
+<td>How much of the pattern&#39;s accents the pieces get.</td>
+</tr>
+<tr>
+<td>Absolute pattern</td>
+<td>On, the rhythm counts from the pattern&#39;s start. Off, it counts from each note&#39;s start.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The rhythm is measured on the snap. If the Chopper says the pattern is too fast, turn <strong>Time mul</strong> left or pick a
+coarser snap. The Chopper keeps its settings for the next time you open it.</p>
+<h2 id="glue-legato-and-lengths"><a class="anchor" href="#glue-legato-and-lengths">Glue, legato and lengths</a></h2>
+<ul>
+<li><kbd>⌘G</kbd> <strong>Glue</strong>: notes of the same pitch that touch or overlap become one note. It keeps the first note&#39;s
+velocity and pan.</li>
+<li><kbd>⌘L</kbd> <strong>Quick legato</strong>: each note is held until the next one starts. Notes that start together (a chord)
+end together.</li>
+<li><kbd>⇧D</kbd> <strong>Discard lengths</strong>: every note becomes the snap&#39;s length (or a tick long with the snap off). Handy
+for drums and one-shots.</li>
+</ul>
+<h2 id="the-tools-menu"><a class="anchor" href="#the-tools-menu">The Tools menu</a></h2>
+<p>The wrench on the title bar. Each item works on the selection, or on every note when nothing is selected.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chop…</td>
+<td><kbd>⌥U</kbd></td>
+</tr>
+<tr>
+<td>Quick chop</td>
+<td><kbd>⌘U</kbd></td>
+</tr>
+<tr>
+<td>Glue</td>
+<td><kbd>⌘G</kbd></td>
+</tr>
+<tr>
+<td>Quick quantize</td>
+<td><kbd>⌃Q</kbd></td>
+</tr>
+<tr>
+<td>Quantize start times</td>
+<td><kbd>⇧Q</kbd></td>
+</tr>
+<tr>
+<td>Quantize…</td>
+<td><kbd>⌥Q</kbd></td>
+</tr>
+<tr>
+<td>Quick legato</td>
+<td><kbd>⌘L</kbd></td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="the-event-editor"><a class="anchor" href="#the-event-editor">The event editor</a></h2>
+<p>The event editor under the grid shows a bar for each note: its velocity, or its pan.</p>
+<ul>
+<li>Click the lane&#39;s label, or press <kbd>F</kbd>, to switch between <strong>Velocity</strong> and <strong>Pan</strong>.</li>
+<li><strong>Drag across</strong> the lane to draw values. Each note you pass takes the height of the pointer. If notes are
+selected, only they change.</li>
+<li><strong>⇧-drag</strong> gives every note you sweep the same value: the height where you pressed.</li>
+<li><strong>⌥-drag</strong> resets the notes you sweep: velocity to the default, pan to the centre.</li>
+<li><strong>Drag a bar&#39;s top</strong> up or down to set that note alone. It selects the note.</li>
+<li>Press near a note&#39;s start and drag up or down to set it. Notes that start at the same moment (a chord) change
+together.</li>
+<li>Drag the lane&#39;s top edge to make it taller or shorter, and double-click that edge for its usual height.</li>
+<li><kbd>⇧Enter</kbd> shows or hides the lane.</li>
+</ul>
+<p>You can also change velocity on the grid: hold ⌥ and scroll over a note. It changes by 2% a notch, or 0.5% with ⌘ as
+well. If the note is selected, the whole selection changes. A run of turns is one undo step.</p>
+<h2 id="note-properties"><a class="anchor" href="#note-properties">Note properties</a></h2>
+<p>Double-click a note to open its properties.</p>
+<ul>
+<li><strong>VEL</strong> and <strong>PAN</strong> knobs set its velocity and pan.</li>
+<li><strong>Start time</strong> (bar:step:tick, counted from 1) and <strong>Duration</strong> (bar:step:tick) set where it is and how long.</li>
+</ul>
+<p>Click <strong>Accept</strong> or press <kbd>Enter</kbd> to keep the change. <kbd>Escape</kbd> or <strong>Cancel</strong> leaves it.</p>
+<p>If the note you double-click is part of a selection, the window says how many more notes there are, and only VEL and
+PAN show: they apply to all of them.</p>
+<h2 id="ghost-notes"><a class="anchor" href="#ghost-notes">Ghost notes</a></h2>
+<p>Ghost notes are the other channels&#39; notes in the same pattern, drawn faintly behind this channel&#39;s. They help you
+write a bass line against the kick, or a melody against the chords.</p>
+<ul>
+<li>Click the ghost notes switch on the title bar, or press <kbd>⌥V</kbd>, to show or hide them. They&#39;re on by
+default.</li>
+<li>Double right-click a ghost note to switch to its channel.</li>
+</ul>
+<h2 id="the-target-channel"><a class="anchor" href="#the-target-channel">The target channel</a></h2>
+<p>The window&#39;s title names the channel whose notes you&#39;re editing. Click it to pick another: the channels with notes in
+this pattern come first, then the others.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Switches to</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>G</kbd> / <kbd>K</kbd></td>
+<td>The channel above or below in the rack</td>
+</tr>
+<tr>
+<td><kbd>H</kbd> / <kbd>J</kbd></td>
+<td>The previous or next channel that has notes in this pattern</td>
+</tr>
+</tbody></table>
+</div>
+<p>You can drop a sample from <a href="../browser/">the Browser</a> onto the Piano roll. If the target channel is a sampler, the sample
+replaces its own. Otherwise a new channel is made for it and shown.</p>
+<h2 id="the-songs-scale"><a class="anchor" href="#the-songs-scale">The song&#39;s scale</a></h2>
+<p>The <strong>Scale</strong> menu (the note icon) lights the notes of a scale on the grid. While a scale is set, notes you draw and
+move land on its notes: each goes to the nearest note of the scale, the lower one when two are as near. Moving notes
+only in time doesn&#39;t change their pitch.</p>
+<ol>
+<li>Click the <strong>Scale</strong> menu.</li>
+<li>Pick a scale, then its root (C to B).</li>
+</ol>
+<p>Choose <strong>None</strong> to turn it off. Hold ⌥ while drawing or moving to put a note anywhere.</p>
+<p>The scale belongs to the song, not to the channel: it&#39;s saved with the song and shows on every channel. Changing it is
+a step you can undo.</p>
+<h2 id="the-stamp"><a class="anchor" href="#the-stamp">The Stamp</a></h2>
+<p>The <strong>Stamp</strong> places a whole chord with one click.</p>
+<ol>
+<li>Click the <strong>Stamp</strong> menu and pick a chord. The Piano roll switches to Draw.</li>
+<li>Click the grid. The note you click is the chord&#39;s lowest note.</li>
+<li>Keep the button down and drag to move the chord before you let go.</li>
+</ol>
+<p>The menu has fixed chords (major, minor, sevenths, ninths, suspended chords and more) and two that follow
+<a href="#the-songs-scale">the song&#39;s scale</a>: <strong>Triad of the scale</strong> and <strong>Seventh of the scale</strong>. These build the chord from
+the scale&#39;s own notes, so they fit the key wherever you click. With no scale set, they use a major scale on the note
+you click.</p>
+<p>Pick <strong>None (a note)</strong> to go back to drawing single notes.</p>
+<h2 id="every-key"><a class="anchor" href="#every-key">Every key</a></h2>
+<p>These work while the Piano roll is the window in front.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>P</kbd> <kbd>B</kbd> <kbd>D</kbd> <kbd>T</kbd> <kbd>C</kbd> <kbd>E</kbd> <kbd>Z</kbd> <kbd>Y</kbd></td>
+<td>Draw, Paint, Delete, Mute, Slice, Select, Zoom, Playback</td>
+</tr>
+<tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select every note</td>
+</tr>
+<tr>
+<td><kbd>⌘D</kbd></td>
+<td>Deselect, and clear the time selection</td>
+</tr>
+<tr>
+<td><kbd>⇧I</kbd></td>
+<td>Invert the selection</td>
+</tr>
+<tr>
+<td><kbd>⌘C</kbd> <kbd>⌘X</kbd> <kbd>⌘V</kbd></td>
+<td>Copy, cut, paste</td>
+</tr>
+<tr>
+<td><kbd>⌘B</kbd></td>
+<td>Duplicate to the right</td>
+</tr>
+<tr>
+<td><kbd>Delete</kbd></td>
+<td>Delete the selected notes</td>
+</tr>
+<tr>
+<td><kbd>⌃Q</kbd></td>
+<td>Quick quantize</td>
+</tr>
+<tr>
+<td><kbd>⇧Q</kbd></td>
+<td>Quantize start times</td>
+</tr>
+<tr>
+<td><kbd>⌥Q</kbd></td>
+<td>The Quantizer</td>
+</tr>
+<tr>
+<td><kbd>⌘U</kbd></td>
+<td>Quick chop</td>
+</tr>
+<tr>
+<td><kbd>⌥U</kbd></td>
+<td>The Chopper</td>
+</tr>
+<tr>
+<td><kbd>⌘G</kbd></td>
+<td>Glue</td>
+</tr>
+<tr>
+<td><kbd>⌘L</kbd></td>
+<td>Quick legato</td>
+</tr>
+<tr>
+<td><kbd>⇧D</kbd></td>
+<td>Discard lengths</td>
+</tr>
+<tr>
+<td><kbd>⌥M</kbd> / <kbd>⇧⌥M</kbd></td>
+<td>Mute / unmute</td>
+</tr>
+<tr>
+<td><kbd>⇧←</kbd> <kbd>⇧→</kbd></td>
+<td>Move by a snap unit</td>
+</tr>
+<tr>
+<td><kbd>⌥←</kbd> <kbd>⌥→</kbd></td>
+<td>Move by a tick</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> <kbd>⇧↓</kbd></td>
+<td>Move a semitone</td>
+</tr>
+<tr>
+<td><kbd>⌘↑</kbd> <kbd>⌘↓</kbd></td>
+<td>Move an octave</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘←</kbd> <kbd>⇧⌘→</kbd></td>
+<td>Rotate within the pattern</td>
+</tr>
+<tr>
+<td><kbd>⌘←</kbd> <kbd>⌘→</kbd></td>
+<td>Move the time selection by its length</td>
+</tr>
+<tr>
+<td><kbd>⌘Enter</kbd></td>
+<td>Time selection around the notes</td>
+</tr>
+<tr>
+<td><kbd>F</kbd></td>
+<td>Velocity or pan in the event editor</td>
+</tr>
+<tr>
+<td><kbd>⇧Enter</kbd></td>
+<td>Show or hide the event editor</td>
+</tr>
+<tr>
+<td><kbd>⌥V</kbd></td>
+<td>Ghost notes on or off</td>
+</tr>
+<tr>
+<td><kbd>G</kbd> <kbd>K</kbd></td>
+<td>Channel above, below</td>
+</tr>
+<tr>
+<td><kbd>H</kbd> <kbd>J</kbd></td>
+<td>Previous, next channel with notes here</td>
+</tr>
+<tr>
+<td><kbd>PageUp</kbd> <kbd>PageDown</kbd></td>
+<td>Zoom in, out</td>
+</tr>
+<tr>
+<td><kbd>⇧1</kbd> to <kbd>⇧5</kbd>, <kbd>⇧0</kbd></td>
+<td>Zoom presets, centre on the playhead</td>
+</tr>
+<tr>
+<td><kbd>Escape</kbd></td>
+<td>Close the Piano roll</td>
+</tr>
+</tbody></table>
+</div>
+<p>The app&#39;s own keys still work with the Piano roll in front: <kbd>Space</kbd> to play, <kbd>⌘Z</kbd> and
+<kbd>⇧⌘Z</kbd> to undo and redo, <kbd>L</kbd> for pattern or song mode, <kbd>R</kbd> to record, <kbd>⌘T</kbd> for
+<a href="../midi/#the-typing-keyboard">the typing keyboard</a>, <kbd>⌘S</kbd> to save, and <kbd>F5</kbd> to <kbd>F9</kbd> for the
+other windows. While the typing keyboard is on, the letter keys play notes instead of choosing tools. See
+<a href="../shortcuts/">Shortcuts</a> for the rest.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../sampler/"><span>Previous</span>Sampler channels</a><a class="next" rel="next" href="../playlist/"><span>Next</span>Playlist</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Piano%20roll">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#open-it">Open it</a></li><li><a href="#draw-notes">Draw notes</a></li><li><a href="#move-copy-and-resize-notes">Move, copy and resize notes</a></li><li><a href="#delete-and-mute-notes">Delete and mute notes</a></li><li><a href="#the-tools">The tools</a></li><li><a href="#select-notes">Select notes</a></li><li><a href="#copy-paste-and-duplicate">Copy, paste and duplicate</a></li><li><a href="#move-notes-with-the-keys">Move notes with the keys</a></li><li><a href="#snap">Snap</a></li><li><a href="#the-time-selection">The time selection</a></li><li><a href="#the-ruler">The ruler</a></li><li><a href="#zoom-and-scroll">Zoom and scroll</a></li><li><a href="#quantize">Quantize</a></li><li><a href="#chop">Chop</a></li><li><a href="#glue-legato-and-lengths">Glue, legato and lengths</a></li><li><a href="#the-tools-menu">The Tools menu</a></li><li><a href="#the-event-editor">The event editor</a></li><li><a href="#note-properties">Note properties</a></li><li><a href="#ghost-notes">Ghost notes</a></li><li><a href="#the-target-channel">The target channel</a></li><li><a href="#the-songs-scale">The song's scale</a></li><li><a href="#the-stamp">The Stamp</a></li><li><a href="#every-key">Every key</a></li></ul></nav>
+</div>
+</body>
+</html>

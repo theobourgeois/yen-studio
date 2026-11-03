@@ -11,7 +11,9 @@ const NAMES = {
   "fx-multiband": "Y-Multiband", "fx-time": "Y-Time", "fx-tune": "Y-Tune", "fx-pan": "Y-Pan", "fx-pitch": "Y-Pitch",
 };
 
-const file = (video) => `clips/${video.dataset.clip}-${phone.matches ? "phone" : "wide"}`;
+// A page further down (the docs) says where the site's root is from it.
+const root = document.documentElement.dataset.root ?? "";
+const file = (video) => `${root}clips/${video.dataset.clip}-${phone.matches ? "phone" : "wide"}`;
 
 function dress(video) {
   video.poster = `${file(video)}.webp`;

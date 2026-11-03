@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coming from FL Studio: Yen Studio docs</title>
+<meta name="description" content="What works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/coming-from-fl-studio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coming from FL Studio">
+<meta property="og:description" content="What works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/coming-from-fl-studio/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/" aria-current="page">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Start">
+<p class="crumb" data-pagefind-ignore>Start</p>
+<h1 data-pagefind-meta="title">Coming from FL Studio</h1>
+<p>If you know FL Studio, you already know most of Yen Studio. The Channel rack, the Piano roll, the Playlist and the Mixer are laid out the way FL lays them out, and they take FL&#39;s clicks and most of its keys. This page is for the rest: the keys on a Mac, the places Yen Studio works differently, and what isn&#39;t there yet.</p>
+<aside class="callout note"><p><strong>Note:</strong> Yen Studio can&#39;t open FL Studio projects (<code>.flp</code> files). Start your songs in Yen Studio, or bring your samples over with the <a href="../browser/">Browser</a>.</p>
+</aside>
+<h2 id="whats-the-same"><a class="anchor" href="#whats-the-same">What&#39;s the same</a></h2>
+<ul>
+<li><strong>PAT / SONG.</strong> <kbd>L</kbd> switches. Pattern mode loops the pattern shown in the rack; song mode plays the Playlist.</li>
+<li><strong>The Channel rack.</strong> Click a step to turn it on, right-click to turn it off, and drag to paint either way. A channel&#39;s button opens its settings. <kbd>1</kbd> to <kbd>0</kbd> mute the first ten channels and <kbd>⌘1</kbd> to <kbd>⌘0</kbd> solo them.</li>
+<li><strong>Knobs.</strong> Drag to turn, hold <kbd>⌘</kbd> for fine moves, and ⌥-click to reset. Right-click for Reset, Copy value, Paste value and Type in value.</li>
+<li><strong>The Piano roll and the Playlist tools,</strong> on FL&#39;s letters: Draw <kbd>P</kbd>, Paint <kbd>B</kbd>, Delete <kbd>D</kbd>, Mute <kbd>T</kbd>, Slice <kbd>C</kbd>, Select <kbd>E</kbd>, Zoom <kbd>Z</kbd> and Playback <kbd>Y</kbd>. The Playlist adds Slip <kbd>S</kbd>. Click adds, right-click deletes, and <kbd>⇧</kbd>-drag clones.</li>
+<li><strong>The Playlist.</strong> Tracks aren&#39;t tied to channels. Pattern, audio and automation clips go on any track, and the Picker holds patterns, audio clips and automation clips.</li>
+<li><strong>The Mixer.</strong> Inserts beside the master, effect slots, sends, routing, and <kbd>⌘L</kbd> to give the selected channels free mixer tracks.</li>
+<li><strong>The toolbar.</strong> The transport, the tempo and position displays, the pattern selector and the hint bar are where FL keeps them. See <a href="../workspace/">Windows and the toolbar</a>.</li>
+<li><strong>Export.</strong> <kbd>⌘R</kbd> exports a WAV and <kbd>⇧⌘R</kbd> an MP3. Both ask where to save first, then open the export window.</li>
+</ul>
+<h2 id="fls-keys-on-a-mac"><a class="anchor" href="#fls-keys-on-a-mac">FL&#39;s keys on a Mac</a></h2>
+<p>Yen Studio takes FL Studio&#39;s keys, moved onto a Mac keyboard:</p>
+<ul>
+<li><strong>Ctrl is <kbd>⌘</kbd>.</strong> <kbd>Ctrl</kbd> works too.</li>
+<li><strong>Alt is <kbd>⌥</kbd>.</strong></li>
+<li><strong>The F keys need <kbd>Fn</kbd></strong> on most Mac keyboards, so the windows have <kbd>⌥</kbd> keys of their own.</li>
+</ul>
+<div class="table"><table>
+<thead>
+<tr>
+<th>In FL Studio</th>
+<th>In Yen Studio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>F5 Playlist</td>
+<td><kbd>⌥1</kbd> (or <kbd>F5</kbd>)</td>
+</tr>
+<tr>
+<td>F6 Channel rack</td>
+<td><kbd>⌥2</kbd> (or <kbd>F6</kbd>)</td>
+</tr>
+<tr>
+<td>F7 Piano roll</td>
+<td><kbd>⌥3</kbd> (or <kbd>F7</kbd>)</td>
+</tr>
+<tr>
+<td>F9 Mixer</td>
+<td><kbd>⌥4</kbd> (or <kbd>F9</kbd>)</td>
+</tr>
+<tr>
+<td>Alt+F8 Browser</td>
+<td><kbd>⌥5</kbd> (or <kbd>⌥F8</kbd>)</td>
+</tr>
+<tr>
+<td>F8 Plugin picker</td>
+<td><kbd>F8</kbd>, a new channel</td>
+</tr>
+<tr>
+<td>F10 Settings</td>
+<td><kbd>⌘,</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+S Save</td>
+<td><kbd>⌘S</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+Z Undo</td>
+<td><kbd>⌘Z</kbd>, and <kbd>⇧⌘Z</kbd> or <kbd>⌘Y</kbd> to redo</td>
+</tr>
+<tr>
+<td>Ctrl+R Export WAV</td>
+<td><kbd>⌘R</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+Shift+R Export MP3</td>
+<td><kbd>⇧⌘R</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+T Typing keyboard to piano</td>
+<td><kbd>⌘T</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+L Assign free mixer tracks</td>
+<td><kbd>⌘L</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+B Duplicate</td>
+<td><kbd>⌘B</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+Q Quick quantize</td>
+<td><kbd>⌃Q</kbd> (<kbd>⌘Q</kbd> is the Mac&#39;s Quit)</td>
+</tr>
+<tr>
+<td>Alt+Q Quantizer</td>
+<td><kbd>⌥Q</kbd></td>
+</tr>
+<tr>
+<td>Ctrl+G Glue notes</td>
+<td><kbd>⌘G</kbd> in the Piano roll</td>
+</tr>
+<tr>
+<td>Ctrl+U Chop, Alt+U Chopper</td>
+<td><kbd>⌘U</kbd>, <kbd>⌥U</kbd></td>
+</tr>
+<tr>
+<td>Shift+M Stretch</td>
+<td><kbd>⇧M</kbd> in the Playlist</td>
+</tr>
+<tr>
+<td>Alt+P Picker</td>
+<td><kbd>⌥P</kbd> in the Playlist</td>
+</tr>
+<tr>
+<td>Alt+T Time marker</td>
+<td><kbd>⌥T</kbd> in the Playlist</td>
+</tr>
+<tr>
+<td>Ctrl+Alt+C Consolidate</td>
+<td><kbd>⌥⌘C</kbd> in the Playlist</td>
+</tr>
+<tr>
+<td>Ctrl+Shift+←/→ Rotate steps</td>
+<td><kbd>⇧⌘←</kbd> / <kbd>⇧⌘→</kbd></td>
+</tr>
+<tr>
+<td>Alt+↑/↓ Move channels</td>
+<td><kbd>⌥↑</kbd> / <kbd>⌥↓</kbd></td>
+</tr>
+<tr>
+<td>Alt+C Clone channel</td>
+<td><kbd>⌥C</kbd></td>
+</tr>
+<tr>
+<td>Numpad +/− Next and previous pattern</td>
+<td>The same, or the <strong>Patterns</strong> menu on a keyboard without a numeric keypad</td>
+</tr>
+</tbody></table>
+</div>
+<p>A Mac&#39;s <kbd>Delete</kbd> key is FL&#39;s Backspace, and it deletes the selection in the Piano roll and the Playlist. The full list is on the <a href="../shortcuts/">Shortcuts</a> page.</p>
+<h3 id="keys-in-a-plugins-window"><a class="anchor" href="#keys-in-a-plugins-window">Keys in a plugin&#39;s window</a></h3>
+<p>While one of your plugins&#39; windows is in front, it gets your keys first. The keys it doesn&#39;t use, such as <kbd>Space</kbd>, <kbd>F6</kbd>, <kbd>F7</kbd>, <kbd>⌘Z</kbd> and <kbd>⇧⌘Z</kbd>, go on to Yen Studio.</p>
+<h2 id="whats-different"><a class="anchor" href="#whats-different">What&#39;s different</a></h2>
+<h3 id="windows"><a class="anchor" href="#windows">Windows</a></h3>
+<p>Every panel is a window, as in FL, but there&#39;s no docking: the windows float over the desktop. Drag one to the top to fill the desktop, or to a side to fill half of it. The Browser stays against the left edge. See <a href="../workspace/">Windows and the toolbar</a>.</p>
+<p>Your plugins open in a window of their own, over Yen Studio&#39;s. Its title bar has the plugin&#39;s presets and a button for the channel&#39;s settings, which hold FL&#39;s wrapper controls: ON, PAN, VOL, PITCH and TRACK. PITCH moves the notes by whole semitones, whatever the plugin&#39;s own bend range. See <a href="../plugins/">Plugins</a>.</p>
+<h3 id="settings"><a class="anchor" href="#settings">Settings</a></h3>
+<p>There&#39;s no F10. Open Settings with <kbd>⌘,</kbd> or the gear on the toolbar. It floats over the song, which keeps playing, and the keys you press in it are its own: <kbd>Space</kbd> doesn&#39;t play. Audio devices, MIDI inputs and the rest are under <strong>Music</strong>. See <a href="../settings/">Settings</a>.</p>
+<h3 id="the-channel-rack"><a class="anchor" href="#the-channel-rack">The Channel rack</a></h3>
+<ul>
+<li>The channel groups are fixed: <strong>Unsorted</strong> (every channel but the Playlist&#39;s audio clips), <strong>Audio</strong> and <strong>All</strong>.</li>
+<li>Turning a step off removes its note. There&#39;s no &quot;Mute removed steps&quot;.</li>
+<li>Swing is the song&#39;s, on the rack. A sampler&#39;s settings have a <strong>SWING</strong> knob for how much of it that channel takes.</li>
+<li>Your plugins are found in the <strong>Plugin manager</strong>: click <strong>More plugins…</strong> in the plugin picker and star the ones you use. The picker lists our instruments and effects and the plugins you&#39;ve starred.</li>
+</ul>
+<h3 id="the-piano-roll"><a class="anchor" href="#the-piano-roll">The Piano roll</a></h3>
+<ul>
+<li><kbd>Backspace</kbd> deletes, as <kbd>Delete</kbd> does. It doesn&#39;t toggle the snap.</li>
+<li>The Paint tool lays notes over what&#39;s already there, rather than replacing them.</li>
+<li>Notes resize from their right edge only.</li>
+<li>Each window has its own snap. There&#39;s no global snap.</li>
+</ul>
+<h3 id="the-playlist"><a class="anchor" href="#the-playlist">The Playlist</a></h3>
+<ul>
+<li>Clips resize from either edge.</li>
+<li><kbd>⇧</kbd> with the Slice tool cuts every track at once, straight down.</li>
+<li>Consolidate renders each mixer track&#39;s clips before that track&#39;s effects, so the mixer stays live. Its menu&#39;s <strong>Unconsolidate</strong> gives the clips back.</li>
+<li>Stretching has the Resample and Stretch modes, not FL&#39;s others.</li>
+</ul>
+<h3 id="the-mixer"><a class="anchor" href="#the-mixer">The Mixer</a></h3>
+<ul>
+<li>Solo follows the routing: soloing a track keeps on what it sends into. Each strip has an <strong>S</strong> button, and a track can be solo safe.</li>
+<li>Plugin delay compensation is always on. There&#39;s no switch for it.</li>
+<li><kbd>⌘G</kbd> routes the selected tracks to a new bus.</li>
+<li>Mixer tracks have no built-in EQ. Put <a href="../y-eq/">Y-EQ</a> in a slot.</li>
+</ul>
+<h3 id="the-browser"><a class="anchor" href="#the-browser">The Browser</a></h3>
+<ul>
+<li>It shows your own folders and nothing else: no plugins, presets or bundled kits. Drag a folder from Finder onto it to add it.</li>
+<li>The search works as you type, across every folder, in a flat list.</li>
+<li><kbd>⇧↑</kbd> and <kbd>⇧↓</kbd> audition the next file in the selected channel, as in FL.</li>
+</ul>
+<p>See <a href="../browser/">the Browser</a>.</p>
+<h3 id="automation"><a class="anchor" href="#automation">Automation</a></h3>
+<ul>
+<li>Automation clips live in the Playlist&#39;s Picker, on its automation tab, not in the Channel rack.</li>
+<li>Automation plays only in song mode.</li>
+<li>⌥-click deletes a point. A Mac has no right ⌥ to tell apart.</li>
+<li>To automate a control in one of our effects or your plugins, touch it, then click <strong>Automate &quot;…&quot;</strong> in the window&#39;s title bar.</li>
+</ul>
+<p>See <a href="../automation/">Automation</a>.</p>
+<h3 id="recording-and-midi"><a class="anchor" href="#recording-and-midi">Recording and MIDI</a></h3>
+<ul>
+<li>Audio is recorded from the dry input only.</li>
+<li><strong>Record</strong> switches to song mode. There&#39;s no recording in pattern mode.</li>
+<li>Takes are always 32-bit float.</li>
+<li>Every MIDI input plays unless you turn it off in <strong>Settings › Music</strong>.</li>
+<li>The typing keyboard has the Piano layout only. <kbd>[</kbd> and <kbd>]</kbd> move it an octave.</li>
+</ul>
+<p>See <a href="../recording/">Recording</a> and <a href="../midi/">MIDI</a>.</p>
+<h3 id="export"><a class="anchor" href="#export">Export</a></h3>
+<ul>
+<li>You can keep working on the song while it exports. What&#39;s exported is the song as it was when you started the export.</li>
+<li>The tail can ring out, be cut, or wrap round to the start so the export loops.</li>
+<li>Stems can be in any of the formats, not only WAV.</li>
+<li><strong>Keep it from clipping</strong> is on at first: a mix that goes over full scale is turned down rather than clipped.</li>
+</ul>
+<p>See <a href="../export/">Export</a>.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/mixer.webp" width="1200" height="615" alt="The Mixer, with its tracks, sends and effect slots" loading="lazy" decoding="async"><figcaption>The Mixer.</figcaption></figure></p>
+<h2 id="what-isnt-there-yet"><a class="anchor" href="#what-isnt-there-yet">What isn&#39;t there yet</a></h2>
+<p>Yen Studio is pre-alpha. These are some of the FL Studio features it doesn&#39;t have yet:</p>
+<ul>
+<li>Opening <code>.flp</code> projects.</li>
+<li>A Windows version.</li>
+<li>Arrangements and performance mode in the Playlist.</li>
+<li>Crossfades and reversing a single audio clip.</li>
+<li>Slide and portamento notes.</li>
+<li>Cut groups, polyphony settings and the arpeggiator in a channel&#39;s settings.</li>
+<li>Zipping channels, and channel groups of your own.</li>
+<li>Edit events and Link to controller on a knob&#39;s menu.</li>
+<li>Uploading an export to SoundCloud.</li>
+</ul>
+<p>If something you rely on in FL Studio is missing, <a href="https://github.com/theobourgeois/yen-studio/issues" rel="noopener">tell us on GitHub</a>.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../workspace/"><span>Previous</span>Windows and the toolbar</a><a class="next" rel="next" href="../channel-rack/"><span>Next</span>Channel rack</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Coming%20from%20FL%20Studio">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#whats-the-same">What's the same</a></li><li><a href="#fls-keys-on-a-mac">FL's keys on a Mac</a></li><li><a href="#whats-different">What's different</a></li><li><a href="#what-isnt-there-yet">What isn't there yet</a></li></ul></nav>
+</div>
+</body>
+</html>

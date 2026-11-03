@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistant: Yen Studio docs</title>
+<meta name="description" content="Set up Yen Studio's assistant with your own Claude Code or Codex, pick a model, see what it can do, and undo its changes with checkpoints.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/assistant/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Assistant">
+<meta property="og:description" content="Set up Yen Studio's assistant with your own Claude Code or Codex, pick a model, see what it can do, and undo its changes with checkpoints.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/assistant/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/" aria-current="page">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:More">
+<p class="crumb" data-pagefind-ignore>More</p>
+<h1 data-pagefind-meta="title">Assistant</h1>
+<p>The assistant is a chat beside your song. Ask it for a beat, a second pattern, a mix move or a measurement, and it
+works on the song in front of you: you watch each change happen, and you can undo any of it. It runs on your own
+Claude Code or Codex, so it uses your account with Anthropic or OpenAI. You don&#39;t need it: the rest of Yen Studio
+works without either.</p>
+<p>Press <kbd>⌘I</kbd>, or click the <strong>Assistant</strong> button at the right of the menu row, to show or hide it.</p>
+<div class="cut"><video class="clip" data-clip="assistant" style="--wide:2400/1148;--phone:806/1360" muted playsinline loop preload="none" aria-label="The assistant is asked to put every channel on its own insert, add effects to the 808 and duck the chords to the kick. The mixer fills up, then the changes wait in a review bar."></video></div>
+<h2 id="set-it-up"><a class="anchor" href="#set-it-up">Set it up</a></h2>
+<p>The assistant needs one of these on your Mac, installed and logged in:</p>
+<ul>
+<li><strong>Claude Code</strong>, with a Claude account. Install it from <a href="https://claude.com/claude-code" rel="noopener">claude.com/claude-code</a>,
+then open Terminal and run <code>claude</code> to log in.</li>
+<li><strong>Codex</strong>, with a ChatGPT account. Install it with <code>npm install -g @openai/codex</code>, then run <code>codex login</code> in
+Terminal.</li>
+</ul>
+<p>Then open the assistant. If it can&#39;t find either, or finds one that isn&#39;t logged in, it says what&#39;s missing. Fix it,
+then click <strong>Check again</strong>. If you&#39;ve only set up one of the two, choose it in the model menu under the message box.</p>
+<aside class="callout note"><p><strong>Note:</strong> Yen Studio finds Claude Code or Codex where your Terminal would, so an install through a Node version
+manager works too.</p>
+</aside>
+<h2 id="ask-for-something"><a class="anchor" href="#ask-for-something">Ask for something</a></h2>
+<ol>
+<li>Open the assistant with <kbd>⌘I</kbd>.</li>
+<li>Type what you want in the message box. On an empty chat a few suggestions are shown: click one to send it.</li>
+<li>Press <kbd>Enter</kbd> to send. <kbd>⇧Enter</kbd> starts a new line, and <kbd>Esc</kbd> leaves the box.</li>
+<li>Watch it work. Each step it takes is listed in the chat as it happens, and the song changes in front of you.</li>
+<li>To stop it partway, click the stop button where the send button was.</li>
+</ol>
+<p>Under the box, a line shows what&#39;s sent with your message so the assistant knows where you are in the song.</p>
+<p>Before it deletes anything, the assistant asks in the chat. Click <strong>Delete</strong> to let it, or <strong>Don&#39;t</strong> to keep it.</p>
+<p>The panel&#39;s left edge drags to make it wider or narrower. Double-click the edge to put it back.</p>
+<h2 id="one-chat-per-song"><a class="anchor" href="#one-chat-per-song">One chat per song</a></h2>
+<p>Each song has its own chat, kept with Yen Studio&#39;s data on your computer. When you open a song, its chat is there.
+Click <strong>New chat</strong> at the top of the panel to start again.</p>
+<p>A chat works on its own song. If you switch to another song while it&#39;s working, it keeps going on the first one.</p>
+<h2 id="pick-a-model-and-a-thinking-level"><a class="anchor" href="#pick-a-model-and-a-thinking-level">Pick a model and a thinking level</a></h2>
+<p>Under the message box are two menus.</p>
+<p><strong>The model menu</strong> lists the models of Claude Code and Codex. The rail down its side shows <strong>Starred</strong> and each
+provider. Type in <strong>Search models…</strong> to search them all. Star a model to keep it under <strong>Starred</strong>. In the menu,
+<kbd>⌘1</kbd> … <kbd>⌘9</kbd> pick a model, and the arrow keys and <kbd>Enter</kbd> move and choose. Older models are
+under <strong>Legacy models</strong>.</p>
+<p><strong>The thinking menu</strong> sets how hard it thinks: higher is slower and more thorough. The levels go from <strong>Low</strong> up;
+which ones a model has depends on the model, and a model with no levels hides the menu. When you change model, your
+level carries over if the new model has it.</p>
+<p>Both menus are locked while it works. Pick another model once it&#39;s done.</p>
+<p>If you switch between Claude Code and Codex in the middle of a chat, the other one starts a conversation of its own
+and is told what it missed.</p>
+<h2 id="what-it-can-do"><a class="anchor" href="#what-it-can-do">What it can do</a></h2>
+<p>The assistant works with the same parts of Yen Studio you do. It can:</p>
+<ul>
+<li><strong>Read the song</strong>: its channels, patterns, Playlist, mixer, tempo, swing and settings.</li>
+<li><strong>Build beats and melodies</strong>: add channels, write steps and notes, quantize, chop and transpose, and change any
+channel&#39;s settings. See <a href="../channel-rack/">Channel rack</a> and <a href="../piano-roll/">Piano roll</a>.</li>
+<li><strong>Work with patterns</strong>: add, rename, clone, transpose, move and remove them.</li>
+<li><strong>Arrange</strong>: place, move, slice and chop clips on <a href="../playlist/">the Playlist</a>, make them unique, split a pattern by
+channel, add audio clips, stretch them, set time markers, and render a part of the song to audio.</li>
+<li><strong>Use sounds</strong>: browse and search your sample folders, preview a sound (you hear it), load it onto a channel, add a
+folder to <a href="../browser/">the Browser</a>, and star sounds and plugins.</li>
+<li><strong>Use your plugins</strong>: list them, load them, pick their presets, and try loading one again that failed. See
+<a href="../plugins/">Plugins</a>.</li>
+<li><strong>Mix</strong>: route channels to mixer tracks, change levels and panning, add, remove and move tracks, make a bus or a
+group, set sends, solo, and add, change, move or copy effects. It can set up <a href="../sidechain/">sidechain</a> compression
+and ducking. See <a href="../mixer/">Mixer</a>.</li>
+<li><strong>Work every built-in effect</strong>: read and change <a href="../y-eq/">Y-EQ</a>, <a href="../y-c/">Y-C</a>, <a href="../y-l/">Y-L</a>, <a href="../y-r/">Y-R</a> and the rest.</li>
+<li><strong>Automate</strong>: draw <a href="../automation/">automation</a> and set up <a href="../modulators/">modulators</a>.</li>
+<li><strong>Detect tempo, extract stems and convert audio to notes</strong>. See <a href="../stems-and-notes/">Stems and notes</a>.</li>
+<li><strong>Record</strong>: list your inputs and MIDI keyboards, arm tracks and record. See <a href="../recording/">Recording audio</a>.</li>
+<li><strong>Play, stop and export</strong>: WAV, MP3, FLAC, OGG, M4A, MIDI or stems. See <a href="../export/">Export</a>.</li>
+<li><strong>Measure the sound</strong>: it renders or captures a passage and measures it on your computer: levels, loudness and true
+peak, the balance between low and high, and the stereo width.</li>
+<li><strong>Help mix a vocal</strong>: measure a vocal against the beat, render a few ways of mixing it, and apply the one you
+choose.</li>
+</ul>
+<p>It can&#39;t hear. When it talks about how something sounds, it&#39;s going on those measurements and on what it knows about
+mixing, not on listening. Trust your ears over it.</p>
+<h2 id="undo-its-changes"><a class="anchor" href="#undo-its-changes">Undo its changes</a></h2>
+<p>Every change the assistant makes is an ordinary edit: <kbd>⌘Z</kbd> takes them back one at a time. Two more ways
+take back a lot at once.</p>
+<h3 id="review-bar"><a class="anchor" href="#review-bar">Review bar</a></h3>
+<p>While the assistant has changed something you haven&#39;t kept yet, a bar over the message box says how many changes
+there are to review.</p>
+<ul>
+<li><strong>Undo all</strong> puts the song back as it was before those changes. If you&#39;ve edited the song yourself since, your
+edits go too. Hold the pointer over the button to see which.</li>
+<li><strong>Keep all</strong> accepts them, and the bar goes.</li>
+</ul>
+<p>Both are greyed out while it&#39;s working. Either way, <kbd>⌘Z</kbd> can still take it back.</p>
+<h3 id="restore-checkpoint"><a class="anchor" href="#restore-checkpoint">Restore checkpoint</a></h3>
+<p>Hold the pointer over a message you sent, and click <strong>Restore checkpoint</strong> under it. The song goes back to how it was
+when you sent that message. Your own edits since then go too: the button&#39;s tip says so when there are some.</p>
+<p>The chat then says <strong>Restored to before this message</strong>, and the messages after it fade. Click <strong>Redo</strong> there, or press
+<kbd>⌘Z</kbd>, to bring it all back.</p>
+<aside class="callout note"><p><strong>Note:</strong> Checkpoints last until you quit Yen Studio. After that, use <kbd>⌘Z</kbd>.</p>
+</aside>
+<h2 id="whats-sent-where"><a class="anchor" href="#whats-sent-where">What&#39;s sent where</a></h2>
+<p>Yen Studio itself sends nothing about your song. When you use the assistant, what you ask and the parts of your song
+it reads go to Anthropic or OpenAI through your own Claude Code or Codex, under that service&#39;s terms.</p>
+<ul>
+<li>The assistant only reaches your song through Yen Studio&#39;s own tools. Claude Code is run without its shell or file
+tools, and Codex in a read-only sandbox with its other tools turned off.</li>
+<li>Audio measurements are made on your computer. What&#39;s sent is the numbers, not the sound.</li>
+<li>Your chats are kept in Yen Studio&#39;s data folder on your computer.</li>
+</ul>
+<p>If you don&#39;t open the assistant, nothing is sent.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../stems-and-notes/"><span>Previous</span>Stems and notes</a><a class="next" rel="next" href="../settings/"><span>Next</span>Settings</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Assistant">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#set-it-up">Set it up</a></li><li><a href="#ask-for-something">Ask for something</a></li><li><a href="#one-chat-per-song">One chat per song</a></li><li><a href="#pick-a-model-and-a-thinking-level">Pick a model and a thinking level</a></li><li><a href="#what-it-can-do">What it can do</a></li><li><a href="#undo-its-changes">Undo its changes</a></li><li><a href="#whats-sent-where">What's sent where</a></li></ul></nav>
+</div>
+</body>
+</html>

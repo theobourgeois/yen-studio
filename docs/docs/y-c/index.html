@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-C: Yen Studio docs</title>
+<meta name="description" content="Yen Studio's compressor. Its curve and gain reduction on screen, modern and vintage styles, a side chain you can key from any track.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-c/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-C">
+<meta property="og:description" content="Yen Studio's compressor. Its curve and gain reduction on screen, modern and vintage styles, a side chain you can key from any track.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-c/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/" aria-current="page">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-C</h1>
+<p>Y-C is a compressor that shows you what it&#39;s doing: the level coming in, the level going out and the gain it takes away, scrolling behind its knobs. It has clean modern styles and vintage ones with their own controls, and a side chain you can key from another track, EQ, or lock to the song&#39;s beat.</p>
+<p><figure class="shot" style="--w:898"><img src="../shots/effect-compressor.webp" width="898" height="610" alt="Y-C's window: the knobs over the level display, meters at the right" loading="lazy" decoding="async"><figcaption>The knobs float over the level display; the red line is the gain it takes away.</figcaption></figure></p>
+<h2 id="get-started"><a class="anchor" href="#get-started">Get started</a></h2>
+<ol>
+<li>Put Y-C in a mixer slot (see <a href="../effects/">Built-in effects</a>). It opens on <strong>Default Setting</strong>.</li>
+<li>Pick a preset close to what you want: the preset menu is in the middle of the top bar, with arrows either side.</li>
+<li>Play the song and bring <strong>Threshold</strong> down until the red line in the display shows the compression you want.</li>
+<li>Set <strong>Ratio</strong>, then <strong>Attack</strong> and <strong>Release</strong> to taste. Leave <strong>Gain</strong> on <strong>AUTO</strong> to keep the level even, or click <strong>Match</strong> in the bottom bar to set it by ear for you.</li>
+</ol>
+<h2 id="the-main-controls"><a class="anchor" href="#the-main-controls">The main controls</a></h2>
+<p>The knobs sit over the level display.</p>
+<ul>
+<li><strong>Threshold</strong> (the big knob): where compression starts. While the song plays, a ring round it shows the level of what it hears. <strong>AUTO</strong> sets the threshold for you.</li>
+<li><strong>Audition triggering</strong> (the headphones by Threshold): plays only what the compression takes away. Click again to stop.</li>
+<li><strong>Ratio</strong>: how hard it compresses above the threshold. Its dots jump to common ratios.</li>
+<li><strong>Style</strong>: the compressor&#39;s character (see <a href="#styles">Styles</a>).</li>
+<li><strong>Character</strong> (the small icon by Style): adds colour. Pick <strong>Off</strong>, <strong>Tube</strong>, <strong>Diode</strong> or <strong>Bright</strong>, set how much <strong>Drive</strong>, and whether it comes before or after the compressor. The icon turns red while a mode is on, and scrolling over it steps through the modes.</li>
+<li><strong>Attack</strong>: how fast it reacts to a rise in level.</li>
+<li><strong>Release</strong>: how fast it lets go. <strong>AUTO</strong> lets it choose its own release.</li>
+<li><strong>Gain</strong>: makes up the level compression takes away. <strong>AUTO</strong> does it for you. The ring round it pans the wet sound between mid and side.</li>
+<li><strong>Dry</strong>: mixes in the uncompressed sound, from off upwards, for parallel compression. The ring round it pans the dry sound left and right.</li>
+<li><strong>Knee</strong>, <strong>Range</strong>, <strong>Lookahead</strong> and <strong>Hold</strong> (the arcs round the knobs): how softly compression begins, the most it can take away, how far ahead it looks for peaks, and how long it holds before letting go.</li>
+</ul>
+<p>Knobs turn by dragging up and down (<kbd>⇧</kbd> for fine) or scrolling. Double-click one to type a value: times in ms or seconds (<code>30</code>, <code>2s</code>), a ratio (<code>4</code>, <code>∞</code>), <code>off</code> for Dry. <kbd>⌘</kbd>-click or <kbd>⌥</kbd>-click resets a knob. Rest the pointer on one to see its name and value. Right-click for <strong>Reset</strong>, <strong>Type in value…</strong> and its automation.</p>
+<p>Some knobs come in pairs. <kbd>⌥</kbd>-drag one and its partner moves the other way: <strong>Gain</strong> with <strong>Dry</strong>, <strong>Input</strong> with <strong>Output</strong>, <strong>Threshold</strong> with <strong>Drive</strong>.</p>
+<h2 id="styles"><a class="anchor" href="#styles">Styles</a></h2>
+<p>Click <strong>Style</strong> for the menu. The styles are in four groups; the menu says a line about each.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Styles</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Modern</td>
+<td><strong>Clean</strong>, <strong>Versatile</strong>, <strong>Smooth</strong>, <strong>Punch</strong>, <strong>Upward</strong>, <strong>TTM</strong></td>
+</tr>
+<tr>
+<td>Classic</td>
+<td><strong>Op-El</strong>, <strong>Vari-Mu</strong>, <strong>Classic</strong>, <strong>Opto</strong></td>
+</tr>
+<tr>
+<td>Utility</td>
+<td><strong>Vocal</strong>, <strong>Vox</strong>, <strong>Mastering</strong>, <strong>Bus</strong>, <strong>Pumping</strong></td>
+</tr>
+<tr>
+<td>Vintage</td>
+<td><strong>FET 76</strong>, <strong>Opto 2A</strong>, <strong>Opto Tube</strong>, <strong>Distress</strong>, <strong>VCA 160</strong>, <strong>Diode 609</strong></td>
+</tr>
+</tbody></table>
+</div>
+<p>The top bar shows the group and style you&#39;re on, for example <em>Modern · Clean</em>.</p>
+<ul>
+<li><strong>Upward</strong> turns up what&#39;s quiet (detail, tails, breaths) rather than turning down what&#39;s loud.</li>
+<li><strong>TTM</strong> works on three bands, up and down at once.</li>
+<li><strong>Vocal</strong> sets its own knee and ratio: you only set the threshold. <strong>Knee</strong> is off in Vocal and in the Vintage styles.</li>
+<li><strong>Vox</strong> is one control: <strong>Compression</strong>, with a <strong>Gate</strong> and a <strong>Ceiling</strong>. With <strong>AUTO</strong> on, ratio, knee and times follow <strong>Compression</strong>.</li>
+</ul>
+<h3 id="vintage-styles"><a class="anchor" href="#vintage-styles">Vintage styles</a></h3>
+<p>The Vintage styles swap the knobs for their own panel, as hardware has.</p>
+<ul>
+<li><strong>Input</strong> drives the compressor harder, in place of Threshold. On <strong>Opto 2A</strong> it&#39;s <strong>Peak Reduction</strong>.</li>
+<li>Ratio buttons pick the ratio. <strong>FET 76</strong> has <strong>All</strong> (all buttons in: the crush). <strong>Distress</strong> has <strong>Nuke</strong>.</li>
+<li><strong>Opto 2A</strong> has <strong>Emphasis</strong> in place of a ratio, and a <strong>LIMIT</strong> / <strong>COMPRESS</strong> switch.</li>
+<li><strong>Opto Tube</strong> has a <strong>TIME</strong> switch: fixed, manual, or both.</li>
+<li><strong>Distress</strong> has <strong>DET</strong> (what the detector hears), <strong>AUDIO</strong> (its distortion modes) and <strong>BRIT</strong> (all buttons, on any ratio).</li>
+<li><strong>VCA 160</strong> has <strong>OVER EASY</strong> (a soft knee) and <strong>AUTO</strong> (its own times).</li>
+<li><strong>Diode 609</strong> has attack buttons and <strong>Recovery</strong> buttons (set times, or <strong>a1</strong> and <strong>a2</strong>, which recover faster after peaks than after long passages), plus a <strong>LIMIT</strong> stage with its own threshold.</li>
+<li><strong>LINK</strong> (Output Link): the output follows the input, so you can drive harder without it getting louder.</li>
+</ul>
+<h2 id="the-displays-and-meters"><a class="anchor" href="#the-displays-and-meters">The displays and meters</a></h2>
+<p>The level display scrolls from right to left: the level coming in, the level going out, and the gain reduction as a red line from the top. Click the scale button to change the scale of the displays and meters. The <strong>KNEE</strong> tab at the side opens the knee display, which draws the compression curve with the level moving along it.</p>
+<p>The meters at the right show the input, the output and the gain reduction. The numbers over them hold the most reduction and the highest output peak; click one to reset it.</p>
+<p><strong>Compact</strong>, in the bottom bar, hides the displays and lays the meters flat, for a smaller window.</p>
+<h2 id="the-side-chain"><a class="anchor" href="#the-side-chain">The side chain</a></h2>
+<p>Click the side chain toggle under the display to open its section. It&#39;s what the compressor listens to, not what it changes.</p>
+<ul>
+<li><strong>Audition</strong> (headphones): hold it to hear what the detector hears.</li>
+<li><strong>Level</strong>: turns the side chain up or down.</li>
+<li><strong>Trigger</strong>: <strong>Internal</strong> (its own sound), <strong>External</strong> (another track&#39;s) or <strong>Host Sync</strong> (a pulse on the song&#39;s beat).</li>
+<li><strong>Stereo Link</strong>: from 0% (each side compresses alone) to 100% (both move together). The button under it picks the link mode: <strong>MID</strong>, <strong>SIDE</strong>, <strong>M&gt;S</strong> (triggered by the mid, compresses the side) or <strong>S&gt;M</strong>.</li>
+</ul>
+<p>With <strong>External</strong>, choose a track in <strong>Key from</strong>. Until you do, it hears silence and says so. This is the same key as the slot&#39;s <strong>Sidechain input</strong> in the Mixer; see <a href="../sidechain/">Sidechain</a>. A kick&#39;s track ducking a bass is the classic use.</p>
+<p>With <strong>Host Sync</strong>, pick the note value (<strong>1/4 Note</strong> and so on), then set <strong>Offset</strong> (where in the beat it hits) and <strong>Length</strong>.</p>
+<h3 id="side-chain-eq"><a class="anchor" href="#side-chain-eq">Side chain EQ</a></h3>
+<p>The side chain has a small EQ of its own, drawn as Y-EQ draws its bands. Use it so the compressor reacts less to the low end, or only to the harsh part of a vocal.</p>
+<ul>
+<li>Double-click the background for a band: a <strong>Low Cut</strong> at the far left, a <strong>High Cut</strong> at the right, a <strong>Notch</strong> near the bottom, else a <strong>Bell</strong>.</li>
+<li>Drag a dot for its frequency and gain (on a cut or notch, up and down sets its Q).</li>
+<li>Scroll over a dot for its Q, or a cut&#39;s slope.</li>
+<li><kbd>⌥</kbd>-click a dot to bypass it.</li>
+<li>Right-click a dot for its shape, slope, placement (stereo, mid or side) and <strong>Delete</strong>.</li>
+</ul>
+<h2 id="the-bottom-bar"><a class="anchor" href="#the-bottom-bar">The bottom bar</a></h2>
+<ul>
+<li><strong>Oversampling</strong>: <strong>Off</strong>, <strong>2x</strong>, <strong>4x</strong>, <strong>8x</strong> or <strong>16x</strong>. Less aliasing on fast settings, more CPU.</li>
+<li><strong>Lookahead</strong>: the most the Lookahead arc can reach, from <strong>Off</strong> up to 20 ms. It sets the latency.</li>
+<li>The latency readout. With Oversampling and Lookahead both <strong>Off</strong> it reads <em>Zero latency</em>, so you can record a vocal through Y-C.</li>
+<li><strong>Match</strong>: play the song and click it. Y-C listens to what comes in and goes out, then sets <strong>Gain</strong> so they&#39;re as loud. It reads <em>Matching…</em> while it listens.</li>
+<li><strong>Bypass</strong>: turns Y-C off, keeping its latency.</li>
+<li><strong>Output</strong> (the button with the mix and levels): <strong>Input</strong> and <strong>Output</strong> with their pans, and <strong>Mix</strong>, the wet and dry blend.</li>
+<li><strong>Compact</strong>: see <a href="#the-displays-and-meters">The displays and meters</a>.</li>
+</ul>
+<p>The top bar has <strong>Undo</strong>, <strong>Redo</strong>, <strong>A/B</strong> with <strong>Copy</strong>, the presets, and the <strong>⋮</strong> menu: <strong>Reset to the default setting</strong>, <strong>Copy state</strong> and <strong>Paste state</strong> (to copy one Y-C&#39;s settings into another).</p>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>The presets are in folders: <strong>Vocals</strong>, <strong>Drums</strong>, <strong>Bass</strong>, <strong>Mix</strong> and <strong>Special</strong>. Each has a line on what it&#39;s for. They go from a rough vocal level to a drum bus smash, a master bus glue, an upward detail lift and <strong>Sidechain – Duck to Kick</strong>, which keys from another track: choose the kick&#39;s track in <strong>Key from</strong>. Once you change a setting, the preset&#39;s name reads <em>Custom</em>.</p>
+<h2 id="automation"><a class="anchor" href="#automation">Automation</a></h2>
+<p>Threshold, Ratio, Knee, Range, Attack, Release, Hold, Wet Gain, Dry Gain, Mix, Side Chain Level, Drive, Input, Output and Emphasis can all be automated. Right-click the control, or touch it and click <strong>Automate &quot;…&quot;</strong> in the title bar. See <a href="../automation/">Automation</a>.</p>
+<div class="cut"><video class="clip" data-clip="fx-compressor" style="--wide:1400/952;--phone:900/612" muted playsinline loop preload="none" aria-label="Y-C on a beat: the level and gain reduction scroll by, and the threshold is turned down and back up."></video></div>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-eq/"><span>Previous</span>Y-EQ</a><a class="next" rel="next" href="../y-l/"><span>Next</span>Y-L</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-C">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#get-started">Get started</a></li><li><a href="#the-main-controls">The main controls</a></li><li><a href="#styles">Styles</a></li><li><a href="#the-displays-and-meters">The displays and meters</a></li><li><a href="#the-side-chain">The side chain</a></li><li><a href="#the-bottom-bar">The bottom bar</a></li><li><a href="#presets">Presets</a></li><li><a href="#automation">Automation</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Channel rack: Yen Studio docs</title>
+<meta name="description" content="Channels, the step sequencer, the graph editor, patterns and swing in Yen Studio's Channel rack, with its menus and keys.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/channel-rack/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Channel rack">
+<meta property="og:description" content="Channels, the step sequencer, the graph editor, patterns and swing in Yen Studio's Channel rack, with its menus and keys.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/channel-rack/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/" aria-current="page">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Make">
+<p class="crumb" data-pagefind-ignore>Make</p>
+<h1 data-pagefind-meta="title">Channel rack</h1>
+<p>The Channel rack holds your song&#39;s instruments. Each row is a channel: a sampler playing one sample, or one of your
+plugins. The steps beside each channel are a pattern&#39;s notes, clicked in on a grid of sixteenths. Patterns are what
+you place on <a href="../playlist/">the Playlist</a> to build the song.</p>
+<p>Open it with <kbd>F6</kbd> or <kbd>⌥2</kbd>, or from the <strong>Window</strong> menu.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/rack.webp" width="1200" height="211" alt="The Channel rack with a drum pattern in its steps" loading="lazy" decoding="async"></figure></p>
+<h2 id="make-a-beat-with-the-steps"><a class="anchor" href="#make-a-beat-with-the-steps">Make a beat with the steps</a></h2>
+<ol>
+<li>Pick a pattern in the pattern picker on the toolbar (see <a href="#patterns">Patterns</a>).</li>
+<li>Click a step to turn it on. Right-click it to turn it off.</li>
+<li>Drag along a row to paint steps on, or right-drag to clear them.</li>
+<li>Press <kbd>Space</kbd> to play. A light above the steps follows the playhead.</li>
+</ol>
+<div class="cut"><video class="clip" data-clip="rack" style="--wide:2342/506;--phone:1358/506" muted playsinline loop preload="none" aria-label="Steps are clicked on and off in the channel rack's kick, clap and hat."></video></div>
+<p>A step is a note that starts on the grid and lasts one step. Steps and <a href="../piano-roll/">the Piano roll</a> are two views of
+the same notes: a step you click shows in the Piano roll, and a note you draw there on the grid shows as a step. When a
+channel&#39;s notes are more than plain steps (longer notes, notes off the grid, chords), its row shows a small preview of
+them instead. Click the preview to open them in the Piano roll.</p>
+<p>The steps alternate colour by beat, so you can count them at a glance. With a step focused, <kbd>Enter</kbd> turns it
+on and <kbd>Delete</kbd> turns it off.</p>
+<h3 id="how-long-a-pattern-is"><a class="anchor" href="#how-long-a-pattern-is">How long a pattern is</a></h3>
+<p>The pattern length display on the rack&#39;s title bar says how long the shown pattern is. By default it&#39;s <strong>Auto</strong>: one
+bar if the notes fit in one, otherwise rounded up to an even number of bars.</p>
+<p>To set it yourself, drag the display up or down, or use the arrow keys on it. Right-click it for <strong>Auto</strong>, <strong>1 bar</strong>,
+<strong>2 bars</strong>, <strong>4 bars</strong> or <strong>8 bars</strong>. Steps past the pattern&#39;s end show faded: they&#39;re kept, but the pattern doesn&#39;t
+play them.</p>
+<p>The rack shows at least a bar of steps. Drag the rack&#39;s right edge to show more; a longer pattern scrolls sideways.
+Drag with the middle button to pan through the steps.</p>
+<h3 id="shift-and-edit-a-channels-steps"><a class="anchor" href="#shift-and-edit-a-channels-steps">Shift and edit a channel&#39;s steps</a></h3>
+<p>Right-click a channel&#39;s button for its menu. The right-hand column works on that channel&#39;s steps:</p>
+<ul>
+<li><strong>Cut</strong>, <strong>Copy</strong>, <strong>Paste</strong>: the channel&#39;s steps in this pattern. Paste replaces what&#39;s there.</li>
+<li><strong>Fill each 2 steps</strong>, <strong>Fill each 4 steps</strong>, <strong>Fill each 8 steps</strong>: a quick hat, clap or kick line.</li>
+<li><strong>Clear steps</strong>: empties the row.</li>
+<li><strong>Rotate left</strong> <kbd>⇧⌘←</kbd> and <strong>Rotate right</strong> <kbd>⇧⌘→</kbd>: move every step one place along, the last
+wrapping round to the start.</li>
+</ul>
+<p>With the rack in front, <kbd>⌘C</kbd>, <kbd>⌘X</kbd> and <kbd>⌘V</kbd> copy, cut and paste the first selected
+channel&#39;s steps too.</p>
+<h2 id="shape-steps-in-the-graph-editor"><a class="anchor" href="#shape-steps-in-the-graph-editor">Shape steps in the graph editor</a></h2>
+<p>The graph editor shows each step&#39;s velocity or note as a bar under the rows. Open it with the graph button on the
+rack&#39;s title bar, <kbd>⌘K</kbd>, <strong>Graph editor</strong> in a channel&#39;s menu, or <strong>Window › Graph Editor</strong>.</p>
+<p>It shows the first selected channel. Pick <strong>Velocity</strong> or <strong>Note</strong> on its tabs. Only steps with a note have a bar.</p>
+<ul>
+<li><strong>Drag</strong> across the bars to draw values.</li>
+<li><strong>⌘-drag</strong> moves them all together: velocities scale, notes shift.</li>
+<li><strong>Right-drag</strong> draws a straight ramp from where you pressed to where you drag.</li>
+<li><strong>⌥-drag</strong> puts bars back to their default: the usual velocity, or the channel&#39;s root note.</li>
+</ul>
+<p>The Note tab reaches an octave either side of the root note. For anything wider, use <a href="../piano-roll/">the Piano roll</a>.</p>
+<h2 id="patterns"><a class="anchor" href="#patterns">Patterns</a></h2>
+<p>A pattern is one set of notes for every channel. The pattern picker on the toolbar shows which one the rack and the
+Piano roll are editing.</p>
+<ul>
+<li><strong>Change pattern:</strong> scroll over its name, drag it up or down, or press <kbd>↑</kbd> or <kbd>↓</kbd> while it has
+the focus. The numpad&#39;s <kbd>+</kbd> and <kbd>−</kbd> step through them from anywhere.</li>
+<li><strong>Make one:</strong> press the <strong>+</strong> beside the name, type a name and press <kbd>Enter</kbd>. Or step past the last
+pattern: a new empty one appears, greyed, and joins the song once you put a note in it or place it on the Playlist.</li>
+<li><strong>Rename, clone or delete:</strong> open the list with the arrow beside the name. The field at its top renames the shown
+pattern; click a pattern in the list to show it. <strong>Clone</strong> and <strong>Delete</strong> at the bottom act on the shown pattern.
+The last pattern can&#39;t be deleted.</li>
+</ul>
+<p>The <strong>Patterns</strong> menu has <strong>New Pattern</strong>, <strong>Clone Pattern</strong>, <strong>Previous Pattern</strong> and <strong>Next Pattern</strong> too.</p>
+<h2 id="add-channels"><a class="anchor" href="#add-channels">Add channels</a></h2>
+<p>Press the <strong>+</strong> under the last row to add a channel. Choose <strong>Sampler</strong> to play a sample, or one of your instrument
+plugins. The list shows the plugins you&#39;ve starred in the Plugin manager; <strong>More plugins…</strong> opens it, and <strong>Scan for
+plugins</strong> looks for ones installed since the last scan. <kbd>F8</kbd> opens the same list, opening the rack first if
+it&#39;s closed.</p>
+<p>A new sampler is selected and its <a href="../sampler/">settings window</a> opens. A plugin&#39;s own window opens once it has loaded.
+See <a href="../plugins/">Plugins</a> for working with them.</p>
+<div class="cut"><video class="clip" data-clip="serum" style="--wide:2400/1354;--phone:2384/1532" muted playsinline loop preload="none" aria-label="Serum 2 opens from the channel rack while the song plays. Its presets are stepped through, a warp knob and the filter are turned, a preset is picked from its browser, and its effects page opens."></video></div>
+<h3 id="the-starter-kit"><a class="anchor" href="#the-starter-kit">The starter kit</a></h3>
+<p>A new song starts with a kick, a clap, a hat and a snare, ready to click in. Adding them isn&#39;t an undo step, so
+<kbd>⌘Z</kbd> straight after starting won&#39;t take them away.</p>
+<p>The rack&#39;s menu (the arrow at its top left) adds more:</p>
+<ul>
+<li><strong>Add starter kit</strong>: the same four drums again.</li>
+<li><strong>Add starter instruments</strong>: a bass, a pluck, a pad, a lead and keys, as samplers that play notes.</li>
+<li><strong>Add samples…</strong>: pick audio files. Each becomes a channel named after its file.</li>
+</ul>
+<h3 id="drop-files-on-the-rack"><a class="anchor" href="#drop-files-on-the-rack">Drop files on the rack</a></h3>
+<p>Drag audio files from Finder, File Explorer or <a href="../browser/">the Browser</a> onto the rack. A line shows where they&#39;ll go.
+Each file becomes a new sampler channel there, and the new channels are selected. Files dropped on an empty part of
+the desktop become channels too.</p>
+<p>Drop a file onto a channel&#39;s button instead to replace that channel&#39;s sample. That works for samplers, not plugins.</p>
+<h2 id="work-with-a-channel"><a class="anchor" href="#work-with-a-channel">Work with a channel</a></h2>
+<p>Each row, from left to right:</p>
+<ul>
+<li><strong>Mute light.</strong> Click it to mute or unmute the channel. ⌘-click or ⌥-click it to solo the channel, or right-click
+it and choose <strong>Solo</strong>.</li>
+<li><strong>Pan</strong> and <strong>Volume</strong> knobs.</li>
+<li><strong>Mixer track</strong>, if track selectors are showing (see <a href="#send-channels-to-the-mixer">Send channels to the Mixer</a>).</li>
+<li><strong>Channel button.</strong> Click it to open the channel: a sampler&#39;s <a href="../sampler/">settings window</a>, a plugin&#39;s own window.
+It stays pressed in while the window is open. ⌘-click it to hear the channel.</li>
+<li><strong>Selector</strong>, the thin light at the end. It&#39;s outlined while the channel is selected and lights while it sounds.</li>
+<li><strong>Steps</strong>, or the notes preview.</li>
+</ul>
+<p>The channel&#39;s colour is the stripe on the button&#39;s left edge. A button turns red with a warning sign when its sample
+is missing or can&#39;t be read, or its plugin didn&#39;t load; a spinner shows while a plugin loads, and a plug icon marks
+plugin channels.</p>
+<h3 id="open-channel-windows"><a class="anchor" href="#open-channel-windows">Open channel windows</a></h3>
+<p>Clicking a channel button opens its window and closes the one that was open, so one channel window shows at a time.
+Click the button again to close it. ⌥-click a button to open its window as well as the ones already open.</p>
+<h3 id="mute-and-solo"><a class="anchor" href="#mute-and-solo">Mute and solo</a></h3>
+<p>Soloing a channel mutes all the others. Solo it again while it&#39;s the only one playing to unmute every channel.</p>
+<p>With the rack in front, the number keys <kbd>1</kbd> to <kbd>9</kbd> and <kbd>0</kbd> mute the first ten channels,
+and <kbd>⌘1</kbd> to <kbd>⌘0</kbd> solo them.</p>
+<h3 id="select-channels"><a class="anchor" href="#select-channels">Select channels</a></h3>
+<ul>
+<li>Click a selector to select that channel alone.</li>
+<li>Drag along the selectors to select a run of channels.</li>
+<li>⇧-click a selector to select everything from the last one you picked.</li>
+<li>Right-click a selector to add its channel to the selection; right-drag adds every channel you pass.</li>
+<li>Double-click a selector to open that channel in the Piano roll.</li>
+</ul>
+<p>Clicking a channel&#39;s button selects it as well. With the rack in front, <kbd>↑</kbd> and <kbd>↓</kbd> select the
+channel above or below, and <kbd>⇧↑</kbd> and <kbd>⇧↓</kbd> extend the selection.</p>
+<h3 id="move-clone-and-delete-channels"><a class="anchor" href="#move-clone-and-delete-channels">Move, clone and delete channels</a></h3>
+<p>These act on the selected channels. They&#39;re in the rack&#39;s menu, and <strong>Clone</strong> and <strong>Delete</strong> are in each channel&#39;s
+menu too.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>What</th>
+<th>Key</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Move selected up</strong> / <strong>Move selected down</strong></td>
+<td><kbd>⌥↑</kbd> / <kbd>⌥↓</kbd></td>
+</tr>
+<tr>
+<td><strong>Clone selected</strong></td>
+<td><kbd>⌥C</kbd></td>
+</tr>
+<tr>
+<td><strong>Delete selected</strong></td>
+<td><kbd>⌥⌫</kbd></td>
+</tr>
+</tbody></table>
+</div>
+<p>You can also hold ⇧ and turn the mouse wheel over a channel&#39;s button to move it up or down.</p>
+<p>A clone sits right under its channel, with the same sample, plugin and settings, but none of its notes.</p>
+<p><strong>Edit › Delete</strong> deletes the selected channels while the rack is in front.</p>
+<h3 id="name-and-colour-a-channel"><a class="anchor" href="#name-and-colour-a-channel">Name and colour a channel</a></h3>
+<p>Right-click the channel&#39;s button and choose <strong>Rename and color…</strong>. Type a name, pick a colour (or the empty swatch for
+the usual one) and press <kbd>Enter</kbd> or <strong>Save</strong>. <kbd>Escape</kbd> leaves it as it was. For just the colour,
+use the <strong>Color</strong> submenu in the same menu.</p>
+<h3 id="replace-a-channels-instrument"><a class="anchor" href="#replace-a-channels-instrument">Replace a channel&#39;s instrument</a></h3>
+<p><strong>Replace…</strong> in a channel&#39;s menu swaps its instrument for the Sampler or another plugin. The channel keeps its notes in
+every pattern, its volume, pan and mixer track.</p>
+<h3 id="more-in-a-channels-menu"><a class="anchor" href="#more-in-a-channels-menu">More in a channel&#39;s menu</a></h3>
+<ul>
+<li><strong>Piano roll</strong>: opens the channel&#39;s notes there.</li>
+<li><strong>Channel settings…</strong>: the settings window, for a plugin channel too.</li>
+<li><strong>Load sample…</strong>: pick a new sample for a sampler.</li>
+<li><strong>Cut itself</strong>: a new note stops the one still playing, as an open hat cuts off the last.</li>
+<li><strong>Hear it</strong>: plays the channel once, the same as ⌘-clicking its button.</li>
+<li><strong>Extract stems…</strong> and <strong>Convert to notes…</strong>: see <a href="../stems-and-notes/">Stems and notes</a>.</li>
+</ul>
+<p>For a plugin that didn&#39;t load, the menu has <strong>Try again</strong>.</p>
+<h2 id="transpose-channels"><a class="anchor" href="#transpose-channels">Transpose channels</a></h2>
+<p><strong>Transpose selected…</strong> in the rack&#39;s menu moves every note of the selected channels in the shown pattern. Type the
+number of semitones, or use the <strong>−12</strong>, <strong>−</strong>, <strong>+</strong> and <strong>+12</strong> buttons, then press <strong>Transpose</strong>. In the field,
+<kbd>↑</kbd> and <kbd>↓</kbd> move it by a semitone, and with ⇧ by an octave.</p>
+<h2 id="swing"><a class="anchor" href="#swing">Swing</a></h2>
+<p>Turn the <strong>Swing</strong> knob on the rack&#39;s title bar to push every second sixteenth late. At its top it delays them by
+half a step. Swing is the song&#39;s: every pattern and channel follows it.</p>
+<p>Each sampler and plugin channel has its own <strong>SWING</strong> knob in its <a href="../sampler/#the-controls-along-the-top">settings window</a>.
+It sets how much of the song&#39;s swing that channel takes, so a hat can swing while the kick stays straight.</p>
+<h2 id="show-channels-by-group"><a class="anchor" href="#show-channels-by-group">Show channels by group</a></h2>
+<p>The group chip on the rack&#39;s title bar picks which channels show:</p>
+<ul>
+<li><strong>Unsorted</strong>: your instruments and samples.</li>
+<li><strong>Audio</strong>: the channels the Playlist&#39;s audio clips play through.</li>
+<li><strong>All</strong>: both.</li>
+</ul>
+<h2 id="send-channels-to-the-mixer"><a class="anchor" href="#send-channels-to-the-mixer">Send channels to the Mixer</a></h2>
+<p>Every channel plays into a track of <a href="../mixer/">the Mixer</a>.</p>
+<ul>
+<li><strong>Assign selected to free mixer tracks</strong> (<kbd>⌘L</kbd>, in the rack&#39;s menu, or <strong>Tools › Assign Free Mixer
+Tracks</strong>) gives each selected channel an empty mixer track named after it.</li>
+<li><strong>Show mixer track selectors</strong> (<kbd>⌥M</kbd>, or <strong>View › Track Selectors</strong>) shows each channel&#39;s track number in
+its row. Drag it up or down, or scroll over it, to change the track; <code>---</code> is the master. Right-click it for
+<strong>Route to a free track</strong>, <strong>Show in the mixer</strong> and <strong>Type in value…</strong>.</li>
+</ul>
+<h2 id="keys"><a class="anchor" href="#keys">Keys</a></h2>
+<p>These work while the rack is the window in front. See <a href="../shortcuts/">Shortcuts</a> for the rest.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>F6</kbd> or <kbd>⌥2</kbd></td>
+<td>Show the Channel rack</td>
+</tr>
+<tr>
+<td><kbd>F8</kbd></td>
+<td>Add a channel</td>
+</tr>
+<tr>
+<td><kbd>1</kbd> … <kbd>0</kbd></td>
+<td>Mute or unmute the first ten channels</td>
+</tr>
+<tr>
+<td><kbd>⌘1</kbd> … <kbd>⌘0</kbd></td>
+<td>Solo the first ten channels</td>
+</tr>
+<tr>
+<td><kbd>↑</kbd> / <kbd>↓</kbd></td>
+<td>Select the channel above or below</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> / <kbd>⇧↓</kbd></td>
+<td>Extend the selection</td>
+</tr>
+<tr>
+<td><kbd>⌥↑</kbd> / <kbd>⌥↓</kbd></td>
+<td>Move the selected channels</td>
+</tr>
+<tr>
+<td><kbd>⌥C</kbd></td>
+<td>Clone the selected channels</td>
+</tr>
+<tr>
+<td><kbd>⌥⌫</kbd></td>
+<td>Delete the selected channels</td>
+</tr>
+<tr>
+<td><kbd>⇧⌘←</kbd> / <kbd>⇧⌘→</kbd></td>
+<td>Rotate the steps</td>
+</tr>
+<tr>
+<td><kbd>⌘C</kbd> / <kbd>⌘X</kbd> / <kbd>⌘V</kbd></td>
+<td>Copy, cut or paste the first selected channel&#39;s steps</td>
+</tr>
+<tr>
+<td><kbd>⌘K</kbd></td>
+<td>Show or hide the graph editor</td>
+</tr>
+<tr>
+<td><kbd>⌘L</kbd></td>
+<td>Assign the selected channels to free mixer tracks</td>
+</tr>
+<tr>
+<td><kbd>⌥M</kbd></td>
+<td>Show or hide the mixer track selectors</td>
+</tr>
+</tbody></table>
+</div>
+<aside class="callout tip"><p><strong>Tip:</strong> Double-click the rack&#39;s title bar to send it to a corner of the desktop, and again to bring it back.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../coming-from-fl-studio/"><span>Previous</span>Coming from FL Studio</a><a class="next" rel="next" href="../sampler/"><span>Next</span>Sampler channels</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Channel%20rack">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#make-a-beat-with-the-steps">Make a beat with the steps</a></li><li><a href="#shape-steps-in-the-graph-editor">Shape steps in the graph editor</a></li><li><a href="#patterns">Patterns</a></li><li><a href="#add-channels">Add channels</a></li><li><a href="#work-with-a-channel">Work with a channel</a></li><li><a href="#transpose-channels">Transpose channels</a></li><li><a href="#swing">Swing</a></li><li><a href="#show-channels-by-group">Show channels by group</a></li><li><a href="#send-channels-to-the-mixer">Send channels to the Mixer</a></li><li><a href="#keys">Keys</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MIDI keyboards: Yen Studio docs</title>
+<meta name="description" content="Play Yen Studio from a MIDI keyboard or your computer's keys, and record what you play as notes.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/midi/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MIDI keyboards">
+<meta property="og:description" content="Play Yen Studio from a MIDI keyboard or your computer's keys, and record what you play as notes.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/midi/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/" aria-current="page">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Record">
+<p class="crumb" data-pagefind-ignore>Record</p>
+<h1 data-pagefind-meta="title">MIDI keyboards</h1>
+<p>A MIDI keyboard plays the channel selected in <a href="../channel-rack/">the Channel rack</a>. Plug it in and play: there&#39;s nothing
+to set up. Your computer&#39;s own keys can do the same with the typing keyboard. Whatever you play, Record can keep as
+notes in a pattern.</p>
+<h2 id="plug-in-a-keyboard"><a class="anchor" href="#plug-in-a-keyboard">Plug in a keyboard</a></h2>
+<ol>
+<li>Connect your MIDI keyboard or pad controller.</li>
+<li>Select a channel in the Channel rack by clicking it.</li>
+<li>Play.</li>
+</ol>
+<p>Every MIDI input is used as soon as it&#39;s plugged in, and again when you unplug it and plug it back in. You don&#39;t need
+to turn it on first.</p>
+<p>To see your inputs or turn one off, open <strong>Settings</strong> (<kbd>⌘,</kbd>) › <strong>Music</strong> and find <a href="../settings/#midi-inputs">MIDI inputs</a>. Each input
+has a switch, and a line that says what it&#39;s doing:</p>
+<ul>
+<li><strong>Playing the selected channel.</strong> It works.</li>
+<li><strong>Couldn&#39;t be opened: another app may have it.</strong> Quit the other app that&#39;s using the keyboard, or turn the keyboard
+off there.</li>
+<li><strong>Turned off.</strong> Flip its switch to use it again.</li>
+</ul>
+<p>Your choice is kept for the next time you open Yen Studio.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> If notes don&#39;t play, check the toolbar&#39;s typing keyboard button: its light blinks each time a note comes
+in, from a keyboard or from your computer&#39;s keys. No blink means the notes aren&#39;t reaching Yen Studio.</p>
+</aside>
+<h2 id="which-channel-plays"><a class="anchor" href="#which-channel-plays">Which channel plays</a></h2>
+<p>Your keyboard plays <strong>the channel selected in the rack</strong>. If several are selected, it plays the first. If none is,
+it plays the channel open in <a href="../piano-roll/">the Piano roll</a>.</p>
+<p>Switching channel in the Piano roll (its title, or <kbd>G</kbd>, <kbd>K</kbd>, <kbd>H</kbd> and <kbd>J</kbd>) selects
+that channel in the rack too, so your keyboard follows what you&#39;re writing.</p>
+<p>A note you&#39;re holding stays on the channel it started on. If you select another channel mid-note, the key still ends
+the right note when you let go.</p>
+<p>The keys you play light up on the Piano roll&#39;s keyboard when it shows that channel.</p>
+<h3 id="samplers-and-plugins"><a class="anchor" href="#samplers-and-plugins">Samplers and plugins</a></h3>
+<ul>
+<li><strong>A sampler channel</strong> plays its sample for as long as you hold the key, then its envelope&#39;s release. Its pitch
+follows the key you press.</li>
+<li><strong>A channel with one of your plugins</strong> gets the notes as MIDI. If you&#39;ve moved the channel&#39;s pitch knob, the keys
+are moved by the same number of whole semitones, as the pattern&#39;s notes are.</li>
+</ul>
+<p>Press a key again before letting it go and the first note ends before the new one starts.</p>
+<h2 id="velocity"><a class="anchor" href="#velocity">Velocity</a></h2>
+<p>Notes play as hard as you hit the keys: the velocity your keyboard sends is the velocity you hear. There&#39;s no velocity
+curve to set.</p>
+<p>The typing keyboard has no velocity: every note it plays is at 100 out of 127.</p>
+<h2 id="the-sustain-pedal"><a class="anchor" href="#the-sustain-pedal">The sustain pedal</a></h2>
+<p>A sustain pedal (MIDI CC 64) works on both kinds of channel.</p>
+<ul>
+<li><strong>On a sampler</strong>, notes you let go of while the pedal is down keep sounding. They end when you lift the pedal.</li>
+<li><strong>On a plugin</strong>, the pedal goes to the plugin, which holds the notes itself.</li>
+</ul>
+<h2 id="pitch-bend-mod-wheel-and-other-controllers"><a class="anchor" href="#pitch-bend-mod-wheel-and-other-controllers">Pitch bend, mod wheel and other controllers</a></h2>
+<p>Pitch bend, the mod wheel, aftertouch and every other controller go to the plugin on the selected channel. What they
+do is up to the plugin.</p>
+<p>Samplers don&#39;t respond to them.</p>
+<p>You can&#39;t link a hardware knob or fader to a control in Yen Studio.</p>
+<h2 id="the-typing-keyboard"><a class="anchor" href="#the-typing-keyboard">The typing keyboard</a></h2>
+<p>The typing keyboard turns your computer&#39;s keys into a piano for the selected channel.</p>
+<ol>
+<li>Press <kbd>⌘T</kbd>, click the keyboard button on the toolbar, or choose <strong>View › Typing Keyboard to Piano</strong>.</li>
+<li>Play on the letter rows.</li>
+<li>Press <kbd>⌘T</kbd> again to turn it off.</li>
+</ol>
+<p>The keys are laid out like a piano: two rows of white keys, with the black keys on the row above each.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Keys</th>
+<th>Plays</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Bottom letters</td>
+<td>Z X C V B N M , . /</td>
+<td>The white keys, from C</td>
+</tr>
+<tr>
+<td>Home row</td>
+<td>S D G H J L ;</td>
+<td>The black keys above them</td>
+</tr>
+<tr>
+<td>Top letters</td>
+<td>Q W E R T Y U I O P</td>
+<td>The white keys, from the C an octave up</td>
+</tr>
+<tr>
+<td>Numbers</td>
+<td>2 3 5 6 7 9 0</td>
+<td>The black keys above them</td>
+</tr>
+</tbody></table>
+</div>
+<ul>
+<li><kbd>[</kbd> and <kbd>]</kbd> move the whole keyboard down or up an octave. <strong>Z</strong> is C5 (MIDI note 60) until you
+move it.</li>
+<li>Holding a key plays one note. It doesn&#39;t repeat.</li>
+<li>The keys follow their place on the keyboard, not their letter, so the layout is the same on any keyboard language.</li>
+<li>The typing keyboard stays on or off as you leave it, in every song and the next time you open Yen Studio.</li>
+<li>If you switch to another app while holding keys, those notes end.</li>
+</ul>
+<p>Its notes go through the same path as a MIDI keyboard&#39;s: they play the same channel, light up the same keys, and are
+recorded the same way.</p>
+<h3 id="shortcuts-while-its-on"><a class="anchor" href="#shortcuts-while-its-on">Shortcuts while it&#39;s on</a></h3>
+<p>While the typing keyboard is on, the letter and number keys play notes instead of running shortcuts. Letters and
+numbers that aren&#39;t part of the piano do nothing, so you can&#39;t change tools or mute channels by accident.</p>
+<p>Shortcuts with ⌘, ⌥ or Ctrl still work, along with <kbd>Space</kbd> to play and stop. <kbd>⌘T</kbd> turns the typing
+keyboard off.</p>
+<h2 id="record-notes"><a class="anchor" href="#record-notes">Record notes</a></h2>
+<ol>
+<li>Select the channel to record in the Channel rack.</li>
+<li>Press <kbd>R</kbd>, or click <strong>Record</strong> on the toolbar. It turns red.</li>
+<li>Press <kbd>Space</kbd>. The metronome counts in, then recording starts.</li>
+<li>Play your keyboard.</li>
+<li>Press <kbd>Space</kbd> to stop. The notes appear in a pattern on <a href="../playlist/">the Playlist</a>.</li>
+</ol>
+<p>Recording always records into the song. If you&#39;re in pattern mode, Record switches to song mode first.</p>
+<p>If no channel is selected and no mixer track is armed, there&#39;s nothing to record and Yen Studio says so. If you&#39;ve
+armed mixer tracks to record audio, the same take records both: see <a href="../recording/">Recording</a>.</p>
+<p>If Record is turned on while the song is already playing, recording starts at once, with no count-in.</p>
+<h3 id="where-the-notes-go"><a class="anchor" href="#where-the-notes-go">Where the notes go</a></h3>
+<p>When you stop, every note you played becomes one undo step:</p>
+<ul>
+<li>If a clip of the selected pattern was already on the Playlist where recording started, the notes go into that
+pattern.</li>
+<li>Otherwise they go into the selected pattern if it isn&#39;t on the Playlist yet, or into a new pattern if it is. A clip of
+it is placed at the bar where recording started, on the first track it fits on. Using a new pattern means the
+selected pattern&#39;s clips elsewhere in the song don&#39;t change.</li>
+</ul>
+<p>That pattern is then the one shown, so the Channel rack and the Piano roll show what you played.</p>
+<p>Notes you play during the count-in land at the point where recording starts. A note you&#39;re still holding when you stop
+ends where play stopped.</p>
+<p>Yen Studio moves each note earlier by your audio output&#39;s latency. You play along to what you hear, and what you hear
+leaves the computer a little late, so this puts each note where you meant it.</p>
+<p>If you&#39;ve placed <strong>Start recording</strong> and <strong>Stop recording</strong> markers on the Playlist, only notes that start between them
+are kept.</p>
+<h3 id="recording-in-a-loop"><a class="anchor" href="#recording-in-a-loop">Recording in a loop</a></h3>
+<p>Turn on <strong>Loop record</strong> in Record&#39;s right-click menu to go round the time selection (or the whole song) until you stop.
+Each pass adds its notes on top of the last, in the same pattern, so you can build a part up a layer at a time. A note
+held past the end of the loop ends there.</p>
+<p>To take notes out, edit the pattern in the Piano roll afterwards.</p>
+<h3 id="how-recorded-notes-are-quantized"><a class="anchor" href="#how-recorded-notes-are-quantized">How recorded notes are quantized</a></h3>
+<p>Recorded notes can be pulled onto the grid as they come in. The grid is <a href="../piano-roll/#snap">the Piano roll&#39;s snap</a>.</p>
+<p>Right-click <strong>Record</strong> and pick one under <strong>Recorded notes (on the Piano roll&#39;s snap)</strong>:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Don&#39;t quantize</td>
+<td>Notes stay where you played them.</td>
+</tr>
+<tr>
+<td>Quantize start times</td>
+<td>Starts go to the grid. Ends stay put, so lengths change. This is the default.</td>
+</tr>
+<tr>
+<td>Quantize end times</td>
+<td>Ends go to the grid. Starts stay put.</td>
+</tr>
+<tr>
+<td>Quantize starts and ends</td>
+<td>Both go to the grid.</td>
+</tr>
+<tr>
+<td>Quantize starts, keeping lengths</td>
+<td>Each note moves onto the grid and keeps its length.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The snap has to be a fixed length (a step, a beat, a bar and so on) for this to happen. With the snap at <strong>Line</strong>,
+<strong>Cell</strong> or <strong>(none)</strong>, recorded notes are always left as played. Line is the Piano roll&#39;s default, so pick a fixed snap
+in the Piano roll before you record if you want notes quantized.</p>
+<p>You can always quantize afterwards with the Piano roll&#39;s <a href="../piano-roll/#quantize">Quantize</a> tools.</p>
+<h3 id="records-other-options"><a class="anchor" href="#records-other-options">Record&#39;s other options</a></h3>
+<p>Record&#39;s right-click menu also has:</p>
+<ul>
+<li><strong>Count-in</strong>, and how many bars it counts. It&#39;s on by default, one bar.</li>
+<li><strong>Disarm on stop</strong>: Record turns itself off when play stops.</li>
+</ul>
+<p>These settings are kept for every song.</p>
+<h2 id="what-it-doesnt-do"><a class="anchor" href="#what-it-doesnt-do">What it doesn&#39;t do</a></h2>
+<ul>
+<li>Playing several channels at once from different MIDI channels.</li>
+<li>Linking hardware knobs and faders to controls.</li>
+<li>A velocity curve.</li>
+<li>Other typing keyboard layouts.</li>
+</ul>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../recording/"><span>Previous</span>Recording audio</a><a class="next" rel="next" href="../mixer/"><span>Next</span>Mixer</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20MIDI%20keyboards">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#plug-in-a-keyboard">Plug in a keyboard</a></li><li><a href="#which-channel-plays">Which channel plays</a></li><li><a href="#velocity">Velocity</a></li><li><a href="#the-sustain-pedal">The sustain pedal</a></li><li><a href="#pitch-bend-mod-wheel-and-other-controllers">Pitch bend, mod wheel and other controllers</a></li><li><a href="#the-typing-keyboard">The typing keyboard</a></li><li><a href="#record-notes">Record notes</a></li><li><a href="#what-it-doesnt-do">What it doesn't do</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-L: Yen Studio docs</title>
+<meta name="description" content="Yen Studio's limiter. Styles, true peak, a clip stage before it, and loudness meters with a target, for the end of a master or a hot vocal.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-l/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-L">
+<meta property="og:description" content="Yen Studio's limiter. Styles, true peak, a clip stage before it, and loudness meters with a target, for the end of a master or a hot vocal.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-l/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/" aria-current="page">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-L</h1>
+<p>Y-L is a limiter: it holds the sound under a ceiling you set, however hard you push it. It shows what it takes away as it scrolls by, meters the loudness against a target, can clip before it limits, and keeps the ceiling between the samples with <strong>True Peak</strong>. Put it last on the master, or on a track that needs its peaks caught.</p>
+<p><figure class="shot" style="--w:958"><img src="../shots/effect-limiter.webp" width="958" height="570" alt="Y-L's window: the Gain slider, the scrolling level display, the meters and the loudness panel" loading="lazy" decoding="async"><figcaption>Gain at the left, what it takes away in red from the top, the loudness at the right.</figcaption></figure></p>
+<h2 id="get-started"><a class="anchor" href="#get-started">Get started</a></h2>
+<ol>
+<li>Put Y-L in the last slot of the Master track (see <a href="../effects/">Built-in effects</a>). It opens on <strong>Default Setting</strong>: the Modern style, with a ceiling just under 0 dB.</li>
+<li>Set <strong>Output</strong> to your ceiling. Turn on <strong>True Peak</strong> if the song is going to a streaming service; −1 dBTP is a safe ceiling.</li>
+<li>Play the loudest part of the song and push <strong>Gain</strong> up until it&#39;s as loud as you want, watching the red reduction at the top of the display.</li>
+<li>Pick a <strong>Style</strong> that sounds right, and check the loudness panel against your target.</li>
+</ol>
+<aside class="callout tip"><p><strong>Tip:</strong> Turn on <strong>Unity Gain</strong> to hear the limiter at the level the sound came in. Then you&#39;re judging how it sounds, not how loud it is.</p>
+</aside>
+<h2 id="the-level-display"><a class="anchor" href="#the-level-display">The level display</a></h2>
+<p>The display scrolls from right to left:</p>
+<ul>
+<li><strong>Pale fill</strong>: the input, after <strong>Gain</strong>.</li>
+<li><strong>Deep blue fill with a light line</strong>: the output.</li>
+<li><strong>Orange from the top</strong>: what the clip stage takes away.</li>
+<li><strong>Red from the top</strong>: what the limiter takes away.</li>
+<li><strong>A thin line</strong>: the loudness, coloured by how close it is to the target.</li>
+<li><strong>Dashed line</strong>: the ceiling.</li>
+</ul>
+<p>The display only shows; there&#39;s nothing to drag in it. Pick how it moves under <strong>Display</strong> in the bottom bar.</p>
+<h2 id="gain"><a class="anchor" href="#gain">Gain</a></h2>
+<p><strong>Gain</strong> is the tall slider at the left of the display, with its value above it. It pushes the sound into the limiter, from 0 up to 30 dB. The higher it goes, the louder the result and the more the limiter works.</p>
+<h2 id="the-main-controls"><a class="anchor" href="#the-main-controls">The main controls</a></h2>
+<p>The controls sit under the display.</p>
+<ul>
+<li><p><strong>Style</strong>: how the limiter moves. Click it for the menu; each style has a line on what it&#39;s for.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Style</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Transparent</strong></td>
+<td>Clean, with the least latency of the master styles. For masters that need a few dB.</td>
+</tr>
+<tr>
+<td><strong>Punchy</strong></td>
+<td>A slower recovery you can hear pump. Vocals, bass, beat music.</td>
+</tr>
+<tr>
+<td><strong>Dynamic</strong></td>
+<td>Turns hits up before limiting them, so they keep their snap.</td>
+</tr>
+<tr>
+<td><strong>Allround</strong></td>
+<td>Lets go only once a sound has ended. When you&#39;re unsure.</td>
+</tr>
+<tr>
+<td><strong>Aggressive</strong></td>
+<td>Near clipping: dense and loud, a little grit on the hits.</td>
+</tr>
+<tr>
+<td><strong>Modern</strong></td>
+<td>Clean and loud at once, with the bass kept smooth.</td>
+</tr>
+<tr>
+<td><strong>Bus</strong></td>
+<td>Slow ramps and a pump. Glue on a drum bus.</td>
+</tr>
+<tr>
+<td><strong>Safe</strong></td>
+<td>Never distorts, at the price of loudness.</td>
+</tr>
+<tr>
+<td><strong>Spit</strong></td>
+<td>A fast, hard brickwall for bite on a vocal, with about 1 ms of latency.</td>
+</tr>
+</tbody></table>
+</div>
+</li>
+<li><p><strong>Lookahead</strong>: how far ahead the limiter looks to meet a peak gently. Its range depends on the style.</p>
+</li>
+<li><p><strong>Attack</strong> and <strong>Release</strong>: how the slow part of the limiter moves. <strong>Aggressive</strong> and <strong>Spit</strong> have no slow part, so these are greyed out there.</p>
+</li>
+<li><p><strong>Hold</strong>: how long it holds before letting go. <strong>AUTO</strong> sets it to half the bass&#39;s period, so a bass note isn&#39;t distorted.</p>
+</li>
+<li><p><strong>Stereo</strong>: how the two sides are limited.</p>
+<ul>
+<li><strong>L/R</strong>: left and right, linked by the <strong>Transients</strong> and <strong>Release</strong> knobs: how much the sides move together on hits and as they let go.</li>
+<li><strong>M/S</strong>: the side is turned down first, so the centre (the kick, the 808, the vocal) stays put. <strong>Side Floor</strong> sets how far the side can go.</li>
+</ul>
+</li>
+<li><p><strong>Output</strong>: the ceiling. It reads <strong>Output (dBTP)</strong> when <strong>True Peak</strong> is on.</p>
+</li>
+<li><p><strong>True Peak</strong>: holds the ceiling between the samples too, as streaming services ask.</p>
+</li>
+</ul>
+<h3 id="the-clip-stage"><a class="anchor" href="#the-clip-stage">The clip stage</a></h3>
+<p>Turn on <strong>Clip</strong> for a clipper before the limiter. It shaves the sharpest peaks so the limiter has less to do, which is how loud masters are made.</p>
+<ul>
+<li>The shape button: <strong>Hard</strong> (a straight cut, the most loudness and the most edge), <strong>Smooth</strong> (a rounded knee, the default), <strong>Soft</strong> (rounds the peaks from well under them), <strong>Converter</strong> (a converter driven over) or <strong>Master</strong> (a soft clipper, as a DAW&#39;s master has).</li>
+<li><strong>First</strong> or <strong>Last</strong>: clip, then limit; or limit, then clip at the ceiling.</li>
+<li><strong>Range</strong>: how much the clipper can take.</li>
+<li><strong>Knee</strong>: how round the knee is. Only <strong>Smooth</strong> has one.</li>
+</ul>
+<h3 id="knobs"><a class="anchor" href="#knobs">Knobs</a></h3>
+<p>Drag a knob up or down (<kbd>⇧</kbd> for fine), or scroll over it. Double-click to type a value. <kbd>⌘</kbd>-click or <kbd>⌥</kbd>-click resets it. Right-click for <strong>Reset</strong>, <strong>Type in value…</strong> and its automation.</p>
+<h2 id="meters"><a class="anchor" href="#meters">Meters</a></h2>
+<p>The meters at the right show the gain reduction, in red from the top, and the output of each side. The numbers over them:</p>
+<ul>
+<li><strong>Gain reduction</strong>: the most it has taken away. Click it to reset.</li>
+<li><strong>Output peak</strong>: the highest peak out. It&#39;s green as a true peak, orange over the <strong>Output</strong> level and red over 0 dBTP. Click it to reset.</li>
+</ul>
+<h2 id="loudness"><a class="anchor" href="#loudness">Loudness</a></h2>
+<p>The loudness panel at the right measures the song as it plays.</p>
+<ul>
+<li>The big number: the loudness in LUFS, or in LU from the target if you&#39;ve chosen that. Under it, the maxima and the peak-to-loudness ratio, then bars for Momentary, Short Term and Integrated against the target, then the loudness range.</li>
+<li>The time scale menu: <strong>Momentary</strong>, <strong>Short Term</strong> or <strong>Integrated</strong> (the whole song so far). With <strong>Integrated</strong> you also choose <strong>Show Max Short Term</strong> or <strong>Show Max Momentary</strong>. <strong>Auto-Reset when play starts</strong> starts the measurement again each time you press play.</li>
+<li><strong>Pause</strong>: stops Integrated, the range and the maxima; the meters carry on.</li>
+<li><strong>Reset</strong>: starts Integrated, the range, the maxima and the peak readouts again.</li>
+<li>The target menu, at the bottom: the loudness you&#39;re aiming for, from −6 to −24 LUFS, each named for where it&#39;s going. The panel colours the loudness by how close it is. The menu also holds <strong>Scale +9</strong> / <strong>Scale +18</strong> and <strong>Relative to the target (LU)</strong>.</li>
+</ul>
+<aside class="callout note"><p><strong>Note:</strong> For an integrated reading of the whole song, reset the measurement, play the song from the start to the end, then read it.</p>
+</aside>
+<h2 id="the-bottom-bar"><a class="anchor" href="#the-bottom-bar">The bottom bar</a></h2>
+<ul>
+<li><strong>Oversampling</strong>: <strong>Off</strong> to <strong>16x</strong>. Fewer peaks between the samples, a little more latency.</li>
+<li><strong>Dither</strong>: <strong>Off</strong>, or 16 to 24 bits, with <strong>Noise shaping</strong>. Use it only last in the chain, before a 16-bit file.</li>
+<li><strong>DC</strong>: removes DC offset (a 1.5 Hz high-pass).</li>
+<li><strong>Unity Gain</strong>: takes <strong>Gain</strong> back off what you hear, so you judge the sound and not the loudness.</li>
+<li><strong>Audition</strong>: <strong>Off</strong>, or hear only what&#39;s taken away: all of it, the clip stage&#39;s share or the limiter&#39;s.</li>
+<li><strong>Display</strong>: how the level display moves: <strong>Slow Down</strong>, <strong>Fast</strong>, <strong>Slow</strong>, <strong>Infinite</strong> or <strong>Off</strong>.</li>
+<li><strong>Meter scale</strong>: 16, 32 or 48 dB, or K-12, K-14 and K-20, with <strong>True peak metering</strong>.</li>
+<li>The latency, in ms. The Mixer delays the rest of the song to match.</li>
+<li><strong>Bypass</strong>: turns Y-L off, keeping its latency.</li>
+</ul>
+<p>The top bar has <strong>Undo</strong>, <strong>Redo</strong>, <strong>A/B</strong> with <strong>Copy</strong>, the presets, <strong>Lock Output</strong> and the <strong>⋮</strong> menu: <strong>Reset to the default setting</strong>, <strong>Copy state</strong> and <strong>Paste state</strong>.</p>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>The presets are in folders: <strong>Master</strong>, <strong>Vocal</strong>, <strong>Drums and bass</strong> and <strong>Delivery</strong>. Master presets go from clean to loud; Vocal ones catch a vocal&#39;s peaks; Drums and bass ones clip an 808 or glue a drum bus; Delivery ones set the ceiling and loudness a place asks for, such as <strong>Broadcast EBU R 128</strong> or <strong>CD Master</strong>. Once you change a setting, the preset&#39;s name reads <em>Custom</em>.</p>
+<p>Turn on <strong>Lock Output</strong> and presets leave <strong>Output</strong>, <strong>True Peak</strong> and the dither alone. Set your ceiling once, then try presets for the sound.</p>
+<h2 id="automation"><a class="anchor" href="#automation">Automation</a></h2>
+<p>Gain, Output, Attack, Release, Hold, Transients, Release (link), Side Floor, Range and Knee can be automated. Lookahead can&#39;t. Right-click the control, or touch it and click <strong>Automate &quot;…&quot;</strong> in the title bar. See <a href="../automation/">Automation</a>.</p>
+<div class="cut"><video class="clip" data-clip="fx-limiter" style="--wide:1400/832;--phone:900/536" muted playsinline loop preload="none" aria-label="Y-L on a beat: the level and gain reduction scroll by beside the loudness meters, and the gain is turned up and back."></video></div>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-c/"><span>Previous</span>Y-C</a><a class="next" rel="next" href="../y-r/"><span>Next</span>Y-R</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-L">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#get-started">Get started</a></li><li><a href="#the-level-display">The level display</a></li><li><a href="#gain">Gain</a></li><li><a href="#the-main-controls">The main controls</a></li><li><a href="#meters">Meters</a></li><li><a href="#loudness">Loudness</a></li><li><a href="#the-bottom-bar">The bottom bar</a></li><li><a href="#presets">Presets</a></li><li><a href="#automation">Automation</a></li></ul></nav>
+</div>
+</body>
+</html>

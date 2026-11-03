@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browser: Yen Studio docs</title>
+<meta name="description" content="Add your sample folders to Yen Studio's Browser, then search, preview, star and send samples to channels.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/browser/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Browser">
+<meta property="og:description" content="Add your sample folders to Yen Studio's Browser, then search, preview, star and send samples to channels.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/browser/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/" aria-current="page">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Make">
+<p class="crumb" data-pagefind-ignore>Make</p>
+<h1 data-pagefind-meta="title">Browser</h1>
+<p>The Browser shows your own sample folders, so you can find a sound, hear it and put it in the song without leaving
+the app. It lists audio files only. Its folders and favourites are the same in every song.</p>
+<p>It sits along the left of the desktop. Show or hide it with <kbd>⌥F8</kbd> or <kbd>⌥5</kbd>, or from the <strong>Window</strong>
+menu. Drag its right edge to make it wider or narrower; the other windows keep to the space beside it.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/browser.webp" width="1200" height="615" alt="The Browser with a sample folder open" loading="lazy" decoding="async"></figure></p>
+<h2 id="add-your-sample-folders"><a class="anchor" href="#add-your-sample-folders">Add your sample folders</a></h2>
+<ol>
+<li>Open the Browser&#39;s menu: the arrow at its top left.</li>
+<li>Choose <strong>Add a folder…</strong> and pick a folder.</li>
+</ol>
+<p>You can also drag folders from Finder or File Explorer straight onto the Browser. With no folders yet, the Browser
+offers <strong>Add a folder…</strong> too.</p>
+<p>Folders stay where they are on your computer: the Browser reads them, it doesn&#39;t copy them. Add the folder that holds
+your packs rather than each pack: everything inside it is included.</p>
+<p>New files in your folders show up by themselves. If something seems missing, press the refresh button at the top of
+the Browser or choose <strong>Read the folders again</strong> in its menu.</p>
+<h3 id="remove-a-folder"><a class="anchor" href="#remove-a-folder">Remove a folder</a></h3>
+<p>Right-click a folder you added and choose <strong>Remove from the Browser</strong>. Nothing is deleted from your computer. A
+folder that has moved or gone shows faded until you remove it or it&#39;s back.</p>
+<h2 id="move-through-the-tree"><a class="anchor" href="#move-through-the-tree">Move through the tree</a></h2>
+<p>Your folders are listed under <strong>Folders</strong>, each opening to its folders first, then its files.</p>
+<ul>
+<li>Click a folder to open or close it. Several can be open at once.</li>
+<li><strong>Close every folder</strong> in the Browser&#39;s menu, or <kbd>⌘↑</kbd>, closes them all.</li>
+<li>With the list focused, <kbd>↑</kbd> and <kbd>↓</kbd> move through the rows. <kbd>→</kbd> opens a folder or goes
+into it, <kbd>←</kbd> closes it or goes back out.</li>
+<li><kbd>Home</kbd> and <kbd>End</kbd> jump to the first and last rows, <kbd>Page Up</kbd> and <kbd>Page Down</kbd> a
+screen at a time.</li>
+</ul>
+<p>Hover over a row to see its full path.</p>
+<h2 id="preview-samples"><a class="anchor" href="#preview-samples">Preview samples</a></h2>
+<p>Press a file to hear it. It starts as the button goes down, so you can play it in time with the song. Moving onto a
+file with the arrow keys plays it too.</p>
+<p>A preview plays the whole file, until the next one cuts it off.</p>
+<ul>
+<li><kbd>Escape</kbd> stops it.</li>
+<li><kbd>Space</kbd> pauses it while one is playing. Press the play button in the preview bar to go on from there.</li>
+</ul>
+<p>The preview bar at the bottom of the Browser shows the selected file: its name, how long it is and its waveform, with
+a line where the preview has got to. Click anywhere in the waveform to play from there. The slider under it sets the
+preview&#39;s volume.</p>
+<h2 id="search"><a class="anchor" href="#search">Search</a></h2>
+<p>Start typing while the list has the focus, or press <kbd>⌘F</kbd> or <kbd>/</kbd> to go to the search box. Results
+come as you type, from every folder you&#39;ve added.</p>
+<ul>
+<li>The words can be in any order: <code>kick 808</code> finds <code>808 Kit/Kick 3.wav</code>.</li>
+<li>A word can match a file&#39;s name or the folder it&#39;s in.</li>
+<li>A slip of a letter or two in a longer word still finds it.</li>
+</ul>
+<p>Results are a flat list, best first, each with the folder it&#39;s in. The number beside the box says how many there are.</p>
+<p>In the search box, <kbd>↓</kbd> or <kbd>Enter</kbd> goes to the first result and plays it. <kbd>Escape</kbd> clears
+the search; with the list focused, <kbd>Escape</kbd> clears it too once nothing is playing.</p>
+<p>Choosing a folder among the results shows it in the tree. Right-click a result and choose <strong>Show in its folder</strong> to
+see a file where it lives.</p>
+<h2 id="star-your-favourites"><a class="anchor" href="#star-your-favourites">Star your favourites</a></h2>
+<p>Hover over a file or folder and click the star at the end of its row. Click it again to take it off. Right-click
+gives <strong>Add to favourites</strong> and <strong>Remove from favourites</strong> too.</p>
+<p>Favourites are listed under <strong>Favourites</strong>, above your folders. A starred folder opens right there, like any other.
+If you&#39;d rather it took you to the folder in the tree, turn off <strong>Open favourite folders in place</strong> in
+<a href="../settings/">Settings</a>.</p>
+<h2 id="put-samples-in-the-song"><a class="anchor" href="#put-samples-in-the-song">Put samples in the song</a></h2>
+<h3 id="drag-them"><a class="anchor" href="#drag-them">Drag them</a></h3>
+<p>Drag a file, or several selected ones, from the Browser onto:</p>
+<ul>
+<li><strong>The Channel rack</strong>: a new sampler channel where you drop it, one for each file.</li>
+<li><strong>A channel&#39;s button</strong> or <strong>its settings window</strong>: that file replaces the channel&#39;s sample.</li>
+<li><strong>The Piano roll</strong>: replaces the sample of the channel it shows. If that channel plays a plugin, you get a new
+channel instead.</li>
+<li><strong>The Playlist</strong>: audio clips where you drop them.</li>
+<li><strong>An empty part of the desktop</strong>: new channels.</li>
+</ul>
+<p>To select several files, ⌘-click them one by one, or ⇧-click to select a run. <kbd>⌘A</kbd> selects every file
+listed.</p>
+<p>The first time you use a file, it&#39;s copied into your song, so the song keeps working if the file moves.</p>
+<h3 id="send-them-to-a-channel"><a class="anchor" href="#send-them-to-a-channel">Send them to a channel</a></h3>
+<p>Select a channel in <a href="../channel-rack/">the Channel rack</a>, then in the Browser:</p>
+<ul>
+<li>Press <kbd>Enter</kbd> on a file, or middle-click it, to make it that channel&#39;s sample.</li>
+<li>Right-click a file and choose <strong>Send to</strong> followed by the channel&#39;s name.</li>
+</ul>
+<p>This goes to the first selected sampler channel. With no sampler selected, the file becomes a new channel, selected,
+so the next one you send goes there. While the song is stopped, the file plays as it&#39;s sent.</p>
+<h3 id="try-samples-in-the-beat"><a class="anchor" href="#try-samples-in-the-beat">Try samples in the beat</a></h3>
+<p>With a channel selected and the pattern playing, press <kbd>⇧↓</kbd> or <kbd>⇧↑</kbd>. The Browser moves to the next
+or previous file and sends it straight to the channel, so you hear each kick or hat in the beat as you go. Every file
+you try counts as one undo step: <kbd>⌘Z</kbd> brings back the sample you started with.</p>
+<h3 id="open-in-new-channels"><a class="anchor" href="#open-in-new-channels">Open in new channels</a></h3>
+<p>Right-click a file and choose <strong>Open in new channel</strong>. With several selected, it&#39;s <strong>Open … files in new channels</strong>:
+each becomes a channel at the end of the rack.</p>
+<h2 id="right-click-menus"><a class="anchor" href="#right-click-menus">Right-click menus</a></h2>
+<p>A file&#39;s menu:</p>
+<ul>
+<li><strong>Send to</strong> the selected channel</li>
+<li><strong>Open in new channel</strong></li>
+<li><strong>Play</strong></li>
+<li><strong>Show in its folder</strong> (in favourites and search results)</li>
+<li><strong>Show in Finder</strong> (or File Explorer)</li>
+<li><strong>Add to favourites</strong> or <strong>Remove from favourites</strong></li>
+</ul>
+<p>A folder&#39;s menu has <strong>Open</strong> or <strong>Close</strong>, <strong>Show in its folder</strong> where it applies, <strong>Show in Finder</strong> and the
+favourites item. A folder you added also has <strong>Read again</strong> and <strong>Remove from the Browser</strong>.</p>
+<h2 id="keys"><a class="anchor" href="#keys">Keys</a></h2>
+<p>These work while the Browser&#39;s list has the focus.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Key</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><kbd>⌥F8</kbd> or <kbd>⌥5</kbd></td>
+<td>Show or hide the Browser (anywhere)</td>
+</tr>
+<tr>
+<td><kbd>↑</kbd> / <kbd>↓</kbd></td>
+<td>Previous or next row, playing a file</td>
+</tr>
+<tr>
+<td><kbd>⇧↑</kbd> / <kbd>⇧↓</kbd></td>
+<td>Previous or next file, sent to the selected channel</td>
+</tr>
+<tr>
+<td><kbd>→</kbd> / <kbd>←</kbd></td>
+<td>Open a folder or go into it / close it or go out</td>
+</tr>
+<tr>
+<td><kbd>Home</kbd> / <kbd>End</kbd></td>
+<td>First or last row</td>
+</tr>
+<tr>
+<td><kbd>Page Up</kbd> / <kbd>Page Down</kbd></td>
+<td>A screen up or down</td>
+</tr>
+<tr>
+<td><kbd>Enter</kbd></td>
+<td>Open a folder, or send a file to the selected channel</td>
+</tr>
+<tr>
+<td><kbd>Escape</kbd></td>
+<td>Stop the preview, or clear the search</td>
+</tr>
+<tr>
+<td><kbd>Space</kbd></td>
+<td>Pause the preview while one plays</td>
+</tr>
+<tr>
+<td><kbd>⌘F</kbd> or <kbd>/</kbd></td>
+<td>Search</td>
+</tr>
+<tr>
+<td><kbd>⌘A</kbd></td>
+<td>Select every file listed</td>
+</tr>
+<tr>
+<td><kbd>⌘↑</kbd></td>
+<td>Close every folder</td>
+</tr>
+</tbody></table>
+</div>
+<aside class="callout note"><p><strong>Note:</strong> On a Mac, <kbd>⌃R</kbd> reads the folders again. It&#39;s Ctrl, not ⌘. On Windows, use the refresh button.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../playlist/"><span>Previous</span>Playlist</a><a class="next" rel="next" href="../plugins/"><span>Next</span>Plugins</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Browser">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#add-your-sample-folders">Add your sample folders</a></li><li><a href="#move-through-the-tree">Move through the tree</a></li><li><a href="#preview-samples">Preview samples</a></li><li><a href="#search">Search</a></li><li><a href="#star-your-favourites">Star your favourites</a></li><li><a href="#put-samples-in-the-song">Put samples in the song</a></li><li><a href="#right-click-menus">Right-click menus</a></li><li><a href="#keys">Keys</a></li></ul></nav>
+</div>
+</body>
+</html>

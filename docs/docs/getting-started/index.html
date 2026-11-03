@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started: Yen Studio docs</title>
+<meta name="description" content="Install Yen Studio on a Mac, open the demo song, start your own and make a first beat. Where your songs are kept and how saving works.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/getting-started/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Getting started">
+<meta property="og:description" content="Install Yen Studio on a Mac, open the demo song, start your own and make a first beat. Where your songs are kept and how saving works.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/getting-started/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/" aria-current="page">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Start">
+<p class="crumb" data-pagefind-ignore>Start</p>
+<h1 data-pagefind-meta="title">Getting started</h1>
+<p>Yen Studio is a music app for the Mac. It works the way FL Studio does: a channel rack, a piano roll, a playlist and a mixer, each in a window of its own. This page gets it onto your Mac and gets a first beat playing.</p>
+<h2 id="install-yen-studio"><a class="anchor" href="#install-yen-studio">Install Yen Studio</a></h2>
+<p>You need a Mac with Apple Silicon, running macOS 14 or later. There&#39;s no Windows version yet, and there&#39;s no account to make.</p>
+<ol>
+<li><a href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg" rel="noopener">Download Yen Studio</a>.</li>
+<li>Open the download and drag Yen Studio to Applications.</li>
+<li>Open Yen Studio from Applications.</li>
+</ol>
+<p>The first time, it asks whether to send usage and crash reports. They never include your songs, your sounds or your file names. Click <strong>Send reports</strong> or <strong>No thanks</strong>. You can change your answer in <a href="../settings/">Settings</a> at any time.</p>
+<p>When a newer release is out, Home tells you. Nothing installs itself: download the new one and drag it to Applications as before.</p>
+<aside class="callout note"><p><strong>Note:</strong> Yen Studio is pre-alpha. Expect bugs and missing features, and keep copies of songs you care about.</p>
+</aside>
+<h2 id="find-your-way-around-home"><a class="anchor" href="#find-your-way-around-home">Find your way around Home</a></h2>
+<p>Home is where Yen Studio opens. It lists your songs and starts new ones.</p>
+<ul>
+<li><strong>New song</strong> starts a song. On Home, <kbd>⌘1</kbd> does the same.</li>
+<li><strong>Open…</strong> (<kbd>⌘O</kbd>) opens a song&#39;s file from anywhere: a copy, a backup, or one someone sent you.</li>
+<li><strong>Recent</strong> lists the songs you&#39;ve opened. Switch between the list, cards and sheet views at its top.</li>
+<li><strong>Search songs</strong> (<kbd>⌘F</kbd>) filters the list as you type.</li>
+</ul>
+<p>Click a song&#39;s name to open it. Click <strong>⋯</strong> on a song, or right-click it, for more: Open, Rename, Duplicate, Show in Finder, Use as starting point, Remove from Recents and Move to Trash….</p>
+<p>To come back to Home from a song, press <kbd>⇧⌘H</kbd> or click the Home button at the start of the tab strip. Press <kbd>⇧⌘H</kbd> again to go back to the song.</p>
+<h2 id="open-the-demo-song"><a class="anchor" href="#open-the-demo-song">Open the demo song</a></h2>
+<p>The first time you open Yen Studio, Home is empty. Click <strong>Open the demo song</strong> to hear a finished beat and look at how it&#39;s put together.</p>
+<p>The demo song opens in song mode, so <kbd>Space</kbd> plays the whole arrangement. Its sounds are the same ones a new song starts with. Change anything you like: it&#39;s your copy.</p>
+<p><figure class="shot" style="--w:1200"><img src="../shots/hero.webp" width="1200" height="615" alt="The demo song: the Playlist, with the Channel rack open over it" loading="lazy" decoding="async"><figcaption>The demo song.</figcaption></figure></p>
+<p>The button shows only while Home has no songs in its list.</p>
+<h2 id="start-a-song"><a class="anchor" href="#start-a-song">Start a song</a></h2>
+<p>Click <strong>New song</strong> on Home, or choose <strong>File › New Song</strong>.</p>
+<p>A new song starts with a drum kit in the <a href="../channel-rack/">Channel rack</a>: Kick, Clap, Hat and Snare, in the order FL Studio puts them. Adding the kit isn&#39;t an undo step, so <kbd>⌘Z</kbd> won&#39;t take it away.</p>
+<p>New songs start at 140 BPM. To change that, right-click the tempo display and choose <strong>Make … BPM the default</strong>.</p>
+<h3 id="start-from-a-song-of-your-own"><a class="anchor" href="#start-from-a-song-of-your-own">Start from a song of your own</a></h3>
+<p>If you always start with the same sounds and routing, make that your starting point:</p>
+<ol>
+<li>On Home, click <strong>⋯</strong> on the song you want to start from.</li>
+<li>Choose <strong>Use as starting point</strong>.</li>
+</ol>
+<p>From then on, <strong>New song</strong> makes a copy of it. To start with nothing at all, ⌥-click <strong>New song</strong>.</p>
+<h2 id="where-your-songs-are-kept"><a class="anchor" href="#where-your-songs-are-kept">Where your songs are kept</a></h2>
+<p>Every song is a <code>.yen</code> file. Finder shows it as one file, but it&#39;s a folder inside, holding the song, its samples, your plugins&#39; states and your recordings. Copy the <code>.yen</code> and you&#39;ve copied everything.</p>
+<p>New songs go in <strong>Documents › Yen Studio</strong>. To keep them somewhere else, click <strong>Change</strong> at the bottom of Home&#39;s left column, or go to <strong>Settings › General</strong>. Songs you already have stay where they are.</p>
+<ul>
+<li><strong>Show in Finder</strong> (the File menu, or a song&#39;s menu on Home) shows a song&#39;s file.</li>
+<li>Double-click a <code>.yen</code> file in Finder to open it in Yen Studio.</li>
+<li>Drop a <code>.yen</code> file on Home to open it.</li>
+</ul>
+<p>If a song&#39;s file has been moved, renamed or deleted, its card on Home says so. Click <strong>Locate…</strong> to find it, or <strong>Remove</strong> to take it off the list.</p>
+<aside class="callout note"><p><strong>Note:</strong> <strong>Remove from Recents</strong> only takes a song off Home&#39;s list. <strong>Move to Trash…</strong> moves its file to the Trash.</p>
+</aside>
+<h2 id="rename-a-song"><a class="anchor" href="#rename-a-song">Rename a song</a></h2>
+<p>Click the song&#39;s name, at the left of the toolbar. Type the new name and press <kbd>Return</kbd>. <kbd>Esc</kbd> keeps the old one.</p>
+<p>You can also choose <strong>File › Rename…</strong>, or double-click a song&#39;s name on Home.</p>
+<p>The song&#39;s file takes the new name once you close the song. Until then, it keeps its old name in Finder.</p>
+<h2 id="undo-and-redo"><a class="anchor" href="#undo-and-redo">Undo and redo</a></h2>
+<ul>
+<li><kbd>⌘Z</kbd> undoes your last change.</li>
+<li><kbd>⇧⌘Z</kbd> redoes it. <kbd>⌘Y</kbd> does too.</li>
+</ul>
+<p>The undo and redo buttons are at the right end of the toolbar, and both are in the Edit menu.</p>
+<p>A drag is one step, however far it goes. Changes you make inside a plugin&#39;s own window aren&#39;t undo steps, as in FL Studio.</p>
+<h2 id="saving"><a class="anchor" href="#saving">Saving</a></h2>
+<p>Your song saves itself as you work, after every change. A drag saves once, when you let go. You don&#39;t need to press anything.</p>
+<p>Press <kbd>⌘S</kbd>, or choose <strong>File › Save</strong>, to save straight away. You&#39;ll see <strong>Saved</strong>.</p>
+<p><strong>File › Save a Copy…</strong> writes a copy of the song somewhere else.</p>
+<p>If a save fails, a message says so. Keep the window open until it goes away. If the song&#39;s file is gone from where it was, Yen Studio tells you that changes aren&#39;t being saved.</p>
+<h2 id="make-a-first-beat"><a class="anchor" href="#make-a-first-beat">Make a first beat</a></h2>
+<p>Start a new song, then:</p>
+<ol>
+<li><strong>Program the drums.</strong> In the Channel rack, click a step to turn it on. Right-click turns it off. Drag across the steps to paint several. Put the kick on the first step of each beat and the clap on beats two and four.</li>
+<li><strong>Play it.</strong> Press <kbd>Space</kbd>. The pattern loops until you press <kbd>Space</kbd> again. To change the tempo, drag the tempo display up or down, or click it and type.</li>
+<li><strong>Add a sound.</strong> Click <strong>+</strong> under the channels and pick an instrument: the Sampler, or <a href="../plugins/">one of your plugins</a>.</li>
+<li><strong>Play some notes.</strong> With the new channel selected, press <kbd>⌥3</kbd> to open the <a href="../piano-roll/">Piano roll</a>. Click in the grid to draw notes. Right-click deletes one.</li>
+<li><strong>Arrange it.</strong> Press <kbd>⌥1</kbd> to open the <a href="../playlist/">Playlist</a>, and drag your pattern from the Picker onto a track. Click <strong>SONG</strong> in the toolbar, then press <kbd>Space</kbd> to play the arrangement.</li>
+</ol>
+<div class="cut"><video class="clip" data-clip="rack" style="--wide:2342/506;--phone:1358/506" muted playsinline loop preload="none" aria-label="Steps are clicked on and off in the channel rack's kick, clap and hat."></video></div>
+<p>When it sounds right, press <kbd>⌘R</kbd> to <a href="../export/">export it</a> as a WAV file.</p>
+<h2 id="where-to-go-next"><a class="anchor" href="#where-to-go-next">Where to go next</a></h2>
+<ul>
+<li><a href="../workspace/">Windows and the toolbar</a>: how the windows move and what each part of the toolbar does.</li>
+<li><a href="../coming-from-fl-studio/">Coming from FL Studio</a>: what&#39;s the same, what&#39;s different, and FL&#39;s keys on a Mac.</li>
+<li><a href="../channel-rack/">The Channel rack</a>, <a href="../sampler/">the Sampler</a> and <a href="../mixer/">the Mixer</a>: the parts you&#39;ll use most.</li>
+</ul>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href=".././"><span>Previous</span>Yen Studio docs</a><a class="next" rel="next" href="../workspace/"><span>Next</span>Windows and the toolbar</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Getting%20started">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#install-yen-studio">Install Yen Studio</a></li><li><a href="#find-your-way-around-home">Find your way around Home</a></li><li><a href="#open-the-demo-song">Open the demo song</a></li><li><a href="#start-a-song">Start a song</a></li><li><a href="#where-your-songs-are-kept">Where your songs are kept</a></li><li><a href="#rename-a-song">Rename a song</a></li><li><a href="#undo-and-redo">Undo and redo</a></li><li><a href="#saving">Saving</a></li><li><a href="#make-a-first-beat">Make a first beat</a></li><li><a href="#where-to-go-next">Where to go next</a></li></ul></nav>
+</div>
+</body>
+</html>

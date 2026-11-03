@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-Pan: Yen Studio docs</title>
+<meta name="description" content="Y-Pan, the built-in auto-panner: its six modes, its knobs, the Tweak panel, the rhythm editors, Analog Style and its presets.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-pan/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-Pan">
+<meta property="og:description" content="Y-Pan, the built-in auto-panner: its six modes, its knobs, the Tweak panel, the rhythm editors, Analog Style and its presets.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-pan/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/" aria-current="page">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-Pan</h1>
+<p>Y-Pan moves a sound across the stereo field. An LFO can sweep it, a rhythm can step it from place to place in time
+with the song, chance can scatter it, or the sound&#39;s own hits can bounce it from side to side. It can also go past the
+speakers. Its settings are saved with the song, every change can be undone, and its knobs can be automated.</p>
+<h2 id="add-y-pan-to-a-track"><a class="anchor" href="#add-y-pan-to-a-track">Add Y-Pan to a track</a></h2>
+<ol>
+<li>Open <a href="../mixer/">the Mixer</a> and pick a track.</li>
+<li>Click an empty effect slot. The picker opens.</li>
+<li>Under <strong>Built in</strong>, choose <strong>Auto-pan</strong> (&quot;Auto-panning: LFO, rhythms, random, on the hits&quot;).</li>
+</ol>
+<p>The window opens when you click the slot&#39;s name. Its title bar names the effect and its track, for example
+&quot;Y-Pan (Insert 1)&quot;. Close it and the effect keeps playing. Delete the effect and the window closes.</p>
+<p>The slot&#39;s own mix knob in the Mixer sets how much of Y-Pan you hear against the dry sound. See
+<a href="../effects/">Built-in effects</a> for what every built-in effect shares.</p>
+<p>A new Y-Pan is the <strong>Slow Pan</strong> preset: a slow sweep back and forth across the speakers.</p>
+<aside class="callout note"><p><strong>Note:</strong> Y-Pan makes the sound mono, then places it. A wide stereo sound comes out as one point that moves.</p>
+</aside>
+<h2 id="the-window"><a class="anchor" href="#the-window">The window</a></h2>
+<ul>
+<li><strong>The preset bar</strong> along the top.</li>
+<li><strong>Position</strong>: where the sound sits and how far it moves, and the meter.</li>
+<li><strong>Modulation</strong>: what moves it. The mode&#39;s controls sit over the mode button.</li>
+<li><strong>Levels</strong>: <strong>Input</strong>, <strong>Output</strong> and <strong>Tweak</strong>.</li>
+<li><strong>The Tweak panel</strong>, under them when it&#39;s open.</li>
+</ul>
+<div class="cut"><video class="clip" data-clip="fx-pan" style="--wide:1400/386;--phone:900/248" muted playsinline loop preload="none" aria-label="Y-Pan on a beat: the meter swings across the stereo field, and the rate is turned up and back."></video></div>
+<h2 id="pick-a-mode"><a class="anchor" href="#pick-a-mode">Pick a mode</a></h2>
+<p>Click the mode button at the bottom of <strong>Modulation</strong> and choose one:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>What moves the sound</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>LFO</strong></td>
+<td>A repeating sweep at its own <strong>Rate</strong>, not in time with the song.</td>
+</tr>
+<tr>
+<td><strong>Rhythm Step</strong></td>
+<td>Steps from place to place, one step each <strong>Rhythm</strong>.</td>
+</tr>
+<tr>
+<td><strong>Rhythm Shape</strong></td>
+<td>A sweep each <strong>Rhythm</strong>, in time with the song.</td>
+</tr>
+<tr>
+<td><strong>PingPong</strong></td>
+<td>From one side to the other each time the sound hits.</td>
+</tr>
+<tr>
+<td><strong>Random</strong></td>
+<td>A new place picked by chance each <strong>Rhythm</strong>.</td>
+</tr>
+<tr>
+<td><strong>Step</strong></td>
+<td>A new place picked by chance each time the sound hits.</td>
+</tr>
+</tbody></table>
+</div>
+<p>Changing the mode keeps the other settings, so you can try the same width and smoothing in each.</p>
+<h2 id="position"><a class="anchor" href="#position">Position</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Ends</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Offset</strong></td>
+<td>Left, Right</td>
+<td>Where the movement is centred, from 105° left to 105° right. It reads &quot;Centre&quot; in the middle. Past 90° is beyond the speakers.</td>
+</tr>
+<tr>
+<td><strong>Width</strong></td>
+<td>Min, Max</td>
+<td>How far either side of the Offset the sound moves, up to 210°. A new Y-Pan uses 180°: from hard left to hard right.</td>
+</tr>
+<tr>
+<td><strong>Smoothing</strong></td>
+<td>Hard, Soft</td>
+<td>How it gets from one place to the next. Hard jumps; soft glides.</td>
+</tr>
+<tr>
+<td><strong>Feel</strong></td>
+<td>Rush, Drag</td>
+<td>Rhythm Step only. Moves the pattern earlier or later, up to a sixteenth note. It reads &quot;On the beat&quot; in the middle.</td>
+</tr>
+<tr>
+<td><strong>Groove</strong></td>
+<td>Shuf, Swng</td>
+<td>Rhythm Shape only. Moves every second sweep later, towards a triplet, for a shuffle or a swing. It reads &quot;Straight&quot; in the middle.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The <strong>pan position meter</strong> shows where the sound is now, with a fading trail of where it&#39;s been.</p>
+<h2 id="modulation"><a class="anchor" href="#modulation">Modulation</a></h2>
+<p>The controls here change with the mode.</p>
+<h3 id="lfo"><a class="anchor" href="#lfo">LFO</a></h3>
+<ul>
+<li><strong>Rate</strong>: how fast it sweeps, from 0.01 to 10 Hz.</li>
+<li><strong>Direction</strong>: <strong>Right to left</strong>, <strong>Back and forth</strong> or <strong>Left to right</strong>. One way, it sweeps across and starts again;
+back and forth, it swings.</li>
+</ul>
+<h3 id="rhythm-step-rhythm-shape-and-random"><a class="anchor" href="#rhythm-step-rhythm-shape-and-random">Rhythm Step, Rhythm Shape and Random</a></h3>
+<ul>
+<li><strong>Direction</strong> (Rhythm Step and Rhythm Shape): the same three buttons as LFO.</li>
+<li><strong>Rhythm</strong>: how long each step, sweep or random move lasts, from <strong>1/32 note</strong> to <strong>4 bars</strong>, straight, dotted
+(<strong>dot</strong>) or triplet (<strong>trip</strong>). Drag it up or down or scroll over it. Right-click it to pick one from the list, or
+choose <strong>Edit…</strong> to open the pattern&#39;s editor (not in Random).</li>
+<li><strong>Steps</strong> (Rhythm Step): how many places it steps through before it repeats, 2 to 16.</li>
+<li><strong>Tap</strong>: tap it three times in time to set the tempo yourself. That takes Y-Pan out of time with the song.</li>
+<li><strong>Tempo</strong>: the tempo it runs at when it isn&#39;t in time with the song. Drag it or scroll over it. It&#39;s dimmed while
+Sync is on, and changing it turns Sync off.</li>
+<li><strong>Sync</strong>: in time with the song. On in a new Y-Pan.</li>
+</ul>
+<p>When the pattern is your own (see <a href="#the-rhythm-editors">The rhythm editors</a>), <strong>Rhythm</strong> reads <strong>Custom</strong> and
+<strong>Steps</strong> is dimmed: the pattern decides. In Rhythm Step, <strong>Direction</strong> is dimmed too.</p>
+<h3 id="pingpong-and-step"><a class="anchor" href="#pingpong-and-step">PingPong and Step</a></h3>
+<ul>
+<li><strong>Trigger</strong>: how loud the sound must get to count as a hit, from −40 dB to <strong>Off</strong>. The strip under it shows the
+level it hears.</li>
+<li><strong>Trigger</strong> (the button): a hit now, by hand. It only works while the sound is under the Trigger level. It isn&#39;t
+saved in the song.</li>
+<li><strong>Divider</strong>: how many hits make one move, from <strong>Every trigger</strong> up to every twelfth. The dots under it count the
+hits.</li>
+</ul>
+<p>In PingPong, the sound starts at the left when the song starts playing, and goes to the other side of the Offset each
+move. In Step, each move goes to a new place picked by chance. Smoothing sets how it glides there.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> To make it move on the kick and not the hats, open <strong>Tweak</strong> and filter what the trigger hears (see
+<a href="#trigger-filter">Trigger filter</a>).</p>
+</aside>
+<h2 id="levels"><a class="anchor" href="#levels">Levels</a></h2>
+<p><strong>Input</strong> and <strong>Output</strong> go from −24 to +24 dB. Each has a row of lights: green, then yellow 6 dB under clipping, then
+red. Turning <strong>Input</strong> up drives the <a href="#analog-style">Analog style</a> harder; <strong>Output</strong> sets the level that leaves.</p>
+<h2 id="tweak"><a class="anchor" href="#tweak">Tweak</a></h2>
+<p>Click <strong>Tweak</strong> to open more controls under the window. What&#39;s there depends on the mode.</p>
+<h3 id="dynamics"><a class="anchor" href="#dynamics">Dynamics</a></h3>
+<p>In LFO, Rhythm Step and Rhythm Shape, the sound&#39;s level can change the movement:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Threshold</strong></td>
+<td>The level, −40 to 0 dB, above which the sound changes the movement. The strip under it shows the level it hears.</td>
+</tr>
+<tr>
+<td><strong>Attack</strong>, <strong>Release</strong></td>
+<td>How fast the change comes in and goes away, up to 5 seconds each.</td>
+</tr>
+<tr>
+<td><strong>Mode</strong></td>
+<td><strong>Env</strong>: the louder the sound is above the threshold, the more it changes. <strong>Gate</strong>: all or nothing, at the Attack and Release&#39;s pace.</td>
+</tr>
+<tr>
+<td><strong>Offset Mod</strong></td>
+<td>How far the Offset moves, left or right, when the sound is loud.</td>
+</tr>
+<tr>
+<td><strong>Width Mod</strong></td>
+<td>How much narrower (<strong>Slim</strong>) or wider (<strong>Wide</strong>) the movement gets.</td>
+</tr>
+<tr>
+<td><strong>Rate Mod</strong></td>
+<td>How much slower or faster it moves, in octaves. 1.00 doubles the rate.</td>
+</tr>
+</tbody></table>
+</div>
+<p>With every Mod at 0, the dynamics do nothing.</p>
+<h3 id="trigger-filter"><a class="anchor" href="#trigger-filter">Trigger filter</a></h3>
+<p>In PingPong and Step, the trigger can listen to part of the sound:</p>
+<ul>
+<li><strong>Type</strong>: <strong>HPF</strong> (only the highs), <strong>Off</strong> or <strong>LPF</strong> (only the lows).</li>
+<li><strong>Cutoff</strong>: from 100 Hz to 15 kHz.</li>
+<li><strong>Filter gain</strong>: −20 to +20 dB, for a part that&#39;s too quiet to reach the Trigger level.</li>
+<li><strong>Monitor</strong>: <strong>On</strong> lets you hear what the trigger hears, unpanned, while you set it. Turn it <strong>Off</strong> after.</li>
+</ul>
+<p>A small picture shows the filter&#39;s curve. The filter only changes what the trigger listens to, not what you hear.</p>
+<h3 id="analog-style"><a class="anchor" href="#analog-style">Analog style</a></h3>
+<p>The saturation the sound goes through, in every mode:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Style</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Clean</strong></td>
+<td>The most range before it clips, fairly hard. A new Y-Pan uses it.</td>
+</tr>
+<tr>
+<td><strong>Fat</strong></td>
+<td>Smooth low-frequency distortion</td>
+</tr>
+<tr>
+<td><strong>Squash</strong></td>
+<td>Fat, more compressed</td>
+</tr>
+<tr>
+<td><strong>Dirt</strong></td>
+<td>Smooth broadband saturation</td>
+</tr>
+<tr>
+<td><strong>Crunch</strong></td>
+<td>Exaggerated high-end clipping</td>
+</tr>
+<tr>
+<td><strong>Shred</strong></td>
+<td>Lots of asymmetrical clipping</td>
+</tr>
+<tr>
+<td><strong>Pump</strong></td>
+<td>Extreme pumping compression</td>
+</tr>
+</tbody></table>
+</div>
+<p>In Random mode, <strong>Analog style</strong> is the only thing in Tweak.</p>
+<h2 id="the-rhythm-editors"><a class="anchor" href="#the-rhythm-editors">The rhythm editors</a></h2>
+<p>In Rhythm Step and Rhythm Shape, Tweak also shows the pattern the knobs make, as an editor you can draw in. Edit it and
+the pattern becomes your own, and <strong>Rhythm</strong> reads <strong>Custom</strong>. While the song plays in time, a line follows where the
+pattern is.</p>
+<h3 id="rhythm-step-editor"><a class="anchor" href="#rhythm-step-editor">Rhythm Step Editor</a></h3>
+<p>Each point is a place the sound steps to, at a time in the bar. Higher is further right.</p>
+<ul>
+<li><strong>Add a point</strong>: click an empty place. It goes on the nearest grid line. Keep the button held to drag it.</li>
+<li><strong>Move a point</strong>: drag it. Up and down is its place; sideways, its time on the grid. Hold <kbd>⌘</kbd> to move it off
+the grid. A point dropped on another&#39;s time goes back.</li>
+<li><strong>Delete a point</strong>: ⌥-click or right-click it.</li>
+</ul>
+<p><strong>Smoothing mode</strong> sets the shape of each move from one point to the next: <strong>Linear</strong>, <strong>Sine</strong>, <strong>Exp</strong>, <strong>Sym</strong> or
+<strong>Rev</strong>.</p>
+<h3 id="rhythm-editor"><a class="anchor" href="#rhythm-editor">Rhythm Editor</a></h3>
+<p>Each block is one sweep, in the Direction&#39;s shape, from its start to its end.</p>
+<ul>
+<li><strong>Add a sweep</strong>: click an empty place. It&#39;s a grid cell long; drag right to make it longer.</li>
+<li><strong>Delete a sweep</strong>: click it, or right-click it.</li>
+<li><strong>Resize it</strong>: drag its left or right edge.</li>
+<li><strong>Move it</strong>: drag its middle.</li>
+<li>⌥-drag moves its end and ⇧-drag its start, wherever you press. ⌥⇧-drag moves the whole sweep.</li>
+<li>Hold <kbd>⌘</kbd> while dragging to go off the grid.</li>
+</ul>
+<h3 id="under-both-editors"><a class="anchor" href="#under-both-editors">Under both editors</a></h3>
+<ul>
+<li><strong>Num bars</strong>: how long the pattern is, 1 to 8 bars.</li>
+<li><strong>Beats/bar</strong>: beats in each of its bars.</li>
+<li><strong>Bar</strong>: which bar of the pattern the editor shows.</li>
+<li><strong>Grid</strong>: where clicks land: <strong>1/4th</strong>, <strong>1/8th</strong>, <strong>1/16th</strong>, <strong>1/32nd</strong> or a triplet.</li>
+<li><strong>Shape preset</strong>: start again from the pattern the knobs make at one of the rhythms, or <strong>Clear the pattern</strong> to
+draw from nothing.</li>
+</ul>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>The preset bar has the arrows (<strong>Previous preset</strong> and <strong>Next preset</strong>), the preset&#39;s name, <strong>Revert</strong> and the ⋯ menu.</p>
+<p>Click the name for the list, grouped by mode. Hover over a preset to read what it does. Once you change the sound, a
+<code>*</code> follows the name. Click <strong>Revert</strong> (the arrow beside the name) to go back to the preset as it was.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Presets</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LFO</td>
+<td><strong>Slow Pan</strong>, <strong>Pendulum Pan</strong>, <strong>Faast Shimmer Pan</strong>, <strong>Lazy Drift</strong>, <strong>Beyond the Speakers</strong>, <strong>Spinning Wheel</strong>, <strong>Breathing Pan</strong>, <strong>Pumped Pan</strong></td>
+</tr>
+<tr>
+<td>Rhythm Step</td>
+<td><strong>Tooo Dang Fast</strong>, <strong>Eighth Hop</strong>, <strong>Three Step Walk</strong>, <strong>Dotted Bounce</strong>, <strong>Sixteenth Sprinkle</strong></td>
+</tr>
+<tr>
+<td>Rhythm Shape</td>
+<td><strong>Wiper Panner</strong>, <strong>Quarter Sway</strong>, <strong>Swung Eighths</strong>, <strong>Saw Train</strong>, <strong>Fast When Loud</strong></td>
+</tr>
+<tr>
+<td>PingPong</td>
+<td><strong>SpazPong</strong>, <strong>Every Other Hit</strong>, <strong>Bar Bouncer</strong>, <strong>Hi-Hat Ping</strong></td>
+</tr>
+<tr>
+<td>Random</td>
+<td><strong>Random Ambler</strong>, <strong>Quarter Wander</strong>, <strong>Scatter</strong></td>
+</tr>
+<tr>
+<td>Step</td>
+<td><strong>EasyHopper</strong>, <strong>Kick Scatter</strong></td>
+</tr>
+</tbody></table>
+</div>
+<p>The ⋯ menu (<strong>Y-Pan&#39;s menu</strong>) has <strong>Copy state</strong> and <strong>Paste state</strong>: every setting, to put on another Y-Pan.</p>
+<h2 id="automate-y-pan"><a class="anchor" href="#automate-y-pan">Automate Y-Pan</a></h2>
+<p>Every knob can be automated.</p>
+<ul>
+<li>Right-click a knob and choose <strong>Create automation clip</strong>.</li>
+<li>Or touch a control, then click <strong>Automate “…”</strong> in the window&#39;s title bar. It names the last control you touched
+and makes a clip of it.</li>
+</ul>
+<p>Automating <strong>Width</strong> from 0 up is a way to open a sound out over a build. See <a href="../automation/">Automation</a>.</p>
+<p>The knobs work like every knob in Yen Studio: drag up or down (<kbd>⌘</kbd> for fine), scroll, ⌥-click to reset, and
+right-click for <strong>Type in value…</strong>, automation and <a href="../modulators/">modulation</a>.</p>
+<h2 id="tips"><a class="anchor" href="#tips">Tips</a></h2>
+<aside class="callout tip"><p><strong>Tip:</strong> On hats and percussion, try a Rhythm Step preset with <strong>Smoothing</strong> low, so each hit lands in its own place.</p>
+</aside>
+<aside class="callout tip"><p><strong>Tip:</strong> For a pan you feel more than hear, lower <strong>Width</strong> to 60° or so and raise <strong>Smoothing</strong>.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-tune/"><span>Previous</span>Y-Tune</a><a class="next" rel="next" href="../y-pitch/"><span>Next</span>Y-Pitch</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-Pan">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#add-y-pan-to-a-track">Add Y-Pan to a track</a></li><li><a href="#the-window">The window</a></li><li><a href="#pick-a-mode">Pick a mode</a></li><li><a href="#position">Position</a></li><li><a href="#modulation">Modulation</a></li><li><a href="#levels">Levels</a></li><li><a href="#tweak">Tweak</a></li><li><a href="#the-rhythm-editors">The rhythm editors</a></li><li><a href="#presets">Presets</a></li><li><a href="#automate-y-pan">Automate Y-Pan</a></li><li><a href="#tips">Tips</a></li></ul></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sampler channels: Yen Studio docs</title>
+<meta name="description" content="Every control in a sampler channel's settings window: the sample, precomputed effects, loop, envelopes, LFOs and the filter.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/sampler/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sampler channels">
+<meta property="og:description" content="Every control in a sampler channel's settings window: the sample, precomputed effects, loop, envelopes, LFOs and the filter.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/sampler/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/" aria-current="page">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Make">
+<p class="crumb" data-pagefind-ignore>Make</p>
+<h1 data-pagefind-meta="title">Sampler channels</h1>
+<p>A sampler channel plays one sample: a drum hit, a vocal chop, a note of a bass. Its settings window is where you
+trim it, shape it, loop it and give it envelopes, LFOs and a filter. Channels that play the Playlist&#39;s audio clips get
+a smaller version of the same window.</p>
+<p>To open it, click the channel&#39;s button in <a href="../channel-rack/">the Channel rack</a>, or right-click the button and choose
+<strong>Channel settings…</strong>. The window&#39;s title is the channel&#39;s name.</p>
+<p><figure class="shot" style="--w:440"><img src="../shots/sampler.webp" width="440" height="481" alt="A sampler channel's settings window, Sample tab" loading="lazy" decoding="async"></figure></p>
+<h2 id="the-controls-along-the-top"><a class="anchor" href="#the-controls-along-the-top">The controls along the top</a></h2>
+<p>These sit at the top right of the window whichever tab is showing.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>ON</strong></td>
+<td>Click to mute or unmute the channel. ⌘-click or ⌥-click to solo it.</td>
+</tr>
+<tr>
+<td><strong>PAN</strong></td>
+<td>Where the channel sits left to right.</td>
+</tr>
+<tr>
+<td><strong>VOL</strong></td>
+<td>The channel&#39;s volume.</td>
+</tr>
+<tr>
+<td><strong>PITCH</strong></td>
+<td>Moves the sample up or down. Turning it moves by whole semitones; type a value in to set cents.</td>
+</tr>
+<tr>
+<td><strong>SWING</strong></td>
+<td>How much of the song&#39;s swing this channel takes. All of it by default; turn it down to keep this channel straight.</td>
+</tr>
+<tr>
+<td><strong>TRACK</strong></td>
+<td>The <a href="../mixer/">mixer</a> track the channel plays into. Click the word <strong>TRACK</strong> to give the channel a free track of its own.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The song&#39;s swing is the <strong>Swing</strong> knob on the Channel rack&#39;s title bar (see <a href="../channel-rack/#swing">Swing</a>).</p>
+<h3 id="turning-knobs"><a class="anchor" href="#turning-knobs">Turning knobs</a></h3>
+<p>Every knob in the window works the same way:</p>
+<ul>
+<li><strong>Drag</strong> up or down to turn it. Hold ⌘ while dragging to turn it finely.</li>
+<li><strong>Scroll</strong> over it to nudge it.</li>
+<li><strong>⌥-click</strong> or middle-click it to put it back to its default.</li>
+<li>With a knob focused, the arrow keys move it, and with ⌘ more finely.</li>
+<li><strong>Right-click</strong> for <strong>Reset</strong>, <strong>Copy value</strong>, <strong>Paste value</strong> and <strong>Type in value…</strong>.</li>
+</ul>
+<p>Hover over a knob to read its exact value. <strong>PAN</strong>, <strong>VOL</strong> and <strong>PITCH</strong> can be automated: their right-click menu
+has <strong>Create automation clip</strong> too. See <a href="../automation/">Automation</a>.</p>
+<h2 id="load-and-replace-the-sample"><a class="anchor" href="#load-and-replace-the-sample">Load and replace the sample</a></h2>
+<p>On the <strong>Sample</strong> tab, the <strong>File</strong> section shows the channel&#39;s name and its sample&#39;s file name. It says <strong>No
+sample</strong> when there isn&#39;t one, and marks a file that can&#39;t be read.</p>
+<ul>
+<li><strong>Rename the channel:</strong> type in the name field.</li>
+<li><strong>Load a sample:</strong> press the folder button, or choose <strong>Load sample…</strong> in the channel&#39;s menu on the rack.</li>
+<li><strong>Drop one in:</strong> drag a file from <a href="../browser/">the Browser</a>, Finder or File Explorer anywhere onto the window. It
+replaces the sample. Dropping a file on the channel&#39;s button in the rack does the same.</li>
+</ul>
+<h3 id="hear-it"><a class="anchor" href="#hear-it">Hear it</a></h3>
+<p>The waveform at the bottom of the tab shows the sample as it will play, after the precomputed effects, with its loop
+marked. Press it to hear the channel, or press <kbd>Enter</kbd> or <kbd>Space</kbd> while it has the focus.</p>
+<h2 id="precomputed-effects"><a class="anchor" href="#precomputed-effects">Precomputed effects</a></h2>
+<p>These change the sample itself before it plays, so they cost nothing while the song runs. They&#39;re worked out in this
+order: trim, reverse, normalise, fade.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Normalize</strong></td>
+<td>Turns the sample up until its loudest point is at full scale.</td>
+</tr>
+<tr>
+<td><strong>Reverse</strong></td>
+<td>Plays the kept part of the sample backwards.</td>
+</tr>
+<tr>
+<td><strong>SMP START</strong></td>
+<td>Where in the file the sample starts.</td>
+</tr>
+<tr>
+<td><strong>LENGTH</strong></td>
+<td>How much of the file after the start is kept.</td>
+</tr>
+<tr>
+<td><strong>IN</strong></td>
+<td>A fade in, as a share of the part that&#39;s kept.</td>
+</tr>
+<tr>
+<td><strong>OUT</strong></td>
+<td>A fade out, as a share of the part that&#39;s kept.</td>
+</tr>
+</tbody></table>
+</div>
+<aside class="callout tip"><p><strong>Tip:</strong> Turn <strong>SMP START</strong> up a touch to cut the silence or click from the front of a sample, then use <strong>OUT</strong> to
+stop the tail ringing.</p>
+</aside>
+<h2 id="loop-a-sample-while-a-note-is-held"><a class="anchor" href="#loop-a-sample-while-a-note-is-held">Loop a sample while a note is held</a></h2>
+<p>The <strong>Loop</strong> section is for samplers. Turn on <strong>Loop while held</strong> and, for as long as a note is held, the sample goes
+round between its loop points instead of stopping at its end.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>START</strong></td>
+<td>Where the loop starts.</td>
+</tr>
+<tr>
+<td><strong>END</strong></td>
+<td>Where the loop ends.</td>
+</tr>
+<tr>
+<td><strong>XFADE</strong></td>
+<td>Crossfades the end of the loop into its start, to hide the join.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The knobs are greyed while the loop is off. The loop shows on the waveform below.</p>
+<h2 id="envelopes-lfos-and-the-filter"><a class="anchor" href="#envelopes-lfos-and-the-filter">Envelopes, LFOs and the filter</a></h2>
+<p>The <strong>Envelope</strong> tab shapes how the sample moves while it plays.</p>
+<p><figure class="shot" style="--w:440"><img src="../shots/sampler-envelope.webp" width="440" height="481" alt="The Envelope tab of a sampler channel" loading="lazy" decoding="async"></figure></p>
+<h3 id="pick-what-to-shape"><a class="anchor" href="#pick-what-to-shape">Pick what to shape</a></h3>
+<p>The buttons along the top pick what the envelope and LFO below it move:</p>
+<ul>
+<li><strong>VOL</strong>: volume</li>
+<li><strong>PAN</strong>: panning</li>
+<li><strong>CUT</strong>: the filter&#39;s cutoff</li>
+<li><strong>RES</strong>: the filter&#39;s resonance</li>
+<li><strong>PITCH</strong>: pitch</li>
+</ul>
+<p>Each one has its own envelope and its own LFO. Switching between them shows that one&#39;s settings.</p>
+<p><strong>CUT</strong> and <strong>RES</strong> only move something once a filter is chosen in the <strong>Filter</strong> section. Until then the tab says
+so.</p>
+<h3 id="the-envelope"><a class="anchor" href="#the-envelope">The envelope</a></h3>
+<p>Turn on the <strong>Envelope</strong> light for the target you picked. Its knobs follow a note from the moment it starts:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>What it sets</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>DEL</strong></td>
+<td>Delay: how long before the envelope starts.</td>
+</tr>
+<tr>
+<td><strong>ATT</strong></td>
+<td>Attack: how long it takes to rise.</td>
+</tr>
+<tr>
+<td><strong>HOLD</strong></td>
+<td>How long it stays at the top.</td>
+</tr>
+<tr>
+<td><strong>DEC</strong></td>
+<td>Decay: how long it takes to fall to the sustain level.</td>
+</tr>
+<tr>
+<td><strong>SUS</strong></td>
+<td>Sustain: the level it holds while the note goes on.</td>
+</tr>
+<tr>
+<td><strong>REL</strong></td>
+<td>Release: how long it takes to fall away once the note ends.</td>
+</tr>
+<tr>
+<td><strong>AMT</strong></td>
+<td>Amount: how far, and which way, it moves its target. Not on <strong>VOL</strong>.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The three <strong>TENSION</strong> knobs bend the attack, decay and release into curves. The small drawing beside them shows the
+envelope&#39;s shape as you turn them.</p>
+<p>The time knobs reach a few seconds when turned. Type a value in for longer.</p>
+<p>The volume envelope decides how long a note sounds. With it on, a note plays for its own length, then fades out by
+its release. With it off, every note plays the whole sample, however short the note is.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> For a pluck from a long sample, turn on the <strong>VOL</strong> envelope, set <strong>SUS</strong> low and <strong>DEC</strong> short. For a
+filter sweep on each note, choose <strong>Low pass</strong> in the filter, pick <strong>CUT</strong> and give it an envelope with a positive
+<strong>AMT</strong>.</p>
+</aside>
+<h3 id="the-lfo"><a class="anchor" href="#the-lfo">The LFO</a></h3>
+<p>An LFO moves the target up and down over and over. Turn on the <strong>LFO</strong> light, then pick a shape: <strong>Sine</strong>,
+<strong>Triangle</strong>, <strong>Square</strong> or <strong>Saw</strong>.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it sets</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>SPEED</strong></td>
+<td>How fast it goes round, in Hz.</td>
+</tr>
+<tr>
+<td><strong>AMT</strong></td>
+<td>How far it moves its target.</td>
+</tr>
+<tr>
+<td><strong>DEL</strong></td>
+<td>How long after the note starts before it begins.</td>
+</tr>
+<tr>
+<td><strong>ATT</strong></td>
+<td>How long it takes to fade in.</td>
+</tr>
+<tr>
+<td><strong>Tempo</strong></td>
+<td>Ties the speed to the song&#39;s tempo. <strong>SPEED</strong> becomes <strong>BEATS</strong>: how many beats one cycle takes.</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="the-filter"><a class="anchor" href="#the-filter">The filter</a></h3>
+<p>Choose <strong>Low pass</strong>, <strong>Band pass</strong> or <strong>High pass</strong> to filter the sample, or <strong>Off</strong>.</p>
+<ul>
+<li><strong>CUT</strong> sets the cutoff frequency.</li>
+<li><strong>RES</strong> sets the resonance: a peak at the cutoff.</li>
+</ul>
+<p>The <strong>CUT</strong> and <strong>RES</strong> targets above move these two knobs&#39; values for each note.</p>
+<h2 id="audio-clips-channels"><a class="anchor" href="#audio-clips-channels">Audio clips&#39; channels</a></h2>
+<p>Every audio clip on <a href="../playlist/">the Playlist</a> plays through a channel of its own kind. They show in the rack under
+the <strong>Audio</strong> group. Their settings window is the same, cut down:</p>
+<ul>
+<li>Only the <strong>Sample</strong> tab: no envelopes, LFOs, filter or loop.</li>
+<li>No <strong>SWING</strong> knob.</li>
+<li><strong>PITCH</strong> makes the clips higher or lower without making them faster. It can&#39;t be automated here.</li>
+<li>A <strong>Time stretching</strong> section, below.</li>
+</ul>
+<p>Pressing the waveform plays the file through the channel&#39;s mixer track and its effects.</p>
+<h3 id="time-stretching"><a class="anchor" href="#time-stretching">Time stretching</a></h3>
+<p>Pick how the clips are stretched to fit the tempo:</p>
+<ul>
+<li><strong>Resample</strong>: faster is higher, as a record sped up.</li>
+<li><strong>Stretch</strong>: the pitch is kept as the speed changes.</li>
+</ul>
+<p>Click the lit mode again to turn stretching off.</p>
+<p><strong>TIME</strong> shows how long the file is set to last. Click it for its menu:</p>
+<ul>
+<li><strong>Reset pitch, keep speed</strong>: back to the pitch it was recorded at, at the speed it plays now.</li>
+<li><strong>None</strong>: no stretching.</li>
+<li><strong>Autodetect</strong>: works out the file&#39;s tempo and fits it to the song&#39;s.</li>
+<li><strong>Project tempo</strong>: keeps the file sounding as it does now and has it follow the song&#39;s tempo from here on.</li>
+<li><strong>Beats / bars</strong>: makes the file last that many beats or bars.</li>
+<li><strong>Twice as long</strong> and <strong>Half as long</strong>.</li>
+</ul>
+<p>Clips with no stretch of their own play by their channel&#39;s. A clip can have its own: see <a href="../playlist/">the Playlist</a>.</p>
+<h2 id="plugin-channels"><a class="anchor" href="#plugin-channels">Plugin channels</a></h2>
+<p>A channel playing one of your plugins has the same controls along the top of its window and a <strong>Plugin</strong> tab
+instead of <strong>Sample</strong> and <strong>Envelope</strong>. Clicking its button on the rack opens the plugin&#39;s own window; <strong>Channel
+settings…</strong> in its menu opens this one. See <a href="../plugins/">Plugins</a>.</p>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../channel-rack/"><span>Previous</span>Channel rack</a><a class="next" rel="next" href="../piano-roll/"><span>Next</span>Piano roll</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Sampler%20channels">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#the-controls-along-the-top">The controls along the top</a></li><li><a href="#load-and-replace-the-sample">Load and replace the sample</a></li><li><a href="#precomputed-effects">Precomputed effects</a></li><li><a href="#loop-a-sample-while-a-note-is-held">Loop a sample while a note is held</a></li><li><a href="#envelopes-lfos-and-the-filter">Envelopes, LFOs and the filter</a></li><li><a href="#audio-clips-channels">Audio clips' channels</a></li><li><a href="#plugin-channels">Plugin channels</a></li></ul></nav>
+</div>
+</body>
+</html>

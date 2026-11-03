@@ -1,0 +1,94 @@
+{
+  "automation": {
+    "width": 1200,
+    "height": 248
+  },
+  "browser": {
+    "width": 1200,
+    "height": 615
+  },
+  "effect-compressor": {
+    "width": 898,
+    "height": 610
+  },
+  "effect-delay": {
+    "width": 840,
+    "height": 291
+  },
+  "effect-eq": {
+    "width": 978,
+    "height": 570
+  },
+  "effect-limiter": {
+    "width": 958,
+    "height": 570
+  },
+  "effect-multiband": {
+    "width": 420,
+    "height": 360
+  },
+  "effect-pan": {
+    "width": 720,
+    "height": 198
+  },
+  "effect-pitch": {
+    "width": 628,
+    "height": 457
+  },
+  "effect-reverb": {
+    "width": 898,
+    "height": 510
+  },
+  "effect-time": {
+    "width": 838,
+    "height": 500
+  },
+  "effect-tune": {
+    "width": 898,
+    "height": 610
+  },
+  "export": {
+    "width": 462,
+    "height": 666
+  },
+  "hero": {
+    "width": 1200,
+    "height": 615
+  },
+  "mixer": {
+    "width": 1200,
+    "height": 615
+  },
+  "piano": {
+    "width": 1200,
+    "height": 615
+  },
+  "playlist": {
+    "width": 1200,
+    "height": 615
+  },
+  "rack": {
+    "width": 1200,
+    "height": 211
+  },
+  "sampler": {
+    "width": 440,
+    "height": 481
+  },
+  "sampler-envelope": {
+    "width": 440,
+    "height": 481
+  },
+  "stems": {
+    "width": 1200,
+    "height": 615
+  },
+  "stems-placed": {
+    "width": 1200,
+    "height": 615
+  },
+  "to-notes": {
+    "width": 1200,
+    "height": 615
+  }
+}

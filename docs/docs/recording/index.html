@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recording audio: Yen Studio docs</title>
+<meta name="description" content="Record a microphone or an instrument into mixer tracks: inputs, arming, monitoring, count-in, loop recording, punch markers and latency.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/recording/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Recording audio">
+<meta property="og:description" content="Record a microphone or an instrument into mixer tracks: inputs, arming, monitoring, count-in, loop recording, punch markers and latency.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/recording/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/" aria-current="page">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Record">
+<p class="crumb" data-pagefind-ignore>Record</p>
+<h1 data-pagefind-meta="title">Recording audio</h1>
+<p>You record audio the way FL Studio does it: through mixer tracks. Give a <a href="../mixer/">mixer</a> track an input, and it&#39;s armed.
+Turn on Record and press Play, and each armed track records what comes into it. Every take lands on the
+<a href="../playlist/">Playlist</a> where you recorded it.</p>
+<h2 id="choose-an-input-device"><a class="anchor" href="#choose-an-input-device">Choose an input device</a></h2>
+<ol>
+<li>Open Settings (<kbd>⌘,</kbd>) and go to <strong>Music</strong>.</li>
+<li>Under <strong>Audio</strong>, in <strong>Input device</strong>, choose your audio interface or the computer&#39;s microphone.</li>
+</ol>
+<p>The first time, macOS asks whether Yen Studio may use the microphone. Allow it, or every take will be silent. If you
+said no, Settings tells you so: allow it in <strong>System Settings → Privacy &amp; Security → Microphone</strong>, then choose the input
+again.</p>
+<p>Once a device is chosen, Settings shows how many inputs it has and how late the device says its sound is.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> recording with the computer&#39;s microphone? Wear headphones, or the song playing from the speakers is
+recorded too.</p>
+</aside>
+<h2 id="give-a-track-an-input"><a class="anchor" href="#give-a-track-an-input">Give a track an input</a></h2>
+<ol>
+<li>Open the Mixer (<kbd>F9</kbd>) and select the track to record on.</li>
+<li>In the inspector on the right, open <strong>Input</strong> and choose one of the device&#39;s inputs. They&#39;re listed as <strong>Stereo</strong>
+pairs and <strong>Mono</strong> channels.</li>
+</ol>
+<p>Choosing an input arms the track; choosing <strong>(no input)</strong> disarms it. A track with an input shows a microphone on its
+number (unless you&#39;ve given it a colour).</p>
+<p><strong>Input device settings…</strong> at the bottom of the list goes to Settings. If you open a song recorded on another device,
+an input this device doesn&#39;t have is kept and shown by its number.</p>
+<h2 id="arm-and-disarm-tracks"><a class="anchor" href="#arm-and-disarm-tracks">Arm and disarm tracks</a></h2>
+<p>An armed track records when you record. Arm or disarm a track with:</p>
+<ul>
+<li>the <strong>arm light</strong> on its strip in the Mixer, under the fader;</li>
+<li>the arm light beside <strong>Input</strong> in the inspector;</li>
+<li>the arm light on its audio track&#39;s header in the Playlist (see <a href="#where-takes-land">Where takes land</a>).</li>
+</ul>
+<p>Only a track with an input can be armed. Try to arm one without and Yen Studio asks you to choose its input first.</p>
+<p>Which tracks are armed isn&#39;t saved with the song, and isn&#39;t undone.</p>
+<h2 id="monitoring"><a class="anchor" href="#monitoring">Monitoring</a></h2>
+<p>Click the sliders button beside <strong>Input</strong> for the track&#39;s input options. <strong>Monitor</strong> says when you hear the input:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Monitor</th>
+<th>You hear the input</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Off</strong></td>
+<td>Never.</td>
+</tr>
+<tr>
+<td><strong>When armed</strong></td>
+<td>While the track is armed. This is the default.</td>
+</tr>
+<tr>
+<td><strong>On</strong></td>
+<td>Always, armed or not.</td>
+</tr>
+</tbody></table>
+</div>
+<p>You hear the input through the track&#39;s effects, so you can sing through a reverb. What&#39;s recorded is always the dry
+input, before the effects: the take then plays back through the same effects, and you can still change them.</p>
+<p>An armed track&#39;s meter shows its input even when it isn&#39;t monitored.</p>
+<h2 id="record"><a class="anchor" href="#record">Record</a></h2>
+<ol>
+<li>Arm the tracks.</li>
+<li>Click <strong>Record</strong> on the toolbar (the round button with a red dot), or press <kbd>R</kbd>. The whole button turns
+red.</li>
+<li>Press Play (<kbd>Space</kbd>). After the count-in, the armed tracks record.</li>
+<li>Press <kbd>Space</kbd> again to stop.</li>
+</ol>
+<p>The Record button pulses while it records. Each take is drawn on the Playlist as it records, its shape taken from the
+input&#39;s level, and becomes an audio clip with its real waveform once its file is in.</p>
+<ul>
+<li>Turning Record on while the song is already playing starts recording at once, with no count-in.</li>
+<li>Turning Record off while recording stops it.</li>
+<li>Recording is the song&#39;s: if you&#39;re in pattern mode, Record switches to song mode first.</li>
+<li>With nothing armed, Record records the notes you play on the selected channel. See <a href="../midi/">MIDI keyboards</a>.</li>
+</ul>
+<p>All the takes of one recording are one undo step. Undoing takes them off the Playlist; their files stay in the song&#39;s
+sounds.</p>
+<h3 id="count-in"><a class="anchor" href="#count-in">Count-in</a></h3>
+<p>The <strong>3·2·1</strong> switch on the toolbar, beside the metronome, turns the count-in on and off. It&#39;s on to start: the metronome clicks for a bar
+before recording starts, and the song waits. Right-click the switch (or Record) to choose <strong>1 bar</strong>, <strong>2 bars</strong> or
+<strong>4 bars</strong>.</p>
+<h3 id="records-options"><a class="anchor" href="#records-options">Record&#39;s options</a></h3>
+<p>Right-click Record for its options. They&#39;re kept on this computer, the same for every song.</p>
+<ul>
+<li><strong>Count-in</strong> and its length.</li>
+<li><strong>Loop record</strong>: see below.</li>
+<li><strong>Blend (hear earlier takes)</strong>: only with Loop record.</li>
+<li><strong>Disarm on stop</strong>: Record turns itself off when play stops.</li>
+<li><em>Recorded notes</em>: how notes you play are quantized to the Piano roll&#39;s snap (see <a href="../midi/">MIDI keyboards</a>).</li>
+</ul>
+<h2 id="loop-record-and-blend"><a class="anchor" href="#loop-record-and-blend">Loop record and Blend</a></h2>
+<p>Without <strong>Loop record</strong>, recording plays on past the end of the loop, so you can record a whole take in one go.</p>
+<p>With <strong>Loop record</strong> on, recording goes round the loop (the time selection on the Playlist, or the whole song) until
+you stop, and every pass is a take of its own. Each pass lands on the Playlist track below the one before.</p>
+<p><strong>Blend</strong> decides what happens to earlier passes:</p>
+<ul>
+<li><strong>Off</strong> (the default): each new pass mutes the ones before. You keep every take, and hear only the last. Unmute
+another on the Playlist to use it instead.</li>
+<li><strong>On</strong>: you hear the earlier passes while you record the next, and they stay unmuted, so you can stack layers.</li>
+</ul>
+<h2 id="punch-in-and-out"><a class="anchor" href="#punch-in-and-out">Punch in and out</a></h2>
+<p>To keep only part of a recording, mark where it starts and stops on the Playlist:</p>
+<ol>
+<li>Put play where recording should start and press <kbd>⌥T</kbd> to add a time marker.</li>
+<li>Right-click the marker and choose <strong>Start recording</strong>.</li>
+<li>Add another marker where it should stop, and choose <strong>Stop recording</strong>.</li>
+</ol>
+<p>Now play from before the markers with Record on. You get a run-up to play along with, but only what&#39;s between the
+markers is kept: audio takes are cut to them, and only notes that start between them are kept.</p>
+<p>The first <strong>Start recording</strong> marker at or after where play starts is used, with the first <strong>Stop recording</strong> marker
+after it. With no Stop marker, the recording runs on to wherever you stop. With no Start marker, everything is kept.</p>
+<p>To turn a marker back into a plain one, choose <strong>Marker</strong> in its menu.</p>
+<h2 id="where-takes-land"><a class="anchor" href="#where-takes-land">Where takes land</a></h2>
+<p>Each take becomes an audio clip with a channel of its own in the <a href="../channel-rack/">Channel rack</a>, routed back into the
+mixer track that recorded it. Because the take was recorded dry, you hear it through the same effects you heard while
+recording. Takes are named after their track and when they were recorded, and saved in the song.</p>
+<p>On the Playlist, a take goes where you recorded it in time, and on:</p>
+<ul>
+<li>the mixer track&#39;s <strong>audio track</strong>, if it has one;</li>
+<li>otherwise the first Playlist track where it fits, then the next free one below. Another track&#39;s audio track is
+never used.</li>
+</ul>
+<h3 id="audio-tracks"><a class="anchor" href="#audio-tracks">Audio tracks</a></h3>
+<p>An audio track is a Playlist track tied to a mixer track: its takes land there, and its header shows the arm light and
+(when the track is tall enough) the mixer track&#39;s name and input. Click the name to open the Mixer on that track.</p>
+<ul>
+<li>In the Mixer, right-click a track and choose <strong>Assign to new audio track</strong>. A new Playlist track is made for it,
+named after it.</li>
+<li>On the Playlist, right-click a track&#39;s header and choose <strong>Audio track ▸</strong>, then a mixer track. <strong>None (an ordinary
+track)</strong> unties it.</li>
+</ul>
+<p>A mixer track has one audio track at most.</p>
+<h2 id="latency"><a class="anchor" href="#latency">Latency</a></h2>
+<p>Every audio device is a little late: sound takes time to go in and come back out. Yen Studio moves each take earlier
+by the latency the device reports, so takes land in time with the beat. Most of the time you don&#39;t need to do
+anything.</p>
+<p>If takes still sit late (or early), there are two places to correct it:</p>
+<ul>
+<li><strong>Settings › Music › Recording offset</strong>, for every track. It shows the latency the device reports, there and back.
+A positive offset moves takes earlier; a negative one moves them later.</li>
+<li><strong>Input offset (ms)</strong> in a track&#39;s input options, for that track alone. Use it for an input that&#39;s late in a way the
+device doesn&#39;t report.</li>
+</ul>
+<p>To measure it: arm a track with a microphone, turn on the metronome, and record the clicks. Zoom in on the take and
+see how far its clicks sit from the beat lines. Enter that in milliseconds.</p>
+<p>A smaller <strong>Buffer length</strong> in Settings makes the device answer faster while you monitor, at the cost of more work
+for the computer.</p>
+<h2 id="if-something-stops-while-recording"><a class="anchor" href="#if-something-stops-while-recording">If something stops while recording</a></h2>
+<p>Takes are written to the song&#39;s package as they record. If the app quits, crashes or loses its audio engine in the
+middle of a recording, the takes are kept. The next time you open the song, Yen Studio puts them back on the Playlist
+where they were recorded and tells you so. If it can&#39;t tell where a take belongs, it leaves it in the song&#39;s sounds
+for you to place.</p>
+<p>Quitting while recording stops the recording and waits a moment for the last takes, so they&#39;re saved with the song.</p>
+<aside class="callout note"><p><strong>Note:</strong> every take is recorded as 32-bit float audio, whatever your device.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../automation/"><span>Previous</span>Automation</a><a class="next" rel="next" href="../midi/"><span>Next</span>MIDI keyboards</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Recording%20audio">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#choose-an-input-device">Choose an input device</a></li><li><a href="#give-a-track-an-input">Give a track an input</a></li><li><a href="#arm-and-disarm-tracks">Arm and disarm tracks</a></li><li><a href="#monitoring">Monitoring</a></li><li><a href="#record">Record</a></li><li><a href="#loop-record-and-blend">Loop record and Blend</a></li><li><a href="#punch-in-and-out">Punch in and out</a></li><li><a href="#where-takes-land">Where takes land</a></li><li><a href="#latency">Latency</a></li><li><a href="#if-something-stops-while-recording">If something stops while recording</a></li></ul></nav>
+</div>
+</body>
+</html>

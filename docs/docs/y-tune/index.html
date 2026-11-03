@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en" data-root="../../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Y-Tune: Yen Studio docs</title>
+<meta name="description" content="Y-Tune, the built-in pitch correction: key and scale, Detect key, Retune Speed, the pitch graph, Edit scale, Create vibrato and presets.">
+<link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/y-tune/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y-Tune">
+<meta property="og:description" content="Y-Tune, the built-in pitch correction: key and scale, Detect key, Retune Speed, the pitch graph, Edit scale, Create vibrato and presets.">
+<meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/y-tune/">
+<meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5a2ee6">
+<link rel="icon" type="image/png" href="../../favicon.png?v=2">
+<link rel="preload" href="../../fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../docs.css">
+<script src="../../site.js" defer></script>
+<script src="../../docs.js" type="module"></script>
+</head>
+<body class="docs">
+<a class="skip" href="#doc">Skip to the page</a>
+<div class="col wide">
+<header class="bar">
+  <span class="where"><a class="brand" href="../../"><img src="../../logo.svg" alt="" width="44" height="44">Yen Studio</a><a class="section" href="../">Docs</a></span>
+  <a class="get" href="https://github.com/theobourgeois/yen-studio/releases/latest/download/Yen-Studio-arm64.dmg">Download</a>
+</header>
+</div>
+<div class="shell col wide">
+<div class="side">
+  <div class="search" role="search">
+    <label class="visually-hidden" for="find">Search the docs</label>
+    <input id="find" type="search" placeholder="Search the docs" autocomplete="off" spellcheck="false" aria-controls="found" aria-expanded="false">
+    <kbd class="hint" aria-hidden="true">/</kbd>
+    <div id="found" class="found" hidden></div>
+  </div>
+  <details class="contents" open>
+    <summary>Contents</summary>
+    <nav aria-label="Docs"><ul><li><span class="group">Start</span><ul><li><a href=".././">Overview</a></li><li><a href="../getting-started/">Getting started</a></li><li><a href="../workspace/">Windows and the toolbar</a></li><li><a href="../coming-from-fl-studio/">Coming from FL Studio</a></li></ul></li><li><span class="group">Make</span><ul><li><a href="../channel-rack/">Channel rack</a></li><li><a href="../sampler/">Sampler channels</a></li><li><a href="../piano-roll/">Piano roll</a></li><li><a href="../playlist/">Playlist</a></li><li><a href="../browser/">Browser</a></li><li><a href="../plugins/">Plugins</a></li><li><a href="../automation/">Automation</a></li></ul></li><li><span class="group">Record</span><ul><li><a href="../recording/">Recording audio</a></li><li><a href="../midi/">MIDI keyboards</a></li></ul></li><li><span class="group">Mix</span><ul><li><a href="../mixer/">Mixer</a></li><li><a href="../sidechain/">Sidechain</a></li><li><a href="../modulators/">Modulators</a></li><li><a href="../effects/">Built-in effects</a></li><li><a href="../y-eq/">Y-EQ</a></li><li><a href="../y-c/">Y-C</a></li><li><a href="../y-l/">Y-L</a></li><li><a href="../y-r/">Y-R</a></li><li><a href="../y-delay/">Y-Delay</a></li><li><a href="../y-multiband/">Y-Multiband</a></li><li><a href="../y-time/">Y-Time</a></li><li><a href="../y-tune/" aria-current="page">Y-Tune</a></li><li><a href="../y-pan/">Y-Pan</a></li><li><a href="../y-pitch/">Y-Pitch</a></li></ul></li><li><span class="group">Finish</span><ul><li><a href="../export/">Export</a></li><li><a href="../stems-and-notes/">Stems and notes</a></li></ul></li><li><span class="group">More</span><ul><li><a href="../assistant/">Assistant</a></li><li><a href="../settings/">Settings</a></li><li><a href="../shortcuts/">Keyboard shortcuts</a></li><li><a href="../troubleshooting/">Problems and logs</a></li></ul></li></ul></nav>
+  </details>
+</div>
+<main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Mix">
+<p class="crumb" data-pagefind-ignore>Mix</p>
+<h1 data-pagefind-meta="title">Y-Tune</h1>
+<p>Y-Tune corrects the pitch of a voice or an instrument as it plays. It hears the note being sung and pulls it to the
+nearest note of a key and scale you choose. Fast, and you get the hard-tuned sound of modern rap and pop. Slow, and
+it&#39;s a gentle fix that keeps the singer&#39;s slides. Its settings are saved with the song, every change can be undone,
+and its knobs and its key can be automated.</p>
+<h2 id="add-y-tune-to-a-track"><a class="anchor" href="#add-y-tune-to-a-track">Add Y-Tune to a track</a></h2>
+<ol>
+<li>Open <a href="../mixer/">the Mixer</a> and pick the track your vocal plays through.</li>
+<li>Click an empty effect slot. The picker opens.</li>
+<li>Under <strong>Built in</strong>, choose <strong>Pitch correction</strong> (&quot;Pitch correction, hard tune to natural&quot;).</li>
+</ol>
+<p>The window opens when you click the slot&#39;s name. Its title bar names the effect and its track, for example
+&quot;Y-Tune (Insert 1)&quot;. The window can be resized. Close it and the effect keeps playing. Delete the effect and the window
+closes.</p>
+<p>The slot&#39;s own mix knob in the Mixer sets how much of the tuned sound you hear against the sound as it was sung. See
+<a href="../effects/">Built-in effects</a> for what every built-in effect shares.</p>
+<h2 id="the-window"><a class="anchor" href="#the-window">The window</a></h2>
+<p>From top to bottom:</p>
+<ul>
+<li><strong>The top bar</strong>: what&#39;s coming in, the key and scale, <strong>Detect</strong>, <strong>Detune</strong>, <strong>Tracking</strong>, the preset, and the
+<strong>Formant</strong>, <strong>Classic</strong> and <strong>Overdrive</strong> switches.</li>
+<li><strong>The display</strong>: the note being heard, the <strong>Pitch change</strong> meter, the key, <strong>Hold</strong>, and the pitch graph.</li>
+<li><strong>The knobs</strong>: <strong>Retune Speed</strong> and the knobs that shape it.</li>
+<li><strong>The tabs</strong>: <strong>Edit scale</strong> and <strong>Create vibrato</strong>.</li>
+</ul>
+<div class="cut"><video class="clip" data-clip="fx-tune" style="--wide:1400/952;--phone:900/612" muted playsinline loop preload="none" aria-label="Y-Tune on a vocal: the pitch heard is drawn on the graph, and the retune speed is turned and back."></video></div>
+<h2 id="set-the-key-and-scale"><a class="anchor" href="#set-the-key-and-scale">Set the key and scale</a></h2>
+<p>Pick the song&#39;s key from <strong>Key</strong> and its scale from <strong>Scale</strong>. A new Y-Tune is set to <strong>Chromatic</strong>, which tunes to
+every note: it corrects a voice that&#39;s off pitch, but it can&#39;t tell a note that&#39;s wrong from one that&#39;s right. Set the
+real key and scale and the voice is only pulled to the notes that belong.</p>
+<p>The scales are <strong>Chromatic</strong>, <strong>Major</strong>, <strong>Minor</strong>, <strong>Harmonic Minor</strong>, <strong>Jazz Melodic Minor</strong>, <strong>Dorian</strong>,
+<strong>Phrygian</strong>, <strong>Lydian</strong>, <strong>Mixolydian</strong>, <strong>Locrian</strong>, <strong>Major Pentatonic</strong>, <strong>Minor Pentatonic</strong>, <strong>Blues</strong>,
+<strong>Whole Tone</strong> and <strong>Diminished</strong>.</p>
+<p>The display says the key it&#39;s in, for example &quot;A Minor&quot;. It adds &quot;(edited)&quot; once you&#39;ve changed which notes it
+tunes to (see <a href="#edit-the-scale">Edit the scale</a>). Choosing a new key or scale starts its notes afresh.</p>
+<h3 id="detect-key"><a class="anchor" href="#detect-key">Detect key</a></h3>
+<p>Click <strong>Detect</strong> (the wand) and Y-Tune sets the key and scale from the song&#39;s notes:</p>
+<ul>
+<li>It reads the notes in your patterns, weighted by how long they are and how often their pattern is on
+<a href="../playlist/">the Playlist</a>. It doesn&#39;t listen to the audio.</li>
+<li>Drum channels are left out. Muted notes don&#39;t count.</li>
+<li>It picks a major or minor key.</li>
+</ul>
+<p>A message says what it found. &quot;Heard clearly in the song&#39;s notes&quot; means the notes fit the key well. &quot;The likeliest key
+from the song&#39;s notes: check it by ear&quot; means they fit it less well. If the song has no melody or chords to go by, it
+says &quot;No key to hear&quot;, and you choose the key yourself.</p>
+<aside class="callout tip"><p><strong>Tip:</strong> Detect works best once the song has its chords or a bassline in. A song of only drums and a vocal
+recording has nothing for it to read.</p>
+</aside>
+<h2 id="the-top-bar"><a class="anchor" href="#the-top-bar">The top bar</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Input</strong></td>
+<td>The kind of sound coming in: <strong>Soprano</strong>, <strong>Alto/Tenor</strong>, <strong>Low Male</strong>, <strong>Instrument</strong> or <strong>Bass Instrument</strong>. It sets the range of pitches Y-Tune listens for. Pick the one closest to the voice.</td>
+</tr>
+<tr>
+<td><strong>Key</strong>, <strong>Scale</strong></td>
+<td>The notes it tunes to.</td>
+</tr>
+<tr>
+<td><strong>Detect</strong></td>
+<td>Sets the key and scale from the song&#39;s notes.</td>
+</tr>
+<tr>
+<td><strong>Detune</strong></td>
+<td>Moves the tuning, up to 100 cents either way, for a song that isn&#39;t tuned to A4 = 440 Hz. Its readout says A4&#39;s new pitch.</td>
+</tr>
+<tr>
+<td><strong>Tracking</strong></td>
+<td>From choosy to relaxed: how unclear a pitch can be and still be tracked. It starts in the middle. Turn it towards relaxed for a breathy or rough voice it loses, towards choosy if it tunes sounds that aren&#39;t notes.</td>
+</tr>
+<tr>
+<td><strong>Preset</strong></td>
+<td>The presets (see <a href="#presets">Presets</a>).</td>
+</tr>
+<tr>
+<td><strong>Formant</strong></td>
+<td>Keeps the voice&#39;s character when its pitch moves. Off, the character moves with the pitch, as a tape sped up or slowed down.</td>
+</tr>
+<tr>
+<td><strong>Classic</strong></td>
+<td>Sharper correction between notes, the older hard-tuned sound. It has no <strong>Formant</strong>, <strong>Throat</strong>, <strong>Transpose</strong> or <strong>Flex</strong>, so those are greyed.</td>
+</tr>
+<tr>
+<td><strong>Overdrive</strong></td>
+<td>Past Retune Speed 0. Each note is reached at once and exactly, and the voice becomes a buzz of one shape, almost a vocoder. <strong>Retune Speed</strong>, <strong>Humanize</strong>, <strong>Flex</strong> and <strong>Natural Vibrato</strong> don&#39;t apply.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The <strong>⋯</strong> menu (<strong>Options</strong>) has:</p>
+<ul>
+<li><strong>Targeting ignores vibrato</strong>: the note to tune to is chosen from the middle of the sung pitch, so a wide vibrato
+doesn&#39;t jump between notes.</li>
+<li><strong>Copy state</strong> and <strong>Paste state</strong>: every setting, to put on another Y-Tune.</li>
+</ul>
+<p>In a narrow window some labels are hidden: the wand alone is Detect.</p>
+<h2 id="read-the-display"><a class="anchor" href="#read-the-display">Read the display</a></h2>
+<ul>
+<li><strong>Note</strong>: the note being heard.</li>
+<li><strong>Pitch change</strong>: how far it&#39;s being moved, from −100 to +100 cents. Its text says, for example, &quot;+20 cents (was
+flat)&quot;, &quot;−15 cents (was sharp)&quot; or &quot;in tune&quot;.</li>
+<li><strong>The pitch graph</strong>: the sung pitch as a thin line and the tuned pitch as a thick one, over the last few seconds.
+Where they meet, the voice was already in tune.</li>
+<li><strong>Hold</strong>: freezes the graph and the meter so you can look at what was sung. Click it again to let them run.</li>
+</ul>
+<p>The keyboard down the graph&#39;s left side shows the notes of the scale, and you can edit them there:</p>
+<ul>
+<li>Click a key to tune to it.</li>
+<li>Right-click a key to remove it.</li>
+<li>⇧-click a key to bypass it, and again to tune to it.</li>
+</ul>
+<h2 id="the-knobs"><a class="anchor" href="#the-knobs">The knobs</a></h2>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Knob</th>
+<th>Range</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Retune Speed</strong></td>
+<td>0 to 400 ms</td>
+<td>How fast a note is pulled into tune. Its readout says <strong>Hard tune</strong> (under 3 ms), <strong>Fast</strong>, <strong>Natural</strong> or <strong>Slow</strong> (80 ms and over). A new Y-Tune starts at 0.</td>
+</tr>
+<tr>
+<td><strong>Humanize</strong></td>
+<td>0 to 100</td>
+<td>Slows the tuning on the held part of long notes, so they keep some life while short notes stay tight.</td>
+</tr>
+<tr>
+<td><strong>Flex</strong></td>
+<td>0 to 100</td>
+<td>Tunes only what&#39;s sung close to a note, and leaves slides and bends alone. At 0, everything is tuned. Not in Classic.</td>
+</tr>
+<tr>
+<td><strong>Natural vibrato</strong></td>
+<td>−12 to +12 dB</td>
+<td>Makes the singer&#39;s own vibrato wider or narrower. All the way down, it&#39;s almost flat.</td>
+</tr>
+<tr>
+<td><strong>Transpose</strong></td>
+<td>−12 to +12 semitones</td>
+<td>Moves every tuned note up or down. Not in Classic.</td>
+</tr>
+<tr>
+<td><strong>Throat</strong></td>
+<td>50 to 180</td>
+<td>The length of the voice&#39;s throat. Above 100 it&#39;s deeper, below it brighter. It needs <strong>Formant</strong> on and Classic off.</td>
+</tr>
+</tbody></table>
+</div>
+<p>The knobs work like every knob in Yen Studio: drag up or down (<kbd>⌘</kbd> for fine), scroll, ⌥-click to reset, and
+right-click for <strong>Type in value…</strong>, automation and <a href="../modulators/">modulation</a>.</p>
+<h2 id="edit-the-scale"><a class="anchor" href="#edit-the-scale">Edit the scale</a></h2>
+<p>Open the <strong>Edit scale</strong> tab. Each of the twelve notes can be:</p>
+<ul>
+<li><strong>On</strong>: a note to tune to. Click its name to switch it between on and removed.</li>
+<li><strong>Bypass</strong> (<strong>B</strong>): a sung note near it passes as it&#39;s sung, untouched.</li>
+<li><strong>Remove</strong> (<strong>R</strong>): never a target. A voice near it goes to the nearest other note. Right-clicking a note&#39;s name
+removes it too.</li>
+</ul>
+<p>A note&#39;s setting is the same in every octave. The buttons on the right set them all:</p>
+<ul>
+<li><strong>Set all</strong>: every note on.</li>
+<li><strong>Reset scale</strong>: back to the notes of the key and scale.</li>
+<li><strong>Bypass all</strong>: every note passes as it&#39;s sung.</li>
+<li><strong>Remove all</strong>: every note removed but the key&#39;s own, so there&#39;s still something to tune to.</li>
+<li><strong>Set major</strong> and <strong>Set minor</strong>: switch the scale.</li>
+</ul>
+<aside class="callout tip"><p><strong>Tip:</strong> Remove a note that the singer keeps landing between, so they&#39;re always pulled the same way.</p>
+</aside>
+<h2 id="create-vibrato"><a class="anchor" href="#create-vibrato">Create vibrato</a></h2>
+<p>Open the <strong>Create vibrato</strong> tab to add a vibrato of Y-Tune&#39;s own after each note starts. A dot on the tab shows when
+it&#39;s on.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Control</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Shape</strong></td>
+<td><strong>Off</strong>, <strong>Sine</strong>, <strong>Square</strong> or <strong>Saw</strong>. Off is no vibrato.</td>
+</tr>
+<tr>
+<td><strong>Rate</strong></td>
+<td>How fast it wobbles, 0.1 to 10 Hz.</td>
+</tr>
+<tr>
+<td><strong>Onset delay</strong></td>
+<td>How long after a note starts the vibrato begins, up to 1.5 seconds.</td>
+</tr>
+<tr>
+<td><strong>Onset rate</strong></td>
+<td>How long it takes to grow to full depth once it begins, up to 1.5 seconds.</td>
+</tr>
+<tr>
+<td><strong>Variation</strong></td>
+<td>How much its rate and depth change from note to note, so it doesn&#39;t sound mechanical.</td>
+</tr>
+<tr>
+<td><strong>Pitch</strong></td>
+<td>How far it moves the pitch, up to 100 cents.</td>
+</tr>
+<tr>
+<td><strong>Amplitude</strong></td>
+<td>How much it moves the level.</td>
+</tr>
+<tr>
+<td><strong>Formant</strong></td>
+<td>How much it moves the voice&#39;s character along with the pitch.</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="presets"><a class="anchor" href="#presets">Presets</a></h2>
+<p>Pick one from <strong>Preset</strong> in the top bar. Hover over one to read what it&#39;s for. A preset sets the sound, never the
+input, the key or the scale, so you can try them on a vocal you&#39;ve already set up. When you change the sound, the
+preset menu says <strong>Custom</strong>.</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>What it&#39;s for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Hard Tune</strong></td>
+<td>Retune Speed 0: every note snapped, the modern rap and pop sound</td>
+</tr>
+<tr>
+<td><strong>Classic Hard Tune</strong></td>
+<td>The classic hard-tuned sound: hard, bright, sharp steps between notes</td>
+</tr>
+<tr>
+<td><strong>Robot</strong></td>
+<td>Hard tuned, the vibrato flattened</td>
+</tr>
+<tr>
+<td><strong>Overdrive</strong></td>
+<td>Instant, exact notes, almost a vocoder</td>
+</tr>
+<tr>
+<td><strong>Modern Pop</strong></td>
+<td>Tight but alive: fast retune, sustained notes kept natural</td>
+</tr>
+<tr>
+<td><strong>Natural Vocal</strong></td>
+<td>Transparent correction that keeps the singer&#39;s slides</td>
+</tr>
+<tr>
+<td><strong>Gentle Fix</strong></td>
+<td>Only what&#39;s near a note, slowly: barely there</td>
+</tr>
+<tr>
+<td><strong>Ballad</strong></td>
+<td>Slow, smooth, the vibrato a touch wider</td>
+</tr>
+<tr>
+<td><strong>Vibrato Lead</strong></td>
+<td>Fast tuning with a vibrato of its own after each note&#39;s start</td>
+</tr>
+<tr>
+<td><strong>Octave Up</strong></td>
+<td>An octave higher, the voice&#39;s character kept</td>
+</tr>
+<tr>
+<td><strong>Octave Down</strong></td>
+<td>An octave lower, a little deeper in the throat</td>
+</tr>
+<tr>
+<td><strong>Chipmunk</strong></td>
+<td>Up a fifth, the character up with it</td>
+</tr>
+<tr>
+<td><strong>Monster</strong></td>
+<td>Down an octave, a long throat</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="automate-y-tune"><a class="anchor" href="#automate-y-tune">Automate Y-Tune</a></h2>
+<p>Every knob can be automated, the vibrato&#39;s too, and so can <strong>Key</strong>, <strong>Detune</strong> and <strong>Tracking</strong>. The switches, the
+input and the scale can&#39;t.</p>
+<ul>
+<li>Right-click a knob and choose <strong>Create automation clip</strong>.</li>
+<li>Or touch a control, then click <strong>Automate “…”</strong> in the window&#39;s title bar. It names the last control you touched
+and makes a clip of it.</li>
+</ul>
+<p>Automating <strong>Key</strong> follows a song that changes key. See <a href="../automation/">Automation</a>.</p>
+<h2 id="tips"><a class="anchor" href="#tips">Tips</a></h2>
+<aside class="callout tip"><p><strong>Tip:</strong> For the hard-tuned sound, start from <strong>Hard Tune</strong>, set the key, and leave Retune Speed at 0. For a natural
+fix, start from <strong>Natural Vocal</strong> and raise <strong>Flex</strong> until the slides come back.</p>
+</aside>
+<aside class="callout tip"><p><strong>Tip:</strong> If a note with a wide vibrato flickers between two notes, turn on <strong>Targeting ignores vibrato</strong> in the ⋯
+menu.</p>
+</aside>
+<aside class="callout note"><p><strong>Note:</strong> Y-Tune listens a little ahead to know the pitch, more for low voices than high ones. Yen Studio makes up
+for that delay, so the track stays in time with the others.</p>
+</aside>
+
+<nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../y-time/"><span>Previous</span>Y-Time</a><a class="next" rel="next" href="../y-pan/"><span>Next</span>Y-Pan</a></nav>
+<p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Y-Tune">Tell us</a>.</p>
+</main>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#add-y-tune-to-a-track">Add Y-Tune to a track</a></li><li><a href="#the-window">The window</a></li><li><a href="#set-the-key-and-scale">Set the key and scale</a></li><li><a href="#the-top-bar">The top bar</a></li><li><a href="#read-the-display">Read the display</a></li><li><a href="#the-knobs">The knobs</a></li><li><a href="#edit-the-scale">Edit the scale</a></li><li><a href="#create-vibrato">Create vibrato</a></li><li><a href="#presets">Presets</a></li><li><a href="#automate-y-tune">Automate Y-Tune</a></li><li><a href="#tips">Tips</a></li></ul></nav>
+</div>
+</body>
+</html>
