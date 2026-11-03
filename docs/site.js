@@ -5,7 +5,11 @@
 const still = matchMedia("(prefers-reduced-motion: reduce)").matches || navigator.connection?.saveData === true;
 const phone = matchMedia("(max-width: 640px)");
 
-const NAMES = { assistant: "assistant", song: "playlist", rack: "channel rack", piano: "piano roll", mixer: "mixer", stems: "stems" };
+const NAMES = {
+  assistant: "assistant", song: "playlist", rack: "channel rack", piano: "piano roll", mixer: "mixer", stems: "stems",
+  serum: "Serum", "fx-eq": "Y-EQ", "fx-compressor": "Y-C", "fx-limiter": "Y-L", "fx-reverb": "Y-R", "fx-delay": "Y-Delay",
+  "fx-multiband": "Y-Multiband", "fx-time": "Y-Time", "fx-tune": "Y-Tune", "fx-pan": "Y-Pan", "fx-pitch": "Y-Pitch",
+};
 
 const file = (video) => `clips/${video.dataset.clip}-${phone.matches ? "phone" : "wide"}`;
 
