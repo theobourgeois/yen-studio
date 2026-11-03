@@ -113,7 +113,13 @@ br.p { display: none; }
 
 /* Footage. Each clip says its two shapes, so nothing moves as it loads, and sits on the page on a soft shadow. A click
    stops it; the button is for the keyboard. */
-.cut { position: relative; margin-top: clamp(12px, 1.6vw, 20px); }
+/* Until it has a picture, a clip is a faint shape in its place (never a black box), then it fades in. */
+.cut {
+  position: relative;
+  margin-top: clamp(12px, 1.6vw, 20px);
+  border-radius: var(--corner);
+  background: rgba(20, 10, 58, 0.18);
+}
 .clip {
   display: block;
   width: 100%;
@@ -123,6 +129,18 @@ br.p { display: none; }
   background: var(--well);
   box-shadow: 0 8px 18px -2px rgba(8, 3, 32, 0.6);
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+.clip.shown { opacity: 1; }
+
+/* Sections rise into place as they come on screen (site.js marks what's below the fold). */
+.rise { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.rise.risen { opacity: 1; transform: none; }
+.fx figure + figure.rise, .more > div:nth-child(3n + 2).rise { transition-delay: 0.08s; }
+.more > div:nth-child(3n).rise { transition-delay: 0.16s; }
+@media (prefers-reduced-motion: reduce) {
+  .clip, .rise { transition: none; }
 }
 .toggle {
   position: absolute;
