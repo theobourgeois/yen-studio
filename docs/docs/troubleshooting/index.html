@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Problems and logs: Yen Studio docs</title>
-<meta name="description" content="What to do when Yen Studio has no sound, a plugin crashes or a song won't open, and how to find the logs and report a problem.">
+<meta name="description" content="What to do when Yen Studio has no sound, a plugin crashes, a song won't open, the app quit unexpectedly or an update won't install, and how to find the logs and report a problem.">
 <link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/troubleshooting/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Problems and logs">
-<meta property="og:description" content="What to do when Yen Studio has no sound, a plugin crashes or a song won't open, and how to find the logs and report a problem.">
+<meta property="og:description" content="What to do when Yen Studio has no sound, a plugin crashes, a song won't open, the app quit unexpectedly or an update won't install, and how to find the logs and report a problem.">
 <meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/troubleshooting/">
 <meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -52,7 +52,7 @@ about, where it keeps its logs, and how to report the rest.</p>
 <ol>
 <li><strong>Check the output device.</strong> Open <a href="../settings/">Settings</a> with <kbd>⌘,</kbd> and look at <strong>Output device</strong> on the
 <strong>Music</strong> tab. Is it the speakers or headphones you&#39;re listening on?</li>
-<li><strong>Play the test tone.</strong> At the bottom of the Music tab, under <strong>Engine and plugins</strong>, turn on <strong>Test tone</strong>. If you
+<li><strong>Play the test tone.</strong> Near the bottom of the Music tab, under <strong>Plugins</strong>, turn on <strong>Test tone</strong>. If you
 hear it, the engine and your device work: the problem is in the song. If you don&#39;t, it&#39;s the device or the volume.</li>
 <li><strong>Check your Mac&#39;s volume</strong>, and the volume on your audio interface if you use one.</li>
 <li><strong>Check the song&#39;s mode.</strong> Press <kbd>L</kbd> to switch between pattern mode and song mode. Song mode plays the
@@ -99,9 +99,9 @@ at the top of the channel&#39;s settings window.</li>
 remove it from the song.</p>
 <h3 id="when-a-scan-skips-a-plugin"><a class="anchor" href="#when-a-scan-skips-a-plugin">When a scan skips a plugin</a></h3>
 <p>When Yen Studio looks for your plugins, one that crashes during the scan is skipped and listed as skipped, with why.
-The list is in the Plugin manager (<strong>More plugins…</strong> at the foot of <a href="../plugins/">the plugin picker</a>) and in Settings,
-Music tab, under <strong>Engine and plugins</strong>. Click <strong>Try again</strong> there to scan the skipped plugins again, for example
-after updating one.</p>
+The list is in the Plugin manager (<strong>Plugin manager…</strong> at the foot of <a href="../plugins/">the plugin picker</a>) and in Settings,
+Music tab, under <strong>Plugins</strong>. Click <strong>Try again</strong> there to scan the skipped plugins again, for example after updating
+one.</p>
 <h2 id="a-song-wont-open"><a class="anchor" href="#a-song-wont-open">A song won&#39;t open</a></h2>
 <p>When Yen Studio isn&#39;t sure it can read a song, it leaves the file alone rather than risk your work. The song still
 shows on the Home screen, greyed out, saying <strong>Damaged: can&#39;t be opened</strong>. Hold the pointer over it to see why. It
@@ -142,6 +142,26 @@ A message says the song <strong>was also saved somewhere else</strong>, and name
 <p>Your window&#39;s version is saved as the song. The other version is kept inside the package, beside <code>project.json</code>, as
 <code>project.conflict-</code> followed by the date and time. To use it instead, close the song, open the package with <strong>Show
 Package Contents</strong>, and swap the two files.</p>
+<h2 id="yen-studio-quit-unexpectedly"><a class="anchor" href="#yen-studio-quit-unexpectedly">Yen Studio quit unexpectedly</a></h2>
+<p>If Yen Studio crashed, or stopped without closing properly, the next time it opens a note in the corner says <strong>Yen
+Studio quit unexpectedly</strong>, with the songs you had open. It doesn&#39;t show after you Force Quit it, or when your Mac
+restarts.</p>
+<ul>
+<li><strong>Reopen</strong> opens the songs you had open again, each in its tab.</li>
+<li><strong>Report a Problem…</strong> opens a new issue on Yen Studio&#39;s GitHub: see <a href="#report-a-problem">Report a problem</a>.</li>
+<li><strong>OK</strong> closes the note.</li>
+</ul>
+<p>A recording that was under way is mended and put back where it was when its song opens: see
+<a href="#takes-recovered-after-a-crash">Takes recovered after a crash</a>.</p>
+<h2 id="changes-that-werent-saved"><a class="anchor" href="#changes-that-werent-saved">Changes that weren&#39;t saved</a></h2>
+<p>With <strong>Save automatically</strong> off, Yen Studio keeps a copy of your changes beside the song as you work, until you save.
+If it closes before you save them, the next time you open the song a message says it <strong>has changes that weren&#39;t
+saved</strong>, and when they were from.</p>
+<ul>
+<li><strong>Recover</strong> brings them back. It&#39;s an undo step, so <kbd>⌘Z</kbd> goes back to the song as it was saved.</li>
+<li><strong>Discard</strong> lets them go.</li>
+</ul>
+<p>See <a href="../getting-started/#saving">Saving</a>.</p>
 <h2 id="takes-recovered-after-a-crash"><a class="anchor" href="#takes-recovered-after-a-crash">Takes recovered after a crash</a></h2>
 <p>If Yen Studio stops while you&#39;re recording, what you&#39;d recorded isn&#39;t lost. The next time you open the song, it&#39;s
 recovered, and a message says <strong>Recovered a take from when the app stopped</strong> (or how many takes).</p>
@@ -173,6 +193,23 @@ your macOS version already filled in.</li>
 it yourself.</p>
 <p>If you&#39;ve turned on <strong>Send usage and crash reports</strong> in <a href="../settings/#send-usage-and-crash-reports">Settings</a>, crashes
 are reported without your names or your songs. A written report is still the best way to say what went wrong.</p>
+<h2 id="an-update-wont-install"><a class="anchor" href="#an-update-wont-install">An update won&#39;t install</a></h2>
+<p>When a new version is out, Yen Studio offers to install it (see <a href="../getting-started/#updates">Updates</a>). Sometimes it
+can&#39;t install it itself, and the update window says why, with a <strong>Download…</strong> button that opens the release&#39;s page:</p>
+<ul>
+<li><strong>It&#39;s running from its disk image</strong>, or from a temporary place macOS made for it. Drag Yen Studio into your
+Applications folder, open it from there, and try again.</li>
+<li><strong>It can&#39;t change the folder it&#39;s in.</strong> Download the new version and replace the app yourself.</li>
+<li><strong>The release has no Mac app attached.</strong> It can only be downloaded from its page.</li>
+</ul>
+<p>If an install fails part way, the window says why and offers <strong>Try Again</strong>. When the download didn&#39;t finish, there
+wasn&#39;t enough disk space, or the download didn&#39;t pass Yen Studio&#39;s checks (a damaged download, or one that isn&#39;t
+signed by Yen Studio&#39;s developer), nothing is installed: the message ends <strong>Yen Studio hasn&#39;t changed.</strong></p>
+<p>Before it restarts, Yen Studio saves your songs. If you save by hand and a song has unsaved changes, it asks first, as
+quitting does; <strong>Cancel</strong> keeps it from restarting. If a song can&#39;t be saved, it doesn&#39;t restart, and the window names
+the song: save it, then click <strong>Install and Relaunch</strong>.</p>
+<p>If an update didn&#39;t finish installing, you&#39;re still on the version you had, and the update window says so. Choose
+<strong>Check for Updates…</strong> to try again.</p>
 <h2 id="yen-studio-wont-start"><a class="anchor" href="#yen-studio-wont-start">Yen Studio won&#39;t start</a></h2>
 <p>If Yen Studio takes a long time to open, it says so, with <strong>Show Logs</strong> and <strong>Quit</strong>. It opens by itself once it&#39;s
 ready, or you can quit and try again. If it says its server keeps stopping, or couldn&#39;t start, quit, open it again,
@@ -181,7 +218,7 @@ and if it still won&#39;t start, report it with the log.</p>
 <nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../shortcuts/"><span>Previous</span>Keyboard shortcuts</a><span></span></nav>
 <p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Problems%20and%20logs">Tell us</a>.</p>
 </main>
-<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#no-sound">No sound</a></li><li><a href="#where-the-sound-goes">Where the sound goes</a></li><li><a href="#a-plugin-crashes">A plugin crashes</a></li><li><a href="#a-song-wont-open">A song won't open</a></li><li><a href="#two-copies-of-a-song">Two copies of a song</a></li><li><a href="#takes-recovered-after-a-crash">Takes recovered after a crash</a></li><li><a href="#logs">Logs</a></li><li><a href="#report-a-problem">Report a problem</a></li><li><a href="#yen-studio-wont-start">Yen Studio won't start</a></li></ul></nav>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#no-sound">No sound</a></li><li><a href="#where-the-sound-goes">Where the sound goes</a></li><li><a href="#a-plugin-crashes">A plugin crashes</a></li><li><a href="#a-song-wont-open">A song won't open</a></li><li><a href="#two-copies-of-a-song">Two copies of a song</a></li><li><a href="#yen-studio-quit-unexpectedly">Yen Studio quit unexpectedly</a></li><li><a href="#changes-that-werent-saved">Changes that weren't saved</a></li><li><a href="#takes-recovered-after-a-crash">Takes recovered after a crash</a></li><li><a href="#logs">Logs</a></li><li><a href="#report-a-problem">Report a problem</a></li><li><a href="#an-update-wont-install">An update won't install</a></li><li><a href="#yen-studio-wont-start">Yen Studio won't start</a></li></ul></nav>
 </div>
 </body>
 </html>

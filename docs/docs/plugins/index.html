@@ -46,36 +46,32 @@
 <p class="crumb" data-pagefind-ignore>Make</p>
 <h1 data-pagefind-meta="title">Plugins</h1>
 <p>Yen Studio loads your VST3 and Audio Units plugins. An instrument plugin goes on a channel in the <a href="../channel-rack/">Channel rack</a>. An effect plugin goes in a slot of a <a href="../mixer/">Mixer</a> track. Each one opens in a window of its own, and every knob on it can be <a href="../automation/">automated</a>.</p>
-<h2 id="scan-for-your-plugins"><a class="anchor" href="#scan-for-your-plugins">Scan for your plugins</a></h2>
-<p>Yen Studio doesn&#39;t look for plugins until you ask. Do it once after you install it, and again whenever you install a new plugin.</p>
-<ol>
-<li>Click <strong>+</strong> at the bottom of the Channel rack, or press <kbd>F8</kbd>.</li>
-<li>Click <strong>Scan for plugins</strong> at the bottom of the picker.</li>
-<li>Wait while the status line says which plugin it&#39;s scanning.</li>
-</ol>
-<p>You can also scan from the Plugin manager (its <strong>Scan for plugins</strong> button), or from Settings › Music › <strong>Engine and plugins</strong> (its <strong>Scan</strong> button). There it says how many plugins were found.</p>
-<p>Yen Studio looks in the usual places on a Mac for VST3 and Audio Units. A scan also drops plugins that are no longer on your disk.</p>
+<h2 id="finding-your-plugins"><a class="anchor" href="#finding-your-plugins">Finding your plugins</a></h2>
+<p>Yen Studio finds your plugins by itself. Each time it starts, it looks in the usual places on a Mac for VST3 and Audio Units. The first time, it looks at all of them, which can take a while; after that, only at plugins that are new or have been updated since. While it looks, the hint bar and the bottom of the pickers say how far it has got: <strong>Finding your plugins…</strong> the first time, <strong>Looking for plugins…</strong> after that, with how many it has looked at. When it finds new plugins, a message says how many.</p>
+<p>If a song was opened before a plugin it uses was found, it picks the plugin up when the scan ends.</p>
+<h3 id="scan-again"><a class="anchor" href="#scan-again">Scan again</a></h3>
+<p>To look at every plugin again, click <strong>Scan for plugins</strong>. It&#39;s at the bottom of the instrument picker (the Channel rack&#39;s <strong>+</strong>, or <kbd>F8</kbd>), in the Plugin manager, and in Settings › Music › <strong>Plugins</strong> (its <strong>Scan</strong> button). A scan from there also forgets plugins that are no longer on your disk, and tries the skipped ones again.</p>
 <h3 id="plugins-that-are-skipped"><a class="anchor" href="#plugins-that-are-skipped">Plugins that are skipped</a></h3>
 <p>Each plugin is scanned on its own, one at a time. If one crashes, takes longer than 60 seconds to load, or has nothing in it Yen Studio can load, it&#39;s skipped and the scan carries on. Yen Studio doesn&#39;t crash with it.</p>
-<p>Skipped plugins are listed under the scan, each with the reason, for example &quot;Some Synth crashed during the scan and was skipped.&quot; Click <strong>Try again</strong> to scan them again, after updating the plugin for example.</p>
-<p>If a song was opened before a plugin it uses was found, it picks the plugin up when the scan ends.</p>
+<p>When a scan skips plugins, its message says how many, with a <strong>Plugin manager</strong> button. The Plugin manager and Settings › Music › <strong>Plugins</strong> list them, each with the reason, for example &quot;Some Synth crashed during the scan and was skipped.&quot; Click <strong>Try again</strong> to scan them again, after updating the plugin for example.</p>
 <h2 id="star-the-plugins-you-use"><a class="anchor" href="#star-the-plugins-you-use">Star the plugins you use</a></h2>
-<p>The pickers list the built-in instruments and effects, and only the plugins you&#39;ve starred. That keeps them short. You star plugins in the Plugin manager.</p>
-<ol>
-<li>Open a picker (click <strong>+</strong> in the Channel rack, or click an empty slot in the Mixer).</li>
-<li>Click <strong>More plugins…</strong> at the bottom. It says how many more are on your computer.</li>
-<li>In the Plugin manager, click a plugin&#39;s row to star it. Click it again to unstar it.</li>
-</ol>
-<p>The Plugin manager lists every plugin found, with its maker, its kind and its format (VST3 or AU). Type in the search field to find a plugin by its name, maker or kind. The buttons at the top show <strong>All</strong>, <strong>Instruments</strong>, <strong>Effects</strong> or <strong>Starred</strong>. The bottom line says how many you&#39;ve starred.</p>
+<p>The pickers list every plugin found on your computer. The ones you&#39;ve starred come first, so the plugins you use are always at hand.</p>
+<ul>
+<li><strong>In a picker</strong>, move to a plugin (with the pointer or the arrow keys) and click the star on its line. Click it again to unstar it.</li>
+<li><strong>In the Plugin manager</strong>, click a plugin&#39;s row to star it. Click it again to unstar it.</li>
+</ul>
+<p>To open the Plugin manager, open a picker (click <strong>+</strong> in the Channel rack, or click an empty slot in the Mixer) and click <strong>Plugin manager…</strong> at the bottom. It lists every plugin found, with its maker, its kind and its format (VST3 or AU). Type in the search field to find a plugin by its name, maker or kind. The buttons at the top show <strong>All</strong>, <strong>Instruments</strong>, <strong>Effects</strong> or <strong>Starred</strong>. The bottom line says how many you&#39;ve starred.</p>
 <p>Stars belong to your computer, not to a song: they&#39;re the same in every song. Press <kbd>Escape</kbd> to close the Plugin manager.</p>
 <h2 id="choose-a-plugin-in-the-picker"><a class="anchor" href="#choose-a-plugin-in-the-picker">Choose a plugin in the picker</a></h2>
 <p>The picker opens from the Channel rack&#39;s <strong>+</strong> (<kbd>F8</kbd>), from a channel&#39;s <strong>Replace…</strong>, and from a Mixer slot.</p>
 <ul>
-<li>The search field has the focus as it opens: type to narrow the list.</li>
+<li>The search field has the focus as it opens: type to narrow the list. It searches the plugins&#39; names, makers and kinds.</li>
 <li><strong>Built in</strong> comes first. In the Channel rack that&#39;s the <a href="../sampler/">Sampler</a>. In a Mixer slot, it&#39;s Yen Studio&#39;s <a href="../effects/">own effects</a>.</li>
-<li>Your starred plugins follow, grouped by the kind the plugin says it is: EQ, Reverb, Synth and so on. Plugins that don&#39;t say are under Other, at the end.</li>
-<li>Use <kbd>↑</kbd> and <kbd>↓</kbd> to move through a column and <kbd>←</kbd> and <kbd>→</kbd> to move across columns. Once you&#39;ve typed in the search field, hold <kbd>⌥</kbd> with <kbd>←</kbd> and <kbd>→</kbd>. Press <kbd>Enter</kbd> to choose.</li>
-<li>Hover over a plugin and click its pin to pin it to the top. Pinned plugins get a column of their own, first. Click the pin again to unpin it. Pins belong to your computer, like stars.</li>
+<li><strong>Starred</strong> follows, with the plugins you&#39;ve starred.</li>
+<li>Then every other plugin, grouped by the kind the plugin says it is: EQ, Reverb, Synth and so on. Plugins that don&#39;t say are grouped by their maker, and the rest are under Other, at the end.</li>
+<li>A plugin that comes as both a VST3 and an Audio Unit is listed once, as the VST3.</li>
+<li>The groups run down one column and on into the next. When there are more than fit, the picker scrolls sideways; the mouse wheel scrolls it too.</li>
+<li>Use <kbd>↑</kbd> and <kbd>↓</kbd> to move through the list and <kbd>←</kbd> and <kbd>→</kbd> to move across columns. Once you&#39;ve typed in the search field, hold <kbd>⌥</kbd> with <kbd>←</kbd> and <kbd>→</kbd>. Press <kbd>Enter</kbd> to choose.</li>
 </ul>
 <h2 id="plugin-channels"><a class="anchor" href="#plugin-channels">Plugin channels</a></h2>
 <p>Choose an instrument plugin from the Channel rack&#39;s <strong>+</strong> and it becomes a new channel. Plugins load in the background: the channel button shows a spinner until it&#39;s ready, and the plugin&#39;s window opens once it has loaded.</p>
@@ -165,7 +161,7 @@
 <nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../browser/"><span>Previous</span>Browser</a><a class="next" rel="next" href="../automation/"><span>Next</span>Automation</a></nav>
 <p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Plugins">Tell us</a>.</p>
 </main>
-<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#scan-for-your-plugins">Scan for your plugins</a></li><li><a href="#star-the-plugins-you-use">Star the plugins you use</a></li><li><a href="#choose-a-plugin-in-the-picker">Choose a plugin in the picker</a></li><li><a href="#plugin-channels">Plugin channels</a></li><li><a href="#plugin-windows">Plugin windows</a></li><li><a href="#effects-in-mixer-slots">Effects in Mixer slots</a></li><li><a href="#how-plugin-settings-are-saved">How plugin settings are saved</a></li><li><a href="#when-a-plugin-fails">When a plugin fails</a></li><li><a href="#delay-compensation">Delay compensation</a></li><li><a href="#tempo-and-automation">Tempo and automation</a></li></ul></nav>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#finding-your-plugins">Finding your plugins</a></li><li><a href="#star-the-plugins-you-use">Star the plugins you use</a></li><li><a href="#choose-a-plugin-in-the-picker">Choose a plugin in the picker</a></li><li><a href="#plugin-channels">Plugin channels</a></li><li><a href="#plugin-windows">Plugin windows</a></li><li><a href="#effects-in-mixer-slots">Effects in Mixer slots</a></li><li><a href="#how-plugin-settings-are-saved">How plugin settings are saved</a></li><li><a href="#when-a-plugin-fails">When a plugin fails</a></li><li><a href="#delay-compensation">Delay compensation</a></li><li><a href="#tempo-and-automation">Tempo and automation</a></li></ul></nav>
 </div>
 </body>
 </html>

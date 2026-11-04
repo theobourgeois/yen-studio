@@ -32,7 +32,7 @@ After that, the model stays on your Mac, for every song. To stop a download, cli
 3. Leave **Mute the original clip** on to silence the clip they came from, or turn it off.
 4. Click **Extract**.
 
-The window closes, and a notification says how far along the split is. Click **Cancel** in it to stop. A split can take a while, depending on how long the file is and on your Mac.
+The window closes, and a notification says how far along the split is. Click **Cancel** in it to stop. A split can take a while, depending on how long the file is and on your Mac. If you're in another app when it ends, Yen Studio's icon in the Dock bounces once.
 
 ### What Other holds
 

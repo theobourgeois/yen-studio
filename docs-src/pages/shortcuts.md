@@ -7,7 +7,7 @@ Yen Studio's keys follow FL Studio's wherever it has them. The keys of the windo
 <kbd>D</kbd> is its Delete tool, and the Playlist's is too. Keys that work everywhere are listed first.
 
 ⌘ and Ctrl both work for command keys, so <kbd>⌘Z</kbd> is also Ctrl+Z. Where a key must be Ctrl, it says so. Keys
-on the number pad say "Numpad".
+on the number pad say "Numpad". The keys of the Mac's menu bar (Quit, Hide, Zoom In…) are ⌘ only.
 
 Menus show their keys beside their items, and buttons show theirs when you hold the pointer over them.
 
@@ -47,6 +47,7 @@ Settings.
 
 | Key | What it does |
 | --- | --- |
+| <kbd>⌘N</kbd> | New song |
 | <kbd>⌘S</kbd> | Save |
 | <kbd>⌘Z</kbd> | Undo |
 | <kbd>⇧⌘Z</kbd> or <kbd>⌘Y</kbd> | Redo |
@@ -59,7 +60,7 @@ Settings.
 | <kbd>⇧⌘H</kbd> | Go to the Home screen, and back |
 | <kbd>⇧⌘]</kbd> / <kbd>⇧⌘[</kbd> | Next / previous tab |
 | Ctrl+Tab / Ctrl+⇧Tab | Next / previous tab |
-| <kbd>⌘Q</kbd> | Quit (your songs are saved first) |
+| <kbd>⌘Q</kbd> | Quit. With the Piano roll or the Playlist in front, it quantizes instead |
 
 ### The app
 
@@ -69,6 +70,11 @@ Settings.
 | <kbd>⌥⌘H</kbd> | Hide other apps |
 | <kbd>⌘M</kbd> | Minimise the window |
 | <kbd>⌃⌘F</kbd> | Full screen |
+| <kbd>⌘=</kbd> or <kbd>⌘+</kbd> | Zoom in: everything in the app larger |
+| <kbd>⌘−</kbd> | Zoom out |
+| <kbd>⌘0</kbd> | Actual size |
+
+These are in the Mac's menu bar, with the others it has: see [The Mac's menu bar](workspace#the-macs-menu-bar).
 
 ## Channel rack
 
@@ -77,7 +83,7 @@ When the Channel rack is in front, or no other window is. See [Channel rack](cha
 | Key | What it does |
 | --- | --- |
 | <kbd>1</kbd> … <kbd>9</kbd>, <kbd>0</kbd> | Mute or unmute the first ten channels |
-| <kbd>⌘1</kbd> … <kbd>⌘9</kbd>, <kbd>⌘0</kbd> | Solo the first ten channels |
+| <kbd>⌘1</kbd> … <kbd>⌘9</kbd>, <kbd>⌃0</kbd> | Solo the first ten channels (the tenth is Ctrl, as <kbd>⌘0</kbd> is Actual size) |
 | <kbd>↑</kbd> / <kbd>↓</kbd> | Select the channel above / below |
 | <kbd>⇧↑</kbd> / <kbd>⇧↓</kbd> | Add the channel above / below to the selection |
 | <kbd>⌥↑</kbd> / <kbd>⌥↓</kbd> | Move the selected channels up / down |
@@ -125,7 +131,7 @@ When the Piano roll is in front. See [Piano roll](piano-roll).
 | <kbd>⌘U</kbd> | Chop the selected notes into grid-long pieces |
 | <kbd>⌥U</kbd> | Open the Chopper |
 | <kbd>⌥Q</kbd> | Open the Quantizer |
-| <kbd>⌃Q</kbd> | Quick quantize: to the snap, or a step when snap is off |
+| <kbd>⌘Q</kbd> or <kbd>⌃Q</kbd> | Quick quantize: to the snap, or a step when snap is off |
 | <kbd>⇧Q</kbd> | Quantize the starts only |
 | <kbd>⌘L</kbd> | Legato: each note lasts until the next |
 | <kbd>⇧D</kbd> | Discard lengths |
@@ -194,7 +200,7 @@ When the Playlist is in front. See [Playlist](playlist).
 
 | Key | What it does |
 | --- | --- |
-| <kbd>⌃Q</kbd> or <kbd>⇧Q</kbd> | Quantize the selected clips |
+| <kbd>⌘Q</kbd>, <kbd>⌃Q</kbd> or <kbd>⇧Q</kbd> | Quantize the selected clips |
 | <kbd>⌥⌘C</kbd> | Consolidate the selected clips |
 | <kbd>⇧M</kbd> | Turn Stretch on or off |
 | <kbd>⌘Delete</kbd> | Delete the time selection, and close up the gap |

@@ -54,9 +54,17 @@
 <li>Open Yen Studio from Applications.</li>
 </ol>
 <p>The first time, it asks whether to send usage and crash reports. They never include your songs, your sounds or your file names. Click <strong>Send reports</strong> or <strong>No thanks</strong>. You can change your answer in <a href="../settings/">Settings</a> at any time.</p>
-<p>When a newer release is out, Home tells you. Nothing installs itself: download the new one and drag it to Applications as before.</p>
 <aside class="callout note"><p><strong>Note:</strong> Yen Studio is pre-alpha. Expect bugs and missing features, and keep copies of songs you care about.</p>
 </aside>
+<h3 id="updates"><a class="anchor" href="#updates">Updates</a></h3>
+<p>Yen Studio looks for a newer release when it opens, and every few hours after. When there is one, the <strong>Software Update</strong> window comes up with its release notes:</p>
+<ul>
+<li><strong>Install Update</strong> downloads and checks it, saves your work, then installs it and opens the new version in its place. <strong>Cancel</strong> stops the download. If you <a href="#save-by-hand">save by hand</a> and a song has changes you haven&#39;t saved, it asks first, as quitting does; <strong>Cancel</strong> there leaves the update ready for <strong>Install and Relaunch</strong>.</li>
+<li><strong>Remind Me Later</strong> puts it off for a day.</li>
+<li><strong>Skip This Version</strong> stops that version coming up by itself.</li>
+</ul>
+<p>Close the window and it won&#39;t come up by itself again until you next open Yen Studio. While a newer release is out, Home shows <strong>Version … is out</strong>: click it to see the window again. To look straight away, choose <strong>Check for Updates…</strong> in the Yen Studio menu or the Edit menu.</p>
+<p>If Yen Studio can&#39;t install the update itself, the window says why and has a <strong>Download…</strong> button instead. See <a href="../troubleshooting/#an-update-wont-install">An update won&#39;t install</a>.</p>
 <h2 id="find-your-way-around-home"><a class="anchor" href="#find-your-way-around-home">Find your way around Home</a></h2>
 <p>Home is where Yen Studio opens. It lists your songs and starts new ones.</p>
 <ul>
@@ -64,6 +72,7 @@
 <li><strong>Open…</strong> (<kbd>⌘O</kbd>) opens a song&#39;s file from anywhere: a copy, a backup, or one someone sent you.</li>
 <li><strong>Recent</strong> lists the songs you&#39;ve opened. Switch between the list, cards and sheet views at its top.</li>
 <li><strong>Search songs</strong> (<kbd>⌘F</kbd>) filters the list as you type.</li>
+<li><strong>Sort by</strong> orders the list: <strong>Last opened</strong> (the usual order), <strong>Last modified</strong>, <strong>Name</strong> or <strong>Date created</strong>. Yen Studio remembers your choice.</li>
 </ul>
 <p>Click a song&#39;s name to open it. Click <strong>⋯</strong> on a song, or right-click it, for more: Open, Rename, Duplicate, Show in Finder, Use as starting point, Remove from Recents and Move to Trash….</p>
 <p>To come back to Home from a song, press <kbd>⇧⌘H</kbd> or click the Home button at the start of the tab strip. Press <kbd>⇧⌘H</kbd> again to go back to the song.</p>
@@ -91,6 +100,7 @@
 <li>Double-click a <code>.yen</code> file in Finder to open it in Yen Studio.</li>
 <li>Drop a <code>.yen</code> file on Home to open it.</li>
 </ul>
+<p>In Finder, a song&#39;s icon is a picture of its Playlist, its clips in their colours (an empty song shows Yen Studio&#39;s document icon). Select it and press <kbd>Space</kbd> for Quick Look: the picture, the song&#39;s name, its tempo, length, and how many channels and patterns it has. The picture is drawn again a moment after each save.</p>
 <p>If a song&#39;s file has been moved, renamed or deleted, its card on Home says so. Click <strong>Locate…</strong> to find it, or <strong>Remove</strong> to take it off the list.</p>
 <aside class="callout note"><p><strong>Note:</strong> <strong>Remove from Recents</strong> only takes a song off Home&#39;s list. <strong>Move to Trash…</strong> moves its file to the Trash.</p>
 </aside>
@@ -105,16 +115,35 @@
 </ul>
 <p>The undo and redo buttons are at the right end of the toolbar, and both are in the Edit menu.</p>
 <p>A drag is one step, however far it goes. Changes you make inside a plugin&#39;s own window aren&#39;t undo steps, as in FL Studio.</p>
+<h3 id="the-history-window"><a class="anchor" href="#the-history-window">The History window</a></h3>
+<p>Choose <strong>Edit › Undo History…</strong> to see every step you can undo, as FL Studio&#39;s History does. Each step is named after what it did, such as <strong>Move 3 notes</strong>, <strong>Add channel Kick</strong> or <strong>Tempo 128</strong>.</p>
+<ul>
+<li>The oldest step is at the top. The first line, <strong>Open</strong>, is the song as it opened; once the oldest steps have been forgotten it reads <strong>Oldest step kept</strong>.</li>
+<li>The step you&#39;re on is lit. Steps you&#39;ve undone are greyed out, until you make a new change.</li>
+<li>Click any step to go straight to it, back or forward. That&#39;s the same as pressing <kbd>⌘Z</kbd> or <kbd>⇧⌘Z</kbd> until you get there.</li>
+</ul>
+<p>Its footer says how many steps it keeps and, once older ones have been forgotten, how many.</p>
 <h2 id="saving"><a class="anchor" href="#saving">Saving</a></h2>
-<p>Your song saves itself as you work, after every change. A drag saves once, when you let go. You don&#39;t need to press anything.</p>
+<p>Your song saves itself as you work, after every change. A drag saves once, when you let go. You don&#39;t need to press anything. (If you&#39;d rather save by hand, see <a href="#save-by-hand">Save by hand</a>.)</p>
 <p>Press <kbd>⌘S</kbd>, or choose <strong>File › Save</strong>, to save straight away. You&#39;ll see <strong>Saved</strong>.</p>
 <p><strong>File › Save a Copy…</strong> writes a copy of the song somewhere else.</p>
 <p>If a save fails, a message says so. Keep the window open until it goes away. If the song&#39;s file is gone from where it was, Yen Studio tells you that changes aren&#39;t being saved.</p>
+<h3 id="save-by-hand"><a class="anchor" href="#save-by-hand">Save by hand</a></h3>
+<p>If you&#39;d rather choose when a song is saved, as in FL Studio, turn off <strong>Save automatically</strong> in <strong>Settings › Music › Saving</strong>. Then:</p>
+<ul>
+<li>A song is saved only when you press <kbd>⌘S</kbd> or choose <strong>File › Save</strong>.</li>
+<li><strong>Edited</strong> shows beside the song&#39;s name while it has changes you haven&#39;t saved, and its tab has a dot.</li>
+<li>Closing its tab, switching to another, going Home or quitting asks <strong>Do you want to save the changes you made to “…”?</strong> <strong>Save</strong> saves them, <strong>Don&#39;t Save</strong> leaves the song as you last saved it, and <strong>Cancel</strong> (or <kbd>Esc</kbd>) takes you back to it.</li>
+<li><strong>File › Revert to Saved</strong> takes the song back to how you last saved it. It&#39;s an undo step, so <kbd>⌘Z</kbd> brings your changes back.</li>
+</ul>
+<p>Turning <strong>Save automatically</strong> back on saves any changes that were waiting.</p>
+<h3 id="changes-that-werent-saved"><a class="anchor" href="#changes-that-werent-saved">Changes that weren&#39;t saved</a></h3>
+<p>While a song has changes waiting to be saved by hand, Yen Studio keeps a copy of them beside the song, a couple of seconds after you stop. If the app closes before you save, opening the song again offers them: <strong>Recover</strong> puts them back (as an undo step, so <kbd>⌘Z</kbd> goes back to the song as it was saved), and <strong>Discard</strong> lets them go. Saving or choosing <strong>Don&#39;t Save</strong> drops the copy.</p>
 <h2 id="make-a-first-beat"><a class="anchor" href="#make-a-first-beat">Make a first beat</a></h2>
 <p>Start a new song, then:</p>
 <ol>
 <li><strong>Program the drums.</strong> In the Channel rack, click a step to turn it on. Right-click turns it off. Drag across the steps to paint several. Put the kick on the first step of each beat and the clap on beats two and four.</li>
-<li><strong>Play it.</strong> Press <kbd>Space</kbd>. The pattern loops until you press <kbd>Space</kbd> again. To change the tempo, drag the tempo display up or down, or click it and type.</li>
+<li><strong>Play it.</strong> Press <kbd>Space</kbd>. The pattern loops until you press <kbd>Space</kbd> again. To change the tempo, drag the tempo display up or down, or double-click it and type.</li>
 <li><strong>Add a sound.</strong> Click <strong>+</strong> under the channels and pick an instrument: the Sampler, or <a href="../plugins/">one of your plugins</a>.</li>
 <li><strong>Play some notes.</strong> With the new channel selected, press <kbd>⌥3</kbd> to open the <a href="../piano-roll/">Piano roll</a>. Click in the grid to draw notes. Right-click deletes one.</li>
 <li><strong>Arrange it.</strong> Press <kbd>⌥1</kbd> to open the <a href="../playlist/">Playlist</a>, and drag your pattern from the Picker onto a track. Click <strong>SONG</strong> in the toolbar, then press <kbd>Space</kbd> to play the arrangement.</li>

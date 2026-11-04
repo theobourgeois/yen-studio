@@ -99,7 +99,9 @@ The song is exported as it was when you clicked **Start**. Keep editing: your ch
 - The window says what it's doing: **Rendering…**, **Rendering the tail…**, then **Encoding** each file, with how far along it is.
 - Click **Stop** to stop it. The files it had started are deleted. Closing the export window stops it too, so <kbd>Escape</kbd> doesn't close it while it's working.
 
-When it's done, the window lists the files and their sizes, and how long it took. Click **Show in Finder** to see them, **Export again** to go back to the settings, or **Done** to close it.
+When it's done, the window lists the files and their sizes, and how long it took. Click **Show in Finder** to see them, **Export again** to go back to the settings, or **Done** to close it. If the export window isn't open when it ends, a message says **Exported**, with the files' names and a **Show in Finder** button (unless **Show in Finder when done** already opened the folder).
+
+If you're in another app when an export ends, Yen Studio's icon in the Dock bounces once.
 
 ## What happens to plugins
 

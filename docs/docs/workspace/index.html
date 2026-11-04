@@ -94,6 +94,7 @@
 <li><strong>Bring a window to the front</strong> by clicking anywhere in it.</li>
 <li><strong>Close a window</strong> with the <strong>×</strong> at the right of its title bar.</li>
 </ul>
+<p>The Playlist, the Channel rack, the Piano roll, the Mixer and the other windows (all but the Browser, which keeps to the left) are windows of the Mac&#39;s own, as a plugin&#39;s window is. You can drag one past the edges of Yen Studio&#39;s main window, onto another part of the screen. They all stay above the main window, the one you clicked last in front, and they minimise with it.</p>
 <h3 id="resize-maximise-and-half-the-screen"><a class="anchor" href="#resize-maximise-and-half-the-screen">Resize, maximise and half the screen</a></h3>
 <p>Most windows can be resized. The Channel rack is the exception: it doesn&#39;t maximise or fill half the desktop.</p>
 <ul>
@@ -120,14 +121,16 @@
 <h3 id="record"><a class="anchor" href="#record">Record</a></h3>
 <p>The round <strong>Record</strong> button (<kbd>R</kbd>) turns recording on. While it&#39;s on, <strong>Play</strong> records the mixer tracks you&#39;ve armed and the notes you play on the selected channel. Right-click it for the count-in, loop recording and how recorded notes are quantized. See <a href="../recording/">Recording</a>.</p>
 <h3 id="tempo"><a class="anchor" href="#tempo">Tempo</a></h3>
-<p>The tempo display shows the song&#39;s tempo in BPM.</p>
+<p>The tempo display shows the song&#39;s tempo in BPM, in two parts as in FL Studio: the whole BPM in the larger digits, and its fine tune in thousandths after the point.</p>
 <ul>
-<li>Drag it up or down to change it. The pointer keeps going past the edge of the screen.</li>
-<li>Scroll over it to move it a beat per minute at a time.</li>
-<li>Click it to type a tempo. <kbd>Return</kbd> sets it; <kbd>Esc</kbd> keeps the old one. <kbd>↑</kbd> and <kbd>↓</kbd> nudge it.</li>
+<li>Drag the whole part up or down to change it a BPM at a time. Drag the decimals to fine tune it a thousandth at a time. The pointer keeps going past the edge of the screen.</li>
+<li>Scroll over either part to step it. Hold <kbd>⌘</kbd> as you scroll over the whole part to step a tenth of a BPM.</li>
+<li>Double-click it to type a tempo. <kbd>Return</kbd>, or clicking elsewhere, sets it; <kbd>Esc</kbd> keeps the old one. <kbd>↑</kbd> and <kbd>↓</kbd> nudge it a BPM.</li>
 </ul>
+<p>A single click does nothing, so you can&#39;t change the tempo by accident.</p>
 <p>Right-click it for more:</p>
 <ul>
+<li><strong>Type in value…</strong>: the same as double-clicking it.</li>
 <li><strong>Tap tempo…</strong>: tap along to the beat, by clicking the pad or pressing any key at least three times, then click <strong>Set tempo</strong>.</li>
 <li>An automation clip for the tempo, so it can change during the song. See <a href="../automation/">Automation</a>.</li>
 <li><strong>Make … BPM the default</strong>: new songs start at this tempo. <strong>Reset the default</strong> goes back to 140 BPM.</li>
@@ -167,15 +170,27 @@
 <h2 id="the-menu-bar"><a class="anchor" href="#the-menu-bar">The menu bar</a></h2>
 <p>The menus are at the left of the toolbar:</p>
 <ul>
-<li><strong>File</strong>: New Song, Open…, Find Song… (<kbd>⌘P</kbd>), Save, Save a Copy…, Rename…, Export, Show in Finder, Home and Close Tab.</li>
-<li><strong>Edit</strong>: Undo, Redo, Cut, Copy, Paste, Delete and Select All, which act on the window in front, and Settings….</li>
+<li><strong>File</strong>: New Song, Open…, Import FL Studio Project…, Find Song… (<kbd>⌘P</kbd>), Save (<kbd>⌘S</kbd>), Save a Copy…, Rename…, Export…, Export WAV… (<kbd>⌘R</kbd>), Export MP3… (<kbd>⇧⌘R</kbd>), Show in Finder, Home and Close Tab. A song you <a href="../coming-from-fl-studio/#open-an-fl-studio-project">imported from FL Studio</a> also has <strong>Import Report…</strong>. With <strong>Save automatically</strong> off, there&#39;s <strong>Revert to Saved</strong> too (see <a href="../getting-started/#saving">Saving</a>).</li>
+<li><strong>Edit</strong>: Undo, Redo, Undo History…, Cut, Copy, Paste, Delete and Select All, which act on the window in front, then Settings… and Check for Updates….</li>
 <li><strong>View</strong>: pattern or song mode, the metronome, the typing keyboard and the Channel rack&#39;s track selectors.</li>
 <li><strong>Patterns</strong>: New Pattern, Clone Pattern, and the next and previous pattern.</li>
 <li><strong>Tools</strong>: Record and Assign Free Mixer Tracks.</li>
 <li><strong>Window</strong>: the Playlist, the Channel rack, the Piano roll, the Mixer, the Browser and the Graph editor.</li>
 </ul>
 <p>Click a menu to open it. While one is open, move the pointer to another to open that, or press <kbd>←</kbd> and <kbd>→</kbd>.</p>
-<p>The Mac&#39;s own menu bar, at the top of the screen, has most of the same File and Edit commands, plus the View menu&#39;s zoom (<kbd>⌘=</kbd>, <kbd>⌘−</kbd> and <kbd>⌘0</kbd>), full screen (<kbd>⌃⌘F</kbd>) and Help. <strong>Help</strong> shows the data folder and the logs, reports a problem and opens the website.</p>
+<h3 id="the-macs-menu-bar"><a class="anchor" href="#the-macs-menu-bar">The Mac&#39;s menu bar</a></h3>
+<p>The Mac&#39;s own menu bar, at the top of the screen, has the menus every Mac app has:</p>
+<ul>
+<li><strong>Yen Studio</strong>: About Yen Studio, Check for Updates…, Settings… (<kbd>⌘,</kbd>), Hide (<kbd>⌘H</kbd>), Hide Others (<kbd>⌥⌘H</kbd>), Show All and Quit (<kbd>⌘Q</kbd>).</li>
+<li><strong>File</strong>: New Song (<kbd>⌘N</kbd>), Open… (<kbd>⌘O</kbd>), Open Recent, Import FL Studio Project…, Save (<kbd>⌘S</kbd>), Save a Copy…, Rename…, Export WAV… (<kbd>⌘R</kbd>), Export MP3… (<kbd>⇧⌘R</kbd>), Home (<kbd>⇧⌘H</kbd>), Show in Finder, Close Tab (<kbd>⌘W</kbd>) and Close Window (<kbd>⇧⌘W</kbd>).</li>
+<li><strong>Edit</strong>: Undo, Redo, Cut, Copy, Paste, Delete and Select All.</li>
+<li><strong>View</strong>: Zoom In (<kbd>⌘=</kbd> or <kbd>⌘+</kbd>), Zoom Out (<kbd>⌘−</kbd>), Actual Size (<kbd>⌘0</kbd>) and Enter Full Screen (<kbd>⌃⌘F</kbd>). Zooming makes everything in the app larger or smaller.</li>
+<li><strong>Window</strong>: Minimize (<kbd>⌘M</kbd>), Zoom and Bring All to Front.</li>
+<li><strong>Help</strong>: the docs, the website, Report a Problem…, Show Logs, Show Data Folder and the third-party notices.</li>
+</ul>
+<p><kbd>⌘S</kbd>, <kbd>⌘R</kbd> and <kbd>⌘N</kbd> work while a plugin&#39;s window is in front, and <kbd>⌘W</kbd> closes that plugin&#39;s window.</p>
+<aside class="callout note"><p><strong>Note:</strong> With the <a href="../piano-roll/">Piano roll</a> or the <a href="../playlist/">Playlist</a> in front, <kbd>⌘Q</kbd> quantizes, as <kbd>Ctrl+Q</kbd> does in FL Studio. Anywhere else it quits Yen Studio.</p>
+</aside>
 <h2 id="the-tab-strip"><a class="anchor" href="#the-tab-strip">The tab strip</a></h2>
 <p>Each song you open is a tab in the strip along the top of the window. The Home button starts the strip.</p>
 <ul>
