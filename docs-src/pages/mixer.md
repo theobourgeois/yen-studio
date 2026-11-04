@@ -168,8 +168,8 @@ The inspector shows the current track's effect slots. An empty one reads **Slot*
 
 1. Click an empty slot.
 2. Pick an effect: the [built-in effects](effects) come first (Y-EQ, Y-C, Y-L, Y-R, Y-Multiband, Y-Time,
-   Y-Delay, Y-Tune, Y-Pan, Y-Pitch), then the [plugins](plugins) you've starred. **More plugins…** opens the Plugin
-   manager.
+   Y-Delay, Y-Tune, Y-Pan, Y-Pitch), then the [plugins](plugins) you've starred, then the rest of your effect plugins.
+   **Plugin manager…** opens the Plugin manager, where you star the plugins you use so they come first.
 
 A built-in effect's window opens at once; a plugin's opens when it has loaded. A spinner shows while it loads. If it
 fails, the slot shows a warning and a button to try again.

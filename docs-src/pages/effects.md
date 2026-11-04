@@ -11,11 +11,11 @@ Yen Studio comes with its own effects: an EQ, compressors, a limiter, a reverb, 
 
 1. Open the [Mixer](mixer) and click the track you want the effect on.
 2. In the Inspector on the Mixer's right, click an empty slot (it reads *Slot 1*, *Slot 2* and so on), or the arrow beside it.
-3. Pick an effect. The built-in ones come first, under **Built in**; your plugins follow, by kind.
+3. Pick an effect. The built-in ones come first, under **Built in**; then the plugins you've starred, under **Starred**; then the rest of your plugins, by kind or maker.
 
 A built-in effect opens its window as soon as you pick it. The window's title says the effect and the track it's on, for example *Y-C (Vocals)*.
 
-> **Tip:** **More plugins** at the foot of the picker opens the plugin manager, for [your plugins](plugins).
+> **Tip:** **Plugin manager…** at the foot of the picker opens the Plugin manager, where you star [your plugins](plugins) so the picker lists them first.
 
 ## Work with a loaded slot
 

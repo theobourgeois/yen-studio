@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coming from FL Studio: Yen Studio docs</title>
-<meta name="description" content="What works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.">
+<meta name="description" content="Open your FL Studio projects, and learn what works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.">
 <link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/coming-from-fl-studio/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Coming from FL Studio">
-<meta property="og:description" content="What works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.">
+<meta property="og:description" content="Open your FL Studio projects, and learn what works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.">
 <meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/coming-from-fl-studio/">
 <meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -45,18 +45,40 @@
 <main id="doc" class="doc" data-pagefind-body data-pagefind-meta="section:Start">
 <p class="crumb" data-pagefind-ignore>Start</p>
 <h1 data-pagefind-meta="title">Coming from FL Studio</h1>
-<p>If you know FL Studio, you already know most of Yen Studio. The Channel rack, the Piano roll, the Playlist and the Mixer are laid out the way FL lays them out, and they take FL&#39;s clicks and most of its keys. This page is for the rest: the keys on a Mac, the places Yen Studio works differently, and what isn&#39;t there yet.</p>
-<aside class="callout note"><p><strong>Note:</strong> Yen Studio can&#39;t open FL Studio projects (<code>.flp</code> files). Start your songs in Yen Studio, or bring your samples over with the <a href="../browser/">Browser</a>.</p>
-</aside>
+<p>If you know FL Studio, you already know most of Yen Studio. The Channel rack, the Piano roll, the Playlist and the Mixer are laid out the way FL lays them out, and they take FL&#39;s clicks and most of its keys. This page is for the rest: bringing your projects over, the keys on a Mac, the places Yen Studio works differently, and what isn&#39;t there yet.</p>
+<h2 id="open-an-fl-studio-project"><a class="anchor" href="#open-an-fl-studio-project">Open an FL Studio project</a></h2>
+<p>Yen Studio opens FL Studio projects (<code>.flp</code> files). Choose <strong>File › Import FL Studio Project…</strong>, or open an <code>.flp</code> with <strong>Open…</strong> or by dropping it on Home. Yen Studio makes a new song of it, beside your other songs and named after the file. The <code>.flp</code> itself is only read, never changed, and its samples are copied into the new song, so they stay where they were too.</p>
+<p>What comes over:</p>
+<ul>
+<li>The tempo, the time signature and the Playlist&#39;s time markers.</li>
+<li>The Channel rack: each channel&#39;s name, colour, volume, pan, pitch and mixer track, and a sampler&#39;s sample with its Normalize, Reverse, start, length and quick fades.</li>
+<li>Every pattern, with its notes.</li>
+<li>The Playlist&#39;s tracks, with their pattern and audio clips.</li>
+<li>The Mixer: the tracks&#39; names, colours, levels, pans, mutes and routing.</li>
+<li>Your plugins, with the sounds you saved in them, when the same plugin is on this Mac as a VST3 or an Audio Unit.</li>
+<li>Some of FL&#39;s own effects, made into ours: its parametric EQ becomes <a href="../y-eq/">Y-EQ</a>, its limiter <a href="../y-l/">Y-L</a> or <a href="../y-c/">Y-C</a>, its reverb <a href="../y-r/">Y-R</a> and its time and volume effect <a href="../y-time/">Y-Time</a>, with their settings.</li>
+<li>Automation clips, for the controls Yen Studio has.</li>
+</ul>
+<p>Samples are looked for where the project says they are, then beside the <code>.flp</code>, in FL Studio&#39;s own folders and by name.</p>
+<p>When the import is done, a message says what came over and what didn&#39;t. If anything didn&#39;t, click <strong>Details</strong> for the import report: each thing that didn&#39;t come over, under Samples, Instruments, Effects, Automation and Other, with why. <strong>File › Import Report…</strong> opens it again while the song is open.</p>
+<p>What doesn&#39;t come over:</p>
+<ul>
+<li><strong>FL&#39;s own instruments</strong> belong to FL Studio. Their channels and notes come over, without a sound.</li>
+<li><strong>VST2 plugins</strong>: Yen Studio hosts VST3 and Audio Units only. The channel or slot is kept, with its name, and marked missing.</li>
+<li><strong>FL&#39;s effects that Yen Studio has nothing like</strong>: the slot is listed and left empty. Those that came over as one of ours are listed with anything that sounds different.</li>
+<li><strong>Samples that aren&#39;t on this Mac</strong>: the channel comes over without its sample, and the report lists it.</li>
+<li>Other things Yen Studio doesn&#39;t have yet, such as slides and per-note fine pitch, the sampler&#39;s envelopes and arpeggiator, and arrangements after the first. The report lists each one that your project uses.</li>
+</ul>
 <h2 id="whats-the-same"><a class="anchor" href="#whats-the-same">What&#39;s the same</a></h2>
 <ul>
 <li><strong>PAT / SONG.</strong> <kbd>L</kbd> switches. Pattern mode loops the pattern shown in the rack; song mode plays the Playlist.</li>
-<li><strong>The Channel rack.</strong> Click a step to turn it on, right-click to turn it off, and drag to paint either way. A channel&#39;s button opens its settings. <kbd>1</kbd> to <kbd>0</kbd> mute the first ten channels and <kbd>⌘1</kbd> to <kbd>⌘0</kbd> solo them.</li>
+<li><strong>The Channel rack.</strong> Click a step to turn it on, right-click to turn it off, and drag to paint either way. A channel&#39;s button opens its settings. <kbd>1</kbd> to <kbd>0</kbd> mute the first ten channels and <kbd>⌘1</kbd> to <kbd>⌘9</kbd> solo them. The tenth solos with <kbd>⌃0</kbd>, because <kbd>⌘0</kbd> is the Mac&#39;s Actual Size.</li>
 <li><strong>Knobs.</strong> Drag to turn, hold <kbd>⌘</kbd> for fine moves, and ⌥-click to reset. Right-click for Reset, Copy value, Paste value and Type in value.</li>
 <li><strong>The Piano roll and the Playlist tools,</strong> on FL&#39;s letters: Draw <kbd>P</kbd>, Paint <kbd>B</kbd>, Delete <kbd>D</kbd>, Mute <kbd>T</kbd>, Slice <kbd>C</kbd>, Select <kbd>E</kbd>, Zoom <kbd>Z</kbd> and Playback <kbd>Y</kbd>. The Playlist adds Slip <kbd>S</kbd>. Click adds, right-click deletes, and <kbd>⇧</kbd>-drag clones.</li>
 <li><strong>The Playlist.</strong> Tracks aren&#39;t tied to channels. Pattern, audio and automation clips go on any track, and the Picker holds patterns, audio clips and automation clips.</li>
 <li><strong>The Mixer.</strong> Inserts beside the master, effect slots, sends, routing, and <kbd>⌘L</kbd> to give the selected channels free mixer tracks.</li>
-<li><strong>The toolbar.</strong> The transport, the tempo and position displays, the pattern selector and the hint bar are where FL keeps them. See <a href="../workspace/">Windows and the toolbar</a>.</li>
+<li><strong>The toolbar.</strong> The transport, the tempo and position displays, the pattern selector and the hint bar are where FL keeps them. The tempo drags as FL&#39;s does: the whole BPM, or its decimals for a fine tune, and a double-click types it. See <a href="../workspace/">Windows and the toolbar</a>.</li>
+<li><strong>History.</strong> <strong>Edit › Undo History…</strong> lists your undo steps by name. Click one to go back to it. See <a href="../getting-started/#the-history-window">Getting started</a>.</li>
 <li><strong>Export.</strong> <kbd>⌘R</kbd> exports a WAV and <kbd>⇧⌘R</kbd> an MP3. Both ask where to save first, then open the export window.</li>
 </ul>
 <h2 id="fls-keys-on-a-mac"><a class="anchor" href="#fls-keys-on-a-mac">FL&#39;s keys on a Mac</a></h2>
@@ -131,7 +153,7 @@
 </tr>
 <tr>
 <td>Ctrl+Q Quick quantize</td>
-<td><kbd>⌃Q</kbd> (<kbd>⌘Q</kbd> is the Mac&#39;s Quit)</td>
+<td><kbd>⌘Q</kbd> (or <kbd>⌃Q</kbd>) with the Piano roll or the Playlist in front; anywhere else <kbd>⌘Q</kbd> quits</td>
 </tr>
 <tr>
 <td>Alt+Q Quantizer</td>
@@ -193,7 +215,7 @@
 <li>The channel groups are fixed: <strong>Unsorted</strong> (every channel but the Playlist&#39;s audio clips), <strong>Audio</strong> and <strong>All</strong>.</li>
 <li>Turning a step off removes its note. There&#39;s no &quot;Mute removed steps&quot;.</li>
 <li>Swing is the song&#39;s, on the rack. A sampler&#39;s settings have a <strong>SWING</strong> knob for how much of it that channel takes.</li>
-<li>Your plugins are found in the <strong>Plugin manager</strong>: click <strong>More plugins…</strong> in the plugin picker and star the ones you use. The picker lists our instruments and effects and the plugins you&#39;ve starred.</li>
+<li>Yen Studio finds your plugins by itself, and the plugin picker lists all of them: ours first, then the ones you&#39;ve starred, then the rest by kind or maker. See <a href="../plugins/">Plugins</a>.</li>
 </ul>
 <h3 id="the-piano-roll"><a class="anchor" href="#the-piano-roll">The Piano roll</a></h3>
 <ul>
@@ -252,7 +274,6 @@
 <h2 id="what-isnt-there-yet"><a class="anchor" href="#what-isnt-there-yet">What isn&#39;t there yet</a></h2>
 <p>Yen Studio is pre-alpha. These are some of the FL Studio features it doesn&#39;t have yet:</p>
 <ul>
-<li>Opening <code>.flp</code> projects.</li>
 <li>A Windows version.</li>
 <li>Arrangements and performance mode in the Playlist.</li>
 <li>Crossfades and reversing a single audio clip.</li>
@@ -267,7 +288,7 @@
 <nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../workspace/"><span>Previous</span>Windows and the toolbar</a><a class="next" rel="next" href="../channel-rack/"><span>Next</span>Channel rack</a></nav>
 <p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Coming%20from%20FL%20Studio">Tell us</a>.</p>
 </main>
-<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#whats-the-same">What's the same</a></li><li><a href="#fls-keys-on-a-mac">FL's keys on a Mac</a></li><li><a href="#whats-different">What's different</a></li><li><a href="#what-isnt-there-yet">What isn't there yet</a></li></ul></nav>
+<nav class="toc" aria-label="On this page"><span class="group">On this page</span><ul><li><a href="#open-an-fl-studio-project">Open an FL Studio project</a></li><li><a href="#whats-the-same">What's the same</a></li><li><a href="#fls-keys-on-a-mac">FL's keys on a Mac</a></li><li><a href="#whats-different">What's different</a></li><li><a href="#what-isnt-there-yet">What isn't there yet</a></li></ul></nav>
 </div>
 </body>
 </html>

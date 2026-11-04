@@ -1,21 +1,47 @@
 ---
 title: Coming from FL Studio
-description: What works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.
+description: Open your FL Studio projects, and learn what works the way FL Studio does, what's different, FL's keys on a Mac, and what Yen Studio can't do yet.
 ---
 
-If you know FL Studio, you already know most of Yen Studio. The Channel rack, the Piano roll, the Playlist and the Mixer are laid out the way FL lays them out, and they take FL's clicks and most of its keys. This page is for the rest: the keys on a Mac, the places Yen Studio works differently, and what isn't there yet.
+If you know FL Studio, you already know most of Yen Studio. The Channel rack, the Piano roll, the Playlist and the Mixer are laid out the way FL lays them out, and they take FL's clicks and most of its keys. This page is for the rest: bringing your projects over, the keys on a Mac, the places Yen Studio works differently, and what isn't there yet.
 
-> **Note:** Yen Studio can't open FL Studio projects (`.flp` files). Start your songs in Yen Studio, or bring your samples over with the [Browser](browser).
+## Open an FL Studio project
+
+Yen Studio opens FL Studio projects (`.flp` files). Choose **File › Import FL Studio Project…**, or open an `.flp` with **Open…** or by dropping it on Home. Yen Studio makes a new song of it, beside your other songs and named after the file. The `.flp` itself is only read, never changed, and its samples are copied into the new song, so they stay where they were too.
+
+What comes over:
+
+- The tempo, the time signature and the Playlist's time markers.
+- The Channel rack: each channel's name, colour, volume, pan, pitch and mixer track, and a sampler's sample with its Normalize, Reverse, start, length and quick fades.
+- Every pattern, with its notes.
+- The Playlist's tracks, with their pattern and audio clips.
+- The Mixer: the tracks' names, colours, levels, pans, mutes and routing.
+- Your plugins, with the sounds you saved in them, when the same plugin is on this Mac as a VST3 or an Audio Unit.
+- Some of FL's own effects, made into ours: its parametric EQ becomes [Y-EQ](y-eq), its limiter [Y-L](y-l) or [Y-C](y-c), its reverb [Y-R](y-r) and its time and volume effect [Y-Time](y-time), with their settings.
+- Automation clips, for the controls Yen Studio has.
+
+Samples are looked for where the project says they are, then beside the `.flp`, in FL Studio's own folders and by name.
+
+When the import is done, a message says what came over and what didn't. If anything didn't, click **Details** for the import report: each thing that didn't come over, under Samples, Instruments, Effects, Automation and Other, with why. **File › Import Report…** opens it again while the song is open.
+
+What doesn't come over:
+
+- **FL's own instruments** belong to FL Studio. Their channels and notes come over, without a sound.
+- **VST2 plugins**: Yen Studio hosts VST3 and Audio Units only. The channel or slot is kept, with its name, and marked missing.
+- **FL's effects that Yen Studio has nothing like**: the slot is listed and left empty. Those that came over as one of ours are listed with anything that sounds different.
+- **Samples that aren't on this Mac**: the channel comes over without its sample, and the report lists it.
+- Other things Yen Studio doesn't have yet, such as slides and per-note fine pitch, the sampler's envelopes and arpeggiator, and arrangements after the first. The report lists each one that your project uses.
 
 ## What's the same
 
 - **PAT / SONG.** <kbd>L</kbd> switches. Pattern mode loops the pattern shown in the rack; song mode plays the Playlist.
-- **The Channel rack.** Click a step to turn it on, right-click to turn it off, and drag to paint either way. A channel's button opens its settings. <kbd>1</kbd> to <kbd>0</kbd> mute the first ten channels and <kbd>⌘1</kbd> to <kbd>⌘0</kbd> solo them.
+- **The Channel rack.** Click a step to turn it on, right-click to turn it off, and drag to paint either way. A channel's button opens its settings. <kbd>1</kbd> to <kbd>0</kbd> mute the first ten channels and <kbd>⌘1</kbd> to <kbd>⌘9</kbd> solo them. The tenth solos with <kbd>⌃0</kbd>, because <kbd>⌘0</kbd> is the Mac's Actual Size.
 - **Knobs.** Drag to turn, hold <kbd>⌘</kbd> for fine moves, and ⌥-click to reset. Right-click for Reset, Copy value, Paste value and Type in value.
 - **The Piano roll and the Playlist tools,** on FL's letters: Draw <kbd>P</kbd>, Paint <kbd>B</kbd>, Delete <kbd>D</kbd>, Mute <kbd>T</kbd>, Slice <kbd>C</kbd>, Select <kbd>E</kbd>, Zoom <kbd>Z</kbd> and Playback <kbd>Y</kbd>. The Playlist adds Slip <kbd>S</kbd>. Click adds, right-click deletes, and <kbd>⇧</kbd>-drag clones.
 - **The Playlist.** Tracks aren't tied to channels. Pattern, audio and automation clips go on any track, and the Picker holds patterns, audio clips and automation clips.
 - **The Mixer.** Inserts beside the master, effect slots, sends, routing, and <kbd>⌘L</kbd> to give the selected channels free mixer tracks.
-- **The toolbar.** The transport, the tempo and position displays, the pattern selector and the hint bar are where FL keeps them. See [Windows and the toolbar](workspace).
+- **The toolbar.** The transport, the tempo and position displays, the pattern selector and the hint bar are where FL keeps them. The tempo drags as FL's does: the whole BPM, or its decimals for a fine tune, and a double-click types it. See [Windows and the toolbar](workspace).
+- **History.** **Edit › Undo History…** lists your undo steps by name. Click one to go back to it. See [Getting started](getting-started#the-history-window).
 - **Export.** <kbd>⌘R</kbd> exports a WAV and <kbd>⇧⌘R</kbd> an MP3. Both ask where to save first, then open the export window.
 
 ## FL's keys on a Mac
@@ -42,7 +68,7 @@ Yen Studio takes FL Studio's keys, moved onto a Mac keyboard:
 | Ctrl+T Typing keyboard to piano | <kbd>⌘T</kbd> |
 | Ctrl+L Assign free mixer tracks | <kbd>⌘L</kbd> |
 | Ctrl+B Duplicate | <kbd>⌘B</kbd> |
-| Ctrl+Q Quick quantize | <kbd>⌃Q</kbd> (<kbd>⌘Q</kbd> is the Mac's Quit) |
+| Ctrl+Q Quick quantize | <kbd>⌘Q</kbd> (or <kbd>⌃Q</kbd>) with the Piano roll or the Playlist in front; anywhere else <kbd>⌘Q</kbd> quits |
 | Alt+Q Quantizer | <kbd>⌥Q</kbd> |
 | Ctrl+G Glue notes | <kbd>⌘G</kbd> in the Piano roll |
 | Ctrl+U Chop, Alt+U Chopper | <kbd>⌘U</kbd>, <kbd>⌥U</kbd> |
@@ -78,7 +104,7 @@ There's no F10. Open Settings with <kbd>⌘,</kbd> or the gear on the toolbar. I
 - The channel groups are fixed: **Unsorted** (every channel but the Playlist's audio clips), **Audio** and **All**.
 - Turning a step off removes its note. There's no "Mute removed steps".
 - Swing is the song's, on the rack. A sampler's settings have a **SWING** knob for how much of it that channel takes.
-- Your plugins are found in the **Plugin manager**: click **More plugins…** in the plugin picker and star the ones you use. The picker lists our instruments and effects and the plugins you've starred.
+- Yen Studio finds your plugins by itself, and the plugin picker lists all of them: ours first, then the ones you've starred, then the rest by kind or maker. See [Plugins](plugins).
 
 ### The Piano roll
 
@@ -143,7 +169,6 @@ See [Export](export).
 
 Yen Studio is pre-alpha. These are some of the FL Studio features it doesn't have yet:
 
-- Opening `.flp` projects.
 - A Windows version.
 - Arrangements and performance mode in the Playlist.
 - Crossfades and reversing a single audio clip.

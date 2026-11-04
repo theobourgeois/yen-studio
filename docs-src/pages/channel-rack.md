@@ -85,8 +85,8 @@ The **Patterns** menu has **New Pattern**, **Clone Pattern**, **Previous Pattern
 ## Add channels
 
 Press the **+** under the last row to add a channel. Choose **Sampler** to play a sample, or one of your instrument
-plugins. The list shows the plugins you've starred in the Plugin manager; **More plugins…** opens it, and **Scan for
-plugins** looks for ones installed since the last scan. <kbd>F8</kbd> opens the same list, opening the rack first if
+plugins. The list has every instrument plugin on your computer, the ones you've starred first; **Plugin manager…**
+opens the Plugin manager, and **Scan for plugins** looks at every plugin again. <kbd>F8</kbd> opens the same list, opening the rack first if
 it's closed.
 
 A new sampler is selected and its [settings window](sampler) opens. A plugin's own window opens once it has loaded.

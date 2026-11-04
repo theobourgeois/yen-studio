@@ -5,35 +5,30 @@ description: Load your VST3 and Audio Units plugins as instruments and effects, 
 
 Yen Studio loads your VST3 and Audio Units plugins. An instrument plugin goes on a channel in the [Channel rack](channel-rack). An effect plugin goes in a slot of a [Mixer](mixer) track. Each one opens in a window of its own, and every knob on it can be [automated](automation).
 
-## Scan for your plugins
+## Finding your plugins
 
-Yen Studio doesn't look for plugins until you ask. Do it once after you install it, and again whenever you install a new plugin.
+Yen Studio finds your plugins by itself. Each time it starts, it looks in the usual places on a Mac for VST3 and Audio Units. The first time, it looks at all of them, which can take a while; after that, only at plugins that are new or have been updated since. While it looks, the hint bar and the bottom of the pickers say how far it has got: **Finding your plugins…** the first time, **Looking for plugins…** after that, with how many it has looked at. When it finds new plugins, a message says how many.
 
-1. Click **+** at the bottom of the Channel rack, or press <kbd>F8</kbd>.
-2. Click **Scan for plugins** at the bottom of the picker.
-3. Wait while the status line says which plugin it's scanning.
+If a song was opened before a plugin it uses was found, it picks the plugin up when the scan ends.
 
-You can also scan from the Plugin manager (its **Scan for plugins** button), or from Settings › Music › **Engine and plugins** (its **Scan** button). There it says how many plugins were found.
+### Scan again
 
-Yen Studio looks in the usual places on a Mac for VST3 and Audio Units. A scan also drops plugins that are no longer on your disk.
+To look at every plugin again, click **Scan for plugins**. It's at the bottom of the instrument picker (the Channel rack's **+**, or <kbd>F8</kbd>), in the Plugin manager, and in Settings › Music › **Plugins** (its **Scan** button). A scan from there also forgets plugins that are no longer on your disk, and tries the skipped ones again.
 
 ### Plugins that are skipped
 
 Each plugin is scanned on its own, one at a time. If one crashes, takes longer than 60 seconds to load, or has nothing in it Yen Studio can load, it's skipped and the scan carries on. Yen Studio doesn't crash with it.
 
-Skipped plugins are listed under the scan, each with the reason, for example "Some Synth crashed during the scan and was skipped." Click **Try again** to scan them again, after updating the plugin for example.
-
-If a song was opened before a plugin it uses was found, it picks the plugin up when the scan ends.
+When a scan skips plugins, its message says how many, with a **Plugin manager** button. The Plugin manager and Settings › Music › **Plugins** list them, each with the reason, for example "Some Synth crashed during the scan and was skipped." Click **Try again** to scan them again, after updating the plugin for example.
 
 ## Star the plugins you use
 
-The pickers list the built-in instruments and effects, and only the plugins you've starred. That keeps them short. You star plugins in the Plugin manager.
+The pickers list every plugin found on your computer. The ones you've starred come first, so the plugins you use are always at hand.
 
-1. Open a picker (click **+** in the Channel rack, or click an empty slot in the Mixer).
-2. Click **More plugins…** at the bottom. It says how many more are on your computer.
-3. In the Plugin manager, click a plugin's row to star it. Click it again to unstar it.
+- **In a picker**, move to a plugin (with the pointer or the arrow keys) and click the star on its line. Click it again to unstar it.
+- **In the Plugin manager**, click a plugin's row to star it. Click it again to unstar it.
 
-The Plugin manager lists every plugin found, with its maker, its kind and its format (VST3 or AU). Type in the search field to find a plugin by its name, maker or kind. The buttons at the top show **All**, **Instruments**, **Effects** or **Starred**. The bottom line says how many you've starred.
+To open the Plugin manager, open a picker (click **+** in the Channel rack, or click an empty slot in the Mixer) and click **Plugin manager…** at the bottom. It lists every plugin found, with its maker, its kind and its format (VST3 or AU). Type in the search field to find a plugin by its name, maker or kind. The buttons at the top show **All**, **Instruments**, **Effects** or **Starred**. The bottom line says how many you've starred.
 
 Stars belong to your computer, not to a song: they're the same in every song. Press <kbd>Escape</kbd> to close the Plugin manager.
 
@@ -41,11 +36,13 @@ Stars belong to your computer, not to a song: they're the same in every song. Pr
 
 The picker opens from the Channel rack's **+** (<kbd>F8</kbd>), from a channel's **Replace…**, and from a Mixer slot.
 
-- The search field has the focus as it opens: type to narrow the list.
+- The search field has the focus as it opens: type to narrow the list. It searches the plugins' names, makers and kinds.
 - **Built in** comes first. In the Channel rack that's the [Sampler](sampler). In a Mixer slot, it's Yen Studio's [own effects](effects).
-- Your starred plugins follow, grouped by the kind the plugin says it is: EQ, Reverb, Synth and so on. Plugins that don't say are under Other, at the end.
-- Use <kbd>↑</kbd> and <kbd>↓</kbd> to move through a column and <kbd>←</kbd> and <kbd>→</kbd> to move across columns. Once you've typed in the search field, hold <kbd>⌥</kbd> with <kbd>←</kbd> and <kbd>→</kbd>. Press <kbd>Enter</kbd> to choose.
-- Hover over a plugin and click its pin to pin it to the top. Pinned plugins get a column of their own, first. Click the pin again to unpin it. Pins belong to your computer, like stars.
+- **Starred** follows, with the plugins you've starred.
+- Then every other plugin, grouped by the kind the plugin says it is: EQ, Reverb, Synth and so on. Plugins that don't say are grouped by their maker, and the rest are under Other, at the end.
+- A plugin that comes as both a VST3 and an Audio Unit is listed once, as the VST3.
+- The groups run down one column and on into the next. When there are more than fit, the picker scrolls sideways; the mouse wheel scrolls it too.
+- Use <kbd>↑</kbd> and <kbd>↓</kbd> to move through the list and <kbd>←</kbd> and <kbd>→</kbd> to move across columns. Once you've typed in the search field, hold <kbd>⌥</kbd> with <kbd>←</kbd> and <kbd>→</kbd>. Press <kbd>Enter</kbd> to choose.
 
 ## Plugin channels
 

@@ -11,17 +11,33 @@
 <main class="prose">
   <a class="brand" href="./"><img src="logo.svg" alt="" width="44" height="44">Yen Studio</a>
   <h1>What Yen Studio sends</h1>
-  <p>Your songs and samples stay on your computer. There's no account and no analytics.</p>
-  <h2>The app</h2>
+  <p>Your songs and samples stay on your computer. There's no account. Usage and crash reports go out only if you say yes.</p>
+
+  <h2>Usage and crash reports</h2>
+  <p>The app asks once, with two equal buttons, and sends nothing until you answer. A no sends nothing, ever. To change your answer, go to Settings › General › Send usage and crash reports. Turning it off also forgets your anonymous id and anything still waiting to be sent; turning it on later starts a new id.</p>
+  <p>If you say yes, these go to <a href="https://posthog.com">PostHog</a>, a product analytics service, on its US servers:</p>
   <ul>
-    <li><b>Checking for a new version:</b> one request to GitHub at each launch, for the latest release's number. It carries no identifiers. Nothing installs itself.</li>
+    <li><b>An anonymous id</b>, made up at random on your computer when you said yes, and one for each time the app runs. Neither is tied to your name or account, because there isn't one.</li>
+    <li><b>Your version and system:</b> the app's version, the operating system's name (not its version), and whether your Mac is Apple silicon or Intel. Not your Mac's model.</li>
+    <li><b>What's used:</b> that the app opened and how many minutes it stayed open, that a project was made or opened, that you pressed play, whether in song or pattern mode, and that an export finished or failed, with its formats, whether it had stems, and its length in seconds.</li>
+    <li><b>Plugins:</b> the name, format and kind (instrument or effect) of the plugins you load, and of any that fail to load. Not where they are, or their settings.</li>
+    <li><b>When something breaks:</b> the kind of error, the app's own fixed description of it, where in the app's code it happened, and which assistant tool failed. After a crash, the next launch sends the crash's type, the list of code it was running and the plugin it was in, from the report your Mac wrote.</li>
+  </ul>
+  <p><b>Never your songs, sounds or file names, or the paths to them,</b> and none of your notes or settings. Text from an error is only sent when the programming language wrote it, about the app's code, and it's cleaned first of anything that looks like a file, a path, a quoted name, an address, your user name or your computer's name.</p>
+  <p>The internet address your computer connects from reaches PostHog, as it does any server. The project is set to discard it, and the app asks for no location to be worked out from it.</p>
+
+  <h2>The rest of the app</h2>
+  <ul>
+    <li><b>Checking for a new version:</b> a request to GitHub when the app opens and every six hours after, for the latest release. It carries no identifiers. An update downloads from GitHub and installs only when you choose Install Update.</li>
     <li><b>Models:</b> Extract stems and Convert to notes download their models from GitHub the first time you say yes to it. Your audio is processed on your Mac and isn't uploaded.</li>
     <li><b>The assistant:</b> if you use it, what you ask and the parts of your song it reads go to Anthropic or OpenAI through your own Claude Code or Codex, under that service's terms.</li>
-    <li><b>Reports:</b> Help › Report a Problem opens a GitHub issue in your browser, with the app's version and your system's filled in. You see it before you send it. Logs are never attached for you.</li>
+    <li><b>Report a Problem:</b> Help › Report a Problem opens a GitHub issue in your browser, with the app's version and your system's filled in. You see it before you send it. Logs are never attached for you.</li>
     <li><b>Local server:</b> the app talks to its own engine on your computer and refuses requests from web pages.</li>
   </ul>
+
   <h2>This website</h2>
   <p>It's a plain page on GitHub Pages: no cookies, no analytics, and the fonts are served from here. GitHub keeps its own server logs, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">its privacy statement</a>.</p>
+
   <h2>Questions</h2>
   <p><a href="https://github.com/theobourgeois/yen-studio/issues">Open an issue</a>.</p>
 </main>

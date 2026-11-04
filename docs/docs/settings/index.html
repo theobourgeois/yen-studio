@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Settings: Yen Studio docs</title>
-<meta name="description" content="Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI and quality.">
+<meta name="description" content="Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI, quality, saving and plugins.">
 <link rel="canonical" href="https://theobourgeois.github.io/yen-studio/docs/settings/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Settings">
-<meta property="og:description" content="Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI and quality.">
+<meta property="og:description" content="Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI, quality, saving and plugins.">
 <meta property="og:url" content="https://theobourgeois.github.io/yen-studio/docs/settings/">
 <meta property="og:image" content="https://theobourgeois.github.io/yen-studio/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -47,8 +47,9 @@
 <h1 data-pagefind-meta="title">Settings</h1>
 <p>Settings is where you choose how Yen Studio looks, where your songs are saved, and where its sound goes. It opens as a
 window over the app, and you can keep working with it open.</p>
-<p>Press <kbd>⌘,</kbd> to open it, or choose <strong>Settings…</strong> from the <strong>Edit</strong> menu. Press <kbd>⌘,</kbd> again or
-<kbd>Esc</kbd> to close it. With a song open it starts on the <strong>Music</strong> tab; from the Home screen it starts on
+<p>Press <kbd>⌘,</kbd> to open it, or choose <strong>Settings…</strong> from the <strong>Edit</strong> menu or the <strong>Yen Studio</strong> menu in the Mac&#39;s
+menu bar. If it&#39;s already open behind other windows, <kbd>⌘,</kbd> brings it to the front. Press <kbd>⌘,</kbd> again
+while you&#39;re in it, or <kbd>Esc</kbd>, to close it. With a song open it starts on the <strong>Music</strong> tab; from the Home screen it starts on
 <strong>General</strong>. Click a tab to switch, or use the arrow keys, <kbd>Home</kbd> and <kbd>End</kbd> on the tabs.</p>
 <h2 id="general"><a class="anchor" href="#general">General</a></h2>
 <p>How the whole app looks, and where new songs go.</p>
@@ -196,26 +197,24 @@ sound cleaner (no faint whistles on bright sounds) and cost more. Your plugins a
 <h3 id="reset-plugins-on-stop"><a class="anchor" href="#reset-plugins-on-stop">Reset plugins on stop</a></h3>
 <p>Under <strong>Playback</strong>. On, stopping silences delays, reverbs and every other tail at once. Off, they ring out after a
 stop, and pressing Stop again silences them.</p>
+<h3 id="save-automatically"><a class="anchor" href="#save-automatically">Save automatically</a></h3>
+<p>Under <strong>Saving</strong>. On (the default), every change is saved as you make it. Off, a song is saved only when you press
+<kbd>⌘S</kbd> or choose <strong>File › Save</strong>, and closing it asks whether to save your changes. See
+<a href="../getting-started/#saving">Saving</a>.</p>
 <h3 id="open-favourite-folders-in-place"><a class="anchor" href="#open-favourite-folders-in-place">Open favourite folders in place</a></h3>
 <p>Under <strong>Browser</strong>. On, a folder you&#39;ve starred opens under <strong>Favourites</strong> in <a href="../browser/">the Browser</a>. Off, it&#39;s a
 shortcut: clicking it shows the folder where it is among your folders.</p>
-<h3 id="engine-and-plugins"><a class="anchor" href="#engine-and-plugins">Engine and plugins</a></h3>
-<p>The state of the audio engine, and a test bench for your plugins.</p>
+<h3 id="plugins"><a class="anchor" href="#plugins">Plugins</a></h3>
+<p>The state of the audio engine, and your plugins.</p>
 <p>The status card shows the device, its sample rate and buffer, how late its output is, how hard the engine is working,
 any dropouts, and the output&#39;s level on a meter. Turn on <strong>Test tone</strong> to check you can hear the engine at all.</p>
-<p>The <strong>Plugins</strong> card says how many plugins were found (VST3 and Audio Units). Click <strong>Scan</strong> to look for plugins you&#39;ve
-installed since. A plugin that crashed during the scan is listed under it as skipped, with the reason and a way to try
-it again. See <a href="../plugins/">Plugins</a>.</p>
-<p>The <strong>Instrument</strong> and <strong>Effect</strong> cards try a plugin on its own, outside any song:</p>
-<ol>
-<li>Pick an instrument under <strong>Instrument</strong>. Play it with the keys under the cards.</li>
-<li>Pick an effect under <strong>Effect</strong>. The song, the instrument and the test tone all go through it.</li>
-<li>Use <strong>Open window</strong> to see its own window, <strong>Save state</strong> and <strong>Restore</strong> to keep and bring back its settings, and
-<strong>Remove</strong> to take it off the bench.</li>
-</ol>
+<p>The <strong>Plugins</strong> card says how many plugins were found (VST3 and Audio Units). Yen Studio looks for new ones each time
+it starts; click <strong>Scan</strong> to look at every plugin again. While it scans, the card says how far it has got. A plugin
+that crashed during a scan is listed under it as skipped, with the reason and <strong>Try again</strong>. See <a href="../plugins/">Plugins</a>.</p>
 <h3 id="starting-point"><a class="anchor" href="#starting-point">Starting point</a></h3>
-<p>Under <strong>New songs</strong>. New songs start blank. To start each one from a song of yours, choose <strong>Use as starting point</strong>
-in its menu on the Home screen. Once one is set, <strong>Start blank</strong> here goes back to blank songs.</p>
+<p>Under <strong>New songs</strong>. New songs start with the starter kit in the rack. To start each one from a song of yours, choose
+<strong>Use as starting point</strong> in its menu on the Home screen. Once one is set, this says which song new ones copy, and
+<strong>Stop using it</strong> goes back to the starter kit.</p>
 
 <nav class="steps" aria-label="Pages" data-pagefind-ignore><a class="prev" rel="prev" href="../assistant/"><span>Previous</span>Assistant</a><a class="next" rel="next" href="../shortcuts/"><span>Next</span>Keyboard shortcuts</a></nav>
 <p class="fix" data-pagefind-ignore>Something here wrong or missing? <a href="https://github.com/theobourgeois/yen-studio/issues/new?title=Docs%3A%20Settings">Tell us</a>.</p>

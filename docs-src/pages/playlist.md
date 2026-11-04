@@ -106,7 +106,19 @@ Keys for jumping to a view:
 | <kbd>⇧0</kbd> | Centre on the playhead |
 | <kbd>Home</kbd> | Back to the song's start |
 
-While the song plays, the view follows the playhead a page at a time. The playhead turns red while you record.
+The playhead turns red while you record.
+
+### Follow playhead
+
+The Playlist stays where you put it while the song plays: it doesn't move by itself, so you can work on one part while another plays. To have it go along with the song, turn on **Follow playhead**, the arrow button in the Playlist's toolbar. Yen Studio remembers it.
+
+With it on, while the song plays:
+
+- The view goes to the playhead when you turn it on or start playing, if the playhead isn't in view.
+- As the playhead reaches the middle of the view, the view scrolls smoothly with it, keeping it in the middle.
+- When play goes round the loop back to its start, the view goes there at once.
+- If you scroll away from the playhead, the view stays where you scrolled until the playhead comes back into it, or goes round the loop.
+- It doesn't scroll while you drag something.
 
 ## Snap
 

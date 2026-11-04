@@ -1,6 +1,6 @@
 ---
 title: Problems and logs
-description: What to do when Yen Studio has no sound, a plugin crashes or a song won't open, and how to find the logs and report a problem.
+description: What to do when Yen Studio has no sound, a plugin crashes, a song won't open, the app quit unexpectedly or an update won't install, and how to find the logs and report a problem.
 ---
 
 Yen Studio is pre-alpha, so things will go wrong. This page covers the problems it already knows how to tell you
@@ -12,7 +12,7 @@ Work down this list. Most of the time the answer is in the first few.
 
 1. **Check the output device.** Open [Settings](settings) with <kbd>⌘,</kbd> and look at **Output device** on the
    **Music** tab. Is it the speakers or headphones you're listening on?
-2. **Play the test tone.** At the bottom of the Music tab, under **Engine and plugins**, turn on **Test tone**. If you
+2. **Play the test tone.** Near the bottom of the Music tab, under **Plugins**, turn on **Test tone**. If you
    hear it, the engine and your device work: the problem is in the song. If you don't, it's the device or the volume.
 3. **Check your Mac's volume**, and the volume on your audio interface if you use one.
 4. **Check the song's mode.** Press <kbd>L</kbd> to switch between pattern mode and song mode. Song mode plays the
@@ -68,9 +68,9 @@ remove it from the song.
 ### When a scan skips a plugin
 
 When Yen Studio looks for your plugins, one that crashes during the scan is skipped and listed as skipped, with why.
-The list is in the Plugin manager (**More plugins…** at the foot of [the plugin picker](plugins)) and in Settings,
-Music tab, under **Engine and plugins**. Click **Try again** there to scan the skipped plugins again, for example
-after updating one.
+The list is in the Plugin manager (**Plugin manager…** at the foot of [the plugin picker](plugins)) and in Settings,
+Music tab, under **Plugins**. Click **Try again** there to scan the skipped plugins again, for example after updating
+one.
 
 ## A song won't open
 
@@ -101,6 +101,30 @@ A message says the song **was also saved somewhere else**, and names the copy.
 Your window's version is saved as the song. The other version is kept inside the package, beside `project.json`, as
 `project.conflict-` followed by the date and time. To use it instead, close the song, open the package with **Show
 Package Contents**, and swap the two files.
+
+## Yen Studio quit unexpectedly
+
+If Yen Studio crashed, or stopped without closing properly, the next time it opens a note in the corner says **Yen
+Studio quit unexpectedly**, with the songs you had open. It doesn't show after you Force Quit it, or when your Mac
+restarts.
+
+- **Reopen** opens the songs you had open again, each in its tab.
+- **Report a Problem…** opens a new issue on Yen Studio's GitHub: see [Report a problem](#report-a-problem).
+- **OK** closes the note.
+
+A recording that was under way is mended and put back where it was when its song opens: see
+[Takes recovered after a crash](#takes-recovered-after-a-crash).
+
+## Changes that weren't saved
+
+With **Save automatically** off, Yen Studio keeps a copy of your changes beside the song as you work, until you save.
+If it closes before you save them, the next time you open the song a message says it **has changes that weren't
+saved**, and when they were from.
+
+- **Recover** brings them back. It's an undo step, so <kbd>⌘Z</kbd> goes back to the song as it was saved.
+- **Discard** lets them go.
+
+See [Saving](getting-started#saving).
 
 ## Takes recovered after a crash
 
@@ -140,6 +164,27 @@ it yourself.
 
 If you've turned on **Send usage and crash reports** in [Settings](settings#send-usage-and-crash-reports), crashes
 are reported without your names or your songs. A written report is still the best way to say what went wrong.
+
+## An update won't install
+
+When a new version is out, Yen Studio offers to install it (see [Updates](getting-started#updates)). Sometimes it
+can't install it itself, and the update window says why, with a **Download…** button that opens the release's page:
+
+- **It's running from its disk image**, or from a temporary place macOS made for it. Drag Yen Studio into your
+  Applications folder, open it from there, and try again.
+- **It can't change the folder it's in.** Download the new version and replace the app yourself.
+- **The release has no Mac app attached.** It can only be downloaded from its page.
+
+If an install fails part way, the window says why and offers **Try Again**. When the download didn't finish, there
+wasn't enough disk space, or the download didn't pass Yen Studio's checks (a damaged download, or one that isn't
+signed by Yen Studio's developer), nothing is installed: the message ends **Yen Studio hasn't changed.**
+
+Before it restarts, Yen Studio saves your songs. If you save by hand and a song has unsaved changes, it asks first, as
+quitting does; **Cancel** keeps it from restarting. If a song can't be saved, it doesn't restart, and the window names
+the song: save it, then click **Install and Relaunch**.
+
+If an update didn't finish installing, you're still on the version you had, and the update window says so. Choose
+**Check for Updates…** to try again.
 
 ## Yen Studio won't start
 

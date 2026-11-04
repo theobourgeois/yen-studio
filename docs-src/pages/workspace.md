@@ -31,6 +31,8 @@ The Piano roll shows the selected channel's notes. Click a channel's button in t
 - **Bring a window to the front** by clicking anywhere in it.
 - **Close a window** with the **×** at the right of its title bar.
 
+The Playlist, the Channel rack, the Piano roll, the Mixer and the other windows (all but the Browser, which keeps to the left) are windows of the Mac's own, as a plugin's window is. You can drag one past the edges of Yen Studio's main window, onto another part of the screen. They all stay above the main window, the one you clicked last in front, and they minimise with it.
+
 ### Resize, maximise and half the screen
 
 Most windows can be resized. The Channel rack is the exception: it doesn't maximise or fill half the desktop.
@@ -70,14 +72,17 @@ The round **Record** button (<kbd>R</kbd>) turns recording on. While it's on, **
 
 ### Tempo
 
-The tempo display shows the song's tempo in BPM.
+The tempo display shows the song's tempo in BPM, in two parts as in FL Studio: the whole BPM in the larger digits, and its fine tune in thousandths after the point.
 
-- Drag it up or down to change it. The pointer keeps going past the edge of the screen.
-- Scroll over it to move it a beat per minute at a time.
-- Click it to type a tempo. <kbd>Return</kbd> sets it; <kbd>Esc</kbd> keeps the old one. <kbd>↑</kbd> and <kbd>↓</kbd> nudge it.
+- Drag the whole part up or down to change it a BPM at a time. Drag the decimals to fine tune it a thousandth at a time. The pointer keeps going past the edge of the screen.
+- Scroll over either part to step it. Hold <kbd>⌘</kbd> as you scroll over the whole part to step a tenth of a BPM.
+- Double-click it to type a tempo. <kbd>Return</kbd>, or clicking elsewhere, sets it; <kbd>Esc</kbd> keeps the old one. <kbd>↑</kbd> and <kbd>↓</kbd> nudge it a BPM.
+
+A single click does nothing, so you can't change the tempo by accident.
 
 Right-click it for more:
 
+- **Type in value…**: the same as double-clicking it.
 - **Tap tempo…**: tap along to the beat, by clicking the pad or pressing any key at least three times, then click **Set tempo**.
 - An automation clip for the tempo, so it can change during the song. See [Automation](automation).
 - **Make … BPM the default**: new songs start at this tempo. **Reset the default** goes back to 140 BPM.
@@ -131,8 +136,8 @@ The slider shows where play is in the pattern, or in the song in song mode. Clic
 
 The menus are at the left of the toolbar:
 
-- **File**: New Song, Open…, Find Song… (<kbd>⌘P</kbd>), Save, Save a Copy…, Rename…, Export, Show in Finder, Home and Close Tab.
-- **Edit**: Undo, Redo, Cut, Copy, Paste, Delete and Select All, which act on the window in front, and Settings….
+- **File**: New Song, Open…, Import FL Studio Project…, Find Song… (<kbd>⌘P</kbd>), Save (<kbd>⌘S</kbd>), Save a Copy…, Rename…, Export…, Export WAV… (<kbd>⌘R</kbd>), Export MP3… (<kbd>⇧⌘R</kbd>), Show in Finder, Home and Close Tab. A song you [imported from FL Studio](coming-from-fl-studio#open-an-fl-studio-project) also has **Import Report…**. With **Save automatically** off, there's **Revert to Saved** too (see [Saving](getting-started#saving)).
+- **Edit**: Undo, Redo, Undo History…, Cut, Copy, Paste, Delete and Select All, which act on the window in front, then Settings… and Check for Updates….
 - **View**: pattern or song mode, the metronome, the typing keyboard and the Channel rack's track selectors.
 - **Patterns**: New Pattern, Clone Pattern, and the next and previous pattern.
 - **Tools**: Record and Assign Free Mixer Tracks.
@@ -140,7 +145,20 @@ The menus are at the left of the toolbar:
 
 Click a menu to open it. While one is open, move the pointer to another to open that, or press <kbd>←</kbd> and <kbd>→</kbd>.
 
-The Mac's own menu bar, at the top of the screen, has most of the same File and Edit commands, plus the View menu's zoom (<kbd>⌘=</kbd>, <kbd>⌘−</kbd> and <kbd>⌘0</kbd>), full screen (<kbd>⌃⌘F</kbd>) and Help. **Help** shows the data folder and the logs, reports a problem and opens the website.
+### The Mac's menu bar
+
+The Mac's own menu bar, at the top of the screen, has the menus every Mac app has:
+
+- **Yen Studio**: About Yen Studio, Check for Updates…, Settings… (<kbd>⌘,</kbd>), Hide (<kbd>⌘H</kbd>), Hide Others (<kbd>⌥⌘H</kbd>), Show All and Quit (<kbd>⌘Q</kbd>).
+- **File**: New Song (<kbd>⌘N</kbd>), Open… (<kbd>⌘O</kbd>), Open Recent, Import FL Studio Project…, Save (<kbd>⌘S</kbd>), Save a Copy…, Rename…, Export WAV… (<kbd>⌘R</kbd>), Export MP3… (<kbd>⇧⌘R</kbd>), Home (<kbd>⇧⌘H</kbd>), Show in Finder, Close Tab (<kbd>⌘W</kbd>) and Close Window (<kbd>⇧⌘W</kbd>).
+- **Edit**: Undo, Redo, Cut, Copy, Paste, Delete and Select All.
+- **View**: Zoom In (<kbd>⌘=</kbd> or <kbd>⌘+</kbd>), Zoom Out (<kbd>⌘−</kbd>), Actual Size (<kbd>⌘0</kbd>) and Enter Full Screen (<kbd>⌃⌘F</kbd>). Zooming makes everything in the app larger or smaller.
+- **Window**: Minimize (<kbd>⌘M</kbd>), Zoom and Bring All to Front.
+- **Help**: the docs, the website, Report a Problem…, Show Logs, Show Data Folder and the third-party notices.
+
+<kbd>⌘S</kbd>, <kbd>⌘R</kbd> and <kbd>⌘N</kbd> work while a plugin's window is in front, and <kbd>⌘W</kbd> closes that plugin's window.
+
+> **Note:** With the [Piano roll](piano-roll) or the [Playlist](playlist) in front, <kbd>⌘Q</kbd> quantizes, as <kbd>Ctrl+Q</kbd> does in FL Studio. Anywhere else it quits Yen Studio.
 
 ## The tab strip
 

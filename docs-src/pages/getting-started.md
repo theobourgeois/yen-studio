@@ -15,9 +15,19 @@ You need a Mac with Apple Silicon, running macOS 14 or later. There's no Windows
 
 The first time, it asks whether to send usage and crash reports. They never include your songs, your sounds or your file names. Click **Send reports** or **No thanks**. You can change your answer in [Settings](settings) at any time.
 
-When a newer release is out, Home tells you. Nothing installs itself: download the new one and drag it to Applications as before.
-
 > **Note:** Yen Studio is pre-alpha. Expect bugs and missing features, and keep copies of songs you care about.
+
+### Updates
+
+Yen Studio looks for a newer release when it opens, and every few hours after. When there is one, the **Software Update** window comes up with its release notes:
+
+- **Install Update** downloads and checks it, saves your work, then installs it and opens the new version in its place. **Cancel** stops the download. If you [save by hand](#save-by-hand) and a song has changes you haven't saved, it asks first, as quitting does; **Cancel** there leaves the update ready for **Install and Relaunch**.
+- **Remind Me Later** puts it off for a day.
+- **Skip This Version** stops that version coming up by itself.
+
+Close the window and it won't come up by itself again until you next open Yen Studio. While a newer release is out, Home shows **Version … is out**: click it to see the window again. To look straight away, choose **Check for Updates…** in the Yen Studio menu or the Edit menu.
+
+If Yen Studio can't install the update itself, the window says why and has a **Download…** button instead. See [An update won't install](troubleshooting#an-update-wont-install).
 
 ## Find your way around Home
 
@@ -27,6 +37,7 @@ Home is where Yen Studio opens. It lists your songs and starts new ones.
 - **Open…** (<kbd>⌘O</kbd>) opens a song's file from anywhere: a copy, a backup, or one someone sent you.
 - **Recent** lists the songs you've opened. Switch between the list, cards and sheet views at its top.
 - **Search songs** (<kbd>⌘F</kbd>) filters the list as you type.
+- **Sort by** orders the list: **Last opened** (the usual order), **Last modified**, **Name** or **Date created**. Yen Studio remembers your choice.
 
 Click a song's name to open it. Click **⋯** on a song, or right-click it, for more: Open, Rename, Duplicate, Show in Finder, Use as starting point, Remove from Recents and Move to Trash….
 
@@ -69,6 +80,8 @@ New songs go in **Documents › Yen Studio**. To keep them somewhere else, click
 - Double-click a `.yen` file in Finder to open it in Yen Studio.
 - Drop a `.yen` file on Home to open it.
 
+In Finder, a song's icon is a picture of its Playlist, its clips in their colours (an empty song shows Yen Studio's document icon). Select it and press <kbd>Space</kbd> for Quick Look: the picture, the song's name, its tempo, length, and how many channels and patterns it has. The picture is drawn again a moment after each save.
+
 If a song's file has been moved, renamed or deleted, its card on Home says so. Click **Locate…** to find it, or **Remove** to take it off the list.
 
 > **Note:** **Remove from Recents** only takes a song off Home's list. **Move to Trash…** moves its file to the Trash.
@@ -90,9 +103,19 @@ The undo and redo buttons are at the right end of the toolbar, and both are in t
 
 A drag is one step, however far it goes. Changes you make inside a plugin's own window aren't undo steps, as in FL Studio.
 
+### The History window
+
+Choose **Edit › Undo History…** to see every step you can undo, as FL Studio's History does. Each step is named after what it did, such as **Move 3 notes**, **Add channel Kick** or **Tempo 128**.
+
+- The oldest step is at the top. The first line, **Open**, is the song as it opened; once the oldest steps have been forgotten it reads **Oldest step kept**.
+- The step you're on is lit. Steps you've undone are greyed out, until you make a new change.
+- Click any step to go straight to it, back or forward. That's the same as pressing <kbd>⌘Z</kbd> or <kbd>⇧⌘Z</kbd> until you get there.
+
+Its footer says how many steps it keeps and, once older ones have been forgotten, how many.
+
 ## Saving
 
-Your song saves itself as you work, after every change. A drag saves once, when you let go. You don't need to press anything.
+Your song saves itself as you work, after every change. A drag saves once, when you let go. You don't need to press anything. (If you'd rather save by hand, see [Save by hand](#save-by-hand).)
 
 Press <kbd>⌘S</kbd>, or choose **File › Save**, to save straight away. You'll see **Saved**.
 
@@ -100,12 +123,27 @@ Press <kbd>⌘S</kbd>, or choose **File › Save**, to save straight away. You'l
 
 If a save fails, a message says so. Keep the window open until it goes away. If the song's file is gone from where it was, Yen Studio tells you that changes aren't being saved.
 
+### Save by hand
+
+If you'd rather choose when a song is saved, as in FL Studio, turn off **Save automatically** in **Settings › Music › Saving**. Then:
+
+- A song is saved only when you press <kbd>⌘S</kbd> or choose **File › Save**.
+- **Edited** shows beside the song's name while it has changes you haven't saved, and its tab has a dot.
+- Closing its tab, switching to another, going Home or quitting asks **Do you want to save the changes you made to “…”?** **Save** saves them, **Don't Save** leaves the song as you last saved it, and **Cancel** (or <kbd>Esc</kbd>) takes you back to it.
+- **File › Revert to Saved** takes the song back to how you last saved it. It's an undo step, so <kbd>⌘Z</kbd> brings your changes back.
+
+Turning **Save automatically** back on saves any changes that were waiting.
+
+### Changes that weren't saved
+
+While a song has changes waiting to be saved by hand, Yen Studio keeps a copy of them beside the song, a couple of seconds after you stop. If the app closes before you save, opening the song again offers them: **Recover** puts them back (as an undo step, so <kbd>⌘Z</kbd> goes back to the song as it was saved), and **Discard** lets them go. Saving or choosing **Don't Save** drops the copy.
+
 ## Make a first beat
 
 Start a new song, then:
 
 1. **Program the drums.** In the Channel rack, click a step to turn it on. Right-click turns it off. Drag across the steps to paint several. Put the kick on the first step of each beat and the clap on beats two and four.
-2. **Play it.** Press <kbd>Space</kbd>. The pattern loops until you press <kbd>Space</kbd> again. To change the tempo, drag the tempo display up or down, or click it and type.
+2. **Play it.** Press <kbd>Space</kbd>. The pattern loops until you press <kbd>Space</kbd> again. To change the tempo, drag the tempo display up or down, or double-click it and type.
 3. **Add a sound.** Click **+** under the channels and pick an instrument: the Sampler, or [one of your plugins](plugins).
 4. **Play some notes.** With the new channel selected, press <kbd>⌥3</kbd> to open the [Piano roll](piano-roll). Click in the grid to draw notes. Right-click deletes one.
 5. **Arrange it.** Press <kbd>⌥1</kbd> to open the [Playlist](playlist), and drag your pattern from the Picker onto a track. Click **SONG** in the toolbar, then press <kbd>Space</kbd> to play the arrangement.

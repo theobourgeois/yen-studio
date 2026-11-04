@@ -1,13 +1,14 @@
 ---
 title: Settings
-description: Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI and quality.
+description: Every tab and option in Yen Studio's Settings: themes, fonts, where songs are saved, reports, logs, the audio device, MIDI, quality, saving and plugins.
 ---
 
 Settings is where you choose how Yen Studio looks, where your songs are saved, and where its sound goes. It opens as a
 window over the app, and you can keep working with it open.
 
-Press <kbd>⌘,</kbd> to open it, or choose **Settings…** from the **Edit** menu. Press <kbd>⌘,</kbd> again or
-<kbd>Esc</kbd> to close it. With a song open it starts on the **Music** tab; from the Home screen it starts on
+Press <kbd>⌘,</kbd> to open it, or choose **Settings…** from the **Edit** menu or the **Yen Studio** menu in the Mac's
+menu bar. If it's already open behind other windows, <kbd>⌘,</kbd> brings it to the front. Press <kbd>⌘,</kbd> again
+while you're in it, or <kbd>Esc</kbd>, to close it. With a song open it starts on the **Music** tab; from the Home screen it starts on
 **General**. Click a tab to switch, or use the arrow keys, <kbd>Home</kbd> and <kbd>End</kbd> on the tabs.
 
 ## General
@@ -153,30 +154,30 @@ sound cleaner (no faint whistles on bright sounds) and cost more. Your plugins a
 Under **Playback**. On, stopping silences delays, reverbs and every other tail at once. Off, they ring out after a
 stop, and pressing Stop again silences them.
 
+### Save automatically
+
+Under **Saving**. On (the default), every change is saved as you make it. Off, a song is saved only when you press
+<kbd>⌘S</kbd> or choose **File › Save**, and closing it asks whether to save your changes. See
+[Saving](getting-started#saving).
+
 ### Open favourite folders in place
 
 Under **Browser**. On, a folder you've starred opens under **Favourites** in [the Browser](browser). Off, it's a
 shortcut: clicking it shows the folder where it is among your folders.
 
-### Engine and plugins
+### Plugins
 
-The state of the audio engine, and a test bench for your plugins.
+The state of the audio engine, and your plugins.
 
 The status card shows the device, its sample rate and buffer, how late its output is, how hard the engine is working,
 any dropouts, and the output's level on a meter. Turn on **Test tone** to check you can hear the engine at all.
 
-The **Plugins** card says how many plugins were found (VST3 and Audio Units). Click **Scan** to look for plugins you've
-installed since. A plugin that crashed during the scan is listed under it as skipped, with the reason and a way to try
-it again. See [Plugins](plugins).
-
-The **Instrument** and **Effect** cards try a plugin on its own, outside any song:
-
-1. Pick an instrument under **Instrument**. Play it with the keys under the cards.
-2. Pick an effect under **Effect**. The song, the instrument and the test tone all go through it.
-3. Use **Open window** to see its own window, **Save state** and **Restore** to keep and bring back its settings, and
-   **Remove** to take it off the bench.
+The **Plugins** card says how many plugins were found (VST3 and Audio Units). Yen Studio looks for new ones each time
+it starts; click **Scan** to look at every plugin again. While it scans, the card says how far it has got. A plugin
+that crashed during a scan is listed under it as skipped, with the reason and **Try again**. See [Plugins](plugins).
 
 ### Starting point
 
-Under **New songs**. New songs start blank. To start each one from a song of yours, choose **Use as starting point**
-in its menu on the Home screen. Once one is set, **Start blank** here goes back to blank songs.
+Under **New songs**. New songs start with the starter kit in the rack. To start each one from a song of yours, choose
+**Use as starting point** in its menu on the Home screen. Once one is set, this says which song new ones copy, and
+**Stop using it** goes back to the starter kit.
