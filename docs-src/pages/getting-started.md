@@ -57,7 +57,7 @@ The button shows only while Home has no songs in its list.
 
 Click **New song** on Home, or choose **File › New Song**.
 
-A new song starts with a drum kit in the [Channel rack](channel-rack): Kick, Clap, Hat and Snare, in the order FL Studio puts them. Adding the kit isn't an undo step, so <kbd>⌘Z</kbd> won't take it away.
+A new song starts with a drum kit in the [Channel rack](channel-rack): Kick, Clap, Hat and Snare, in the order FL Studio puts them. Adding the kit isn't an undo step, so <kbd>⌘Z</kbd> won't take it away. To start with an empty rack instead, turn off **Starter kit** in [Settings](settings) › Songs & saving.
 
 New songs start at 140 BPM. To change that, right-click the tempo display and choose **Make … BPM the default**.
 
