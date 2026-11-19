@@ -181,3 +181,6 @@ that crashed during a scan is listed under it as skipped, with the reason and **
 Under **New songs**. New songs start with the starter kit in the rack. To start each one from a song of yours, choose
 **Use as starting point** in its menu on the Home screen. Once one is set, this says which song new ones copy, and
 **Stop using it** goes back to the starter kit.
+
+**Starter kit**: a new song starts with a kick, clap, hat and snare in the [Channel rack](channel-rack). Turn it off and
+a new song starts with one empty Sampler instead. It shows while no song of yours is the starting point.

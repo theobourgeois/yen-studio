@@ -82,7 +82,7 @@ Some settings make an effect look ahead, which delays its sound a little (a line
 | [Y-R](y-r) | A reverb: plates, rooms, chambers and halls, each in an era, with a decay you shape across the bands. |
 | [Y-Delay](y-delay) | Analog and tape echo: single, dual, ping-pong or rhythm. |
 | [Y-Multiband](y-multiband) | Upward and downward compression on three bands. |
-| [Y-Time](y-time) | Repeats, gates and tape stops as envelopes you draw, in time with the song. |
+| [Y-Time](y-time) | Repeats, gates, tape stops, filter wobbles and pans as lanes of waves you draw, in time with the song. |
 | [Y-Tune](y-tune) | Pitch correction with a live pitch graph. It can detect the key. |
 | [Y-Pan](y-pan) | Moves a sound across the stereo field, on patterns or an LFO. |
 | [Y-Pitch](y-pitch) | Two wheels, pitch and timbre, that swing back with gravity and inertia. Play them from the keys or MIDI. |
